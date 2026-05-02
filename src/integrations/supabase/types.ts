@@ -14,7 +14,170 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      action_items: {
+        Row: {
+          assignee: string | null
+          category: string | null
+          content_block_id: string | null
+          created_at: string
+          description: string | null
+          due_date: string | null
+          id: string
+          priority: string
+          proof_link: string | null
+          proof_notes: string | null
+          status: string
+          title: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          assignee?: string | null
+          category?: string | null
+          content_block_id?: string | null
+          created_at?: string
+          description?: string | null
+          due_date?: string | null
+          id?: string
+          priority?: string
+          proof_link?: string | null
+          proof_notes?: string | null
+          status?: string
+          title: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          assignee?: string | null
+          category?: string | null
+          content_block_id?: string | null
+          created_at?: string
+          description?: string | null
+          due_date?: string | null
+          id?: string
+          priority?: string
+          proof_link?: string | null
+          proof_notes?: string | null
+          status?: string
+          title?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "action_items_content_block_id_fkey"
+            columns: ["content_block_id"]
+            isOneToOne: false
+            referencedRelation: "content_blocks"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      brand_context: {
+        Row: {
+          audience: string | null
+          company_name: string
+          competitors: string | null
+          description: string | null
+          id: string
+          keywords: string | null
+          services: string | null
+          tone: string | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          audience?: string | null
+          company_name?: string
+          competitors?: string | null
+          description?: string | null
+          id?: string
+          keywords?: string | null
+          services?: string | null
+          tone?: string | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          audience?: string | null
+          company_name?: string
+          competitors?: string | null
+          description?: string | null
+          id?: string
+          keywords?: string | null
+          services?: string | null
+          tone?: string | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      content_blocks: {
+        Row: {
+          block_type: string
+          brief: string | null
+          content: string | null
+          created_at: string
+          id: string
+          meta: Json | null
+          platform: string | null
+          scheduled_for: string | null
+          status: string
+          title: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          block_type: string
+          brief?: string | null
+          content?: string | null
+          created_at?: string
+          id?: string
+          meta?: Json | null
+          platform?: string | null
+          scheduled_for?: string | null
+          status?: string
+          title: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          block_type?: string
+          brief?: string | null
+          content?: string | null
+          created_at?: string
+          id?: string
+          meta?: Json | null
+          platform?: string | null
+          scheduled_for?: string | null
+          status?: string
+          title?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          created_at: string
+          email: string | null
+          full_name: string | null
+          id: string
+        }
+        Insert: {
+          created_at?: string
+          email?: string | null
+          full_name?: string | null
+          id: string
+        }
+        Update: {
+          created_at?: string
+          email?: string | null
+          full_name?: string | null
+          id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
