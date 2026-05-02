@@ -1,0 +1,92 @@
+import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
+import {
+  Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel,
+  SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarProvider, SidebarTrigger, useSidebar,
+} from "@/components/ui/sidebar";
+import { Activity, LayoutDashboard, FileText, Megaphone, MapPin, CheckSquare, Settings, LogOut } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { Button } from "@/components/ui/button";
+import { useAuth } from "@/hooks/useAuth";
+
+const nav = [
+  { to: "/", label: "Dashboard", icon: LayoutDashboard, end: true },
+  { to: "/seo", label: "SEO Workshop", icon: FileText },
+  { to: "/social", label: "Social Planner", icon: Megaphone },
+  { to: "/gbp", label: "Google Business / GSC", icon: MapPin },
+  { to: "/tasks", label: "Action Tracker", icon: CheckSquare },
+  { to: "/brand", label: "Brand Context", icon: Settings },
+];
+
+function AppSidebar() {
+  const { state } = useSidebar();
+  const collapsed = state === "collapsed";
+  const { pathname } = useLocation();
+  return (
+    <Sidebar collapsible="icon">
+      <SidebarContent className="gradient-surface">
+        <div className="p-4 flex items-center gap-2">
+          <div className="grid h-9 w-9 place-items-center rounded-lg gradient-primary shadow-elegant shrink-0">
+            <Activity className="h-4 w-4 text-primary-foreground" />
+          </div>
+          {!collapsed && (
+            <div className="leading-tight">
+              <div className="font-semibold text-sm">MedPharma</div>
+              <div className="text-[10px] uppercase tracking-wider text-muted-foreground">Marketing OS</div>
+            </div>
+          )}
+        </div>
+        <SidebarGroup>
+          <SidebarGroupLabel>Workspace</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {nav.map((item) => {
+                const active = item.end ? pathname === item.to : pathname.startsWith(item.to);
+                return (
+                  <SidebarMenuItem key={item.to}>
+                    <SidebarMenuButton asChild isActive={active}>
+                      <NavLink to={item.to} end={item.end} className="flex items-center gap-2">
+                        <item.icon className="h-4 w-4" />
+                        {!collapsed && <span>{item.label}</span>}
+                      </NavLink>
+                    </SidebarMenuButton>
+                  </SidebarMenuItem>
+                );
+              })}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+      </SidebarContent>
+    </Sidebar>
+  );
+}
+
+export default function AppShell() {
+  const { user, loading } = useAuth();
+  const nav = useNavigate();
+  if (loading) return <div className="min-h-screen grid place-items-center text-muted-foreground">Loading…</div>;
+  if (!user) {
+    nav("/auth", { replace: true });
+    return null;
+  }
+  return (
+    <SidebarProvider>
+      <div className="min-h-screen flex w-full bg-background">
+        <AppSidebar />
+        <div className="flex-1 flex flex-col">
+          <header className="h-14 flex items-center justify-between border-b border-border px-4 sticky top-0 bg-background/80 backdrop-blur z-10">
+            <div className="flex items-center gap-2">
+              <SidebarTrigger />
+              <span className="text-xs text-muted-foreground hidden sm:inline">Signed in as {user.email}</span>
+            </div>
+            <Button variant="ghost" size="sm" onClick={() => supabase.auth.signOut()}>
+              <LogOut className="h-4 w-4 mr-1" /> Sign out
+            </Button>
+          </header>
+          <main className="flex-1 overflow-auto">
+            <Outlet />
+          </main>
+        </div>
+      </div>
+    </SidebarProvider>
+  );
+}
