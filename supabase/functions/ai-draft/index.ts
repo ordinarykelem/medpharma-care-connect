@@ -10,42 +10,78 @@ Company: MedPharma Alliance International (Ghana). Health-tech / e-pharmacy.
 Product app: mCare (mcare.medpharma.care). Main site: medpharma.care.
 What we do: customers with chronic + acute conditions order medication via app or call center; we deliver. We partner with banks, insurers, and corporates to serve their staff/members (B2B2C).
 Audience: people living with chronic diseases (diabetes, hypertension, etc.), HR/benefits managers at banks & corporates, insurance partners.
-Goal: rank for "best health tech company in Ghana", "online pharmacy Ghana", "medication delivery Accra"; drive app downloads and order volume.
+Phone: 030 290 9731. Email: care@medpharma.care.
+Goal: rank for "best health tech company in Ghana", "online pharmacy Ghana", "medication delivery Accra", "MedPharma", "buy medicine online Ghana"; drive app downloads and order volume.
 `.trim();
 
-const SYSTEM = `You are the senior digital marketing strategist for MedPharma Alliance International, a Ghanaian health-tech e-pharmacy.
-Voice: trustworthy, warm, expert, locally rooted (Ghana / Accra), action-oriented.
-Always produce work that a developer or social manager can ship without rewriting.
-Use specific Ghana / Accra references where natural. Never invent medical claims.
-Output clean Markdown unless the user asks for HTML/JSON.`;
+const SYSTEM = `You are the head of growth for MedPharma Alliance International, a Ghanaian health-tech e-pharmacy.
+Voice: trustworthy, warm, expert, locally rooted (Ghana / Accra), action-oriented. Never invent medical claims.
+You produce work the marketing lead can copy-paste directly. No hedging, no "consider", no "you might want to".
+When asked for ready-to-use text, return ONLY the text — no preface, no explanation, no markdown code fences unless the format requires them.`;
 
 const PROMPT_BY_TYPE: Record<string, (input: any, brand: string) => string> = {
+  mission_playbook: ({ keyword, painPoint }, brand) => `${brand}
+
+Build a step-by-step playbook to make MedPharma rank #1 on Google for: "${keyword}"
+Current pain: ${painPoint || "competitor ads sit above us; we appear too low"}
+
+Return STRICT JSON (no prose, no code fences) shaped exactly:
+{
+  "goal": "One sentence describing what 'winning' this keyword looks like",
+  "steps": [
+    {
+      "title": "Short verb-led step name (max 10 words)",
+      "kind": "copy_paste | dev_ticket | publish | external | decision",
+      "owner": "me | dev_team | boss | agency",
+      "estimated_minutes": 5,
+      "instructions": "Plain-English instructions: where to go, what to click, what to do. No fluff.",
+      "where_to_paste": "The exact destination if applicable, e.g. 'Google Business Profile → Edit profile → Description' or 'medpharma.care homepage <head> tag'. Empty string if not applicable.",
+      "body": "The EXACT text/copy/code/script the user should paste or send. Polished, final, brand-on. Empty string if the step is a decision or external action with nothing to paste."
+    }
+  ]
+}
+
+Rules:
+- Generate 6 to 10 steps, ordered by impact-per-effort (highest first).
+- Mix step kinds. For "${keyword}", typically include:
+  * 1 GBP step (copy_paste) — exact business description / category / post body
+  * 1 on-page SEO step (dev_ticket) — exact <title>, <meta description>, H1, schema for the dev team
+  * 1 content step (copy_paste) — full polished blog intro or full LinkedIn post they can publish today
+  * 1 Google Ads step if pain mentions ads (copy_paste) — exact headlines, descriptions, keywords, daily budget recommendation in GHS
+  * 1 review/reputation step (copy_paste) — exact email/SMS template asking customers for reviews
+  * 1 backlink/PR step (external) — specific Ghanaian publication to pitch + the pitch email body
+  * 1 measurement step (decision) — what to check in 14 days
+- For dev_ticket steps, write the body as a complete ticket: ## Summary / ## Files to change / ## Code to paste / ## Acceptance criteria.
+- For Google Ads, give real Ghana-context headlines (max 30 chars each), descriptions (max 90 chars), and a daily budget in GHS.
+- The "body" field must be ready to ship — not a template with [PLACEHOLDERS]. Use real MedPharma details.
+- Output MUST be valid JSON parseable by JSON.parse. No trailing commas, no comments.`,
+
   seo_blog: ({ topic, keywords, audience }, brand) => `${brand}
 
 Draft a complete SEO blog brief AND the full article (1100-1500 words) targeting:
 Topic: ${topic}
-Primary keywords: ${keywords || "best health tech company in Ghana, online pharmacy Ghana"}
+Primary keywords: ${keywords || "best health tech company in Ghana"}
 Audience: ${audience || "Ghanaians managing chronic conditions; HR managers at banks/insurers"}
 
-Return Markdown with these sections:
+Return Markdown:
 ## SEO Brief
 - Target URL slug
 - Primary keyword + 4-6 secondary keywords
 - Meta title (<60 chars)
 - Meta description (<155 chars)
 - Suggested internal links
-- Featured snippet target (1 paragraph or list)
+- Featured snippet target
 
 ## Article Outline
 H1, H2s, H3s
 
 ## Full Article
-Publish-ready Markdown. Include FAQ section (3-5 Q&A) at the end. Use Ghana context. Mention MedPharma's mCare app naturally with one CTA paragraph.`,
+Publish-ready Markdown. Include FAQ (3-5 Q&A). Use Ghana context. Mention mCare naturally with one CTA paragraph.`,
 
   meta_tags: ({ topic, url }, brand) => `${brand}
 
 For the page: ${url || topic}
-Generate optimized on-page SEO assets the dev team can paste directly:
+Generate ready-to-paste assets:
 
 ## Title Tag (<60 chars)
 ## Meta Description (<155 chars)
@@ -53,63 +89,57 @@ Generate optimized on-page SEO assets the dev team can paste directly:
 ## Twitter Card title + description
 ## H1
 ## 5 H2 suggestions
-## JSON-LD schema (Organization + Service if relevant) — full <script type="application/ld+json"> block
+## JSON-LD schema — full <script type="application/ld+json"> block
 ## Canonical URL recommendation
-## 3 alt-text suggestions for hero/section images`,
+## 3 alt-text suggestions`,
 
   social_post: ({ platform, topic, cta }, brand) => `${brand}
 
 Write 3 distinct ${platform || "LinkedIn"} post variants about: ${topic}
 CTA: ${cta || "download mCare app or call our pharmacy line"}
 
-Tailor length, tone, and hashtags to ${platform || "LinkedIn"}:
+Tailor to ${platform}:
 - LinkedIn: 150-220 words, professional, hook in line 1, 5-7 hashtags
-- Facebook: 80-130 words, friendly, emoji-light, 3-5 hashtags
-- Instagram: 100-150 words, warm + visual, line breaks, 8-15 hashtags
-- TikTok: caption + 30-second video script with on-screen text cues, trending hooks
+- Facebook: 80-130 words, friendly, 3-5 hashtags
+- Instagram: 100-150 words, warm, line breaks, 8-15 hashtags
+- TikTok: caption + 30s video script with on-screen text cues
 
 ## Variant 1 / Variant 2 / Variant 3
-End each with: Suggested image/video brief + best posting time (Ghana time GMT).`,
+End each: image/video brief + best posting time (GMT).`,
 
   gbp_post: ({ topic, offer }, brand) => `${brand}
 
-Draft 3 Google Business Profile post variants for MedPharma (Accra). Topic: ${topic}
+Draft 3 Google Business Profile post variants. Topic: ${topic}
 ${offer ? `Offer/CTA: ${offer}` : ""}
 
-Each variant: 100-300 chars, action-oriented, includes one CTA button suggestion (Call now / Learn more / Order online), and a 1-line image brief.`,
+Each: 100-300 chars, action-oriented, CTA button suggestion, 1-line image brief.`,
 
   review_reply: ({ rating, review }, brand) => `${brand}
 
-Draft 2 professional Google review reply variants.
+Draft 2 Google review reply variants.
 Star rating: ${rating}
 Review text: """${review}"""
 
-Tone: warm, accountable, never defensive. If negative, acknowledge + offer a private channel (030 290 9731 / care@medpharma.care). Keep under 90 words. Mention MedPharma by name once.`,
+Warm, accountable, never defensive. If negative, acknowledge + offer private channel (030 290 9731 / care@medpharma.care). Under 90 words.`,
 
   gsc_fix: ({ issue, urls }, brand) => `${brand}
 
-Google Search Console issue to resolve: ${issue}
-Affected URLs (sample): ${urls || "n/a"}
+Google Search Console issue: ${issue}
+URLs: ${urls || "n/a"}
 
-Produce a developer-ready ticket:
-## Summary
-## Likely Root Cause
-## Step-by-step Fix (numbered, code snippets where relevant — htaccess, robots.txt, meta tags, redirects, schema)
-## Acceptance Criteria
-## How to Validate in GSC after deploy`,
+Developer-ready ticket:
+## Summary / ## Likely Root Cause / ## Step-by-step Fix (with code snippets) / ## Acceptance Criteria / ## How to Validate`,
 
   schema_markup: ({ pageType, details }, brand) => `${brand}
 
-Generate production-ready JSON-LD for: ${pageType}
+Generate JSON-LD for: ${pageType}
 Details: ${details || "use sensible MedPharma defaults"}
 
-Return:
 ## JSON-LD
 \`\`\`html
 <script type="application/ld+json"> ... </script>
 \`\`\`
-## Where to place it
-## Validation steps`,
+## Where to place / ## Validation steps`,
 };
 
 Deno.serve(async (req) => {
@@ -130,6 +160,8 @@ Deno.serve(async (req) => {
     const apiKey = Deno.env.get("LOVABLE_API_KEY");
     if (!apiKey) throw new Error("LOVABLE_API_KEY not configured");
 
+    const isJson = block_type === "mission_playbook";
+
     const resp = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
       method: "POST",
       headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
@@ -139,6 +171,7 @@ Deno.serve(async (req) => {
           { role: "system", content: SYSTEM },
           { role: "user", content: userPrompt },
         ],
+        ...(isJson ? { response_format: { type: "json_object" } } : {}),
       }),
     });
 

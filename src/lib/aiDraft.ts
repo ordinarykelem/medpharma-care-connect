@@ -1,7 +1,6 @@
 import { supabase } from "@/integrations/supabase/client";
-import type { BlockType } from "@/lib/types";
 
-export async function aiDraft(block_type: BlockType, input: Record<string, any>) {
+export async function aiDraft(block_type: string, input: Record<string, any>) {
   const { data: brand } = await supabase.from("brand_context").select("*").maybeSingle();
   const brandStr = brand
     ? `Company: ${brand.company_name}\nDescription: ${brand.description ?? ""}\nAudience: ${brand.audience ?? ""}\nTone: ${brand.tone ?? ""}\nKeywords: ${brand.keywords ?? ""}\nServices: ${brand.services ?? ""}`

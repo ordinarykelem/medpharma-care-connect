@@ -157,6 +157,116 @@ export type Database = {
         }
         Relationships: []
       }
+      mission_steps: {
+        Row: {
+          body: string | null
+          created_at: string
+          done_at: string | null
+          estimated_minutes: number | null
+          id: string
+          instructions: string | null
+          kind: string
+          mission_id: string
+          owner: string
+          position: number
+          proof_link: string | null
+          proof_notes: string | null
+          status: string
+          title: string
+          updated_at: string
+          user_id: string
+          where_to_paste: string | null
+        }
+        Insert: {
+          body?: string | null
+          created_at?: string
+          done_at?: string | null
+          estimated_minutes?: number | null
+          id?: string
+          instructions?: string | null
+          kind?: string
+          mission_id: string
+          owner?: string
+          position?: number
+          proof_link?: string | null
+          proof_notes?: string | null
+          status?: string
+          title: string
+          updated_at?: string
+          user_id: string
+          where_to_paste?: string | null
+        }
+        Update: {
+          body?: string | null
+          created_at?: string
+          done_at?: string | null
+          estimated_minutes?: number | null
+          id?: string
+          instructions?: string | null
+          kind?: string
+          mission_id?: string
+          owner?: string
+          position?: number
+          proof_link?: string | null
+          proof_notes?: string | null
+          status?: string
+          title?: string
+          updated_at?: string
+          user_id?: string
+          where_to_paste?: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "mission_steps_mission_id_fkey"
+            columns: ["mission_id"]
+            isOneToOne: false
+            referencedRelation: "missions"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      missions: {
+        Row: {
+          created_at: string
+          current_rank: number | null
+          goal: string | null
+          id: string
+          keyword: string
+          notes: string | null
+          priority: string
+          status: string
+          target_rank: number | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          current_rank?: number | null
+          goal?: string | null
+          id?: string
+          keyword: string
+          notes?: string | null
+          priority?: string
+          status?: string
+          target_rank?: number | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          current_rank?: number | null
+          goal?: string | null
+          id?: string
+          keyword?: string
+          notes?: string | null
+          priority?: string
+          status?: string
+          target_rank?: number | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       profiles: {
         Row: {
           created_at: string

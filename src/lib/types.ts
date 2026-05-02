@@ -27,3 +27,44 @@ export const PRIORITIES = ["low", "medium", "high"] as const;
 export type Priority = typeof PRIORITIES[number];
 
 export const CATEGORIES = ["seo", "social", "gbp", "gsc", "partnerships", "app_growth"] as const;
+
+// Mission system
+export const STEP_KINDS = ["copy_paste", "dev_ticket", "publish", "external", "decision"] as const;
+export type StepKind = typeof STEP_KINDS[number];
+
+export const STEP_OWNERS = ["me", "dev_team", "boss", "agency"] as const;
+export const MISSION_PRIORITIES = ["high", "medium", "low"] as const;
+
+export type Mission = {
+  id: string;
+  user_id: string;
+  keyword: string;
+  goal: string | null;
+  priority: string;
+  status: string;
+  current_rank: number | null;
+  target_rank: number | null;
+  notes: string | null;
+  created_at: string;
+  updated_at: string;
+};
+
+export type MissionStep = {
+  id: string;
+  mission_id: string;
+  user_id: string;
+  position: number;
+  kind: StepKind;
+  title: string;
+  instructions: string | null;
+  body: string | null;
+  where_to_paste: string | null;
+  owner: string;
+  status: TaskStatus;
+  proof_link: string | null;
+  proof_notes: string | null;
+  estimated_minutes: number | null;
+  done_at: string | null;
+  created_at: string;
+  updated_at: string;
+};

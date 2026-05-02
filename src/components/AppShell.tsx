@@ -3,16 +3,18 @@ import {
   Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel,
   SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarProvider, SidebarTrigger, useSidebar,
 } from "@/components/ui/sidebar";
-import { Activity, LayoutDashboard, FileText, Megaphone, MapPin, CheckSquare, Settings, LogOut } from "lucide-react";
+import { Activity, Target, Coffee, BarChart3, FileText, Megaphone, MapPin, CheckSquare, Settings, LogOut } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
 
 const nav = [
-  { to: "/", label: "Dashboard", icon: LayoutDashboard, end: true },
-  { to: "/seo", label: "SEO Workshop", icon: FileText },
-  { to: "/social", label: "Social Planner", icon: Megaphone },
-  { to: "/gbp", label: "Google Business / GSC", icon: MapPin },
+  { to: "/", label: "Mission Control", icon: Target, end: true },
+  { to: "/today", label: "Today", icon: Coffee },
+  { to: "/report", label: "Boss Report", icon: BarChart3 },
+  { to: "/seo", label: "SEO Drafts", icon: FileText },
+  { to: "/social", label: "Social Drafts", icon: Megaphone },
+  { to: "/gbp", label: "GBP & GSC Drafts", icon: MapPin },
   { to: "/tasks", label: "Action Tracker", icon: CheckSquare },
   { to: "/brand", label: "Brand Context", icon: Settings },
 ];
@@ -23,15 +25,15 @@ function AppSidebar() {
   const { pathname } = useLocation();
   return (
     <Sidebar collapsible="icon">
-      <SidebarContent className="gradient-surface">
+      <SidebarContent className="bg-sidebar text-sidebar-foreground">
         <div className="p-4 flex items-center gap-2">
-          <div className="grid h-9 w-9 place-items-center rounded-lg gradient-primary shadow-elegant shrink-0">
-            <Activity className="h-4 w-4 text-primary-foreground" />
+          <div className="grid h-9 w-9 place-items-center rounded-lg gradient-warm shadow-soft shrink-0">
+            <Activity className="h-4 w-4 text-accent-foreground" />
           </div>
           {!collapsed && (
             <div className="leading-tight">
-              <div className="font-semibold text-sm">MedPharma</div>
-              <div className="text-[10px] uppercase tracking-wider text-muted-foreground">Marketing OS</div>
+              <div className="font-display font-semibold text-sm">MedPharma</div>
+              <div className="text-[10px] uppercase tracking-[0.18em] text-sidebar-foreground/60">Mission Control</div>
             </div>
           )}
         </div>
