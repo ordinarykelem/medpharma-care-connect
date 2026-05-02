@@ -25,7 +25,7 @@ function AppSidebar() {
   const { pathname } = useLocation();
   return (
     <Sidebar collapsible="icon">
-      <SidebarContent className="gradient-surface">
+      <SidebarContent className="bg-sidebar text-sidebar-foreground">
         <div className="p-4 flex items-center gap-2">
           <div className="grid h-9 w-9 place-items-center rounded-lg gradient-warm shadow-soft shrink-0">
             <Activity className="h-4 w-4 text-accent-foreground" />

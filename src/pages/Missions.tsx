@@ -11,7 +11,7 @@ import { NavLink } from "react-router-dom";
 import { Plus, Sparkles, Loader2, Target, ArrowRight, Trophy, Clock } from "lucide-react";
 import { aiDraft } from "@/lib/aiDraft";
 import { toast } from "sonner";
-import type { Mission, MissionStep } from "@/lib/types";
+import type { Mission } from "@/lib/types";
 import heroImg from "@/assets/hero-pharmacist.jpg";
 
 const SEED_KEYWORDS = [
