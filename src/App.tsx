@@ -6,7 +6,10 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "./pages/NotFound.tsx";
 import Auth from "./pages/Auth.tsx";
 import AppShell from "./components/AppShell";
-import Dashboard from "./pages/Dashboard.tsx";
+import Missions from "./pages/Missions.tsx";
+import MissionDetail from "./pages/MissionDetail.tsx";
+import Today from "./pages/Today.tsx";
+import BossReport from "./pages/BossReport.tsx";
 import Seo from "./pages/Seo.tsx";
 import Social from "./pages/Social.tsx";
 import Gbp from "./pages/Gbp.tsx";
@@ -26,7 +29,10 @@ const App = () => (
           <Routes>
             <Route path="/auth" element={<Auth />} />
             <Route element={<AppShell />}>
-              <Route path="/" element={<Dashboard />} />
+              <Route path="/" element={<Missions />} />
+              <Route path="/missions/:id" element={<MissionDetail />} />
+              <Route path="/today" element={<Today />} />
+              <Route path="/report" element={<BossReport />} />
               <Route path="/seo" element={<Seo />} />
               <Route path="/social" element={<Social />} />
               <Route path="/gbp" element={<Gbp />} />
