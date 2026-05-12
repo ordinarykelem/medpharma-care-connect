@@ -51,8 +51,6 @@ export const FULLIFE_PLAN: ContentPlan = {
     "No emojis on the artwork — keep it clean and clinical-corporate.",
     "FulLife logo top-left on every asset. MedPharma 'Seamless Healthcare' lockup bottom-left.",
     "Every asset must show: phone line " + CALL + " + app QR/link. No exceptions.",
-    
-    "Headline font: heavy condensed sans (e.g., Druk / Anton / Acumin Pro Black). Body font: Inter or Helvetica Neue.",
     "Never use the word 'chronic' on a customer-facing graphic. Use FulLife, daily adherence, routine medication, consistency.",
     "Every CTA block must contain BOTH the call line and the app link — never just one.",
   ],
@@ -803,8 +801,6 @@ export const MEDPHARMA_PLAN: ContentPlan = {
     "Use Black/African models exclusively in lifestyle shots.",
     "No emojis on the artwork itself. Emojis are fine in the social caption only.",
     "Every asset must show: " + CALL + " + app QR/link + the @medpharma / @medpharmagh handle row.",
-    
-    "Headline font: heavy condensed sans. Body: Inter / Helvetica Neue.",
     "Never make medical claims. Talk about access, delivery, reminders, doctor chat — never outcomes for a specific condition.",
     "If a graphic is for a public holiday, the holiday wish must come BEFORE the product mention. Respect first, sell second.",
   ],
