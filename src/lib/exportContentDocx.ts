@@ -142,7 +142,7 @@ export async function exportPlanToDocx(plan: ContentPlan) {
   [
     "Black/African models in every lifestyle shot.",
     "No emojis on the artwork.",
-    "Brand lockup top-left. CTA lockup bottom strip.",
+    "Use established brand templates for lockup and CTA placement.",
     "Both call line and app link present on every asset.",
     "Export each asset at the EXACT format listed in its brief — no cropping shortcuts.",
     "Send a low-res preview JPG before exporting the full set.",
