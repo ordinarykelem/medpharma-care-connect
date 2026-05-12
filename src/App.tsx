@@ -15,6 +15,7 @@ import Social from "./pages/Social.tsx";
 import Gbp from "./pages/Gbp.tsx";
 import Tasks from "./pages/Tasks.tsx";
 import Brand from "./pages/Brand.tsx";
+import ContentPlanPage from "./pages/ContentPlanPage.tsx";
 import { AuthProvider } from "./hooks/useAuth";
 
 const queryClient = new QueryClient();
@@ -33,6 +34,7 @@ const App = () => (
               <Route path="/missions/:id" element={<MissionDetail />} />
               <Route path="/today" element={<Today />} />
               <Route path="/report" element={<BossReport />} />
+              <Route path="/content/:brand" element={<ContentPlanPage />} />
               <Route path="/seo" element={<Seo />} />
               <Route path="/social" element={<Social />} />
               <Route path="/gbp" element={<Gbp />} />
