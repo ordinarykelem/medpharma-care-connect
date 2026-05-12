@@ -51,7 +51,7 @@ export const FULLIFE_PLAN: ContentPlan = {
     "No emojis on the artwork — keep it clean and clinical-corporate.",
     "FulLife logo top-left on every asset. MedPharma 'Seamless Healthcare' lockup bottom-left.",
     "Every asset must show: phone line " + CALL + " + app QR/link. No exceptions.",
-    "Primary palette: FulLife teal #2BB3C0, FulLife coral #F25A2B, MedPharma green #1A7F3C, charcoal #1B1B1B, soft cream #FFF6E8, accent yellow #FFD24A used as a highlighter behind black text.",
+    
     "Headline font: heavy condensed sans (e.g., Druk / Anton / Acumin Pro Black). Body font: Inter or Helvetica Neue.",
     "Never use the word 'chronic' on a customer-facing graphic. Use FulLife, daily adherence, routine medication, consistency.",
     "Every CTA block must contain BOTH the call line and the app link — never just one.",
@@ -74,7 +74,7 @@ export const FULLIFE_PLAN: ContentPlan = {
         "Sub-line (yellow highlighter behind black): FulLife — your daily adherence partner.\n\n" +
         "Supporting line (small, white): Built in Ghana for Ghanaians on routine medication. Refills delivered. Reminders that work. A care team that already knows you.",
       designDirection:
-        "Full-bleed FulLife teal background. Subtle silhouette of the African continent watermarked at 8% opacity behind the headline. Right-side close-up portrait of a Ghanaian woman (35–55) smiling, looking off-camera. Yellow highlighter strip behind the FulLife sub-line. Bottom 120px white footer strip with full CTA lockup.",
+        "Visual: A subtle silhouette of the African continent with a close-up portrait of a smiling Ghanaian woman.",
       cta: STD_CTA,
       caption:
         "An Africa that lives longer is an Africa that takes its medicine on time. FulLife brings your routine medication, your reminders and your care team into one quiet rhythm — so you can focus on living. Join the FulLife family today.",
@@ -94,12 +94,12 @@ export const FULLIFE_PLAN: ContentPlan = {
         { title: "Slide 1 — Cover", body: "Headline: 5 quiet wins of staying on your meds.\nSub: Brought to you by FulLife." },
         { title: "Slide 2", body: "Headline: A morning that starts on your terms.\nBody: No frantic search for the last pill in the strip." },
         { title: "Slide 3", body: "Headline: Doctor visits that get shorter, not longer.\nBody: Steady numbers mean fewer surprises in consultation." },
-        { title: "Slide 4", body: "Headline: Money that stays in your pocket.\nBody: One emergency admission costs more than a year of consistent care." },
+        { title: "Slide 4", body: "Headline: Health that stays in your control.\nBody: One emergency admission costs more than a year of consistent care." },
         { title: "Slide 5", body: "Headline: Energy for the people you love.\nBody: Your grandchildren, your students, your patients — they need the version of you that took the dose." },
         { title: "Slide 6 — CTA", body: "Headline: Join the FulLife family today.\nCTA block: " + STD_CTA },
       ],
       designDirection:
-        "Slide 1 cover: deep teal background, oversized condensed headline in white, single coral '5' as a graphic anchor on the right. Slides 2–5: alternate cream and teal backgrounds for rhythm; each slide has one large lifestyle photo (Ghanaian subjects) on the right, headline on the left, short body underneath. Slide 6 CTA: coral background, white headline, white CTA block with phone + QR.",
+        "Visual: Oversized typography and lifestyle photos of Ghanaian subjects.",
       cta: STD_CTA,
       caption:
         "The reward for taking your medicine isn't a feeling — it's the day you don't notice anything happened. Five quiet wins of staying on your routine medication, with FulLife. Swipe →",
@@ -120,7 +120,7 @@ export const FULLIFE_PLAN: ContentPlan = {
         "Middle — yellow highlighter behind black text: FulLife refills your routine medication BEFORE it finishes.\n\n" +
         "Bottom CTA strip (white): " + STD_CTA,
       designDirection:
-        "Vertical 9:16. Top half: motion-blurred photo of a delivery rider at dusk (re-use the brand's existing rider photography style). Bottom half: solid coral block with the headline + yellow-highlighter sub-line stacked. Footer 220px tall white strip with full CTA lockup, phone icon, app QR.",
+        "Visual: Motion-blurred photo of a delivery rider at dusk.",
       cta: STD_CTA,
     },
 
@@ -142,7 +142,7 @@ export const FULLIFE_PLAN: ContentPlan = {
         "1. Monthly door-step delivery\n2. Smart reminders that learn your schedule\n3. One care team that already knows your file\n\n" +
         "CTA: " + STD_CTA,
       designDirection:
-        "Cream background. Centre-right: hero shot of a FulLife-branded medication pouch being handed over (gloved pharmacist hand → patient hand). Left column: numbered bullets with coral circular numerals (1, 2, 3) and yellow highlighter behind the bold word in each bullet. Bottom 120px white footer strip with CTA lockup.",
+        "Visual: Hero shot of a FulLife-branded medication pouch being handed from a pharmacist to a patient.",
       cta: STD_CTA,
       caption:
         "Set it once. Live it always. FulLife is the easiest way to never run out of your routine medication again. Enroll today and let us handle the rhythm.",
@@ -167,7 +167,7 @@ export const FULLIFE_PLAN: ContentPlan = {
         { title: "Slide 5 — CTA", body: "Headline: Honour the donors. Honour your dose.\nCTA: " + STD_CTA },
       ],
       designDirection:
-        "Slide 1: deep red/maroon background (one-time exception from teal — the day calls for it), white headline. Slide 2: large red-on-cream stat '1 PINT = 3 LIVES'. Slides 3–4: shift back to FulLife teal with a single large editorial portrait of a Ghanaian subject on the right. Slide 5 CTA: coral background, white CTA block.",
+        "Visual: Large typographic stat '1 PINT = 3 LIVES' and editorial portraits of Ghanaian subjects.",
       cta: STD_CTA,
       caption:
         "Today we honour the people who give blood. Tomorrow — and every day after — give your body the other thing it asks for: your dose, on time. Happy World Blood Donor Day from FulLife and MedPharma.",
@@ -190,7 +190,7 @@ export const FULLIFE_PLAN: ContentPlan = {
         "Supporting line (small, white): Enroll Dad in FulLife today. Monthly delivery, smart reminders, and a care team that picks up the phone — so the man who carried everyone gets carried, gently, in return.\n\n" +
         "CTA: " + STD_CTA,
       designDirection:
-        "Left 60%: warm, golden-hour portrait of a Ghanaian father (55–70) with his adult child — close, candid, hand on shoulder. Right 40%: solid teal block with stacked headline and yellow highlighter sub-line. Bottom 120px white footer strip with full CTA lockup. Add a small 'A FulLife gift for Dad' coral seal in the top-right corner of the photo.",
+        "Visual: Warm, golden-hour portrait of a Ghanaian father with his adult child.",
       cta: STD_CTA,
       caption:
         "He never missed your school run, your graduation, or that one phone call you needed at midnight. This Father's Day, make sure he never misses his dose. Enroll Dad in FulLife today. 💙",
@@ -208,16 +208,16 @@ export const FULLIFE_PLAN: ContentPlan = {
       hook: "The cheapest medical claim is the one that never gets filed.",
       slides: [
         { title: "Page 1 — Cover", body: "Headline: The cheapest medical claim is the one that never gets filed.\nSub: A 5-minute brief for HR leaders — by FulLife, from MedPharma." },
-        { title: "Page 2", body: "Headline: Your highest-cost employees are not the sickest. They are the inconsistent.\nBody: Missed routine medication is the single biggest predictor of an avoidable hospital admission." },
+        { title: "Page 2", body: "Headline: Your most impacted employees are not always the sickest. They are the inconsistent.\nBody: Missed routine medication is the single biggest predictor of an avoidable hospital admission." },
         { title: "Page 3", body: "Headline: One admission can wipe out a year of preventive savings.\nBody: A 3-night admission for an uncontrolled hypertension event in Accra now averages over GHS 9,000 in private care." },
         { title: "Page 4", body: "Headline: FulLife is medication continuity, delivered as an employee benefit.\nBody: Monthly door-step refills · smart reminders · a named care team · in-app e-consultations." },
         { title: "Page 5", body: "Headline: Designed for the schedule of a working professional.\nBody: No queues. No half-day off to visit a pharmacy. Refills land at the office or the gate." },
         { title: "Page 6", body: "Headline: One dashboard for HR. Zero PHI exposure.\nBody: You see uptake and engagement. You never see what anyone is being treated for." },
-        { title: "Page 7", body: "Headline: Three ways to deploy.\nBody: 1. Fully employer-funded · 2. Co-paid · 3. Subsidised enrollment with payroll deduction." },
+        { title: "Page 7", body: "Headline: Three ways to deploy.\nBody: 1. Fully employer-funded · 2. Co-paid · 3. Subsidised enrollment with employer sponsorship." },
         { title: "Page 8 — CTA", body: "Headline: Let's run the numbers for your team.\nBody: Reply to this post or email partnerships@medpharma.care.\nCTA block: " + STD_CTA },
       ],
       designDirection:
-        "Editorial / annual-report look. Cream pages 1, 3, 5, 7. Teal pages 2, 4, 6, 8. Heavy condensed headlines, generous margins (top/bottom 120px, sides 96px). One restrained data callout per page (giant number in coral, small label underneath). Page numbers bottom-right '02 / 08' style. No lifestyle photos until page 4, then one professional portrait of a Ghanaian executive.",
+        "Visual: Editorial style with data callouts and a professional portrait of a Ghanaian executive.",
       cta: STD_CTA,
     },
     {
@@ -236,7 +236,7 @@ export const FULLIFE_PLAN: ContentPlan = {
         { title: "Frame 3", body: "Visual: same person from Frame 1, now mid-laugh with a child / colleague / patient — clearly back in life.\nOverlay text: The point was never the pill. It was the day you got back." },
       ],
       designDirection:
-        "Three images that obviously belong together — same colour grade (warm, slightly desaturated), same overlay text style (white condensed sans, top-aligned), same small FulLife wordmark bottom-right. Shoot or composite all three with Ghanaian subjects.",
+        "Visual: 3-part sequence showing a morning routine, receiving a delivery, and enjoying life.",
       cta: STD_CTA,
       caption:
         "Three frames. One quiet system. Zero missed doses. This is what a FulLife day looks like. Tap to enroll: " + APP,
@@ -260,7 +260,7 @@ export const FULLIFE_PLAN: ContentPlan = {
         "Sub (yellow highlighter behind black): Show up. Take the dose. Stay in the story.\n\n" +
         "Supporting line: Happy Republic Day from FulLife and MedPharma — proudly built in Ghana, for Ghana.",
       designDirection:
-        "Background: vertical gradient from FulLife teal (top) to MedPharma green (bottom). A single subtle Black Star watermarked centre at 12% opacity. Headline left-aligned, large condensed white. Yellow highlighter sub-line directly below. Bottom 120px white footer strip with CTA lockup. No lifestyle photo on this one — let the typography carry it.",
+        "Visual: Typographic focus with a subtle Black Star watermark.",
       cta: STD_CTA,
       caption:
         "A nation is only as strong as the citizens who show up tomorrow. Show up. Take the dose. Stay in the story. Happy Republic Day, Ghana — from FulLife and MedPharma. 🇬🇭",
@@ -284,7 +284,7 @@ export const FULLIFE_PLAN: ContentPlan = {
         { title: "Slide 5 — CTA", body: "Headline: Less remembering. More living.\nCTA block: " + STD_CTA },
       ],
       designDirection:
-        "Cream background throughout for a calm, almost editorial feel. Each slide has ONE oversized icon (drawn in coral line-work, not stock icons): calendar, prescription pad, doorstep package, smiling face. Headline below the icon, body two lines max. Slide 5: flip to teal with white type for the CTA payoff.",
+        "Visual: Clean, editorial style featuring custom line-work icons (calendar, prescription pad, package, smiling face).",
       cta: STD_CTA,
       caption:
         "It's not a subscription. It's a relief. Here's what auto-refill actually means inside FulLife — in 60 seconds. Swipe →",
@@ -307,7 +307,7 @@ export const FULLIFE_PLAN: ContentPlan = {
         "Supporting line: Routine medication, delivered. Reminders that show up. A care team that already knows your history.\n\n" +
         "CTA: " + STD_CTA,
       designDirection:
-        "Solid deep teal background (slightly darker than house teal for the gravity of the day). Centre: a single, restrained coral ribbon graphic (the hepatitis awareness symbol) — not a photo. Type stacked left-aligned. Bottom 120px white footer strip with CTA lockup.",
+        "Visual: A single, restrained coral hepatitis awareness ribbon graphic.",
       cta: STD_CTA,
       caption:
         "The condition is silent. Your routine shouldn't be. On World Hepatitis Day, FulLife stands with every Ghanaian managing a long-term liver condition — and with the families who walk it with them. You are not alone.",
@@ -326,9 +326,466 @@ export const FULLIFE_PLAN: ContentPlan = {
       body:
         "Left 55%: Headline (white on teal): Six months. One quiet promise — never run out.\nSub (yellow highlighter behind black): FulLife monthly newsletter · July 2026 edition.\n\nRight 45%: composite image of a Ghanaian pharmacist + the MedPharma app screen + a smiling older customer — the same composition language as the existing newsletter header in the brand library, just refreshed with the FulLife wordmark dominant top-right.",
       designDirection:
-        "Match the existing FulLife newsletter header style (teal-to-green gradient, app phone mock, Ghanaian model on the left). Update the headline only. Keep the FulLife wordmark large in the top-right and the MedPharma 'Seamless Healthcare' lockup in the bottom-left.",
+        "Visual: Composite of a Ghanaian pharmacist, the MedPharma app screen, and a smiling older customer.",
       cta: STD_CTA,
+    },    {
+      id: "fl-jun-1b",
+      week: "Week of Mon 1 – Sun 7 Jun",
+      date: "Mon 1 Jun 2026",
+      title: "Square Flyer — The hidden risk of missed doses",
+      assetType: "Square Flyer",
+      format: "1080 x 1080 px (1:1)",
+      platforms: [
+        "Instagram",
+        "Facebook",
+        "X / Twitter"
+      ],
+      audience: "Adults 35–65 on routine medication.",
+      hook: "The most dangerous medication is the one you forgot to take.",
+      body: "Headline: The most dangerous medication is the one you forgot to take.\n\nSub (yellow highlighter): FulLife auto-refills mean zero missed days.\n\nSupporting line: Skipping days breaks your rhythm and risks emergencies. FulLife delivers your routine medication every month before your strip is empty.",
+      designDirection: "Visual: A subtle, faded out pharmacy receipt showing a missed refill.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      caption: "The most dangerous medication is the one you forgot to take. Don't let a missed dose become an emergency admission. Enroll in FulLife today for seamless monthly delivery.",
+      hashtags: [
+        "#FulLife",
+        "#DailyAdherence",
+        "#MedPharmaGH",
+        "#SeamlessHealthcare"
+      ]
     },
+    {
+      id: "fl-jun-1c",
+      week: "Week of Mon 1 – Sun 7 Jun",
+      date: "Fri 5 Jun 2026",
+      title: "WhatsApp Status — Doorstep relief",
+      assetType: "Story / WhatsApp Status",
+      format: "1080 x 1920 px (9:16)",
+      platforms: [
+        "WhatsApp Status",
+        "Instagram Stories",
+        "Facebook Stories"
+      ],
+      audience: "Existing customers + WhatsApp broadcast list.",
+      hook: "Friday traffic vs. Doorstep delivery.",
+      body: "Top headline (white on teal): Friday evening Accra traffic?\n\nMiddle (yellow highlighter behind black): Your routine medication is already at your gate.\n\nBottom CTA strip (white): Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      designDirection: "Visual: Motion-blurred red taillights in traffic.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh"
+    },
+    {
+      id: "fl-jun-2a",
+      week: "Week of Mon 8 – Sun 14 Jun",
+      date: "Tue 10 Jun 2026",
+      title: "Educational Carousel — 'I feel fine so I stopped'",
+      assetType: "Educational Carousel",
+      format: "1080 x 1350 px (4:5) · 4 slides",
+      platforms: [
+        "Instagram",
+        "Facebook"
+      ],
+      audience: "People on routine medication who struggle with consistency.",
+      hook: "The most dangerous lie we tell ourselves: 'I feel fine so I stopped taking it.'",
+      slides: [
+        {
+          title: "Slide 1",
+          body: "Headline: The most dangerous phrase in healthcare:\nSub: 'I felt fine, so I stopped taking it.'"
+        },
+        {
+          title: "Slide 2",
+          body: "Headline: Feeling fine means it's working.\nBody: Routine medication controls the condition. It doesn't always cure it."
+        },
+        {
+          title: "Slide 3",
+          body: "Headline: Don't break the streak.\nBody: FulLife delivers your refills automatically, so you never have to make the choice."
+        },
+        {
+          title: "Slide 4 — CTA",
+          body: "Headline: Let's keep the streak going.\nCTA block: Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh"
+        }
+      ],
+      designDirection: "Visual: Typographic focus with a bold graph line showing stability.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      caption: "Feeling fine doesn't mean you're cured. It means the medication is doing its job. Keep the streak going with FulLife auto-refills.",
+      hashtags: [
+        "#FulLife",
+        "#DailyAdherence",
+        "#MedPharmaGH",
+        "#SeamlessHealthcare"
+      ]
+    },
+    {
+      id: "fl-jun-2b",
+      week: "Week of Mon 8 – Sun 14 Jun",
+      date: "Thu 12 Jun 2026",
+      title: "Square Flyer — Water & Routine",
+      assetType: "Square Flyer",
+      format: "1080 x 1080 px (1:1)",
+      platforms: [
+        "Instagram",
+        "Facebook"
+      ],
+      audience: "General FulLife audience.",
+      hook: "A glass of water. A single dose. A whole day won.",
+      body: "Headline: A glass of water. A single dose. A whole day won.\n\nSub (yellow highlighter): FulLife keeps the rhythm simple.\n\nSupporting line: Monthly delivery and smart reminders.",
+      designDirection: "Visual: Simple, elegant top-down shot of a glass of water and a small medication pouch on a wooden table.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      caption: "A glass of water. A single dose. A whole day won. Let FulLife keep your rhythm simple with automatic monthly deliveries.",
+      hashtags: [
+        "#FulLife",
+        "#DailyAdherence",
+        "#MedPharmaGH",
+        "#HealthyGhana"
+      ]
+    },
+    {
+      id: "fl-jun-3a",
+      week: "Week of Mon 15 – Sun 21 Jun",
+      date: "Mon 15 Jun 2026",
+      title: "Square Flyer — Privacy and discretion",
+      assetType: "Square Flyer",
+      format: "1080 x 1080 px (1:1)",
+      platforms: [
+        "Instagram",
+        "Facebook"
+      ],
+      audience: "Professionals who value privacy in their medical care.",
+      hook: "Your health is your business. Delivery is ours.",
+      body: "Headline: Your health is your business. Delivery is ours.\n\nSub (yellow highlighter): FulLife delivers in discreet, secure packaging.\n\nSupporting line: To your office, your gate, or your hands. No labels on the outer package. No questions asked.",
+      designDirection: "Visual: A clean, unbranded brown package being handed over.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      caption: "Your health is your business. FulLife ensures your routine medication arrives securely and discreetly, wherever you are.",
+      hashtags: [
+        "#FulLife",
+        "#MedPharmaGH",
+        "#SeamlessHealthcare"
+      ]
+    },
+    {
+      id: "fl-jun-3b",
+      week: "Week of Mon 15 – Sun 21 Jun",
+      date: "Wed 17 Jun 2026",
+      title: "Square Flyer — Supporting the Caregiver",
+      assetType: "Square Flyer",
+      format: "1080 x 1080 px (1:1)",
+      platforms: [
+        "Instagram",
+        "Facebook",
+        "X / Twitter"
+      ],
+      audience: "Adult children caring for aging parents.",
+      hook: "You do the caring. We'll do the counting.",
+      body: "Headline: You do the caring. We'll do the counting.\n\nSub (yellow highlighter): FulLife takes the mental load off caregivers.\n\nSupporting line: We track the days, schedule the refills, and send the reminders.",
+      designDirection: "Visual: Warm portrait of a Ghanaian daughter holding her elderly mother's hands.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      caption: "Taking care of someone you love is hard enough without having to count pills and chase prescriptions. Let FulLife handle the logistics.",
+      hashtags: [
+        "#FulLife",
+        "#CaregiverSupport",
+        "#MedPharmaGH",
+        "#SeamlessHealthcare"
+      ]
+    },
+    {
+      id: "fl-jun-4a",
+      week: "Week of Mon 22 – Sun 28 Jun",
+      date: "Mon 22 Jun 2026",
+      title: "WhatsApp Status — Traveling",
+      assetType: "Story / WhatsApp Status",
+      format: "1080 x 1920 px (9:16)",
+      platforms: [
+        "WhatsApp Status",
+        "Instagram Stories"
+      ],
+      audience: "Existing customers.",
+      hook: "Traveling this weekend? Let your care team know.",
+      body: "Top headline (white on coral): Traveling this weekend?\n\nMiddle (yellow highlighter): Let your FulLife care team know, and we'll deliver your refill early.\n\nBottom CTA strip (white): Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      designDirection: "Visual: Close-up of a packed suitcase with a passport.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh"
+    },
+    {
+      id: "fl-jun-4b",
+      week: "Week of Mon 22 – Sun 28 Jun",
+      date: "Fri 26 Jun 2026",
+      title: "Square Flyer — Counterfeit check",
+      assetType: "Square Flyer",
+      format: "1080 x 1080 px (1:1)",
+      platforms: [
+        "Instagram",
+        "Facebook",
+        "LinkedIn"
+      ],
+      audience: "Adults concerned about medication authenticity.",
+      hook: "Consistency only works if the medication is real.",
+      body: "Headline: Consistency only works if the medication is real.\n\nSub (yellow highlighter): FulLife guarantees 100% authentic sourcing.\n\nSupporting line: Direct from manufacturers and authorized distributors. No compromises.",
+      designDirection: "Visual: Close-up of a pharmacist's hands inspecting a sealed medication box.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      caption: "Consistency only works if the medication is real. FulLife guarantees 100% authentic sourcing for all routine medications.",
+      hashtags: [
+        "#FulLife",
+        "#MedPharmaGH",
+        "#AuthenticMedication",
+        "#SeamlessHealthcare"
+      ]
+    },
+    {
+      id: "fl-jul-0a",
+      week: "Week of Mon 29 Jun – Sun 5 Jul",
+      date: "Fri 3 Jul 2026",
+      title: "Square Flyer — Math of prevention",
+      assetType: "Square Flyer",
+      format: "1080 x 1080 px (1:1)",
+      platforms: [
+        "Instagram",
+        "Facebook"
+      ],
+      audience: "Value-conscious adults.",
+      hook: "Prevention brings peace.",
+      body: "Headline: Prevention brings peace.\n\nSub (yellow highlighter): The math of routine medication is simple.\n\nSupporting line: A month of consistent medication prevents the stress of a single emergency room visit. Protect your health and your peace of mind with FulLife.",
+      designDirection: "Visual: Large numbers fading into the background behind bold typography.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      caption: "The math is simple: a month of consistent medication prevents the stress of a single emergency room visit. Protect your health and your peace of mind with FulLife.",
+      hashtags: [
+        "#FulLife",
+        "#MedPharmaGH",
+        "#SeamlessHealthcare"
+      ]
+    },
+    {
+      id: "fl-jul-1a",
+      week: "Week of Mon 6 – Sun 12 Jul",
+      date: "Tue 7 Jul 2026",
+      title: "Square Flyer — In-app doctor",
+      assetType: "Square Flyer",
+      format: "1080 x 1080 px (1:1)",
+      platforms: [
+        "Instagram",
+        "Facebook"
+      ],
+      audience: "People wanting more than just delivery.",
+      hook: "Your care team is always awake.",
+      body: "Headline: Your care team is always awake.\n\nSub (yellow highlighter): Connect with a clinician instantly in the MedPharma app.\n\nSupporting line: Have a question about your routine medication? Don't wait for your next appointment. Chat with a professional today.",
+      designDirection: "Visual: A bright phone mockup showing a friendly chat interface with a doctor.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      caption: "Have a question about your routine medication? Your care team is always awake. Connect with a clinician instantly in the MedPharma app.",
+      hashtags: [
+        "#FulLife",
+        "#MedPharmaGH",
+        "#TelehealthGhana",
+        "#SeamlessHealthcare"
+      ]
+    },
+    {
+      id: "fl-jul-1b",
+      week: "Week of Mon 6 – Sun 12 Jul",
+      date: "Thu 9 Jul 2026",
+      title: "Educational Carousel — Dietary habits",
+      assetType: "Educational Carousel",
+      format: "1080 x 1350 px (4:5) · 3 slides",
+      platforms: [
+        "Instagram",
+        "Facebook"
+      ],
+      audience: "Health-conscious individuals on medication.",
+      hook: "The pill works best when the plate supports it.",
+      slides: [
+        {
+          title: "Slide 1",
+          body: "Headline: The pill works best when the plate supports it.\nSub: Nutrition and routine medication."
+        },
+        {
+          title: "Slide 2",
+          body: "Headline: Small changes, big impact.\nBody: Reducing salt and managing portions amplifies the effect of your daily dose."
+        },
+        {
+          title: "Slide 3 — CTA",
+          body: "Headline: Holistic care, delivered.\nCTA block: Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh"
+        }
+      ],
+      designDirection: "Visual: Vibrant shot of fresh vegetables and local Ghanaian healthy foods.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      caption: "The pill works best when the plate supports it. Small dietary changes amplify the effect of your daily dose. Partner with FulLife for holistic care.",
+      hashtags: [
+        "#FulLife",
+        "#MedPharmaGH",
+        "#HealthyGhana",
+        "#SeamlessHealthcare"
+      ]
+    },
+    {
+      id: "fl-jul-1c",
+      week: "Week of Mon 6 – Sun 12 Jul",
+      date: "Sat 11 Jul 2026",
+      title: "WhatsApp Status — Q&A on auto-refill",
+      assetType: "Story / WhatsApp Status",
+      format: "1080 x 1920 px (9:16)",
+      platforms: [
+        "WhatsApp Status",
+        "Instagram Stories"
+      ],
+      audience: "Curious followers.",
+      hook: "Can I pause my auto-refill?",
+      body: "Top — yellow highlighter: Q: Can I pause my auto-refill if I have extra pills?\n\nBottom — white on teal: A: Yes. Your care team tracks your supply, and you can adjust or pause anytime.\n\nBottom CTA strip: Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      designDirection: "Visual: Simple Q&A typographic layout.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh"
+    },
+    {
+      id: "fl-jul-2a",
+      week: "Week of Mon 13 – Sun 19 Jul",
+      date: "Mon 13 Jul 2026",
+      title: "Square Flyer — Exercise safely",
+      assetType: "Square Flyer",
+      format: "1080 x 1080 px (1:1)",
+      platforms: [
+        "Instagram",
+        "Facebook"
+      ],
+      audience: "Active individuals.",
+      hook: "Keep moving. We'll keep the rhythm.",
+      body: "Headline: Keep moving. We'll keep the rhythm.\n\nSub (yellow highlighter): FulLife auto-refills support your active lifestyle.\n\nSupporting line: Managing your condition shouldn't slow you down.",
+      designDirection: "Visual: Energetic shot of a Ghanaian man jogging in the early morning.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      caption: "Managing your condition shouldn't slow you down. Keep moving. We'll keep the rhythm with FulLife auto-refills.",
+      hashtags: [
+        "#FulLife",
+        "#MedPharmaGH",
+        "#ActiveGhana",
+        "#SeamlessHealthcare"
+      ]
+    },
+    {
+      id: "fl-jul-2b",
+      week: "Week of Mon 13 – Sun 19 Jul",
+      date: "Fri 17 Jul 2026",
+      title: "Square Flyer — Consistency over intensity",
+      assetType: "Square Flyer",
+      format: "1080 x 1080 px (1:1)",
+      platforms: [
+        "Instagram",
+        "Facebook",
+        "X / Twitter"
+      ],
+      audience: "General FulLife audience.",
+      hook: "Consistency over intensity.",
+      body: "Headline: Consistency beats intensity.\n\nSub (yellow highlighter): The quiet power of showing up every day.\n\nSupporting line: Health isn't built in a day. It's built in the daily dose.",
+      designDirection: "Visual: Minimalist shot of a single pill resting on a calendar.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      caption: "Health isn't built in a day. It's built in the daily dose. Experience the quiet power of consistency with FulLife.",
+      hashtags: [
+        "#FulLife",
+        "#DailyAdherence",
+        "#MedPharmaGH",
+        "#SeamlessHealthcare"
+      ]
+    },
+    {
+      id: "fl-jul-3a",
+      week: "Week of Mon 20 – Sun 26 Jul",
+      date: "Mon 20 Jul 2026",
+      title: "Square Flyer — Peace of mind",
+      assetType: "Square Flyer",
+      format: "1080 x 1080 px (1:1)",
+      platforms: [
+        "Instagram",
+        "Facebook"
+      ],
+      audience: "Adults seeking stress relief from health management.",
+      hook: "The feeling of one less thing to worry about.",
+      body: "Headline: The feeling of one less thing to worry about.\n\nSub (yellow highlighter): That's the FulLife promise.\n\nSupporting line: Let us remember the dates, coordinate the pharmacy, and navigate the traffic.",
+      designDirection: "Visual: Deeply relaxed portrait of an older Ghanaian woman sitting comfortably with a cup of tea.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      caption: "The feeling of one less thing to worry about. Let FulLife remember the dates, coordinate the pharmacy, and navigate the traffic.",
+      hashtags: [
+        "#FulLife",
+        "#MedPharmaGH",
+        "#SeamlessHealthcare"
+      ]
+    },
+    {
+      id: "fl-jul-3b",
+      week: "Week of Mon 20 – Sun 26 Jul",
+      date: "Wed 22 Jul 2026",
+      title: "Educational Carousel — Alarms vs FulLife",
+      assetType: "Educational Carousel",
+      format: "1080 x 1350 px (4:5) · 3 slides",
+      platforms: [
+        "Instagram",
+        "Facebook"
+      ],
+      audience: "People who rely on basic phone alarms.",
+      hook: "Your alarm tells you to take it. FulLife ensures you have it.",
+      slides: [
+        {
+          title: "Slide 1",
+          body: "Headline: Your phone alarm tells you to take the dose.\nSub: FulLife ensures the dose is actually there."
+        },
+        {
+          title: "Slide 2",
+          body: "Headline: A complete system.\nBody: Smart reminders + guaranteed doorstep delivery before you run out."
+        },
+        {
+          title: "Slide 3 — CTA",
+          body: "Headline: Upgrade your routine.\nCTA block: Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh"
+        }
+      ],
+      designDirection: "Visual: A phone lock screen showing a standard alarm vs the MedPharma app notification.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      caption: "Your phone alarm tells you to take the dose. FulLife ensures the dose is actually there. Upgrade your routine today.",
+      hashtags: [
+        "#FulLife",
+        "#DailyAdherence",
+        "#MedPharmaGH",
+        "#SeamlessHealthcare"
+      ]
+    },
+    {
+      id: "fl-jul-3c",
+      week: "Week of Mon 20 – Sun 26 Jul",
+      date: "Fri 24 Jul 2026",
+      title: "Square Flyer — Caregiver spotlight",
+      assetType: "Square Flyer",
+      format: "1080 x 1080 px (1:1)",
+      platforms: [
+        "Instagram",
+        "Facebook"
+      ],
+      audience: "Caregivers.",
+      hook: "Behind every consistent patient is a tired caregiver. We see you.",
+      body: "Headline: Behind every consistent patient is a tired caregiver.\n\nSub (yellow highlighter): Let FulLife share the load.\n\nSupporting line: We partner with you to ensure your loved ones never miss a dose.",
+      designDirection: "Visual: A candid shot of a younger person handing a glass of water to an older relative.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      caption: "Behind every consistent patient is a tired caregiver. Let FulLife share the load. Enroll your loved ones today.",
+      hashtags: [
+        "#FulLife",
+        "#CaregiverSupport",
+        "#MedPharmaGH",
+        "#SeamlessHealthcare"
+      ]
+    },
+    {
+      id: "fl-jul-4a",
+      week: "Week of Mon 27 Jul – Sun 2 Aug",
+      date: "Sun 2 Aug 2026",
+      title: "Square Flyer — Month-end reflection",
+      assetType: "Square Flyer",
+      format: "1080 x 1080 px (1:1)",
+      platforms: [
+        "Instagram",
+        "Facebook",
+        "X / Twitter"
+      ],
+      audience: "General FulLife audience.",
+      hook: "Another month down. How many days did you remember?",
+      body: "Headline: Another month down. How many days did you remember?\n\nSub (yellow highlighter): With FulLife, the answer is 'Every single one.'\n\nSupporting line: Step into August with a guaranteed routine.",
+      designDirection: "Visual: Abstract graphic of a complete 30-day calendar perfectly checked off.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      caption: "Another month down. Step into August with a guaranteed routine. Join the FulLife family and never miss a day.",
+      hashtags: [
+        "#FulLife",
+        "#DailyAdherence",
+        "#MedPharmaGH",
+        "#SeamlessHealthcare"
+      ]
+    },
+
   ],
 };
 
@@ -346,7 +803,7 @@ export const MEDPHARMA_PLAN: ContentPlan = {
     "Use Black/African models exclusively in lifestyle shots.",
     "No emojis on the artwork itself. Emojis are fine in the social caption only.",
     "Every asset must show: " + CALL + " + app QR/link + the @medpharma / @medpharmagh handle row.",
-    "Primary palette: MedPharma green #1A7F3C, MedPharma blue #0F4FA8, charcoal #1B1B1B, soft cream #FFF6E8, accent yellow #FFD24A as a highlighter behind black text.",
+    
     "Headline font: heavy condensed sans. Body: Inter / Helvetica Neue.",
     "Never make medical claims. Talk about access, delivery, reminders, doctor chat — never outcomes for a specific condition.",
     "If a graphic is for a public holiday, the holiday wish must come BEFORE the product mention. Respect first, sell second.",
@@ -366,13 +823,13 @@ export const MEDPHARMA_PLAN: ContentPlan = {
       slides: [
         { title: "Slide 1 — Cover", body: "Headline: 5 things MedPharma quietly does for you.\nSub: Open the app. We'll do the rest." },
         { title: "Slide 2", body: "Headline: We deliver, anywhere in Ghana.\nBody: Accra, Kumasi, Tamale, your village — same app, same rider network." },
-        { title: "Slide 3", body: "Headline: We talk to a doctor for you, before you pay.\nBody: Chat with Kobikuul, our in-app AI, then a real clinician if you need one." },
+        { title: "Slide 3", body: "Headline: We talk to a doctor for you, before you commit.\nBody: Chat with Kobikuul, our in-app AI, then a real clinician if you need one." },
         { title: "Slide 4", body: "Headline: We remember your prescription so you don't have to.\nBody: One profile. Every refill. No re-uploading the same script." },
-        { title: "Slide 5", body: "Headline: We work with your insurance, your employer, or your wallet.\nBody: Cash, mobile money, NHIA-supported items, corporate billing." },
+        { title: "Slide 5", body: "Headline: We work with your insurance, your employer, or your peace of mind.\nBody: Secure processing, local options, NHIA-supported items, corporate health cover." },
         { title: "Slide 6 — CTA", body: "Headline: One app. The whole pharmacy.\nCTA block: " + STD_CTA },
       ],
       designDirection:
-        "Slide 1: deep MedPharma green background, oversized white condensed headline, '5' in a yellow highlighter circle on the right. Slides 2–5: alternate cream and green for rhythm. Each slide carries ONE simple coral-and-green line illustration on the right (motorbike rider, chat bubble, prescription pad, wallet) — not photos. Slide 6: blue background, white CTA block.",
+        "Visual: Simple line illustrations (motorbike rider, chat bubble, prescription pad, peace of mind).",
       cta: STD_CTA,
       caption:
         "You don't need a pharmacy. You need a system. Five things MedPharma quietly does for you, every single day. Swipe →",
@@ -391,7 +848,7 @@ export const MEDPHARMA_PLAN: ContentPlan = {
       body:
         "Top — yellow highlighter behind black: Question.\nHeadline (white): How fast is MedPharma delivery, really?\n\nBottom — yellow highlighter behind black: Answer.\nHeadline (white): Same-day in Accra. Next-day everywhere else in Ghana.\n\nFooter (white block): " + STD_CTA,
       designDirection:
-        "Vertical 9:16. Background: deep MedPharma green. Match the visual format of the existing 'How do I ensure I never miss my medication?' WhatsApp flyer in the brand library — yellow Question/Answer chips, big white condensed headlines, white CTA block at the bottom. Add a small motion-blurred rider silhouette behind the answer block at 15% opacity for context.",
+        "Visual: Question/Answer typographic layout with a subtle rider silhouette.",
       cta: STD_CTA,
     },
 
@@ -409,7 +866,7 @@ export const MEDPHARMA_PLAN: ContentPlan = {
       body:
         "Headline (white, bottom-left): Time for a refill?\n\nSub (yellow highlighter behind black): We're already on the road.\n\nSupporting line: Order on the MedPharma app or call " + CALL + " — and a rider is dispatched within the hour, anywhere in Ghana.",
       designDirection:
-        "Re-use the brand's existing motion-blurred night-rider photography style (the red-tail-light shot already in the brand library). Type stacked bottom-left in white condensed sans. Yellow highlighter sub-line directly underneath. Bottom 120px white footer strip with full CTA lockup.",
+        "Visual: Motion-blurred night-rider photography (red tail-light).",
       cta: STD_CTA,
       caption:
         "Time for a refill? We're already on the road. Order in the MedPharma app and a rider is dispatched within the hour. 🛵💨",
@@ -428,7 +885,7 @@ export const MEDPHARMA_PLAN: ContentPlan = {
       body:
         "Headline: The first opinion is always free.\n\nSub (yellow highlighter behind black): And it's already in your phone.\n\nSupporting line: Chat with Kobikuul, MedPharma's in-app health assistant, any time. If your case needs a human, we'll connect you to a clinician — no queue, no waiting room.\n\nCTA: " + STD_CTA,
       designDirection:
-        "Match the existing Kobikuul flyer composition (teal-to-green gradient, doctor holding the phone with the app open, Kobikuul mascot bottom-centre). Refresh only the headline. Keep the mascot, keep the doctor portrait, keep the CTA strip.",
+        "Visual: Doctor holding a phone with the app open, featuring the Kobikuul mascot.",
       cta: STD_CTA,
       caption:
         "The first opinion is always free. And it's already in your phone. Meet Kobikuul, MedPharma's in-app health assistant — chat any time, day or night.",
@@ -448,7 +905,7 @@ export const MEDPHARMA_PLAN: ContentPlan = {
       body:
         "Headline (centre, white): Eid Mubarak.\n\nSub (centre, white, lighter weight): May this season bring health, peace, and abundance to you and your loved ones.\n\nFooter line (yellow highlighter behind black): The MedPharma pharmacy and delivery service is open through the holiday — call " + CALL + " any time.",
       designDirection:
-        "Background: deep MedPharma green with subtle gold/cream Islamic geometric pattern at 8% opacity (do not use crescent + star clichés — use a refined geometric tessellation instead). Centred typography. Bottom 120px white footer strip with full CTA lockup. No lifestyle photo on this one — keep it dignified.",
+        "Visual: Refined Islamic geometric tessellation pattern.",
       cta: STD_CTA,
       caption:
         "Eid Mubarak from all of us at MedPharma. May this season bring health, peace and abundance to your home. Our pharmacy and delivery service stay open through the holiday — we're here when you need us.",
@@ -466,15 +923,15 @@ export const MEDPHARMA_PLAN: ContentPlan = {
       hook: "We're past the question of whether Ghanaians will buy medicine online. The question is who they'll trust.",
       slides: [
         { title: "Page 1 — Cover", body: "Headline: The state of online pharmacy in Ghana, 2026.\nSub: A short brief from MedPharma." },
-        { title: "Page 2", body: "Headline: Smartphone penetration crossed the threshold.\nBody: Mobile money is universal. Telehealth is normalised. The infrastructure for digital pharmacy is no longer the bottleneck." },
+        { title: "Page 2", body: "Headline: Smartphone penetration crossed the threshold.\nBody: Digital access is universal. Telehealth is normalised. The infrastructure for digital pharmacy is no longer the bottleneck." },
         { title: "Page 3", body: "Headline: The bottleneck is trust.\nBody: Patients want to know: is the medication real, is the dose right, will it arrive, and will someone pick up the phone if it doesn't." },
         { title: "Page 4", body: "Headline: How MedPharma earns it.\nBody: Licensed pharmacists in every fulfilment centre · cold-chain handling for sensitive items · same-day in Accra, next-day nationwide · in-app clinician chat." },
         { title: "Page 5", body: "Headline: What's next: continuity, not just convenience.\nBody: With FulLife, we're moving from one-off orders to managed monthly care for people on routine medication." },
-        { title: "Page 6", body: "Headline: For partners.\nBody: We work with insurers, employers, and clinics. One integration. Three payment modalities. Real reporting." },
+        { title: "Page 6", body: "Headline: For partners.\nBody: We work with insurers, employers, and clinics. One integration. Three checkout modalities. Real reporting." },
         { title: "Page 7 — CTA", body: "Headline: Let's talk.\nBody: partnerships@medpharma.care\nCTA: " + STD_CTA },
       ],
       designDirection:
-        "Editorial / annual-report look. Cream pages 1, 3, 5, 7. Green pages 2, 4, 6. Heavy condensed headlines, generous margins. One restrained data callout per page (giant number, small label). Page numbers bottom-right '02 / 07'. Use one professional Ghanaian portrait on page 4 and one on page 6 — never more than that.",
+        "Visual: Editorial report style with data callouts and professional Ghanaian portraits.",
       cta: STD_CTA,
     },
 
@@ -493,7 +950,7 @@ export const MEDPHARMA_PLAN: ContentPlan = {
       body:
         "Headline (white): Built in Ghana, for Ghana.\n\nSub (yellow highlighter behind black): Every order, every rider, every refill.\n\nSupporting line: Happy Republic Day from the MedPharma family. The pharmacy is open today — call " + CALL + " or order in the app.",
       designDirection:
-        "Background: vertical gradient from MedPharma green (top) to MedPharma blue (bottom). A single restrained Black Star watermarked centre at 12% opacity. Type left-aligned, large white condensed. Yellow highlighter sub-line underneath. Bottom 120px white footer strip with CTA lockup.",
+        "Visual: Typographic focus with a subtle Black Star watermark.",
       cta: STD_CTA,
       caption:
         "Built in Ghana, for Ghana — every order, every rider, every refill. Happy Republic Day from the MedPharma family. 🇬🇭",
@@ -517,7 +974,7 @@ export const MEDPHARMA_PLAN: ContentPlan = {
         { title: "Slide 5 — CTA", body: "Headline: Buying medicine online should feel safer than the queue, not riskier.\nCTA: " + STD_CTA },
       ],
       designDirection:
-        "Cream backgrounds for slides 1–4 with one restrained green-and-coral line illustration per slide (pharmacist signature, thermometer, receipt with QR). Slide 5: solid green with white type for the payoff. Headlines large condensed black; body in Inter regular underneath.",
+        "Visual: Restrained line illustrations (pharmacist signature, thermometer, receipt with QR).",
       cta: STD_CTA,
       caption:
         "Buying medicine online should feel safer than the queue, not riskier. Three things MedPharma does that the corner shop can't. Swipe →",
@@ -536,7 +993,7 @@ export const MEDPHARMA_PLAN: ContentPlan = {
       body:
         "Headline (left): The whole pharmacy.\nSub (left, slightly smaller): In your pocket.\n\nRight side: phone mock showing the MedPharma app home screen.\n\nBottom (yellow highlighter behind black): Scan to download — or call " + CALL + ".",
       designDirection:
-        "Background: MedPharma green-to-blue diagonal gradient. Left half: stacked condensed type in white. Right half: realistic phone mock-up (use the same phone style as the existing 'New Standard' newsletter header — same device, same shadow, same angle) showing the MedPharma app, NOT mCare branding — be precise. Bottom 120px white footer strip with the QR code enlarged 30% from default + the call line.",
+        "Visual: Realistic phone mock-up showing the MedPharma app home screen.",
       cta: STD_CTA,
       caption:
         "The whole pharmacy. In your pocket. Order medication, chat with a clinician, set refill reminders — all in one app. Scan, download, and we'll do the rest.",
@@ -556,7 +1013,7 @@ export const MEDPHARMA_PLAN: ContentPlan = {
       body:
         "Headline (white): Get tested. Then, if you need to, keep going.\n\nSub (yellow highlighter behind black): MedPharma supports every Ghanaian on long-term liver care.\n\nSupporting line: Talk to a clinician in the app. Refills delivered. A care team that doesn't lose your file.\n\nCTA: " + STD_CTA,
       designDirection:
-        "Background: deep MedPharma green. Centre-left: a single restrained coral awareness ribbon graphic (not a photo). Right: stacked typography. Bottom 120px white footer strip with CTA lockup.",
+        "Visual: A single restrained awareness ribbon graphic.",
       cta: STD_CTA,
       caption:
         "On World Hepatitis Day, the most useful thing we can say is the simplest one: get tested. Then, if you need to, keep going — with us. MedPharma is here for the long road.",
@@ -578,12 +1035,472 @@ export const MEDPHARMA_PLAN: ContentPlan = {
         { title: "Frame 3", body: "Visual: front gate / front door of a typical Accra home, rider handing the bag to the customer.\nOverlay text: 11:02 AM — at your gate. This is normal." },
       ],
       designDirection:
-        "Three images that obviously belong together — same warm colour grade, same overlay text style (white condensed sans, top-aligned), same small MedPharma 'Seamless Healthcare' lockup bottom-right. All Ghanaian subjects. No emojis on the artwork.",
+        "Visual: 3-part sequence showing an order confirmation screen, a pharmacist packing a bag, and a rider delivering it.",
       cta: STD_CTA,
       caption:
         "Order placed at 9:14. At your gate by 11:02. This is normal at MedPharma. Tap to download: " + APP,
       hashtags: ["#MedPharmaGH", "#OnlinePharmacyGhana", "#AccraTikTok", "#GhanaTikTok"],
+    },    {
+      id: "mp-may-3",
+      week: "Week of Mon 26 May – Sun 1 Jun",
+      date: "Thu 29 May 2026",
+      title: "Square Flyer — Intro to the rider network",
+      assetType: "Square Flyer",
+      format: "1080 x 1080 px (1:1)",
+      platforms: [
+        "Instagram",
+        "Facebook",
+        "X / Twitter"
+      ],
+      audience: "General audience.",
+      hook: "Our pharmacy doesn't end at the door. It ends at your gate.",
+      body: "Headline: Our pharmacy doesn't end at the door. It ends at your gate.\n\nSub (yellow highlighter): The MedPharma rider network spans the nation.\n\nSupporting line: Trained, dedicated delivery professionals ensuring your medication arrives safely and on time.",
+      designDirection: "Visual: Dynamic shot of a MedPharma rider on a motorbike, looking forward confidently.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      caption: "Our pharmacy doesn't end at the door. It ends at your gate. Experience seamless nationwide delivery with MedPharma.",
+      hashtags: [
+        "#MedPharmaGH",
+        "#MedicationDelivery",
+        "#SeamlessHealthcare"
+      ]
     },
+    {
+      id: "mp-jun-1a",
+      week: "Week of Mon 1 – Sun 7 Jun",
+      date: "Mon 1 Jun 2026",
+      title: "Educational Carousel — Corporate health cover",
+      assetType: "Educational Carousel",
+      format: "1080 x 1350 px (4:5) · 3 slides",
+      platforms: [
+        "LinkedIn",
+        "Facebook"
+      ],
+      audience: "Corporate employees, HR professionals.",
+      hook: "Use your company health cover without the paperwork.",
+      slides: [
+        {
+          title: "Slide 1",
+          body: "Headline: Use your company health cover without the paperwork.\nSub: Corporate health cover, simplified."
+        },
+        {
+          title: "Slide 2",
+          body: "Headline: Seamless integration.\nBody: We work directly with major insurers and corporate health plans."
+        },
+        {
+          title: "Slide 3 — CTA",
+          body: "Headline: Ask HR about MedPharma today.\nCTA block: Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh"
+        }
+      ],
+      designDirection: "Visual: Professional Ghanaian office workers in lifestyle shots.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      caption: "Use your company health cover without the paperwork. MedPharma integrates directly with major corporate plans.",
+      hashtags: [
+        "#MedPharmaGH",
+        "#CorporateHealth",
+        "#SeamlessHealthcare"
+      ]
+    },
+    {
+      id: "mp-jun-1b",
+      week: "Week of Mon 1 – Sun 7 Jun",
+      date: "Fri 5 Jun 2026",
+      title: "Square Flyer — Spotting real medication",
+      assetType: "Square Flyer",
+      format: "1080 x 1080 px (1:1)",
+      platforms: [
+        "Instagram",
+        "Facebook"
+      ],
+      audience: "Safety-conscious consumers.",
+      hook: "Don't guess with your health.",
+      body: "Headline: Don't guess with your health.\n\nSub (yellow highlighter): MedPharma guarantees 100% authentic medications.\n\nSupporting line: Sourced only from FDA-approved manufacturers and authorized distributors.",
+      designDirection: "Visual: A clean, well-lit shot of pristine medication boxes with a subtle seal of authenticity.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      caption: "Don't guess with your health. MedPharma guarantees 100% authentic medications, sourced only from FDA-approved partners.",
+      hashtags: [
+        "#MedPharmaGH",
+        "#AuthenticMedication",
+        "#SeamlessHealthcare"
+      ]
+    },
+    {
+      id: "mp-jun-2a",
+      week: "Week of Mon 8 – Sun 14 Jun",
+      date: "Mon 8 Jun 2026",
+      title: "Square Flyer — Spotlight on Pharmacists",
+      assetType: "Square Flyer",
+      format: "1080 x 1080 px (1:1)",
+      platforms: [
+        "Instagram",
+        "Facebook",
+        "LinkedIn"
+      ],
+      audience: "General audience.",
+      hook: "Meet the experts behind every order.",
+      body: "Headline: Meet the experts behind every order.\n\nSub (yellow highlighter): A licensed pharmacist signs off on every MedPharma delivery.\n\nSupporting line: Real professionals ensuring safety, accuracy, and care.",
+      designDirection: "Visual: High-quality portrait of a Ghanaian pharmacist in a white coat smiling.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      caption: "Behind every MedPharma order is a licensed professional. Our pharmacists ensure accuracy, safety, and expert care.",
+      hashtags: [
+        "#MedPharmaGH",
+        "#PharmacyExperts",
+        "#SeamlessHealthcare"
+      ]
+    },
+    {
+      id: "mp-jun-2b",
+      week: "Week of Mon 8 – Sun 14 Jun",
+      date: "Sat 13 Jun 2026",
+      title: "WhatsApp Status — Cold-chain delivery",
+      assetType: "Story / WhatsApp Status",
+      format: "1080 x 1920 px (9:16)",
+      platforms: [
+        "WhatsApp Status",
+        "Instagram Stories"
+      ],
+      audience: "Patients needing specialized medications.",
+      hook: "Some medications need a jacket. We provide the cooler.",
+      body: "Top headline (white on green): Temperature-sensitive medication?\n\nMiddle (yellow highlighter): Delivered safely with our cold-chain technology.\n\nBottom CTA strip: Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      designDirection: "Visual: An insulated delivery cooler bag being zipped up.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh"
+    },
+    {
+      id: "mp-jun-3a",
+      week: "Week of Mon 15 – Sun 21 Jun",
+      date: "Mon 15 Jun 2026",
+      title: "Educational Carousel — How Kobikuul works",
+      assetType: "Educational Carousel",
+      format: "1080 x 1350 px (4:5) · 3 slides",
+      platforms: [
+        "Instagram",
+        "Facebook"
+      ],
+      audience: "Tech-savvy users.",
+      hook: "Meet Kobikuul: Your first line of care.",
+      slides: [
+        {
+          title: "Slide 1",
+          body: "Headline: Meet Kobikuul: Your first line of care.\nSub: MedPharma's intelligent in-app health assistant."
+        },
+        {
+          title: "Slide 2",
+          body: "Headline: Instant triage.\nBody: Describe your symptoms and Kobikuul provides immediate, AI-driven guidance."
+        },
+        {
+          title: "Slide 3 — CTA",
+          body: "Headline: Seamless escalation to human doctors.\nCTA block: Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh"
+        }
+      ],
+      designDirection: "Visual: Clean graphics showing the Kobikuul chat interface.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      caption: "Meet Kobikuul: Your first line of care. Get instant, AI-driven guidance right in the MedPharma app.",
+      hashtags: [
+        "#MedPharmaGH",
+        "#Kobikuul",
+        "#HealthTechGhana",
+        "#SeamlessHealthcare"
+      ]
+    },
+    {
+      id: "mp-jun-3b",
+      week: "Week of Mon 15 – Sun 21 Jun",
+      date: "Fri 19 Jun 2026",
+      title: "Square Flyer — Diaspora Care",
+      assetType: "Square Flyer",
+      format: "1080 x 1080 px (1:1)",
+      platforms: [
+        "Instagram",
+        "Facebook"
+      ],
+      audience: "Ghanaians living abroad.",
+      hook: "Care for them from an ocean away.",
+      body: "Headline: Care for them from an ocean away.\n\nSub (yellow highlighter): Order for your loved ones in Ghana, from anywhere in the world.\n\nSupporting line: Secure processing, guaranteed authentic medications, and doorstep delivery.",
+      designDirection: "Visual: Split screen showing a person in a snowy city and an older parent receiving a package in sunny Accra.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      caption: "Care for them from an ocean away. Order authentic medication for your loved ones back home through the MedPharma app.",
+      hashtags: [
+        "#MedPharmaGH",
+        "#DiasporaGhana",
+        "#SeamlessHealthcare"
+      ]
+    },
+    {
+      id: "mp-jun-4a",
+      week: "Week of Mon 22 – Sun 28 Jun",
+      date: "Mon 22 Jun 2026",
+      title: "WhatsApp Status — Step-by-step app ordering",
+      assetType: "Story / WhatsApp Status",
+      format: "1080 x 1920 px (9:16)",
+      platforms: [
+        "WhatsApp Status",
+        "Instagram Stories"
+      ],
+      audience: "New app users.",
+      hook: "3 taps to delivery.",
+      body: "Top: 1. Search. 2. Add to Cart. 3. Checkout.\n\nMiddle (yellow highlighter): It's that simple.\n\nBottom CTA strip: Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      designDirection: "Visual: 3 simple screenshots of the app ordering process.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh"
+    },
+    {
+      id: "mp-jun-4b",
+      week: "Week of Mon 22 – Sun 28 Jun",
+      date: "Sat 27 Jun 2026",
+      title: "Square Flyer — Avoiding the queue",
+      assetType: "Square Flyer",
+      format: "1080 x 1080 px (1:1)",
+      platforms: [
+        "Instagram",
+        "Facebook",
+        "X / Twitter"
+      ],
+      audience: "Busy professionals.",
+      hook: "Your time is too valuable for the pharmacy queue.",
+      body: "Headline: Your time is too valuable for the pharmacy queue.\n\nSub (yellow highlighter): Tap, order, and get back to your day.\n\nSupporting line: MedPharma delivers.",
+      designDirection: "Visual: Blurry background of a long queue with a clear phone showing the MedPharma app in the foreground.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      caption: "Your time is too valuable for the pharmacy queue. Tap, order, and get back to your day with MedPharma.",
+      hashtags: [
+        "#MedPharmaGH",
+        "#OnlinePharmacyGhana",
+        "#SeamlessHealthcare"
+      ]
+    },
+    {
+      id: "mp-jul-0a",
+      week: "Week of Mon 29 Jun – Sun 5 Jul",
+      date: "Mon 29 Jun 2026",
+      title: "Square Flyer — Same-day Accra",
+      assetType: "Square Flyer",
+      format: "1080 x 1080 px (1:1)",
+      platforms: [
+        "Instagram",
+        "Facebook"
+      ],
+      audience: "Accra residents.",
+      hook: "Need it today in Accra? Done.",
+      body: "Headline: Need it today in Accra? Done.\n\nSub (yellow highlighter): Same-day delivery across Greater Accra.\n\nSupporting line: Fast, reliable, and secure.",
+      designDirection: "Visual: Bright, sunny shot of an iconic Accra landmark.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      caption: "Need it today in Accra? Done. Enjoy same-day delivery across Greater Accra with MedPharma.",
+      hashtags: [
+        "#MedPharmaGH",
+        "#AccraDelivery",
+        "#SeamlessHealthcare"
+      ]
+    },
+    {
+      id: "mp-jul-0b",
+      week: "Week of Mon 29 Jun – Sun 5 Jul",
+      date: "Fri 3 Jul 2026",
+      title: "Square Flyer — Next-day Nationwide",
+      assetType: "Square Flyer",
+      format: "1080 x 1080 px (1:1)",
+      platforms: [
+        "Instagram",
+        "Facebook"
+      ],
+      audience: "Residents outside Accra.",
+      hook: "From Kumasi to Tamale: We deliver.",
+      body: "Headline: From Kumasi to Tamale: We deliver.\n\nSub (yellow highlighter): Next-day delivery everywhere else in Ghana.\n\nSupporting line: Seamless healthcare, no matter your region.",
+      designDirection: "Visual: Abstract, stylized map of Ghana with delivery pins.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      caption: "From Kumasi to Tamale: We deliver. Enjoy reliable next-day delivery everywhere outside Accra with MedPharma.",
+      hashtags: [
+        "#MedPharmaGH",
+        "#GhanaDelivery",
+        "#SeamlessHealthcare"
+      ]
+    },
+    {
+      id: "mp-jul-1a",
+      week: "Week of Mon 6 – Sun 12 Jul",
+      date: "Mon 6 Jul 2026",
+      title: "Square Flyer — The Batch Number",
+      assetType: "Square Flyer",
+      format: "1080 x 1080 px (1:1)",
+      platforms: [
+        "Instagram",
+        "Facebook",
+        "LinkedIn"
+      ],
+      audience: "Detail-oriented consumers.",
+      hook: "Traceability is transparency.",
+      body: "Headline: Traceability is transparency.\n\nSub (yellow highlighter): Every MedPharma receipt includes a manufacturer batch number.\n\nSupporting line: Because you deserve to know exactly what you're taking.",
+      designDirection: "Visual: Macro shot of a clean receipt highlighting the batch number field.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      caption: "Traceability is transparency. Every MedPharma receipt includes a manufacturer batch number, so you know exactly what you're taking.",
+      hashtags: [
+        "#MedPharmaGH",
+        "#SafeMedication",
+        "#SeamlessHealthcare"
+      ]
+    },
+    {
+      id: "mp-jul-1b",
+      week: "Week of Mon 6 – Sun 12 Jul",
+      date: "Fri 10 Jul 2026",
+      title: "WhatsApp Status — Flexible checkout",
+      assetType: "Story / WhatsApp Status",
+      format: "1080 x 1920 px (9:16)",
+      platforms: [
+        "WhatsApp Status",
+        "Instagram Stories"
+      ],
+      audience: "Everyone.",
+      hook: "Choose your method.",
+      body: "Top headline: Digital Wallets, Cards, or Corporate Insurance?\n\nMiddle (yellow highlighter): Choose your method, securely in the app.\n\nBottom CTA strip: Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      designDirection: "Visual: Icons representing MoMo, Visa/Mastercard, and an insurance card.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh"
+    },
+    {
+      id: "mp-jul-2a",
+      week: "Week of Mon 13 – Sun 19 Jul",
+      date: "Mon 13 Jul 2026",
+      title: "Square Flyer — Customer testimonial",
+      assetType: "Square Flyer",
+      format: "1080 x 1080 px (1:1)",
+      platforms: [
+        "Instagram",
+        "Facebook"
+      ],
+      audience: "Skeptical buyers.",
+      hook: "Don't just take our word for it.",
+      body: "Headline: 'They delivered to my office in 45 minutes.'\n\nSub (yellow highlighter): Real stories from MedPharma users.\n\nSupporting line: Experience seamless healthcare for yourself.",
+      designDirection: "Visual: Smiling portrait of a professional Ghanaian woman.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      caption: "Don't just take our word for it. Experience seamless healthcare and lightning-fast delivery for yourself.",
+      hashtags: [
+        "#MedPharmaGH",
+        "#CustomerLove",
+        "#SeamlessHealthcare"
+      ]
+    },
+    {
+      id: "mp-jul-2b",
+      week: "Week of Mon 13 – Sun 19 Jul",
+      date: "Thu 16 Jul 2026",
+      title: "Square Flyer — Authenticity guarantee",
+      assetType: "Square Flyer",
+      format: "1080 x 1080 px (1:1)",
+      platforms: [
+        "Instagram",
+        "Facebook",
+        "X / Twitter"
+      ],
+      audience: "General audience.",
+      hook: "Zero fakes. Zero compromises.",
+      body: "Headline: Zero fakes. Zero compromises.\n\nSub (yellow highlighter): The MedPharma Authenticity Guarantee.\n\nSupporting line: Direct sourcing. Rigorous checks. Unwavering standards.",
+      designDirection: "Visual: A bold, gold-foiled '100% Authentic' badge graphic.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      caption: "Zero fakes. Zero compromises. With the MedPharma Authenticity Guarantee, you never have to second-guess your medication.",
+      hashtags: [
+        "#MedPharmaGH",
+        "#SafeMedication",
+        "#SeamlessHealthcare"
+      ]
+    },
+    {
+      id: "mp-jul-2c",
+      week: "Week of Mon 13 – Sun 19 Jul",
+      date: "Sat 18 Jul 2026",
+      title: "Educational Carousel — E-consultation value",
+      assetType: "Educational Carousel",
+      format: "1080 x 1350 px (4:5) · 3 slides",
+      platforms: [
+        "Instagram",
+        "Facebook"
+      ],
+      audience: "Busy individuals feeling unwell.",
+      hook: "Skip the waiting room.",
+      slides: [
+        {
+          title: "Slide 1",
+          body: "Headline: Skip the waiting room.\nSub: See a doctor from your couch."
+        },
+        {
+          title: "Slide 2",
+          body: "Headline: Licensed clinicians, on demand.\nBody: Secure video and text consultations right in the MedPharma app."
+        },
+        {
+          title: "Slide 3 — CTA",
+          body: "Headline: Care that comes to you.\nCTA block: Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh"
+        }
+      ],
+      designDirection: "Visual: Professional doctor looking at a webcam or phone screen.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      caption: "Skip the waiting room. See a licensed clinician directly from the MedPharma app and get your prescriptions delivered instantly.",
+      hashtags: [
+        "#MedPharmaGH",
+        "#TelehealthGhana",
+        "#SeamlessHealthcare"
+      ]
+    },
+    {
+      id: "mp-jul-3a",
+      week: "Week of Mon 20 – Sun 26 Jul",
+      date: "Tue 21 Jul 2026",
+      title: "WhatsApp Status — Prescription upload",
+      assetType: "Story / WhatsApp Status",
+      format: "1080 x 1920 px (9:16)",
+      platforms: [
+        "WhatsApp Status",
+        "Instagram Stories"
+      ],
+      audience: "App users with physical prescriptions.",
+      hook: "Snap a picture. Get your meds.",
+      body: "Top: Have a physical prescription?\n\nMiddle (yellow highlighter): Snap a picture and upload it securely in the app.\n\nBottom CTA strip: Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      designDirection: "Visual: A phone taking a photo of a handwritten doctor's prescription.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh"
+    },
+    {
+      id: "mp-jul-3b",
+      week: "Week of Mon 20 – Sun 26 Jul",
+      date: "Thu 23 Jul 2026",
+      title: "Square Flyer — Insurance integration",
+      assetType: "Square Flyer",
+      format: "1080 x 1080 px (1:1)",
+      platforms: [
+        "Instagram",
+        "Facebook",
+        "LinkedIn"
+      ],
+      audience: "Insured individuals.",
+      hook: "We accept your health insurance.",
+      body: "Headline: We accept your health insurance.\n\nSub (yellow highlighter): Seamless processing via NHIS and major private insurers.\n\nSupporting line: Enter your details once. We handle the claims.",
+      designDirection: "Visual: A stylized grid of partner insurance logos.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      caption: "Did you know MedPharma accepts NHIS and major private health insurance? Enter your details once, and let us handle the claims.",
+      hashtags: [
+        "#MedPharmaGH",
+        "#HealthInsuranceGhana",
+        "#SeamlessHealthcare"
+      ]
+    },
+    {
+      id: "mp-jul-4a",
+      week: "Week of Mon 27 Jul – Sun 2 Aug",
+      date: "Sat 1 Aug 2026",
+      title: "Square Flyer — Future of healthcare",
+      assetType: "Square Flyer",
+      format: "1080 x 1080 px (1:1)",
+      platforms: [
+        "Instagram",
+        "Facebook",
+        "X / Twitter"
+      ],
+      audience: "General audience.",
+      hook: "The future of healthcare is in your pocket.",
+      body: "Headline: The future of healthcare is in your pocket.\n\nSub (yellow highlighter): MedPharma: Pharmacy, Clinic, and Delivery in one app.\n\nSupporting line: Step into the new standard of care.",
+      designDirection: "Visual: A futuristic, glowing phone displaying the MedPharma logo.",
+      cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
+      caption: "The future of healthcare is in your pocket. Experience the new standard of care with the MedPharma app.",
+      hashtags: [
+        "#MedPharmaGH",
+        "#FutureOfHealth",
+        "#SeamlessHealthcare"
+      ]
+    },
+
   ],
 };
 
