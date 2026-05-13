@@ -128,7 +128,6 @@ export const VIDEO_BRIEFS: VideoBrief[] = [
     core: "She no dey play with her routine meds. That's why she still dey dance with her grandkids. Be like Grandma.",
     visuals: "Elderly Ghanaian woman dancing with children -> Close-up of her smiling face -> Showing her pill organizer.",
     aiPrompt: "Vibrant footage of an elderly Ghanaian woman in Kente cloth dancing joyfully with small children. Warm sunlight. 4k.",
-    aiPrompt: "Vibrant footage of an elderly Ghanaian woman in Kente cloth dancing joyfully with small children. Warm sunlight. 4k.",
     freepikKeywords: "Elderly African woman dancing, Happy grandkids, Pill organizer"
   },
   {

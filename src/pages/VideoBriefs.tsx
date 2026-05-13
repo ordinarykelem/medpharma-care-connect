@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Video, Search, Brain, Heart, Activity, ShieldCheck, Zap, Ghost } from "lucide-react";
 import { VIDEO_BRIEFS, type VideoBrief } from "@/lib/videoBriefs";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 const CATEGORY_ICONS: Record<string, any> = {
   "Condition Deep-Dive": Activity,
@@ -20,39 +21,74 @@ const CATEGORY_ICONS: Record<string, any> = {
 function VideoBriefCard({ b }: { b: VideoBrief }) {
   const Icon = CATEGORY_ICONS[b.category] ?? Video;
   const [status, setStatus] = useState<"idle" | "generating" | "success" | "error">("idle");
+  const [videoUrl, setVideoUrl] = useState<string | null>(null);
+  const [taskId, setTaskId] = useState<string | null>(null);
 
   const copyPrompt = () => {
     navigator.clipboard.writeText(b.aiPrompt);
     toast.success(`AI Prompt for ${b.id} copied!`);
   };
 
+  const pickVideoUrl = (d: any): string | null => {
+    return (
+      d?.video?.url ||
+      d?.result?.video?.url ||
+      d?.data?.video?.url ||
+      d?.data?.generated?.[0] ||
+      d?.generated?.[0] ||
+      d?.output?.[0] ||
+      d?.url ||
+      null
+    );
+  };
+
+  const pollTask = async (id: string) => {
+    for (let i = 0; i < 60; i++) {
+      await new Promise((r) => setTimeout(r, 5000));
+      const { data, error } = await supabase.functions.invoke("magnific-video", {
+        body: { action: "status", task_id: id, model: "wan-2-5-t2v-1080p" },
+      });
+      if (error) throw new Error(error.message);
+      const s = (data?.status || data?.data?.status || "").toUpperCase();
+      const url = pickVideoUrl(data);
+      if (url) {
+        setVideoUrl(url);
+        setStatus("success");
+        toast.success(`Video ready for ${b.id}!`);
+        return;
+      }
+      if (s === "FAILED" || s === "ERROR") {
+        throw new Error(data?.error?.message || "Generation failed");
+      }
+    }
+    throw new Error("Timed out after 5 minutes — check Magnific dashboard");
+  };
+
   const triggerGeneration = async () => {
     setStatus("generating");
-    const API_KEY = "FPSXbd8cb3d6a1104128b7d8da98daebd1c0"; // The user's Freepik/Magnific Key
-    
+    setVideoUrl(null);
     try {
-      // Using the Vite Proxy to bypass CORS issues on localhost
-      const response = await fetch("/api/magnific/v1/ai/text-to-video/wan-2-5-t2v-1080p", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "x-magnific-api-key": API_KEY, // Magnific uses this header
-        },
-        body: JSON.stringify({
+      const { data, error } = await supabase.functions.invoke("magnific-video", {
+        body: {
+          action: "generate",
+          model: "wan-2-5-t2v-1080p",
           prompt: b.aiPrompt,
           aspect_ratio: "9:16",
-        }),
+          duration: 5,
+        },
       });
-
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}));
-        throw new Error(errorData.message || `API Error: ${response.status}`);
+      if (error) throw new Error(error.message);
+      if (data?.error) throw new Error(typeof data.error === "string" ? data.error : data.error.message || "API error");
+      const id = data?.id || data?.task_id || data?.data?.id || data?.data?.task_id;
+      if (!id) {
+        // Maybe it returned the URL directly (sync)
+        const url = pickVideoUrl(data);
+        if (url) { setVideoUrl(url); setStatus("success"); toast.success("Video ready!"); return; }
+        throw new Error("No task_id returned");
       }
-      
-      const data = await response.json();
-      setStatus("success");
-      toast.success(`Generation started for ${b.id}! Task ID: ${data.data?.id || data.id}`);
-      console.log("Magnific Response:", data);
+      setTaskId(id);
+      toast.success(`Generation started — polling for ${b.id}`);
+      await pollTask(id);
     } catch (err: any) {
       console.error("Video Generation Error:", err);
       setStatus("error");
@@ -86,6 +122,13 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
         </div>
       </CardHeader>
       <CardContent className="space-y-4">
+        {videoUrl && (
+          <video
+            src={videoUrl}
+            controls
+            className="w-full rounded-lg border border-primary/20"
+          />
+        )}
         <div className="space-y-2">
           <div className="text-[10px] uppercase tracking-widest text-muted-foreground font-semibold">Script (15s)</div>
           <p className="text-xs text-foreground/80 leading-relaxed italic border-l-2 border-primary/30 pl-3">
@@ -111,8 +154,18 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
             ) : (
               <Video className="h-3 w-3 mr-2" />
             )}
-            Trigger AI Generation
+            {status === "generating" ? "Generating… (~1–3 min)" : videoUrl ? "Regenerate" : "Trigger AI Generation"}
           </Button>
+          {videoUrl && (
+            <Button
+              variant="outline"
+              size="sm"
+              className="w-full text-[10px] h-8"
+              onClick={() => window.open(videoUrl, "_blank")}
+            >
+              Download / Open Video
+            </Button>
+          )}
           
           <Button 
             variant="ghost" 
