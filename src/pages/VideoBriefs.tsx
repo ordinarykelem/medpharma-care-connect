@@ -49,6 +49,9 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
         body: { action: "status", task_id: id, model: "wan-2-5-t2v-1080p" },
       });
       if (error) throw new Error(error.message);
+      if (data?.ok === false) {
+        throw new Error(data?.error?.message || data?.error || data?.message || `Upstream ${data?.upstream_status || ""}`);
+      }
       const s = (data?.status || data?.data?.status || "").toUpperCase();
       const url = pickVideoUrl(data);
       if (url) {
@@ -78,7 +81,10 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
         },
       });
       if (error) throw new Error(error.message);
-      if (data?.error) throw new Error(typeof data.error === "string" ? data.error : data.error.message || "API error");
+      if (data?.ok === false || data?.error) {
+        const msg = typeof data?.error === "string" ? data.error : (data?.error?.message || data?.message || `Upstream ${data?.upstream_status || ""}`);
+        throw new Error(msg || "API error");
+      }
       const id = data?.id || data?.task_id || data?.data?.id || data?.data?.task_id;
       if (!id) {
         // Maybe it returned the URL directly (sync)
