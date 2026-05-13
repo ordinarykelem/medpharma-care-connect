@@ -39,17 +39,19 @@ Deno.serve(async (req) => {
     if (action === "status") {
       const taskId = body.task_id;
       if (!taskId) {
-        return new Response(JSON.stringify({ error: "task_id required" }), {
-          status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" },
+        return new Response(JSON.stringify({ ok: false, error: "task_id required" }), {
+          status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" },
         });
       }
       const resp = await fetch(`${BASE}${endpoint}/${taskId}`, {
         headers: { "x-magnific-api-key": apiKey },
       });
-      const data = await resp.json().catch(() => ({}));
-      return new Response(JSON.stringify(data), {
-        status: resp.status, headers: { ...corsHeaders, "Content-Type": "application/json" },
-      });
+      const text = await resp.text();
+      let data: any; try { data = JSON.parse(text); } catch { data = { raw: text }; }
+      return new Response(
+        JSON.stringify({ ok: resp.ok, upstream_status: resp.status, ...data }),
+        { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } },
+      );
     }
 
     // generate
@@ -68,13 +70,15 @@ Deno.serve(async (req) => {
       },
       body: JSON.stringify(payload),
     });
-    const data = await resp.json().catch(() => ({}));
-    return new Response(JSON.stringify(data), {
-      status: resp.status, headers: { ...corsHeaders, "Content-Type": "application/json" },
-    });
+    const text = await resp.text();
+    let data: any; try { data = JSON.parse(text); } catch { data = { raw: text }; }
+    return new Response(
+      JSON.stringify({ ok: resp.ok, upstream_status: resp.status, ...data }),
+      { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } },
+    );
   } catch (e) {
-    return new Response(JSON.stringify({ error: (e as Error).message }), {
-      status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" },
+    return new Response(JSON.stringify({ ok: false, error: (e as Error).message }), {
+      status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" },
     });
   }
 });
