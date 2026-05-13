@@ -8,6 +8,13 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    proxy: {
+      '/api/magnific': {
+        target: 'https://api.magnific.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/magnific/, ''),
+      }
+    },
     hmr: {
       overlay: false,
     },

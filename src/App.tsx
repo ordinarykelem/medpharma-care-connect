@@ -16,6 +16,7 @@ import Gbp from "./pages/Gbp.tsx";
 import Tasks from "./pages/Tasks.tsx";
 import Brand from "./pages/Brand.tsx";
 import ContentPlanPage from "./pages/ContentPlanPage.tsx";
+import VideoBriefs from "./pages/VideoBriefs.tsx";
 import { AuthProvider } from "./hooks/useAuth";
 
 const queryClient = new QueryClient();
@@ -40,6 +41,7 @@ const App = () => (
               <Route path="/gbp" element={<Gbp />} />
               <Route path="/tasks" element={<Tasks />} />
               <Route path="/brand" element={<Brand />} />
+              <Route path="/videos" element={<VideoBriefs />} />
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
