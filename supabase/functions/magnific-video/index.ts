@@ -1,4 +1,5 @@
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
+import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 
 const CORS_HEADERS = {
   "Access-Control-Allow-Origin": "*",
@@ -36,7 +37,7 @@ const MODEL_ENDPOINTS: Record<string, string> = {
   "elevenlabs-tts": "/v1/ai/audio/text-to-speech",
 };
 
-Deno.serve(async (req) => {
+serve(async (req) => {
   // Always return 200 for OPTIONS to handle preflight
   if (req.method === "OPTIONS") return new Response(null, { headers: CORS_HEADERS });
 
