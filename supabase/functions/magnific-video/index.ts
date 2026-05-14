@@ -38,7 +38,8 @@ const parseUpstreamResponse = async (resp: Response) => {
 const MODEL_ENDPOINTS: Record<string, string> = {
   "wan-2-5-t2v-1080p": "/v1/ai/text-to-video/wan-2-5-t2v-1080p",
   "ltx-2-pro": "/v1/ai/text-to-video/ltx-2-pro",
-  "elevenlabs-tts": "/v1/ai/audio/text-to-speech", // Corrected path based on Magnific's /audio/ grouping
+  "kling-v2-6-pro": "/v1/ai/text-to-video/kling-v2-6-pro",
+  "elevenlabs-tts": "/v1/ai/audio/text-to-speech",
 };
 
 Deno.serve(async (req) => {
@@ -80,10 +81,17 @@ Deno.serve(async (req) => {
     }
 
     // generate
+    // Build prompt with native voiceover instruction for Kling 2.6 Pro
+    const isKling = model.includes("kling");
+    const finalPrompt = isKling && body.script 
+      ? `Voiceover Script: "${body.script}". Visual Direction: ${body.prompt}` 
+      : body.prompt;
+
     const payload: Record<string, unknown> = {
-      prompt: body.prompt,
+      prompt: finalPrompt,
       aspect_ratio: body.aspect_ratio || "9:16",
-      duration: Number(body.duration || 10), // Max 10s for WAN 2.5, using Number type
+      duration: Number(body.duration || 10),
+      sound: true, // Enable native audio co-generation (supported by Kling 2.6 Pro)
       enable_prompt_expansion: body.enable_prompt_expansion ?? true,
     };
 
