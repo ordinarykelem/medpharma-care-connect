@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { PageHeader } from "@/components/PageHeader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -59,6 +59,7 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
   const [taskId, setTaskId] = useState<string | null>(() => localStorage.getItem(storageKey));
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [elapsed, setElapsed] = useState(0);
+  const resumeStartedRef = useRef(false);
 
   const copyPrompt = () => {
     navigator.clipboard.writeText(b.aiPrompt);
@@ -154,6 +155,20 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
       toast.error(`Failed: ${err.message || "Unknown error"}`);
     }
   };
+
+  // Resume polling on mount if a task was in flight.
+  useEffect(() => {
+    if (!taskId || videoUrl || resumeStartedRef.current) return;
+    resumeStartedRef.current = true;
+    setStatus("generating");
+    pollTask(taskId).catch((err) => {
+      console.error("Video Generation Error:", err);
+      setStatus("error");
+      setErrorMessage(err.message || "Unknown error");
+      toast.error(`Failed: ${err.message || "Unknown error"}`);
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <Card className="overflow-hidden border-border/40 bg-card/50 backdrop-blur-sm hover:bg-card/80 transition-all duration-300 group">
