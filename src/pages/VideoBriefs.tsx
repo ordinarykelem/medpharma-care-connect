@@ -65,6 +65,8 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [elapsed, setElapsed] = useState(0);
   const resumeStartedRef = useRef(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   const copyPrompt = () => {
     navigator.clipboard.writeText(b.aiPrompt);
@@ -207,6 +209,21 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
     }
   };
 
+  const syncPlayback = () => {
+    if (!videoRef.current || !audioRef.current) return;
+    
+    // Simple sync: make audio follow video
+    videoRef.current.onplay = () => audioRef.current?.play();
+    videoRef.current.onpause = () => audioRef.current?.pause();
+    videoRef.current.onseeking = () => {
+      if (audioRef.current) audioRef.current.currentTime = videoRef.current!.currentTime;
+    };
+  };
+
+  useEffect(() => {
+    syncPlayback();
+  }, [videoUrl, voiceUrl]);
+
   // Resume polling on mount if a task was in flight.
   useEffect(() => {
     if (!taskId || videoUrl || resumeStartedRef.current) return;
@@ -248,16 +265,26 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
       </CardHeader>
       <CardContent className="space-y-4">
         {videoUrl && (
-          <video
-            src={videoUrl}
-            controls
-            className="w-full rounded-lg border border-primary/20 aspect-[9/16] bg-black"
-          />
+          <div className="relative group/video">
+            <video
+              ref={videoRef}
+              src={videoUrl}
+              controls
+              className="w-full rounded-lg border border-primary/20 aspect-[9/16] bg-black"
+            />
+            {voiceUrl && (
+              <div className="absolute top-2 right-2 flex gap-1">
+                <Badge variant="default" className="bg-green-600 border-none text-[8px] animate-pulse">
+                  Audio Synced
+                </Badge>
+              </div>
+            )}
+          </div>
         )}
         {voiceUrl && (
           <div className="space-y-1">
             <div className="text-[10px] uppercase tracking-widest text-muted-foreground font-semibold">Audio Voiceover</div>
-            <audio src={voiceUrl} controls className="w-full h-8" />
+            <audio ref={audioRef} src={voiceUrl} controls className="w-full h-8" />
           </div>
         )}
         <div className="space-y-2">
