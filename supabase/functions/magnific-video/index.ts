@@ -19,9 +19,11 @@ const parseUpstreamResponse = async (resp: Response) => {
   }
 
   const message = String(data?.error?.message || data?.message || data?.error || "").toLowerCase();
+  console.log(`Magnific Upstream Status: ${resp.status}`);
   return {
     ok: resp.ok,
     upstream_status: resp.status,
+    upstream_body: data,
     retry_after: resp.headers.get("retry-after"),
     retryable:
       RETRYABLE_UPSTREAM_STATUSES.has(resp.status) ||

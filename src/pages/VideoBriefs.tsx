@@ -142,8 +142,10 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
       });
       if (error) throw new Error(error.message);
       if (data?.ok === false || data?.error) {
-        const msg = typeof data?.error === "string" ? data.error : (data?.error?.message || data?.message || `Upstream ${data?.upstream_status || ""}`);
-        throw new Error(msg || "API error");
+        const msg = typeof data?.error === "string" 
+          ? data.error 
+          : (data?.error?.message || data?.message || data?.upstream_body?.message || `Upstream Error: ${data?.upstream_status || "Unknown"}`);
+        throw new Error(msg);
       }
       const id = data?.id || data?.task_id || data?.data?.id || data?.data?.task_id;
       if (!id) {
