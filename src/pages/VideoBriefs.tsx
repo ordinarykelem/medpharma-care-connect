@@ -57,6 +57,7 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
   );
   const [videoUrl, setVideoUrl] = useState<string | null>(() => localStorage.getItem(urlKey));
   const [taskId, setTaskId] = useState<string | null>(() => localStorage.getItem(storageKey));
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [elapsed, setElapsed] = useState(0);
 
   const copyPrompt = () => {
@@ -78,18 +79,26 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
   };
 
   const pollTask = async (id: string) => {
-    // Poll for up to 20 minutes (1080p can take 5–15 min)
+    // Poll gently for up to 25 minutes. Magnific can temporarily block rapid status checks by IP.
     const start = Date.now();
-    for (let i = 0; i < 240; i++) {
-      await new Promise((r) => setTimeout(r, 5000));
+    let retryableErrors = 0;
+    for (let i = 0; i < POLL_MAX_ATTEMPTS; i++) {
+      await waitForStatusSlot();
       setElapsed(Math.floor((Date.now() - start) / 1000));
       const { data, error } = await supabase.functions.invoke("magnific-video", {
         body: { action: "status", task_id: id, model: "wan-2-5-t2v-1080p" },
       });
       if (error) throw new Error(error.message);
       if (data?.ok === false) {
-        throw new Error(data?.error?.message || data?.error || data?.message || `Upstream ${data?.upstream_status || ""}`);
+        if (isRetryableApiResponse(data) && retryableErrors < 12) {
+          retryableErrors += 1;
+          setErrorMessage(`Magnific is temporarily limiting status checks. Waiting before retry ${retryableErrors}/12…`);
+          await wait(Math.min(60_000, POLL_INTERVAL_MS * retryableErrors));
+          continue;
+        }
+        throw new Error(getApiMessage(data));
       }
+      setErrorMessage(null);
       const s = (data?.status || data?.data?.status || "").toUpperCase();
       const url = pickVideoUrl(data);
       if (url) {
@@ -104,12 +113,14 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
         throw new Error(data?.error?.message || "Generation failed");
       }
     }
-    throw new Error("Timed out after 20 minutes — check Magnific dashboard");
+    throw new Error("Timed out after 25 minutes — check your Magnific account tasks");
   };
 
   const triggerGeneration = async () => {
     setStatus("generating");
     setVideoUrl(null);
+    setErrorMessage(null);
+    setElapsed(0);
     try {
       const { data, error } = await supabase.functions.invoke("magnific-video", {
         body: {
@@ -117,7 +128,7 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
           model: "wan-2-5-t2v-1080p",
           prompt: b.aiPrompt,
           aspect_ratio: "9:16",
-          duration: 5,
+          duration: "5",
         },
       });
       if (error) throw new Error(error.message);
@@ -139,22 +150,10 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
     } catch (err: any) {
       console.error("Video Generation Error:", err);
       setStatus("error");
+      setErrorMessage(err.message || "Unknown error");
       toast.error(`Failed: ${err.message || "Unknown error"}`);
     }
   };
-
-  // Resume polling on mount if a task was in flight
-  useEffect(() => {
-    if (taskId && !videoUrl && status !== "generating") {
-      setStatus("generating");
-      pollTask(taskId).catch((err) => {
-        console.error(err);
-        setStatus("error");
-        toast.error(`Failed: ${err.message}`);
-      });
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   return (
     <Card className="overflow-hidden border-border/40 bg-card/50 backdrop-blur-sm hover:bg-card/80 transition-all duration-300 group">
