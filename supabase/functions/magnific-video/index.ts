@@ -38,7 +38,7 @@ const parseUpstreamResponse = async (resp: Response) => {
 const MODEL_ENDPOINTS: Record<string, string> = {
   "wan-2-5-t2v-1080p": "/v1/ai/text-to-video/wan-2-5-t2v-1080p",
   "ltx-2-pro": "/v1/ai/text-to-video/ltx-2-pro",
-  "kling-v2-6-pro": "/v1/ai/text-to-video/kling-v2-6-pro",
+  "kling-v3-omni-pro": "/v1/ai/video/kling-v3-omni-pro",
   "elevenlabs-tts": "/v1/ai/audio/text-to-speech",
 };
 
