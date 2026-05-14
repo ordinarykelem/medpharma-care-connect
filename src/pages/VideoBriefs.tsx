@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { PageHeader } from "@/components/PageHeader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -16,6 +16,36 @@ const CATEGORY_ICONS: Record<string, any> = {
   "Routine Adherence": Heart,
   "App Feature": ShieldCheck,
   "Seasonal": Zap,
+};
+
+const POLL_INTERVAL_MS = 20_000;
+const POLL_MAX_ATTEMPTS = 75;
+const RETRYABLE_UPSTREAM_STATUSES = new Set([403, 408, 409, 425, 429, 500, 502, 503, 504]);
+let nextStatusCheckAt = 0;
+
+const wait = (ms: number) => new Promise<void>((resolve) => setTimeout(resolve, ms));
+
+const waitForStatusSlot = async () => {
+  const now = Date.now();
+  const scheduledAt = Math.max(now, nextStatusCheckAt);
+  nextStatusCheckAt = scheduledAt + POLL_INTERVAL_MS;
+  const delay = scheduledAt - now;
+  if (delay > 0) await wait(delay);
+};
+
+const getApiMessage = (data: any) =>
+  data?.error?.message || data?.message || data?.error || `Upstream ${data?.upstream_status || "error"}`;
+
+const isRetryableApiResponse = (data: any) => {
+  const message = String(getApiMessage(data)).toLowerCase();
+  return (
+    data?.retryable === true ||
+    RETRYABLE_UPSTREAM_STATUSES.has(Number(data?.upstream_status)) ||
+    message.includes("blocked") ||
+    message.includes("rate") ||
+    message.includes("temporarily") ||
+    message.includes("too many")
+  );
 };
 
 function VideoBriefCard({ b }: { b: VideoBrief }) {
