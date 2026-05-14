@@ -7,6 +7,31 @@ const corsHeaders = {
 };
 
 const BASE = "https://api.magnific.com";
+const RETRYABLE_UPSTREAM_STATUSES = new Set([403, 408, 409, 425, 429, 500, 502, 503, 504]);
+
+const parseUpstreamResponse = async (resp: Response) => {
+  const text = await resp.text();
+  let data: any;
+  try {
+    data = JSON.parse(text);
+  } catch {
+    data = { raw: text };
+  }
+
+  const message = String(data?.error?.message || data?.message || data?.error || "").toLowerCase();
+  return {
+    ok: resp.ok,
+    upstream_status: resp.status,
+    retry_after: resp.headers.get("retry-after"),
+    retryable:
+      RETRYABLE_UPSTREAM_STATUSES.has(resp.status) ||
+      message.includes("blocked") ||
+      message.includes("rate") ||
+      message.includes("temporarily") ||
+      message.includes("too many"),
+    ...data,
+  };
+};
 
 // Map a "model" key to its Magnific endpoint.
 // All are async: POST returns task_id, GET /{task_id} returns status + result.
@@ -46,10 +71,9 @@ Deno.serve(async (req) => {
       const resp = await fetch(`${BASE}${endpoint}/${taskId}`, {
         headers: { "x-magnific-api-key": apiKey },
       });
-      const text = await resp.text();
-      let data: any; try { data = JSON.parse(text); } catch { data = { raw: text }; }
+      const data = await parseUpstreamResponse(resp);
       return new Response(
-        JSON.stringify({ ok: resp.ok, upstream_status: resp.status, ...data }),
+        JSON.stringify(data),
         { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } },
       );
     }
@@ -58,8 +82,10 @@ Deno.serve(async (req) => {
     const payload: Record<string, unknown> = {
       prompt: body.prompt,
       aspect_ratio: body.aspect_ratio || "9:16",
-      duration: body.duration || 5,
+      duration: String(body.duration || "5"),
+      enable_prompt_expansion: body.enable_prompt_expansion ?? true,
     };
+    if (body.negative_prompt) payload.negative_prompt = String(body.negative_prompt);
     if (body.resolution) payload.resolution = body.resolution;
 
     const resp = await fetch(`${BASE}${endpoint}`, {
@@ -70,10 +96,9 @@ Deno.serve(async (req) => {
       },
       body: JSON.stringify(payload),
     });
-    const text = await resp.text();
-    let data: any; try { data = JSON.parse(text); } catch { data = { raw: text }; }
+    const data = await parseUpstreamResponse(resp);
     return new Response(
-      JSON.stringify({ ok: resp.ok, upstream_status: resp.status, ...data }),
+      JSON.stringify(data),
       { status: 200, headers: { ...corsHeaders, "Content-Type": "application/json" } },
     );
   } catch (e) {
