@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { PageHeader } from "@/components/PageHeader";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -20,9 +20,14 @@ const CATEGORY_ICONS: Record<string, any> = {
 
 function VideoBriefCard({ b }: { b: VideoBrief }) {
   const Icon = CATEGORY_ICONS[b.category] ?? Video;
-  const [status, setStatus] = useState<"idle" | "generating" | "success" | "error">("idle");
-  const [videoUrl, setVideoUrl] = useState<string | null>(null);
-  const [taskId, setTaskId] = useState<string | null>(null);
+  const storageKey = `magnific-task-${b.id}`;
+  const urlKey = `magnific-url-${b.id}`;
+  const [status, setStatus] = useState<"idle" | "generating" | "success" | "error">(
+    () => (localStorage.getItem(urlKey) ? "success" : "idle")
+  );
+  const [videoUrl, setVideoUrl] = useState<string | null>(() => localStorage.getItem(urlKey));
+  const [taskId, setTaskId] = useState<string | null>(() => localStorage.getItem(storageKey));
+  const [elapsed, setElapsed] = useState(0);
 
   const copyPrompt = () => {
     navigator.clipboard.writeText(b.aiPrompt);
@@ -43,8 +48,11 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
   };
 
   const pollTask = async (id: string) => {
-    for (let i = 0; i < 60; i++) {
+    // Poll for up to 20 minutes (1080p can take 5–15 min)
+    const start = Date.now();
+    for (let i = 0; i < 240; i++) {
       await new Promise((r) => setTimeout(r, 5000));
+      setElapsed(Math.floor((Date.now() - start) / 1000));
       const { data, error } = await supabase.functions.invoke("magnific-video", {
         body: { action: "status", task_id: id, model: "wan-2-5-t2v-1080p" },
       });
@@ -57,6 +65,8 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
       if (url) {
         setVideoUrl(url);
         setStatus("success");
+        localStorage.setItem(urlKey, url);
+        localStorage.removeItem(storageKey);
         toast.success(`Video ready for ${b.id}!`);
         return;
       }
@@ -64,7 +74,7 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
         throw new Error(data?.error?.message || "Generation failed");
       }
     }
-    throw new Error("Timed out after 5 minutes — check Magnific dashboard");
+    throw new Error("Timed out after 20 minutes — check Magnific dashboard");
   };
 
   const triggerGeneration = async () => {
@@ -93,6 +103,7 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
         throw new Error("No task_id returned");
       }
       setTaskId(id);
+      localStorage.setItem(storageKey, id);
       toast.success(`Generation started — polling for ${b.id}`);
       await pollTask(id);
     } catch (err: any) {
@@ -101,6 +112,19 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
       toast.error(`Failed: ${err.message || "Unknown error"}`);
     }
   };
+
+  // Resume polling on mount if a task was in flight
+  useEffect(() => {
+    if (taskId && !videoUrl && status !== "generating") {
+      setStatus("generating");
+      pollTask(taskId).catch((err) => {
+        console.error(err);
+        setStatus("error");
+        toast.error(`Failed: ${err.message}`);
+      });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <Card className="overflow-hidden border-border/40 bg-card/50 backdrop-blur-sm hover:bg-card/80 transition-all duration-300 group">
@@ -160,7 +184,11 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
             ) : (
               <Video className="h-3 w-3 mr-2" />
             )}
-            {status === "generating" ? "Generating… (~1–3 min)" : videoUrl ? "Regenerate" : "Trigger AI Generation"}
+            {status === "generating"
+              ? `Generating… ${Math.floor(elapsed / 60)}:${String(elapsed % 60).padStart(2, "0")} (5–15 min)`
+              : videoUrl
+              ? "Regenerate"
+              : "Trigger AI Generation"}
           </Button>
           {videoUrl && (
             <Button
