@@ -134,7 +134,7 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
           model: "wan-2-5-t2v-1080p",
           prompt: b.aiPrompt,
           aspect_ratio: "9:16",
-          duration: "15", // Updated to 15s
+          duration: 10, // Max supported duration is 10s
         },
       });
       if (error) throw new Error(error.message);

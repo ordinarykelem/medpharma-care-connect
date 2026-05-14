@@ -38,7 +38,7 @@ const parseUpstreamResponse = async (resp: Response) => {
 const MODEL_ENDPOINTS: Record<string, string> = {
   "wan-2-5-t2v-1080p": "/v1/ai/text-to-video/wan-2-5-t2v-1080p",
   "ltx-2-pro": "/v1/ai/text-to-video/ltx-2-pro",
-  "elevenlabs-tts": "/v1/ai/text-to-speech", // Inferred endpoint for Magnific's ElevenLabs integration
+  "elevenlabs-tts": "/v1/ai/audio/text-to-speech", // Corrected path based on Magnific's /audio/ grouping
 };
 
 Deno.serve(async (req) => {
@@ -83,7 +83,7 @@ Deno.serve(async (req) => {
     const payload: Record<string, unknown> = {
       prompt: body.prompt,
       aspect_ratio: body.aspect_ratio || "9:16",
-      duration: String(body.duration || "15"), // Default to 15s for educative content
+      duration: Number(body.duration || 10), // Max 10s for WAN 2.5, using Number type
       enable_prompt_expansion: body.enable_prompt_expansion ?? true,
     };
 
