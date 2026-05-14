@@ -201,6 +201,11 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
         </div>
 
         <div className="pt-2 flex flex-col gap-2">
+          {errorMessage && (
+            <div className="rounded-md border border-destructive/20 bg-destructive/10 px-3 py-2 text-[10px] leading-relaxed text-destructive">
+              {errorMessage}
+            </div>
+          )}
           <Button 
             variant="default" 
             size="sm" 
