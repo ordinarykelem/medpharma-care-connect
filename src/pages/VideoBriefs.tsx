@@ -52,10 +52,15 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
   const Icon = CATEGORY_ICONS[b.category] ?? Video;
   const storageKey = `magnific-task-${b.id}`;
   const urlKey = `magnific-url-${b.id}`;
+  const voiceKey = `magnific-voice-${b.id}`;
   const [status, setStatus] = useState<"idle" | "generating" | "success" | "error">(
     () => (localStorage.getItem(urlKey) ? "success" : "idle")
   );
+  const [voiceStatus, setVoiceStatus] = useState<"idle" | "generating" | "success" | "error">(
+    () => (localStorage.getItem(voiceKey) ? "success" : "idle")
+  );
   const [videoUrl, setVideoUrl] = useState<string | null>(() => localStorage.getItem(urlKey));
+  const [voiceUrl, setVoiceUrl] = useState<string | null>(() => localStorage.getItem(voiceKey));
   const [taskId, setTaskId] = useState<string | null>(() => localStorage.getItem(storageKey));
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [elapsed, setElapsed] = useState(0);
@@ -129,7 +134,7 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
           model: "wan-2-5-t2v-1080p",
           prompt: b.aiPrompt,
           aspect_ratio: "9:16",
-          duration: "5",
+          duration: "15", // Updated to 15s
         },
       });
       if (error) throw new Error(error.message);
@@ -154,6 +159,51 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
       setStatus("error");
       setErrorMessage(err.message || "Unknown error");
       toast.error(`Failed: ${err.message || "Unknown error"}`);
+    }
+  };
+
+  const triggerVoiceover = async () => {
+    setVoiceStatus("generating");
+    setVoiceUrl(null);
+    try {
+      const { data, error } = await supabase.functions.invoke("magnific-video", {
+        body: {
+          action: "generate",
+          model: "elevenlabs-tts",
+          prompt: b.core, // Use the core script for TTS
+        },
+      });
+      if (error) throw new Error(error.message);
+      
+      const pollAudio = async (id: string) => {
+        for (let i = 0; i < 20; i++) {
+          await wait(5000);
+          const { data: sData } = await supabase.functions.invoke("magnific-video", {
+            body: { action: "status", task_id: id, model: "elevenlabs-tts" },
+          });
+          const url = sData?.audio?.url || sData?.url || sData?.data?.audio?.url;
+          if (url) {
+            setVoiceUrl(url);
+            setVoiceStatus("success");
+            localStorage.setItem(voiceKey, url);
+            toast.success(`Voiceover ready for ${b.id}!`);
+            return;
+          }
+        }
+        throw new Error("Voiceover timed out");
+      };
+
+      const id = data?.id || data?.task_id || data?.data?.id;
+      if (id) await pollAudio(id);
+      else {
+        const url = data?.audio?.url || data?.url;
+        if (url) { setVoiceUrl(url); setVoiceStatus("success"); localStorage.setItem(voiceKey, url); }
+        else throw new Error("No audio ID returned");
+      }
+    } catch (err: any) {
+      console.error("Voiceover Error:", err);
+      setVoiceStatus("error");
+      toast.error(`Voiceover failed: ${err.message}`);
     }
   };
 
@@ -201,8 +251,14 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
           <video
             src={videoUrl}
             controls
-            className="w-full rounded-lg border border-primary/20"
+            className="w-full rounded-lg border border-primary/20 aspect-[9/16] bg-black"
           />
+        )}
+        {voiceUrl && (
+          <div className="space-y-1">
+            <div className="text-[10px] uppercase tracking-widest text-muted-foreground font-semibold">Audio Voiceover</div>
+            <audio src={voiceUrl} controls className="w-full h-8" />
+          </div>
         )}
         <div className="space-y-2">
           <div className="text-[10px] uppercase tracking-widest text-muted-foreground font-semibold">Script (15s)</div>
@@ -250,6 +306,16 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
               Download / Open Video
             </Button>
           )}
+
+          <Button 
+            variant={voiceStatus === "success" ? "outline" : "secondary"}
+            size="sm" 
+            className="w-full text-[10px] h-9"
+            onClick={triggerVoiceover}
+            disabled={voiceStatus === "generating"}
+          >
+            {voiceStatus === "generating" ? "Generating Voice…" : voiceUrl ? "Regenerate Voiceover" : "Add Ghanaian Voiceover"}
+          </Button>
           
           <Button 
             variant="ghost" 
