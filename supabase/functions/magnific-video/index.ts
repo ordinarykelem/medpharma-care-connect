@@ -25,12 +25,6 @@ const parseUpstreamResponse = async (resp: Response) => {
     upstream_status: resp.status,
     upstream_body: data,
     retry_after: resp.headers.get("retry-after"),
-    retryable:
-      RETRYABLE_UPSTREAM_STATUSES.has(resp.status) ||
-      message.includes("blocked") ||
-      message.includes("rate") ||
-      message.includes("temporarily") ||
-      message.includes("too many"),
     ...data,
   };
 };
@@ -43,31 +37,32 @@ const MODEL_ENDPOINTS: Record<string, string> = {
 };
 
 Deno.serve(async (req) => {
+  // Always return 200 for OPTIONS to handle preflight
   if (req.method === "OPTIONS") return new Response(null, { headers: CORS_HEADERS });
 
-  const apiKey = Deno.env.get("MAGNIFIC_API_KEY");
-  if (!apiKey) {
-    return new Response(JSON.stringify({ error: "MAGNIFIC_API_KEY (Freepik Key) not configured" }), {
-      status: 500, headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
-    });
-  }
-
   try {
+    const apiKey = Deno.env.get("MAGNIFIC_API_KEY");
+    if (!apiKey) {
+      return new Response(JSON.stringify({ ok: false, error: "MAGNIFIC_API_KEY is not set in Supabase Secrets." }), {
+        status: 200, headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
+      });
+    }
+
     const body = await req.json().catch(() => ({}));
     const action = body.action || "generate";
     const model = body.model || "wan-2-5-t2v-1080p";
     const endpoint = MODEL_ENDPOINTS[model];
 
     if (!endpoint) {
-      return new Response(JSON.stringify({ error: `Unknown model: ${model}` }), {
-        status: 400, headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
+      return new Response(JSON.stringify({ ok: false, error: `Model endpoint not found for: ${model}` }), {
+        status: 200, headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
       });
     }
 
     if (action === "status") {
       const taskId = body.task_id;
       if (!taskId) {
-        return new Response(JSON.stringify({ ok: false, error: "task_id required" }), {
+        return new Response(JSON.stringify({ ok: false, error: "task_id is missing." }), {
           status: 200, headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
         });
       }
@@ -75,17 +70,18 @@ Deno.serve(async (req) => {
         headers: { "x-freepik-api-key": apiKey },
       });
       const data = await parseUpstreamResponse(resp);
-      return new Response(
-        JSON.stringify(data),
-        { status: 200, headers: { ...CORS_HEADERS, "Content-Type": "application/json" } },
-      );
+      return new Response(JSON.stringify(data), {
+        status: 200, headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
+      });
     }
 
     // ElevenLabs handling
     if (model === "elevenlabs-tts") {
       const elApiKey = Deno.env.get("ELEVENLABS_API_KEY");
       if (!elApiKey) {
-        return new Response(JSON.stringify({ error: "ELEVENLABS_API_KEY missing" }), { status: 400, headers: CORS_HEADERS });
+        return new Response(JSON.stringify({ ok: false, error: "ELEVENLABS_API_KEY is missing." }), {
+          status: 200, headers: CORS_HEADERS
+        });
       }
       const voiceId = body.voice_id || "pNInz6obpgnuMvkhgu9V";
       const elResp = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`, {
@@ -98,7 +94,9 @@ Deno.serve(async (req) => {
         }),
       });
       if (!elResp.ok) {
-        return new Response(await elResp.text(), { status: elResp.status, headers: CORS_HEADERS });
+        return new Response(JSON.stringify({ ok: false, error: `ElevenLabs Error: ${await elResp.text()}` }), {
+          status: 200, headers: CORS_HEADERS
+        });
       }
       const audioBlob = await elResp.blob();
       return new Response(audioBlob, { headers: { ...CORS_HEADERS, "Content-Type": "audio/mpeg" } });
@@ -114,11 +112,13 @@ Deno.serve(async (req) => {
       prompt: finalPrompt,
       aspect_ratio: body.aspect_ratio || "9:16",
       duration: Number(body.duration || 10),
-      sound: true, // Native audio
+      sound: true,
       enable_prompt_expansion: body.enable_prompt_expansion ?? true,
     };
     if (body.negative_prompt) payload.negative_prompt = String(body.negative_prompt);
     if (body.resolution) payload.resolution = body.resolution;
+
+    console.log(`Calling Freepik: ${BASE}${endpoint}`);
 
     const resp = await fetch(`${BASE}${endpoint}`, {
       method: "POST",
@@ -128,14 +128,20 @@ Deno.serve(async (req) => {
       },
       body: JSON.stringify(payload),
     });
+    
     const data = await parseUpstreamResponse(resp);
-    return new Response(
-      JSON.stringify(data),
-      { status: 200, headers: { ...CORS_HEADERS, "Content-Type": "application/json" } },
-    );
+    
+    // Always return 200 so the frontend can see the real error in data.error
+    return new Response(JSON.stringify(data), {
+      status: 200,
+      headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
+    });
+
   } catch (e) {
-    return new Response(JSON.stringify({ ok: false, error: (e as Error).message }), {
-      status: 200, headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
+    console.error("Critical Edge Function Error:", e);
+    return new Response(JSON.stringify({ ok: false, error: `Critical: ${(e as Error).message}` }), {
+      status: 200,
+      headers: { ...CORS_HEADERS, "Content-Type": "application/json" },
     });
   }
 });
