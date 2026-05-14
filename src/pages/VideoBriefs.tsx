@@ -94,7 +94,7 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
       await waitForStatusSlot();
       setElapsed(Math.floor((Date.now() - start) / 1000));
       const { data, error } = await supabase.functions.invoke("magnific-video", {
-        body: { action: "status", task_id: id, model: "wan-2-5-t2v-1080p" },
+        body: { action: "status", task_id: id, model: "kling-v3-std" },
       });
       if (error) throw new Error(error.message);
       if (data?.ok === false) {
@@ -133,7 +133,7 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
       const { data, error } = await supabase.functions.invoke("magnific-video", {
         body: {
           action: "generate",
-          model: "wan-2-5-t2v-1080p", // Reverting to WAN but with native audio instructions
+          model: "kling-v3-std", // Freepik's native audio-visual model
           prompt: b.aiPrompt,
           script: b.core, 
           aspect_ratio: "9:16",
