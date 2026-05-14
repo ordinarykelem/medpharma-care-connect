@@ -167,15 +167,30 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
     }
   };
 
-  const triggerVoiceover = async () => {
-    // Immediate Browser Preview (Robot Voice)
+  const playBrowserVoice = () => {
+    // Stop any existing speech
+    window.speechSynthesis.cancel();
+    
     const utterance = new SpeechSynthesisUtterance(b.core);
-    utterance.rate = 0.9;
+    utterance.rate = 0.85; // Slightly slower for clarity
+    utterance.pitch = 1.0;
+    
+    // Try to find a professional sounding voice
+    const voices = window.speechSynthesis.getVoices();
+    const narratorVoice = voices.find(v => v.name.includes("Google") && v.lang.startsWith("en")) || voices[0];
+    if (narratorVoice) utterance.voice = narratorVoice;
+    
     window.speechSynthesis.speak(utterance);
-    toast.info("Playing immediate browser preview...");
+    toast.info("Playing browser voice preview...");
+  };
 
+  const triggerVoiceover = async () => {
     setVoiceStatus("generating");
     setVoiceUrl(null);
+    
+    // Play browser voice immediately as fallback/preview
+    playBrowserVoice();
+
     try {
       const resp = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/magnific-video`, {
         method: "POST",
@@ -338,15 +353,26 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
             </Button>
           )}
 
-          <Button 
-            variant={voiceStatus === "success" ? "outline" : "secondary"}
-            size="sm" 
-            className="w-full text-[10px] h-9"
-            onClick={triggerVoiceover}
-            disabled={voiceStatus === "generating"}
-          >
-            {voiceStatus === "generating" ? "Generating Voice…" : voiceUrl ? "Regenerate Voiceover" : "Add Ghanaian Voiceover"}
-          </Button>
+          <div className="flex gap-2">
+            <Button 
+              variant={voiceStatus === "success" ? "outline" : "secondary"}
+              size="sm" 
+              className="flex-1 text-[10px] h-9"
+              onClick={triggerVoiceover}
+              disabled={voiceStatus === "generating"}
+            >
+              {voiceStatus === "generating" ? "Generating Voice…" : voiceUrl ? "Regenerate Professional Voice" : "Add Ghanaian Voiceover (AI)"}
+            </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              className="px-3 h-9"
+              onClick={playBrowserVoice}
+              title="Test script with browser voice"
+            >
+              🔊
+            </Button>
+          </div>
           
           <Button 
             variant="ghost" 
