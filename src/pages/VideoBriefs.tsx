@@ -146,6 +146,7 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
       }
       setTaskId(id);
       localStorage.setItem(storageKey, id);
+      nextStatusCheckAt = Math.max(nextStatusCheckAt, Date.now() + POLL_INTERVAL_MS);
       toast.success(`Generation started — polling for ${b.id}`);
       await pollTask(id);
     } catch (err: any) {
