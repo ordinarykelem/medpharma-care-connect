@@ -94,7 +94,7 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
       await waitForStatusSlot();
       setElapsed(Math.floor((Date.now() - start) / 1000));
       const { data, error } = await supabase.functions.invoke("magnific-video", {
-        body: { action: "status", task_id: id, model: "kling-v3-omni-pro" },
+        body: { action: "status", task_id: id, model: "kling-v3-std" },
       });
       if (error) throw new Error(error.message);
       if (data?.ok === false) {
@@ -133,7 +133,7 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
       const { data, error } = await supabase.functions.invoke("magnific-video", {
         body: {
           action: "generate",
-          model: "kling-v3-omni-pro", // Switching to Kling 3 Omni Pro for native audio co-generation
+          model: "kling-v3-std", // Using Kling 3 Standard for native audio co-generation
           prompt: b.aiPrompt,
           script: b.core, 
           aspect_ratio: "9:16",
@@ -373,7 +373,7 @@ export default function VideoBriefs() {
     <div className="min-h-screen pb-20">
       <PageHeader
         title="Video Factory — AI Generation"
-        subtitle="10-second high-impact videos with native voiceover co-generation. Powered by Kling 3 Omni Pro."
+        subtitle="10-second high-impact videos with native voiceover co-generation. Powered by Kling 3 Standard."
       />
 
       <div className="max-w-7xl mx-auto px-6 space-y-8">
