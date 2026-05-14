@@ -168,47 +168,48 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
   };
 
   const triggerVoiceover = async () => {
+    // Immediate Browser Preview (Robot Voice)
+    const utterance = new SpeechSynthesisUtterance(b.core);
+    utterance.rate = 0.9;
+    window.speechSynthesis.speak(utterance);
+    toast.info("Playing immediate browser preview...");
+
     setVoiceStatus("generating");
     setVoiceUrl(null);
     try {
-      const { data, error } = await supabase.functions.invoke("magnific-video", {
-        body: {
+      const resp = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/magnific-video`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${(await supabase.auth.getSession()).data.session?.access_token || ""}`,
+        },
+        body: JSON.stringify({
           action: "generate",
           model: "elevenlabs-tts",
-          prompt: b.core, // Use the core script for TTS
-        },
+          prompt: b.core,
+        }),
       });
-      if (error) throw new Error(error.message);
-      
-      const pollAudio = async (id: string) => {
-        for (let i = 0; i < 20; i++) {
-          await wait(5000);
-          const { data: sData } = await supabase.functions.invoke("magnific-video", {
-            body: { action: "status", task_id: id, model: "elevenlabs-tts" },
-          });
-          const url = sData?.audio?.url || sData?.url || sData?.data?.audio?.url;
-          if (url) {
-            setVoiceUrl(url);
-            setVoiceStatus("success");
-            localStorage.setItem(voiceKey, url);
-            toast.success(`Voiceover ready for ${b.id}!`);
-            return;
-          }
-        }
-        throw new Error("Voiceover timed out");
-      };
 
-      const id = data?.id || data?.task_id || data?.data?.id;
-      if (id) await pollAudio(id);
-      else {
-        const url = data?.audio?.url || data?.url;
-        if (url) { setVoiceUrl(url); setVoiceStatus("success"); localStorage.setItem(voiceKey, url); }
-        else throw new Error("No audio ID returned");
+      if (!resp.ok) {
+        const error = await resp.json();
+        throw new Error(error.error || "Voiceover generation failed");
       }
+
+      // Handle binary audio stream
+      const blob = await resp.blob();
+      const url = URL.createObjectURL(blob);
+      setVoiceUrl(url);
+      setVoiceStatus("success");
+      localStorage.setItem(voiceKey, url);
+      toast.success(`Professional Voiceover ready for ${b.id}!`);
     } catch (err: any) {
       console.error("Voiceover Error:", err);
       setVoiceStatus("error");
-      toast.error(`Voiceover failed: ${err.message}`);
+      if (err.message.includes("ELEVENLABS_API_KEY")) {
+        toast.error("ELEVENLABS_API_KEY missing in Supabase. Falling back to Browser Voice.");
+      } else {
+        toast.error(`Professional Voiceover failed: ${err.message}`);
+      }
     }
   };
 

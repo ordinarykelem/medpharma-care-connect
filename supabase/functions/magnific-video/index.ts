@@ -97,12 +97,41 @@ Deno.serve(async (req) => {
       enable_prompt_expansion: body.enable_prompt_expansion ?? true,
     };
 
-    // Special handling for Voiceover
+    // Special handling for Voiceover (ElevenLabs)
     if (model === "elevenlabs-tts") {
-      payload.text = body.prompt; // Map prompt to text for TTS
-      payload.voice_id = body.voice_id || "ghanaian-male-01"; // Placeholder for Ghanaian voice
-      delete payload.aspect_ratio;
-      delete payload.duration;
+      const elApiKey = Deno.env.get("ELEVENLABS_API_KEY");
+      if (!elApiKey) {
+        return new Response(JSON.stringify({ error: "ELEVENLABS_API_KEY not set in Supabase" }), { status: 400, headers: corsHeaders });
+      }
+
+      // Voice ID for a natural African/Ghanaian tone (placeholder ID)
+      const voiceId = body.voice_id || "pNInz6obpgnuMvkhgu9V"; // Example: Adam (neutral/deep)
+      const elResp = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`, {
+        method: "POST",
+        headers: {
+          "xi-api-key": elApiKey,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          text: body.prompt,
+          model_id: "eleven_multilingual_v2",
+          voice_settings: { stability: 0.5, similarity_boost: 0.75 },
+        }),
+      });
+
+      if (!elResp.ok) {
+        const error = await elResp.text();
+        return new Response(JSON.stringify({ error: `ElevenLabs Error: ${error}` }), { status: elResp.status, headers: corsHeaders });
+      }
+
+      // ElevenLabs returns the audio stream directly. 
+      // For this dashboard, we'll return the blob or a way to handle it.
+      // Better: ElevenLabs also has a "generated audio" history if you use the right headers, 
+      // but usually you just stream it.
+      const audioBlob = await elResp.blob();
+      return new Response(audioBlob, {
+        headers: { ...corsHeaders, "Content-Type": "audio/mpeg" },
+      });
     }
     if (body.negative_prompt) payload.negative_prompt = String(body.negative_prompt);
     if (body.resolution) payload.resolution = body.resolution;
