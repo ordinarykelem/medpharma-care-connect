@@ -18,6 +18,7 @@ const nav = [
   { to: "/social", label: "Social Drafts", icon: Megaphone },
   { to: "/gbp", label: "GBP & GSC Drafts", icon: MapPin },
   { to: "/videos", label: "Video Factory (AI)", icon: Video },
+  { to: "/canva-kit", label: "Canva Copy-Paste Kit", icon: Palette },
   { to: "/tasks", label: "Action Tracker", icon: CheckSquare },
   { to: "/brand", label: "Brand Context", icon: Settings },
 ];
