@@ -103,10 +103,14 @@ serve(async (req) => {
       return new Response(audioBlob, { headers: { ...CORS_HEADERS, "Content-Type": "audio/mpeg" } });
     }
 
-    // Video Generation
-    const isKling = model.includes("kling");
-    const finalPrompt = isKling && body.script 
-      ? `Voiceover Script: "${body.script}". Visual Direction: ${body.prompt}` 
+    // Combine Context, Script and Visual Direction for maximum semantic alignment
+    const context = [
+      body.category ? `Category: ${body.category}` : null,
+      body.language ? `Setting/Language: ${body.language}` : null
+    ].filter(Boolean).join(". ");
+
+    const finalPrompt = body.script 
+      ? `${context ? context + ".\n" : ""}Voiceover Script (Narration): "${body.script}".\n\nVisual Direction: ${body.prompt}` 
       : body.prompt;
 
     const payload: Record<string, unknown> = {

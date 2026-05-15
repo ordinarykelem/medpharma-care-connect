@@ -136,6 +136,8 @@ function VideoBriefCard({ b }: { b: VideoBrief }) {
           model: "kling-v3-std", // Freepik's native audio-visual model
           prompt: b.aiPrompt,
           script: b.core, 
+          category: b.category,
+          language: b.language,
           aspect_ratio: "9:16",
           duration: 10,
         },
