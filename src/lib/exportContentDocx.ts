@@ -98,7 +98,7 @@ export async function exportPlanToDocx(plan: ContentPlan, quarter?: string) {
 
   // Cover
   children.push(para([text("MedPharma  ·  Graphic Designer Brief", { size: 18, color: "6B6B6B" })]));
-  children.push(para([text(`${plan.brand} — ${isQ4 ? "Q4 2026" : "Jul–Aug 2026"} Content Plan`, { bold: true, size: 56, color: "1A7F3C" })],
+  children.push(para([text(`${plan.brand} - ${isQ4 ? "Q4 2026" : "Jul-Aug 2026"} Content Plan`, { bold: true, size: 56, color: "1A7F3C" })],
     { spacing: { before: 80, after: 60 } }));
   children.push(para([text(dateRange, { size: 24, color: "6B6B6B" })],
     { spacing: { after: 240 } }));
@@ -147,7 +147,7 @@ export async function exportPlanToDocx(plan: ContentPlan, quarter?: string) {
     "No emojis on the artwork.",
     "Use established brand templates for lockup and CTA placement.",
     "Both call line and app link present on every asset.",
-    "Export each asset at the EXACT format listed in its brief — no cropping shortcuts.",
+    "Export each asset at the EXACT format listed in its brief - no cropping shortcuts.",
     "Send a low-res preview JPG before exporting the full set.",
   ].forEach((c) => {
     children.push(new Paragraph({
@@ -158,7 +158,7 @@ export async function exportPlanToDocx(plan: ContentPlan, quarter?: string) {
 
   const doc = new Document({
     creator: "MedPharma Marketing",
-    title: `${plan.brand} Content Plan — ${dateRange}`,
+    title: `${plan.brand} Content Plan - ${dateRange}`,
     styles: {
       default: { document: { run: { font: "Calibri", size: 22 } } },
     },

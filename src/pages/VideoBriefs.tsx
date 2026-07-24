@@ -185,7 +185,7 @@ Style: Smooth fluid motion, highly realistic animation, cinematic lighting, 4K t
         throw new Error(data?.error?.message || "Generation failed");
       }
     }
-    throw new Error("Timed out after 25 minutes — check your Magnific account tasks");
+    throw new Error("Timed out after 25 minutes - check your Magnific account tasks");
   };
 
   const triggerGeneration = async () => {
@@ -237,7 +237,7 @@ Style: Smooth fluid motion, highly realistic animation, cinematic lighting, 4K t
       setTaskId(id);
       localStorage.setItem(storageKey, id);
       nextStatusCheckAt = Math.max(nextStatusCheckAt, Date.now() + POLL_INTERVAL_MS);
-      toast.success(`Generation started — polling for ${b.id}`);
+      toast.success(`Generation started - polling for ${b.id}`);
       await pollTask(id);
     } catch (err: any) {
       console.error("Video Generation Error:", err);
@@ -844,7 +844,7 @@ export default function VideoBriefs() {
   return (
     <div className="min-h-screen pb-20">
       <PageHeader
-        title="Video Factory — AI Generation"
+        title="Video Factory - AI Generation"
         subtitle="14-second high-impact videos with native voiceover co-generation. Powered by WAN 2.5."
       />
 

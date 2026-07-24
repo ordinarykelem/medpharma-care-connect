@@ -8,7 +8,7 @@ import { FileText, Megaphone, MapPin, CheckSquare, TrendingUp, Sparkles, Target,
 import heroGlow from "@/assets/hero-glow.jpg";
 
 const quickActions = [
-  { to: "/seo", icon: FileText, title: "SEO Workshop", desc: "Blog briefs, meta tags, schema — ready to ship" },
+  { to: "/seo", icon: FileText, title: "SEO Workshop", desc: "Blog briefs, meta tags, schema - ready to ship" },
   { to: "/social", icon: Megaphone, title: "Social Planner", desc: "LinkedIn, Facebook, Instagram, TikTok" },
   { to: "/gbp", icon: MapPin, title: "GBP & Search Console", desc: "Posts, review replies, GSC fixes" },
   { to: "/tasks", icon: CheckSquare, title: "Action Tracker", desc: "Proof-of-execution log for your boss" },
@@ -52,7 +52,7 @@ export default function Dashboard() {
               From <span className="text-gradient">brief to ready-to-ship</span> in under a minute.
             </h2>
             <p className="text-muted-foreground mb-5">
-              Every block you draft is structured for your dev team or social manager — no rework. Save it, mark it for review, and show your boss exactly what was executed.
+              Every block you draft is structured for your dev team or social manager - no rework. Save it, mark it for review, and show your boss exactly what was executed.
             </p>
             <div className="flex gap-2">
               <Button asChild className="gradient-primary text-primary-foreground hover:opacity-90">
@@ -95,7 +95,7 @@ export default function Dashboard() {
             <div>
               <h3 className="font-semibold mb-1">Boss's #1 goal: rank for "best health tech company in Ghana"</h3>
               <p className="text-sm text-muted-foreground mb-3">
-                The fastest path: ship 6–10 high-quality SEO articles around health-tech + Ghana, fix any GSC indexing issues, fully optimise the GBP profile, and publish weekly across LinkedIn + Facebook + Instagram + TikTok. This OS gives you a hand-off-ready block for each move.
+                The fastest path: ship 6-10 high-quality SEO articles around health-tech + Ghana, fix any GSC indexing issues, fully optimise the GBP profile, and publish weekly across LinkedIn + Facebook + Instagram + TikTok. This OS gives you a hand-off-ready block for each move.
               </p>
               <div className="flex gap-2 flex-wrap">
                 <Button asChild size="sm" variant="outline"><NavLink to="/seo">Draft SEO articles</NavLink></Button>

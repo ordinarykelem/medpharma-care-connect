@@ -60,7 +60,7 @@ export default function Gbp() {
               description="Turn any GSC issue (indexing, mobile usability, core web vitals, structured data) into a numbered dev ticket with code and acceptance criteria."
               fields={[
                 { key: "issue", label: "Issue from GSC", type: "textarea",
-                  placeholder: "e.g. 'Discovered – currently not indexed' on /products pages, or 'Cumulative Layout Shift > 0.25 on mobile homepage'" },
+                  placeholder: "e.g. 'Discovered - currently not indexed' on /products pages, or 'Cumulative Layout Shift > 0.25 on mobile homepage'" },
                 { key: "urls", label: "Affected URLs (sample)", type: "textarea", placeholder: "https://medpharma.care/products/..." },
               ]}
               onSaved={bump}

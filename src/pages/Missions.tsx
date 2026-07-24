@@ -117,7 +117,7 @@ export default function Missions() {
             </h1>
             <p className="text-muted-foreground mb-6 leading-relaxed">
               Each search your boss cares about becomes a mission with a step-by-step playbook.
-              No guessing, no chasing the dev team — just copy, paste, ship, prove.
+              No guessing, no chasing the dev team - just copy, paste, ship, prove.
             </p>
             <div className="flex flex-wrap gap-2">
               {missions.length === 0 ? (
@@ -174,7 +174,7 @@ export default function Missions() {
           <Card className="p-12 text-center border-dashed">
             <Target className="h-8 w-8 mx-auto text-muted-foreground mb-3" />
             <p className="text-sm text-muted-foreground">
-              No missions yet. Click <strong className="text-foreground">Build my 5 starter missions</strong> above —
+              No missions yet. Click <strong className="text-foreground">Build my 5 starter missions</strong> above -
               the AI will generate a complete playbook for each of your target Google searches.
             </p>
           </Card>

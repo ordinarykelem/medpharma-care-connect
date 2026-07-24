@@ -10,7 +10,7 @@ const ASSETS = [
     category: "Heart Health",
     icon: HeartPulse,
     hook: "Your heart is working too hard.",
-    script: "High blood pressure is silent. It strains your heart every second. Check your numbers weekly — it's the only way to know.",
+    script: "High blood pressure is silent. It strains your heart every second. Check your numbers weekly - it's the only way to know.",
   },
   {
     category: "Diabetes",

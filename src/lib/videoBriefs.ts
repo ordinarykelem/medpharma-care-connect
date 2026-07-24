@@ -15,7 +15,7 @@ export const VIDEO_BRIEFS: VideoBrief[] = [
     category: "Condition Deep-Dive",
     language: "Professional English (Ghanaian Accent)",
     hook: "Your heart is working too hard.",
-    core: "High blood pressure is silent. It strains your heart every second. Check your numbers weekly — it's the only way to know.",
+    core: "High blood pressure is silent. It strains your heart every second. Check your numbers weekly - it's the only way to know.",
     visuals: "Close-up anatomical 3D heart beating -> Slow transition to a Ghanaian man having his BP checked.",
     aiPrompt: "Cinematic 3D animation of a human heart beating under clinical lighting. Transparent chest cavity showing arteries. 4k, medical visualization.",
     freepikKeywords: "Human heart anatomical, African man blood pressure check"
@@ -185,7 +185,7 @@ export const VIDEO_BRIEFS: VideoBrief[] = [
     category: "Condition Deep-Dive",
     language: "English (Educational)",
     hook: "The pressure you can't feel.",
-    core: "Eye pressure can steal your vision without warning. Daily eye drops aren't just for comfort — they're for keeping your world bright.",
+    core: "Eye pressure can steal your vision without warning. Daily eye drops aren't just for comfort - they're for keeping your world bright.",
     visuals: "Close-up of a human eye with pressure lines -> Ghanaian man using eye drops -> Sunset over Accra.",
     aiPrompt: "Extreme close-up of a human eye. Transition to a man using eye drops with a sunset view of Accra in the background. 4k.",
     freepikKeywords: "Human eye close-up, African man eye drops, Accra sunset"

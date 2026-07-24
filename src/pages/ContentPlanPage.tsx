@@ -109,7 +109,7 @@ export default function ContentPlanPage() {
     try {
       setDownloading(true);
       await exportPlanToDocx(plan);
-      toast.success("Brief downloaded — forward to your designer.");
+      toast.success("Brief downloaded - forward to your designer.");
     } catch (e: any) {
       toast.error(e?.message ?? "Failed to generate document");
     } finally {
@@ -120,10 +120,10 @@ export default function ContentPlanPage() {
   return (
     <>
       <PageHeader
-        title={`${plan.brand} — Designer Content Plan`}
+        title={`${plan.brand} - Designer Content Plan`}
         subtitle={
           brand?.includes("q4")
-            ? "Q4 2026 — October · November · December. Ghana calendar & global health observances captured. Every brief is handoff-ready for your graphic designer."
+            ? "Q4 2026 - October · November · December. Ghana calendar & global health observances captured. Every brief is handoff-ready for your graphic designer."
             : "July → August 2026. Every brief is hand-off ready for your external graphic designer. Click download to get the full Word doc."
         }
       />

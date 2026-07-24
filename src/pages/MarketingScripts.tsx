@@ -196,16 +196,16 @@ const ANTI_GLITCH_RULES = `
 • FINGERS: If hands are visible, the AI must render exactly 5 fingers. If glitch appears, regenerate.
 • BACKGROUND: Keep background soft and blurred (shallow depth of field). No visible text, signs, labels, or posters in background.
 • FACE: Character faces camera directly. Avoid profile shots. No extreme expressions that distort facial features.
-• OBJECTS: If character holds a phone or tablet, it must be held at chest height in medium shot — never close-up.
+• OBJECTS: If character holds a phone or tablet, it must be held at chest height in medium shot - never close-up.
 • LIGHTING: Use stable, consistent lighting throughout the scene. No flickering or colour shifts.
 • MOVEMENT: Slow, deliberate, natural gestures only. No fast hand movements that cause motion blur.
-• TEXT ON SCREEN: Do not render any on-screen text or UI overlays inside the AI video — add text in CapCut instead.
+• TEXT ON SCREEN: Do not render any on-screen text or UI overlays inside the AI video - add text in CapCut instead.
 • FORMAT: 9:16 vertical, film grain, cinematic colour grade.
 `;
 
 /* ─── SCRIPT CARD ───────────────────────────────────────────────────── */
 function ScriptCard({ video, index }: { video: { title: string; s1: string; s2: string }; index: number }) {
-  const fullScript = `Video ${index + 1}: ${video.title}\n\nSCENE 1 (Kikki — The Problem):\n${video.s1}\n\nSCENE 2 (Frederick — The Solution):\n${video.s2}\n\n${ANTI_GLITCH_RULES}`;
+  const fullScript = `Video ${index + 1}: ${video.title}\n\nSCENE 1 (Kikki - The Problem):\n${video.s1}\n\nSCENE 2 (Frederick - The Solution):\n${video.s2}\n\n${ANTI_GLITCH_RULES}`;
   return (
     <Card className="border shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5">
       <CardHeader className="pb-3 flex flex-row items-start justify-between gap-2">
@@ -239,12 +239,12 @@ function ScriptCard({ video, index }: { video: { title: string; s1: string; s2: 
             <span className="text-[10px] font-bold text-amber-700 uppercase tracking-wider">Anti-Glitch Shield Active</span>
           </div>
           <ul className="text-[10px] text-amber-800 space-y-0.5 leading-relaxed">
-            <li>• <strong>Shot:</strong> Medium/wide only — no extreme close-ups</li>
-            <li>• <strong>Hands:</strong> Open-palm or relaxed at sides — never counting fingers</li>
-            <li>• <strong>Background:</strong> Soft blur — no visible text or signs</li>
+            <li>• <strong>Shot:</strong> Medium/wide only - no extreme close-ups</li>
+            <li>• <strong>Hands:</strong> Open-palm or relaxed at sides - never counting fingers</li>
+            <li>• <strong>Background:</strong> Soft blur - no visible text or signs</li>
             <li>• <strong>Objects:</strong> Phone/tablet held at chest in medium shot only</li>
-            <li>• <strong>Movement:</strong> Slow, deliberate gestures — no fast hand motions</li>
-            <li>• <strong>Text:</strong> Add all captions in CapCut — not inside AI video</li>
+            <li>• <strong>Movement:</strong> Slow, deliberate gestures - no fast hand motions</li>
+            <li>• <strong>Text:</strong> Add all captions in CapCut - not inside AI video</li>
           </ul>
         </div>
       </CardContent>
@@ -266,7 +266,7 @@ export default function MarketingScripts() {
           <div>
             <h1 className="text-2xl font-display font-bold tracking-tight">Master Video Scripts</h1>
             <p className="text-sm text-muted-foreground mt-0.5">
-              90 scripts · 9 themes · 2 scenes per video — ready for Google Flow & CapCut
+              90 scripts · 9 themes · 2 scenes per video - ready for Google Flow & CapCut
             </p>
           </div>
           <Badge variant="secondary" className="shrink-0 text-xs font-semibold">

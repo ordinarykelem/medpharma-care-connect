@@ -37,7 +37,7 @@ export default function Brand() {
     delete payload.id; delete payload.updated_at;
     const { error } = await supabase.from("brand_context").upsert(payload, { onConflict: "user_id" });
     if (error) return toast.error(error.message);
-    toast.success("Brand context saved — every AI draft will now use this");
+    toast.success("Brand context saved - every AI draft will now use this");
   };
 
   if (loading) return <div className="p-12 text-muted-foreground">Loading…</div>;
@@ -51,7 +51,7 @@ export default function Brand() {
       <div className="max-w-3xl mx-auto p-6">
         <Card className="p-6 shadow-card space-y-4">
           <Field label="Company name" value={form.company_name} onChange={(v) => setForm({ ...form, company_name: v })} />
-          <Field label="What we do (1–3 lines)" value={form.description} onChange={(v) => setForm({ ...form, description: v })} multiline />
+          <Field label="What we do (1-3 lines)" value={form.description} onChange={(v) => setForm({ ...form, description: v })} multiline />
           <Field label="Target audience" value={form.audience} onChange={(v) => setForm({ ...form, audience: v })} multiline />
           <Field label="Voice & tone" value={form.tone} onChange={(v) => setForm({ ...form, tone: v })} multiline />
           <Field label="Priority SEO keywords" value={form.keywords} onChange={(v) => setForm({ ...form, keywords: v })} multiline />

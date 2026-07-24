@@ -62,7 +62,7 @@ export default function Auth() {
               Your <span className="text-gradient">command center</span> for ranking #1<br/>and growing mCare downloads.
             </h1>
             <p className="text-muted-foreground max-w-md">
-              Draft SEO blocks, social posts, GBP responses and developer-ready tickets — all in one place, all approval-ready.
+              Draft SEO blocks, social posts, GBP responses and developer-ready tickets - all in one place, all approval-ready.
             </p>
           </div>
         </div>

@@ -35,7 +35,7 @@ const STARTER_PLAN = [
   { title: "Reply to all 8 existing Google reviews", category: "gbp", priority: "high",
     description: "Use the Review Reply drafter for each. Personalize and acknowledge issues for low-star reviews." },
   { title: "Fix GSC 'Not indexed' pages on medpharma.care", category: "gsc", priority: "high",
-    description: "Pull the Pages report, list all 'Discovered – currently not indexed' URLs, run them through GSC Fix drafter." },
+    description: "Pull the Pages report, list all 'Discovered - currently not indexed' URLs, run them through GSC Fix drafter." },
   { title: "Submit fresh sitemaps for both domains", category: "gsc", priority: "high",
     description: "Generate sitemap.xml for medpharma.care and mcare.medpharma.care, submit in GSC, monitor coverage." },
   { title: "Publish 4 SEO articles targeting 'best health tech company in Ghana'", category: "seo", priority: "high",
@@ -100,7 +100,7 @@ export default function Tasks() {
     setBusy(true);
     try {
       const txt = await aiDraft("seo_blog", {
-        topic: "Generate a 7-item action plan (titles only, one per line, no numbers, no markdown) of the highest-impact next moves to grow MedPharma Ghana — mix of SEO, GBP, social, partnerships. Return ONLY the list.",
+        topic: "Generate a 7-item action plan (titles only, one per line, no numbers, no markdown) of the highest-impact next moves to grow MedPharma Ghana - mix of SEO, GBP, social, partnerships. Return ONLY the list.",
         keywords: "", audience: "",
       });
       const titles = txt.split("\n").map((l) => l.replace(/^[-*\d.\s]+/, "").trim()).filter((l) => l.length > 8 && l.length < 140).slice(0, 7);
@@ -120,7 +120,7 @@ export default function Tasks() {
     <>
       <PageHeader
         title="Action Tracker"
-        subtitle="Show your boss exactly what's been planned, what's in progress, and what's done — with proof."
+        subtitle="Show your boss exactly what's been planned, what's in progress, and what's done - with proof."
         actions={
           <div className="flex gap-2">
             {tasks.length === 0 && (

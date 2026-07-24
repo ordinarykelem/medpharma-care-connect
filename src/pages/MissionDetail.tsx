@@ -171,7 +171,7 @@ export default function MissionDetail() {
                         <Button
                           size="sm"
                           className="absolute top-2 right-2 h-7"
-                          onClick={() => { navigator.clipboard.writeText(s.body || ""); toast.success("Copied — go paste it"); }}
+                          onClick={() => { navigator.clipboard.writeText(s.body || ""); toast.success("Copied - go paste it"); }}
                         >
                           <Copy className="h-3 w-3 mr-1" /> Copy
                         </Button>

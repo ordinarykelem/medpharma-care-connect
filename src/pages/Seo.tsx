@@ -36,7 +36,7 @@ export default function Seo() {
           <TabsContent value="meta" className="mt-4">
             <BlockComposer
               blockType="meta_tags" title="Page Meta + OG + Schema"
-              description="Title, description, OG, Twitter, H1, H2 ideas, JSON-LD, alt text — paste straight into <head>."
+              description="Title, description, OG, Twitter, H1, H2 ideas, JSON-LD, alt text - paste straight into <head>."
               fields={[
                 { key: "topic", label: "Page topic", placeholder: "Homepage / Diabetes care service / About us" },
                 { key: "url", label: "Page URL (optional)", placeholder: "https://medpharma.care/services/chronic-care" },
