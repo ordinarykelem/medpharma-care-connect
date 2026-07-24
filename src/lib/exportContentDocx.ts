@@ -90,14 +90,17 @@ function briefBlock(b: ContentBrief): any[] {
   return blocks;
 }
 
-export async function exportPlanToDocx(plan: ContentPlan) {
+export async function exportPlanToDocx(plan: ContentPlan, quarter?: string) {
+  const isQ4 = quarter === "q4" || plan.productNote.includes("Q4 2026");
+  const dateRange = isQ4 ? "October · November · December 2026" : "Late May → June → July → August 2026";
+  const fileSlug = isQ4 ? "Q4_OctDec2026" : "MayAug2026";
   const children: any[] = [];
 
   // Cover
   children.push(para([text("MedPharma  ·  Graphic Designer Brief", { size: 18, color: "6B6B6B" })]));
-  children.push(para([text(`${plan.brand} Content Plan`, { bold: true, size: 56, color: "1A7F3C" })],
+  children.push(para([text(`${plan.brand} — ${isQ4 ? "Q4 2026" : "May–Aug 2026"} Content Plan`, { bold: true, size: 56, color: "1A7F3C" })],
     { spacing: { before: 80, after: 60 } }));
-  children.push(para([text("Late May → June → July 2026", { size: 24, color: "6B6B6B" })],
+  children.push(para([text(dateRange, { size: 24, color: "6B6B6B" })],
     { spacing: { after: 240 } }));
   children.push(para([text(plan.productNote, { size: 22 })], { spacing: { after: 240 } }));
 
@@ -155,7 +158,7 @@ export async function exportPlanToDocx(plan: ContentPlan) {
 
   const doc = new Document({
     creator: "MedPharma Marketing",
-    title: `${plan.brand} Content Plan — Late May to July 2026`,
+    title: `${plan.brand} Content Plan — ${dateRange}`,
     styles: {
       default: { document: { run: { font: "Calibri", size: 22 } } },
     },
@@ -171,6 +174,6 @@ export async function exportPlanToDocx(plan: ContentPlan) {
   });
 
   const blob = await Packer.toBlob(doc);
-  const filename = `MedPharma_${plan.brand}_Content_Plan_MayJul2026.docx`;
+  const filename = `MedPharma_${plan.brand.replace(/ /g, "_")}_Content_Plan_${fileSlug}.docx`;
   saveAs(blob, filename);
 }
