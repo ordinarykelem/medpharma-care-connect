@@ -14,6 +14,8 @@ const nav = [
   { to: "/report", label: "Boss Report", icon: BarChart3 },
   { to: "/content/fullife", label: "FulLife — Designer Plan", icon: HeartPulse },
   { to: "/content/medpharma", label: "MedPharma — Designer Plan", icon: Palette },
+  { to: "/content/fullife-q4", label: "FulLife — Q4 2026 Plan", icon: HeartPulse },
+  { to: "/content/medpharma-q4", label: "MedPharma — Q4 2026 Plan", icon: Palette },
   { to: "/seo", label: "SEO Drafts", icon: FileText },
   { to: "/social", label: "Social Drafts", icon: Megaphone },
   { to: "/gbp", label: "GBP & GSC Drafts", icon: MapPin },

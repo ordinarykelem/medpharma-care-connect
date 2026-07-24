@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Copy, Check, Heart, Droplets, Wind, Brain, Moon, Apple, Bone, Venus, Smartphone } from "lucide-react";
+import { Copy, Check, Heart, Droplets, Wind, Brain, Moon, Apple, Bone, Flower2, Smartphone } from "lucide-react";
 
 /* ─── DATA ──────────────────────────────────────────────────────────── */
 const SCRIPTS_DATA = [
@@ -134,7 +134,7 @@ const SCRIPTS_DATA = [
   },
   {
     theme: "Women's Health",
-    icon: Venus,
+    icon: Flower2,
     color: "bg-pink-100 text-pink-700 border-pink-200",
     accent: "#ec4899",
     videos: [
@@ -189,9 +189,23 @@ function CopyButton({ text }: { text: string }) {
   );
 }
 
+const ANTI_GLITCH_RULES = `
+⚠️ ANTI-GLITCH PRODUCTION RULES (Apply to ALL scenes):
+• SHOT TYPE: Always use MEDIUM SHOT (waist up) or WIDE SHOT. NEVER extreme close-ups of hands or face.
+• HANDS: Character keeps hands relaxed at sides or uses open-palm gestures only. No counting fingers, no pinching, no gripping small objects in close-up.
+• FINGERS: If hands are visible, the AI must render exactly 5 fingers. If glitch appears, regenerate.
+• BACKGROUND: Keep background soft and blurred (shallow depth of field). No visible text, signs, labels, or posters in background.
+• FACE: Character faces camera directly. Avoid profile shots. No extreme expressions that distort facial features.
+• OBJECTS: If character holds a phone or tablet, it must be held at chest height in medium shot — never close-up.
+• LIGHTING: Use stable, consistent lighting throughout the scene. No flickering or colour shifts.
+• MOVEMENT: Slow, deliberate, natural gestures only. No fast hand movements that cause motion blur.
+• TEXT ON SCREEN: Do not render any on-screen text or UI overlays inside the AI video — add text in CapCut instead.
+• FORMAT: 9:16 vertical, film grain, cinematic colour grade.
+`;
+
 /* ─── SCRIPT CARD ───────────────────────────────────────────────────── */
 function ScriptCard({ video, index }: { video: { title: string; s1: string; s2: string }; index: number }) {
-  const fullScript = `Video ${index + 1}: ${video.title}\n\nSCENE 1 (Kikki — The Problem):\n${video.s1}\n\nSCENE 2 (Frederick — The Solution):\n${video.s2}`;
+  const fullScript = `Video ${index + 1}: ${video.title}\n\nSCENE 1 (Kikki — The Problem):\n${video.s1}\n\nSCENE 2 (Frederick — The Solution):\n${video.s2}\n\n${ANTI_GLITCH_RULES}`;
   return (
     <Card className="border shadow-sm hover:shadow-md transition-all duration-200 hover:-translate-y-0.5">
       <CardHeader className="pb-3 flex flex-row items-start justify-between gap-2">
@@ -217,6 +231,21 @@ function ScriptCard({ video, index }: { video: { title: string; s1: string; s2: 
             <span className="text-[11px] font-bold text-emerald-700 uppercase tracking-wider">Scene 2 · Frederick (Solution)</span>
           </div>
           <p className="text-xs leading-relaxed text-foreground">{video.s2}</p>
+        </div>
+        {/* Anti-Glitch Shield */}
+        <div className="bg-amber-50 border border-amber-200 rounded-lg p-2.5">
+          <div className="flex items-center gap-1.5 mb-1.5">
+            <span className="text-amber-500 text-xs">🛡️</span>
+            <span className="text-[10px] font-bold text-amber-700 uppercase tracking-wider">Anti-Glitch Shield Active</span>
+          </div>
+          <ul className="text-[10px] text-amber-800 space-y-0.5 leading-relaxed">
+            <li>• <strong>Shot:</strong> Medium/wide only — no extreme close-ups</li>
+            <li>• <strong>Hands:</strong> Open-palm or relaxed at sides — never counting fingers</li>
+            <li>• <strong>Background:</strong> Soft blur — no visible text or signs</li>
+            <li>• <strong>Objects:</strong> Phone/tablet held at chest in medium shot only</li>
+            <li>• <strong>Movement:</strong> Slow, deliberate gestures — no fast hand motions</li>
+            <li>• <strong>Text:</strong> Add all captions in CapCut — not inside AI video</li>
+          </ul>
         </div>
       </CardContent>
     </Card>

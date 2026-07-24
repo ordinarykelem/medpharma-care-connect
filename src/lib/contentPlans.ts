@@ -1500,7 +1500,4 @@ export const MEDPHARMA_PLAN: ContentPlan = {
   ],
 };
 
-export const PLAN_BY_BRAND: Record<string, ContentPlan> = {
-  fullife: FULLIFE_PLAN,
-  medpharma: MEDPHARMA_PLAN,
-};
+import { FULLIFE_Q4_PLAN, MEDPHARMA_Q4_PLAN } from "./contentPlansQ4";`r`nexport const PLAN_BY_BRAND: Record<string, ContentPlan> = {`r`n  fullife: FULLIFE_PLAN,`r`n  medpharma: MEDPHARMA_PLAN,`r`n  "fullife-q4": FULLIFE_Q4_PLAN,`r`n  "medpharma-q4": MEDPHARMA_Q4_PLAN,`r`n};
