@@ -124,7 +124,7 @@ export default function ContentPlanPage() {
         subtitle={
           brand?.includes("q4")
             ? "Q4 2026 — October · November · December. Ghana calendar & global health observances captured. Every brief is handoff-ready for your graphic designer."
-            : "Late May → June → July 2026. Every brief is hand-off ready for your external graphic designer. Click download to get the full Word doc."
+            : "July → August 2026. Every brief is hand-off ready for your external graphic designer. Click download to get the full Word doc."
         }
       />
       <div className="max-w-6xl mx-auto p-6 space-y-8">
