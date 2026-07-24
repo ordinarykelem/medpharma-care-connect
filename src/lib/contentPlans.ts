@@ -783,13 +783,20 @@ export const FULLIFE_PLAN: ContentPlan = {
         "#SeamlessHealthcare"
       ]
     },
+
+  ],
+};
+
+// =================================================================
+// MEDPHARMA GENERAL BRAND PLAN
+// =================================================================
+export const MEDPHARMA_PLAN = {
   brand: "MedPharma",
-  productNote:
-    "MedPharma is the parent brand: full-service e-pharmacy, medication delivery anywhere in Ghana, in-app doctor chat (Kobikuul AI + human clinicians), corporate health partnerships. Tone: warm, expert, locally rooted, action-oriented.",
+  productNote: "MedPharma is the parent brand: full-service e-pharmacy, medication delivery anywhere in Ghana, in-app doctor chat (AI + human clinicians), corporate health partnerships. Tone: warm, expert, locally rooted, action-oriented.",
   callLine: CALL,
   appLink: APP,
   rules: [
-    "Lead with the MedPharma 'Seamless Healthcare' lockup — full logo top-left.",
+    "Lead with the MedPharma Seamless Healthcare lockup — full logo top-left.",
     "Use Black/African models exclusively in lifestyle shots.",
     "No emojis on the artwork itself. Emojis are fine in the social caption only.",
     "Every asset must show: " + CALL + " + app QR/link + the @medpharma / @medpharmagh handle row.",
