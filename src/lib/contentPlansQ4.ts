@@ -20,7 +20,7 @@ const STD_CTA = `Call ${CALL} or download the MedPharma App: ${APP}`;
 //  2 Oct  - World Habitat Day (community / access angle)
 // 10 Oct  - World Mental Health Day ★
 // 14 Oct  - World Standards Day
-// 16 Oct  - World Food Day ★ (nutrition + adherence angle)
+// 16 Oct  - World Food Day ★ (nutrition + taking medication consistently angle)
 // 20 Oct  - Ghana: National Farmers Day prep / Homowo season
 // 31 Oct  - Halloween (light content)
 //  1 Nov  - World Vegan Day (nutrition angle)
@@ -39,7 +39,7 @@ const STD_CTA = `Call ${CALL} or download the MedPharma App: ${APP}`;
 export const FULLIFE_Q4_PLAN: ContentPlan = {
   brand: "FulLife",
   productNote:
-    "FulLife is MedPharma's continuous medication & care programme for people on long-term/routine medication. Never use the word 'chronic' on creative - always say FulLife, consistency, routine medication, or daily adherence. This is the Q4 2026 (Oct-Dec) designer brief.",
+    "FulLife is MedPharma's continuous medication & care programme for people on long-term/daily medication. Never use the word 'chronic' on creative - always say FulLife, consistency, daily medication, or daily taking medication consistently. This is the Q4 2026 (Oct-Dec) designer brief.",
   callLine: CALL,
   appLink: APP,
   rules: [
@@ -47,7 +47,7 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
     "No emojis on the artwork - keep it clean and clinical-corporate.",
     "FulLife logo top-left on every asset. MedPharma 'Seamless Healthcare' lockup bottom-left.",
     "Every asset must show: phone line " + CALL + " + app QR/link. No exceptions.",
-    "Never use the word 'chronic' on a customer-facing graphic - say FulLife, daily adherence, routine medication, consistency.",
+    "Never use the word 'chronic' on a customer-facing graphic - say FulLife, daily taking medication consistently, daily medication, consistency.",
     "Every CTA block must contain BOTH the call line and the app link - never just one.",
     "Q4 colour palette note: You may introduce warm tones (deep amber, forest green) for festive season posts - but anchor back to FulLife teal as the dominant colour.",
   ],
@@ -60,7 +60,7 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
       date: "Wed 1 Oct 2026",
       occasion: "World Heart Day (29 Sep rollover)",
       title: "World Heart Day - Is your heart getting what it needs every day?",
-      assetType: "Educational Carousel",
+      assetType: "Information Carousel",
       format: "1080 x 1350 px (4:5) · 6 slides",
       platforms: ["Instagram", "Facebook", "LinkedIn"],
       audience: "Adults 35-65 on BP or heart medication; their adult children.",
@@ -93,7 +93,7 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
       designDirection:
         "Minimal. White text on FulLife teal. Soft pill graphic. No clutter. Feels like a caring nudge, not an advert.",
       cta: STD_CTA,
-      hashtags: ["#FulLife", "#MedPharmaGH", "#DailyAdherence"],
+      hashtags: ["#FulLife", "#MedPharmaGH", "#DailyConsistency"],
     },
 
     // ============ WEEK 2 - Oct 6-12 ============
@@ -107,10 +107,10 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
       format: "1080 x 1080 px (1:1)",
       platforms: ["Instagram", "Facebook", "X / Twitter"],
       audience: "Adults managing both physical and mental health conditions; caregivers.",
-      hook: "Mental health and physical health are not separate. Your routine medication is part of both.",
+      hook: "Mental health and physical health are not separate. Your daily medication is part of both.",
       body:
         "Headline: Mental health starts with showing up for yourself - every single day.\n\n" +
-        "Sub: Skipping your routine medication doesn't just affect your body. It affects your mood, your sleep, and your mind.\n\n" +
+        "Sub: Skipping your daily medication doesn't just affect your body. It affects your mood, your sleep, and your mind.\n\n" +
         "Supporting line: FulLife keeps your medication routine consistent, so you can focus on the rest of your wellbeing.",
       designDirection:
         "Warm, calming palette - soft peach and FulLife teal. Portrait of a Ghanaian woman 30s, eyes closed, peaceful expression. No clinical imagery.",
@@ -121,11 +121,11 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
       id: "fl-q4-oct-w2b",
       week: "Week of Mon 6 Oct - Sun 12 Oct",
       date: "Wed 8 Oct 2026",
-      title: "Educational Carousel - What happens to your body when you skip a dose?",
-      assetType: "Educational Carousel",
+      title: "Information Carousel - What happens to your body when you skip a dose?",
+      assetType: "Information Carousel",
       format: "1080 x 1350 px (4:5) · 5 slides",
       platforms: ["Instagram", "Facebook"],
-      audience: "Adults 30-65 on any routine medication.",
+      audience: "Adults 30-65 on any daily medication.",
       hook: "One skipped dose feels harmless. Medically, it's not.",
       slides: [
         { title: "Slide 1 - Cover", body: "Headline: What actually happens when you skip a dose.\nSub: The answer might surprise you." },
@@ -137,7 +137,7 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
       designDirection:
         "Data-led, clinical but warm. Use icon + text layout per slide. Soft red accent for the 'problem' slides; teal for the FulLife solution slide.",
       cta: STD_CTA,
-      hashtags: ["#FulLife", "#MedPharmaGH", "#MedicationAdherence", "#HealthEducation"],
+      hashtags: ["#FulLife", "#MedPharmaGH", "#MedicationConsistency", "#HealthEducation"],
     },
 
     // ============ WEEK 3 - Oct 13-19 ============
@@ -154,7 +154,7 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
       hook: "Food is medicine. But some medicine needs your food to work properly.",
       body:
         "Headline: Food and medicine - the daily duo you cannot ignore.\n\n" +
-        "Sub: For many routine medications to work at their full potential, timing with meals matters.\n\n" +
+        "Sub: For many daily medications to work at their full potential, timing with meals matters.\n\n" +
         "Supporting: FulLife's care team advises you on the right routine - not just the refill.",
       designDirection:
         "Rich, warm food photography - a typical Ghanaian breakfast (porridge, eggs, bread) with a pill organiser alongside. Clean teal CTA strip at bottom.",
@@ -184,11 +184,11 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
       id: "fl-q4-oct-w4a",
       week: "Week of Mon 20 Oct - Sun 26 Oct",
       date: "Mon 20 Oct 2026",
-      title: "Educational Carousel - 5 signs your medication routine needs a reset",
-      assetType: "Educational Carousel",
+      title: "Information Carousel - 5 signs your medication routine needs a reset",
+      assetType: "Information Carousel",
       format: "1080 x 1350 px (4:5) · 6 slides",
       platforms: ["Instagram", "Facebook"],
-      audience: "Adults on routine medication for 6+ months who may have lapsed.",
+      audience: "Adults on daily medication for 6+ months who may have lapsed.",
       hook: "If any of these feel familiar, your routine needs FulLife.",
       slides: [
         { title: "Slide 1 - Cover", body: "Headline: 5 signs your medication routine needs a reset.\nSub: Be honest with yourself." },
@@ -201,7 +201,7 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
       designDirection:
         "Bold numbered format. Warm amber and teal palette. Lifestyle imagery of Ghanaian adults looking reflective, not stressed.",
       cta: STD_CTA,
-      hashtags: ["#FulLife", "#MedPharmaGH", "#MedicationRoutine", "#DailyAdherence"],
+      hashtags: ["#FulLife", "#MedPharmaGH", "#MedicationRoutine", "#DailyConsistency"],
     },
 
     // ============ WEEK 5 - Oct 27 - Nov 2 ============
@@ -230,8 +230,8 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
       id: "fl-q4-nov-w2a",
       week: "Week of Mon 3 Nov - Sun 9 Nov",
       date: "Wed 5 Nov 2026",
-      title: "Educational Carousel - The 30-day FulLife promise: What changes in a month?",
-      assetType: "Educational Carousel",
+      title: "Information Carousel - The 30-day FulLife promise: What changes in a month?",
+      assetType: "Information Carousel",
       format: "1080 x 1350 px (4:5) · 5 slides",
       platforms: ["Instagram", "Facebook", "LinkedIn"],
       audience: "Adults considering signing up for FulLife / MCare.",
@@ -246,7 +246,7 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
       designDirection:
         "Week-by-week progress layout. Simple, clean. Green upward trend line graphic. Ghanaian model, looking progressively more confident across slides.",
       cta: STD_CTA,
-      hashtags: ["#FulLife", "#MedPharmaGH", "#30DayChallenge", "#DailyAdherence", "#SeamlessHealthcare"],
+      hashtags: ["#FulLife", "#MedPharmaGH", "#30DayChallenge", "#DailyConsistency", "#SeamlessHealthcare"],
     },
 
     // ============ WORLD DIABETES DAY - Nov 14 ============
@@ -256,14 +256,14 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
       date: "Fri 14 Nov 2026",
       occasion: "World Diabetes Day ★★",
       title: "World Diabetes Day - Managing diabetes is a daily act of love",
-      assetType: "Educational Carousel",
+      assetType: "Information Carousel",
       format: "1080 x 1350 px (4:5) · 6 slides",
       platforms: ["Instagram", "Facebook", "LinkedIn"],
       audience: "Adults living with diabetes; their families; general awareness.",
       hook: "Diabetes doesn't take a day off. Neither does FulLife.",
       slides: [
         { title: "Slide 1 - Cover", body: "Headline: Managing diabetes is a daily act of love.\nSub: World Diabetes Day | 14 November 2026." },
-        { title: "Slide 2", body: "Stat: Ghana has over 500,000 people living with diabetes. Many go unmanaged due to access and adherence barriers." },
+        { title: "Slide 2", body: "Stat: Ghana has over 500,000 people living with diabetes. Many go unmanaged due to access and taking medication consistently barriers." },
         { title: "Slide 3", body: "Headline: The most dangerous myth about diabetes:\nBody: 'I only need my medication when I feel sick.' Diabetes management is every single day - whether you feel it or not." },
         { title: "Slide 4", body: "Headline: FulLife was built for this exact person.\nBody: Monthly medication delivered. Daily reminders sent. Virtual doctor always available." },
         { title: "Slide 5", body: "Headline: For the person managing a parent's diabetes from abroad:\nBody: Pay for their MCare subscription from anywhere in the world. We deliver and remind them locally." },
@@ -320,15 +320,15 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
       id: "fl-q4-nov-w5a",
       week: "Week of Mon 24 Nov - Sun 30 Nov",
       date: "Wed 26 Nov 2026",
-      title: "LinkedIn PDF - Why medication adherence is a business productivity issue in Ghana",
+      title: "LinkedIn PDF - Why medication taking medication consistently is a business productivity issue in Ghana",
       assetType: "LinkedIn PDF Document",
       format: "1920 x 1080 px (16:9) slides · 8 pages",
       platforms: ["LinkedIn"],
       audience: "HR managers, CEOs, business owners, corporate health leads.",
       hook: "Your employee's missed medication is costing you more than their sick days.",
       slides: [
-        { title: "Page 1 - Cover", body: "Title: The Hidden Productivity Cost of Medication Non-Adherence in Ghana's Workforce.\nBy MedPharma / FulLife." },
-        { title: "Page 2", body: "The challenge: 60% of Ghanaian adults on long-term medication are non-adherent within 6 months." },
+        { title: "Page 1 - Cover", body: "Title: The Hidden Productivity Cost of Medication Non-Consistency in Ghana's Workforce.\nBy MedPharma / FulLife." },
+        { title: "Page 2", body: "The challenge: 60% of Ghanaian adults on long-term medication are stop taking their medication within 6 months." },
         { title: "Page 3", body: "The business impact: Uncontrolled hypertension and diabetes lead to cognitive fatigue, absenteeism, and higher group insurance premiums." },
         { title: "Page 4", body: "The FulLife corporate solution: Partner with MedPharma to offer your employees a subsidised MCare subscription as part of their health benefits package." },
         { title: "Page 5", body: "What employees get: Monthly medication delivery to the office. Daily reminders. Virtual doctor access. Digital health record." },
@@ -396,7 +396,7 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: ["Instagram", "Facebook", "LinkedIn"],
-      audience: "General public; advocacy-minded followers.",
+      audience: "General public; community-focused followers.",
       hook: "Access to consistent healthcare is not a privilege. It is a right.",
       body:
         "Headline: Access to medication is a human right.\n\n" +
@@ -411,11 +411,11 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
       id: "fl-q4-dec-w2b",
       week: "Week of Mon 8 Dec - Sun 14 Dec",
       date: "Fri 12 Dec 2026",
-      title: "Educational Carousel - Year-end health review: 5 things to do before 31 December",
-      assetType: "Educational Carousel",
+      title: "Information Carousel - Year-end health review: 5 things to do before 31 December",
+      assetType: "Information Carousel",
       format: "1080 x 1350 px (4:5) · 6 slides",
       platforms: ["Instagram", "Facebook"],
-      audience: "Adults 30-65 on routine medication.",
+      audience: "Adults 30-65 on daily medication.",
       hook: "Before the year ends, your health deserves a proper review.",
       slides: [
         { title: "Slide 1 - Cover", body: "Headline: 5 things to do for your health before the year ends.\nSub: A checklist from your FulLife care team." },
@@ -482,7 +482,7 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
 export const MEDPHARMA_Q4_PLAN: ContentPlan = {
   brand: "MedPharma",
   productNote:
-    "MedPharma is Ghana's premier digital pharmacy and healthcare platform - pharmacy delivery, virtual consultations, lab diagnostics, and prescription management in one app. Q4 2026 (Oct-Dec) designer brief. The brand guide is already with you.",
+    "MedPharma is Ghana's premier digital pharmacy and healthcare platform - pharmacy delivery, online consultations, lab diagnostics, and prescription management in one app. Q4 2026 (Oct-Dec) designer brief. The brand guide is already with you.",
   callLine: CALL,
   appLink: APP,
   rules: [
@@ -520,15 +520,15 @@ export const MEDPHARMA_Q4_PLAN: ContentPlan = {
       id: "mp-q4-oct-w1b",
       week: "Week of Wed 1 Oct - Sun 5 Oct",
       date: "Fri 3 Oct 2026",
-      title: "Educational Carousel - 5 services you didn't know MedPharma offered",
-      assetType: "Educational Carousel",
+      title: "Information Carousel - 5 services you didn't know MedPharma offered",
+      assetType: "Information Carousel",
       format: "1080 x 1350 px (4:5) · 6 slides",
       platforms: ["Instagram", "Facebook"],
       audience: "New and warm audience - app awareness drive.",
       hook: "Most people only know us for delivery. Here's the full picture.",
       slides: [
         { title: "Slide 1 - Cover", body: "Headline: 5 things MedPharma does that most people don't know about.\nSub: You've been sleeping on a full healthcare platform." },
-        { title: "Slide 2", body: "1. Virtual Doctor Consultations.\nBook a video call with a licensed Ghanaian doctor in under 2 minutes - no commute, no queue." },
+        { title: "Slide 2", body: "1. Online Doctor Consultations.\nBook a video call with a licensed Ghanaian doctor in under 2 minutes - no commute, no queue." },
         { title: "Slide 3", body: "2. Lab Diagnostics Booking.\nBook your blood work, cholesterol panel, or HbA1c from the app. Results delivered digitally." },
         { title: "Slide 4", body: "3. Upload & Dispense Prescriptions.\nTake a photo of your handwritten prescription in the app. Our pharmacists verify and deliver." },
         { title: "Slide 5", body: "4. Your Digital Health Vault.\nAll your prescriptions, lab results, and medical history - stored securely in one place." },
@@ -569,7 +569,7 @@ export const MEDPHARMA_Q4_PLAN: ContentPlan = {
       date: "Thu 16 Oct 2026",
       occasion: "World Food Day",
       title: "World Food Day - Nutrition is the first prescription",
-      assetType: "Educational Carousel",
+      assetType: "Information Carousel",
       format: "1080 x 1350 px (4:5) · 5 slides",
       platforms: ["Instagram", "Facebook"],
       audience: "Health-conscious adults; people managing diet-sensitive conditions.",
@@ -632,7 +632,7 @@ export const MEDPHARMA_Q4_PLAN: ContentPlan = {
       date: "Fri 14 Nov 2026",
       occasion: "World Diabetes Day ★★",
       title: "World Diabetes Day - Managing diabetes shouldn't be a full-time job",
-      assetType: "Educational Carousel",
+      assetType: "Information Carousel",
       format: "1080 x 1350 px (4:5) · 5 slides",
       platforms: ["Instagram", "Facebook", "LinkedIn"],
       audience: "Adults with diabetes; their families; healthcare workers.",
@@ -721,8 +721,8 @@ export const MEDPHARMA_Q4_PLAN: ContentPlan = {
       id: "mp-q4-dec-w2a",
       week: "Week of Mon 8 Dec - Sun 14 Dec",
       date: "Wed 10 Dec 2026",
-      title: "Educational Carousel - Your December health checklist",
-      assetType: "Educational Carousel",
+      title: "Information Carousel - Your December health checklist",
+      assetType: "Information Carousel",
       format: "1080 x 1350 px (4:5) · 5 slides",
       platforms: ["Instagram", "Facebook"],
       audience: "Adults 30+ managing ongoing health conditions.",
@@ -751,8 +751,8 @@ export const MEDPHARMA_Q4_PLAN: ContentPlan = {
       hook: "2026 was the year seamless healthcare became real in Ghana.",
       slides: [
         { title: "Page 1 - Cover", body: "MedPharma: Year in Review 2026.\nSeamless Healthcare. Delivered." },
-        { title: "Page 2", body: "Milestone: [X] prescriptions dispensed. [X] virtual consultations completed. [X] cities reached." },
-        { title: "Page 3", body: "FulLife Growth: [X] active MCare subscribers. Average medication adherence rate: [X%]." },
+        { title: "Page 2", body: "Milestone: [X] prescriptions dispensed. [X] online consultations completed. [X] cities reached." },
+        { title: "Page 3", body: "FulLife Growth: [X] active MCare subscribers. Average medication taking medication consistently rate: [X%]." },
         { title: "Page 4", body: "Technology milestones: AI Health Assistant launched. Wearable integrations added. Insurance portal expanded." },
         { title: "Page 5", body: "Community impact: Partnerships with [X] corporate employers. [X] health awareness campaigns run." },
         { title: "Page 6", body: "2027 Preview: Expansion to [cities]. New features: [feature 1], [feature 2]. Partnership announcements." },
@@ -800,7 +800,7 @@ export const MEDPHARMA_Q4_PLAN: ContentPlan = {
       audience: "All followers.",
       hook: "Your 2027 health resolution starts tonight.",
       body:
-        "Visual: Bold countdown. MedPharma teal + gold.\nHeadline: 2027 resolution: Put your health first.\nSub: Download MedPharma. Keep your medication consistent. Book your first virtual consultation. Start the year in control.\nCTA: Download now → " + APP,
+        "Visual: Bold countdown. MedPharma teal + gold.\nHeadline: 2027 resolution: Put your health first.\nSub: Download MedPharma. Keep your medication consistent. Book your first online consultation. Start the year in control.\nCTA: Download now → " + APP,
       designDirection:
         "New Year countdown aesthetic. MedPharma teal and gold. Bold, aspirational, motivating. Feels like a health promise - not just a greeting card.",
       cta: STD_CTA,
