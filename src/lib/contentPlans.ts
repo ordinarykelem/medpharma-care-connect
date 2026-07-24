@@ -784,6 +784,181 @@ export const FULLIFE_PLAN: ContentPlan = {
       ]
     },
 
+    // ============ AUGUST WEEK 1 — Aug 3–9 (Founders' Day Aug 4) ============
+    {
+      id: "mp-aug-w1a",
+      week: "Week of Mon 3 Aug – Sun 9 Aug",
+      date: "Mon 4 Aug 2026",
+      occasion: "Ghana Founders' Day (Public Holiday)",
+      title: "Founders' Day — A healthy nation honours its founders best",
+      assetType: "Square Flyer",
+      format: "1080 x 1080 px (1:1)",
+      platforms: ["Instagram", "Facebook", "X / Twitter"],
+      audience: "General Ghanaian public.",
+      hook: "The founders built this nation with discipline and consistency. Your health deserves the same.",
+      body:
+        "Headline: A healthy nation honours its founders best.\n\n" +
+        "Sub: Happy Founders' Day from MedPharma. We are proud to be building a healthier Ghana — one seamless healthcare experience at a time.\n\n" +
+        "Supporting: Download the MedPharma app today and join thousands of Ghanaians taking control of their health.",
+      designDirection:
+        "Ghana flag palette (red, gold, green, black star) woven elegantly with MedPharma teal. National pride aesthetic — bold, clean, patriotic.",
+      cta: STD_CTA,
+      hashtags: ["#FoundersDay", "#GhanaAt69", "#MedPharmaGH", "#HealthyGhana", "#SeamlessHealthcare"],
+    },
+    {
+      id: "mp-aug-w1b",
+      week: "Week of Mon 3 Aug – Sun 9 Aug",
+      date: "Thu 7 Aug 2026",
+      title: "Educational Carousel — The MedPharma app: A full tour in 5 slides",
+      assetType: "Educational Carousel",
+      format: "1080 x 1350 px (4:5) · 6 slides",
+      platforms: ["Instagram", "Facebook"],
+      audience: "App awareness — new and warm audience.",
+      hook: "Most people still don't know everything MedPharma does. Let's fix that.",
+      slides: [
+        { title: "Slide 1 — Cover", body: "Headline: The MedPharma app.\nSub: A full tour. 5 slides. Everything you need to know." },
+        { title: "Slide 2", body: "Feature 1: Medication Delivery.\nOrder any prescription or OTC medication and get it delivered to your door — anywhere in Accra." },
+        { title: "Slide 3", body: "Feature 2: Virtual Doctor Consultations.\nBook a video call with a licensed Ghanaian doctor in minutes. No commute. No queue." },
+        { title: "Slide 4", body: "Feature 3: Upload Your Prescription.\nTake a photo of your paper prescription. Our pharmacist verifies and dispatches your order." },
+        { title: "Slide 5", body: "Feature 4: AI Health Assistant.\nAsk our 24/7 AI health companion any medical question — instantly and safely, any time of day." },
+        { title: "Slide 6 — CTA", body: "Feature 5: FulLife / MCare Subscription.\nAutomatic monthly medication delivery + reminders + doctor access — all in one plan.\nCTA: " + STD_CTA },
+      ],
+      designDirection:
+        "App UI showcase style. Clean, tech-forward. MedPharma teal. One app screenshot per slide where possible. Modern and aspirational.",
+      cta: STD_CTA,
+      hashtags: ["#MedPharmaGH", "#DigitalPharmacy", "#SeamlessHealthcare", "#AccraHealthTech"],
+    },
+
+    // ============ AUGUST WEEK 2 — Aug 10–16 (Youth Day Aug 12) ============
+    {
+      id: "mp-aug-w2a",
+      week: "Week of Mon 10 Aug – Sun 16 Aug",
+      date: "Wed 12 Aug 2026",
+      occasion: "International Youth Day",
+      title: "International Youth Day — Healthcare for the generation building tomorrow's Ghana",
+      assetType: "Square Flyer",
+      format: "1080 x 1080 px (1:1)",
+      platforms: ["Instagram", "Facebook", "X / Twitter"],
+      audience: "Young Ghanaians 18–35; parents of young people managing health conditions.",
+      hook: "Young Ghanaians are building the future. MedPharma keeps them healthy enough to do it.",
+      body:
+        "Headline: Healthcare for the generation building tomorrow's Ghana.\n\n" +
+        "Sub: International Youth Day is a reminder that asthma, sickle cell, anxiety, and early-onset hypertension affect young Ghanaians right now. Healthcare access cannot wait.\n\n" +
+        "MedPharma: Fast, affordable, and digital healthcare — built for how young Ghanaians actually live.",
+      designDirection:
+        "Bold, energetic. Young Ghanaian professionals and students — diverse, vibrant. MedPharma teal. Modern typography. Urban setting.",
+      cta: STD_CTA,
+      hashtags: ["#InternationalYouthDay", "#YouthHealthGhana", "#MedPharmaGH", "#SeamlessHealthcare"],
+    },
+    {
+      id: "mp-aug-w2b",
+      week: "Week of Mon 10 Aug – Sun 16 Aug",
+      date: "Fri 14 Aug 2026",
+      title: "Story / WhatsApp Status — Sickle cell: managing it just got easier",
+      assetType: "Story / WhatsApp Status",
+      format: "1080 x 1920 px (9:16)",
+      platforms: ["Instagram Stories", "WhatsApp Status", "Facebook Stories"],
+      audience: "Young Ghanaians with sickle cell; their families and caregivers.",
+      hook: "Sickle cell doesn't pause. Your medication access shouldn't either.",
+      body:
+        "Visual: Bold teal card. Clean typography.\nHeadline: Managing sickle cell just got easier.\nSub: MedPharma delivers your hydroxyurea, pain management meds, and supplements straight to your door — with zero pharmacy drama.\nCTA: Download MedPharma → " + APP,
+      designDirection:
+        "Strong, empowering. MedPharma teal on dark background. Sickle cell awareness red-cell graphic as subtle background element. Not clinical — empowering.",
+      cta: STD_CTA,
+      hashtags: ["#SickleCellGhana", "#MedPharmaGH", "#SeamlessHealthcare", "#YouthHealth"],
+    },
+
+    // ============ AUGUST WEEK 3 — Aug 17–23 (World Mosquito Day Aug 20) ============
+    {
+      id: "mp-aug-w3a",
+      week: "Week of Mon 17 Aug – Sun 23 Aug",
+      date: "Thu 20 Aug 2026",
+      occasion: "World Mosquito Day",
+      title: "World Mosquito Day — Order your malaria treatment before you need it",
+      assetType: "Educational Carousel",
+      format: "1080 x 1350 px (4:5) · 5 slides",
+      platforms: ["Instagram", "Facebook"],
+      audience: "General Ghanaian public, parents, caregivers.",
+      hook: "World Mosquito Day: Malaria starts with a bite. Your response starts with MedPharma.",
+      slides: [
+        { title: "Slide 1 — Cover", body: "Headline: Ghana has one of the world's highest malaria burdens.\nSub: World Mosquito Day | 20 August 2026 | by MedPharma." },
+        { title: "Slide 2", body: "The risk: During rainy season in Ghana, malaria transmission spikes significantly. Children under 5 and pregnant women are most at risk." },
+        { title: "Slide 3", body: "What MedPharma offers:\n✓ Order antimalarial medications in the app\n✓ Get malaria test kits delivered to your door\n✓ Book a virtual consultation if you have symptoms\n✓ Upload your prescription for instant dispensing" },
+        { title: "Slide 4", body: "Complete your full course:\nNever stop malaria treatment early — even when you feel better. Incomplete courses cause resistance and relapse.\nFulLife medication reminders keep you on track." },
+        { title: "Slide 5 — CTA", body: "Headline: From prevention to treatment — MedPharma has you covered.\nCTA: " + STD_CTA },
+      ],
+      designDirection:
+        "Health poster style — deep green and MedPharma teal. Mosquito net graphic. Ghanaian family — mother and child. Warm but educational.",
+      cta: STD_CTA,
+      hashtags: ["#WorldMosquitoDay", "#MalariaGhana", "#MedPharmaGH", "#SeamlessHealthcare"],
+    },
+    {
+      id: "mp-aug-w3b",
+      week: "Week of Mon 17 Aug – Sun 23 Aug",
+      date: "Mon 18 Aug 2026",
+      title: "Square Flyer — Book a lab test from the MedPharma app",
+      assetType: "Square Flyer",
+      format: "1080 x 1080 px (1:1)",
+      platforms: ["Instagram", "Facebook", "X / Twitter"],
+      audience: "Adults 25–60 due for routine blood work.",
+      hook: "Your lab test doesn't need a waiting room. It needs a phone.",
+      body:
+        "Headline: Your blood work doesn't need a waiting room.\n\n" +
+        "Sub: Book your malaria test, HbA1c, lipid panel, or full blood count directly in the MedPharma app. Results delivered digitally. No queues. No guessing.\n\n" +
+        "Tap 'Book a Lab Test' in the MedPharma app today.",
+      designDirection:
+        "Clean, medical-tech. Lab tubes / test icon alongside a phone mockup of the booking flow. MedPharma teal. Confident and convenient.",
+      cta: STD_CTA,
+      hashtags: ["#MedPharmaGH", "#LabTests", "#SeamlessHealthcare", "#DigitalHealthGhana"],
+    },
+
+    // ============ AUGUST WEEK 4 — Aug 24–30 (Women's Equality Day Aug 26) ============
+    {
+      id: "mp-aug-w4a",
+      week: "Week of Mon 24 Aug – Sun 30 Aug",
+      date: "Wed 26 Aug 2026",
+      occasion: "Women's Equality Day",
+      title: "Women's Equality Day — Equal healthcare is not optional",
+      assetType: "Square Flyer",
+      format: "1080 x 1080 px (1:1)",
+      platforms: ["Instagram", "Facebook", "LinkedIn", "X / Twitter"],
+      audience: "Women 25–60; general public; advocacy-minded followers.",
+      hook: "Equal rights mean equal access to healthcare — private, consistent, and dignified.",
+      body:
+        "Headline: Equal healthcare is not optional.\n\n" +
+        "Sub: On Women's Equality Day, MedPharma stands for every woman's right to access her healthcare — without queues, stigma, or compromise.\n\n" +
+        "Discreet delivery. Virtual consultations. Prescriptions managed in-app. Healthcare on your terms.",
+      designDirection:
+        "Bold, empowering. MedPharma teal and warm gold. Diverse Ghanaian women — different ages, different backgrounds. Strong, dignified, confident.",
+      cta: STD_CTA,
+      hashtags: ["#WomensEqualityDay", "#WomensHealthGhana", "#MedPharmaGH", "#SeamlessHealthcare"],
+    },
+    {
+      id: "mp-aug-w4b",
+      week: "Week of Mon 24 Aug – Sun 30 Aug",
+      date: "Fri 28 Aug 2026",
+      title: "LinkedIn PDF — Why Ghana's employers should include digital pharmacy in their health benefits",
+      assetType: "LinkedIn PDF Document",
+      format: "1920 x 1080 px (16:9) · 7 pages",
+      platforms: ["LinkedIn"],
+      audience: "HR Directors, CEOs, Business Owners, Corporate Health Leads.",
+      hook: "Your employee's untreated hypertension is costing you far more than their sick days.",
+      slides: [
+        { title: "Page 1 — Cover", body: "Title: Digital Pharmacy as a Corporate Health Benefit: The Business Case for MedPharma.\nBy MedPharma Ghana." },
+        { title: "Page 2", body: "The problem: 42% of working-age Ghanaians on long-term medication are non-adherent within the first 3 months. The main reason? Inconvenience of the physical pharmacy." },
+        { title: "Page 3", body: "The business cost: Lost productivity, increased sick days, higher group health insurance premiums, and elevated risk of acute medical emergencies in the workplace." },
+        { title: "Page 4", body: "The MedPharma corporate solution: Partner with us to include MedPharma / FulLife access in your employee health benefits package at a negotiated group rate." },
+        { title: "Page 5", body: "What employees get: Medication delivered to their desk or home. 24/7 AI health assistant. Virtual doctor access. Digital health records and prescription management." },
+        { title: "Page 6", body: "What the business gets: Healthier, more present team. Reduced insurance claims. Demonstrable wellbeing programme for ESG and recruitment purposes." },
+        { title: "Page 7 — CTA", body: "Ready to build a healthier workforce?\nBook a corporate consultation: " + CALL + "\n" + APP },
+      ],
+      designDirection:
+        "Premium corporate. Navy + MedPharma teal. Data charts, infographic-style layout. Boardroom-ready. Professional and authoritative.",
+      cta: STD_CTA,
+      hashtags: ["#MedPharmaGH", "#CorporateHealth", "#EmployeeWellbeing", "#SeamlessHealthcare", "#GhanaHR"],
+    },
+
+
   ],
 };
 
