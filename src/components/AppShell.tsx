@@ -3,7 +3,7 @@ import {
   Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel,
   SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarProvider, SidebarTrigger, useSidebar,
 } from "@/components/ui/sidebar";
-import { Activity, Target, Coffee, BarChart3, FileText, Megaphone, MapPin, CheckSquare, Settings, LogOut, Palette, HeartPulse, Video } from "lucide-react";
+import { Activity, Target, Coffee, BarChart3, FileText, Megaphone, MapPin, CheckSquare, Settings, LogOut, Palette, HeartPulse, Video, MessageSquare } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
@@ -18,6 +18,7 @@ const nav = [
   { to: "/content/medpharma-q4", label: "MedPharma — Q4 2026 Plan", icon: Palette },
   { to: "/seo", label: "SEO Drafts", icon: FileText },
   { to: "/social", label: "Social Drafts", icon: Megaphone },
+  { to: "/sms-plan", label: "SMS Marketing (Q3)", icon: MessageSquare },
   { to: "/gbp", label: "GBP & GSC Drafts", icon: MapPin },
   { to: "/videos", label: "Video Factory (AI)", icon: Video },
   { to: "/scripts", label: "Master Scripts", icon: FileText },

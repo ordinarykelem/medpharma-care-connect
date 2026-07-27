@@ -19,6 +19,7 @@ import ContentPlanPage from "./pages/ContentPlanPage.tsx";
 import VideoBriefs from "./pages/VideoBriefs.tsx";
 import CanvaKit from "./pages/CanvaKit.tsx";
 import MarketingScripts from "./pages/MarketingScripts.tsx";
+import SmsPlan from "./pages/SmsPlan.tsx";
 import { AuthProvider } from "./hooks/useAuth";
 
 const queryClient = new QueryClient();
@@ -46,6 +47,7 @@ const App = () => (
               <Route path="/videos" element={<VideoBriefs />} />
               <Route path="/canva-kit" element={<CanvaKit />} />
               <Route path="/scripts" element={<MarketingScripts />} />
+              <Route path="/sms-plan" element={<SmsPlan />} />
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
