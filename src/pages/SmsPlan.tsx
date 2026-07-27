@@ -55,6 +55,78 @@ const SMS_CAMPAIGNS = [
     target: "Hypertension / BP",
     copy: "Hello [Name]! Today is World Heart Day. Stress and diet affect your BP. Book an instant doctor consult from home. download our app: onelink.to/vhzcxh",
   },
+  {
+    id: "oct-1",
+    month: "October",
+    date: "October 10",
+    title: "World Mental Health Day",
+    target: "General Audience",
+    copy: "Hi [Name]. Mental health is health. If stress is overwhelming you, talk to our licensed therapists confidentially. download our app: onelink.to/vhzcxh",
+  },
+  {
+    id: "oct-2",
+    month: "October",
+    date: "October 15",
+    title: "Breast Cancer Awareness",
+    target: "Women's Health",
+    copy: "[Name], Pink October is here! Early detection saves lives. Book a doctor consult for a clinical breast exam today. download our app: onelink.to/vhzcxh",
+  },
+  {
+    id: "oct-3",
+    month: "October",
+    date: "October 28",
+    title: "End of Month Refill",
+    target: "Routine Medication",
+    copy: "Hello [Name]! Payday is here. Secure your monthly medications with FulLife automatic refills before they run out. download our app: onelink.to/vhzcxh",
+  },
+  {
+    id: "nov-1",
+    month: "November",
+    date: "November 5",
+    title: "Movember / Men's Health",
+    target: "Men's Health",
+    copy: "[Name], take charge of your health this Movember! Book your routine prostate and wellness checks directly with us. download our app: onelink.to/vhzcxh",
+  },
+  {
+    id: "nov-2",
+    month: "November",
+    date: "November 14",
+    title: "World Diabetes Day",
+    target: "Diabetic Patients",
+    copy: "Hi [Name]. Managing sugar levels is easier with support. Order test strips and insulin directly to your doorstep. download our app: onelink.to/vhzcxh",
+  },
+  {
+    id: "nov-3",
+    month: "November",
+    date: "November 27",
+    title: "Black Friday Health Deals",
+    target: "General Audience",
+    copy: "[Name], Black Friday is here! Get massive discounts on first aid kits and multivitamins this weekend only. download our app: onelink.to/vhzcxh",
+  },
+  {
+    id: "dec-1",
+    month: "December",
+    date: "December 1",
+    title: "World AIDS Day",
+    target: "General Audience",
+    copy: "Hello [Name]. Know your status! Book confidential and safe lab tests from the comfort of your own home today. download our app: onelink.to/vhzcxh",
+  },
+  {
+    id: "dec-2",
+    month: "December",
+    date: "December 15",
+    title: "Festive Season Prep",
+    target: "General Audience",
+    copy: "[Name], the holidays are here! Stay energized and hydrated. Stock up on rehydration salts and daily vitamins. download our app: onelink.to/vhzcxh",
+  },
+  {
+    id: "dec-3",
+    month: "December",
+    date: "December 28",
+    title: "New Year Resolutions",
+    target: "Fitness / Wellness",
+    copy: "Hi [Name]! Ready for a healthy new year? Start your fitness journey with doctor-approved wellness supplements. download our app: onelink.to/vhzcxh",
+  }
 ];
 
 /* ─── COMPONENT ─────────────────────────────────────────────────────── */
@@ -118,6 +190,9 @@ function SmsCard({ campaign }: { campaign: typeof SMS_CAMPAIGNS[0] }) {
 export default function SmsMarketingPlan() {
   const augustCampaigns = SMS_CAMPAIGNS.filter(c => c.month === "August");
   const septemberCampaigns = SMS_CAMPAIGNS.filter(c => c.month === "September");
+  const octoberCampaigns = SMS_CAMPAIGNS.filter(c => c.month === "October");
+  const novemberCampaigns = SMS_CAMPAIGNS.filter(c => c.month === "November");
+  const decemberCampaigns = SMS_CAMPAIGNS.filter(c => c.month === "December");
 
   return (
     <div className="min-h-screen bg-background">
@@ -130,7 +205,7 @@ export default function SmsMarketingPlan() {
             SMS Marketing Plan
           </h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Q3 2026 targeted bulk SMS campaigns for Mnotify deployment. Optimized for character count and high conversion.
+            Q3 & Q4 2026 targeted bulk SMS campaigns for Mnotify deployment. Optimized for character count and high conversion.
           </p>
         </div>
       </div>
@@ -153,6 +228,39 @@ export default function SmsMarketingPlan() {
           </h2>
           <div className="grid sm:grid-cols-2 gap-6">
             {septemberCampaigns.map(c => (
+              <SmsCard key={c.id} campaign={c} />
+            ))}
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold font-display flex items-center gap-2 mb-6 text-foreground">
+            October 2026 Campaigns
+          </h2>
+          <div className="grid sm:grid-cols-2 gap-6">
+            {octoberCampaigns.map(c => (
+              <SmsCard key={c.id} campaign={c} />
+            ))}
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold font-display flex items-center gap-2 mb-6 text-foreground">
+            November 2026 Campaigns
+          </h2>
+          <div className="grid sm:grid-cols-2 gap-6">
+            {novemberCampaigns.map(c => (
+              <SmsCard key={c.id} campaign={c} />
+            ))}
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold font-display flex items-center gap-2 mb-6 text-foreground">
+            December 2026 Campaigns
+          </h2>
+          <div className="grid sm:grid-cols-2 gap-6">
+            {decemberCampaigns.map(c => (
               <SmsCard key={c.id} campaign={c} />
             ))}
           </div>
