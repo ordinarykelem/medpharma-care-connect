@@ -13,7 +13,7 @@ const SMS_CAMPAIGNS = [
     date: "August 15",
     title: "Mid-Month Health Check",
     target: "General Audience",
-    copy: "Hello [Name]! Health is wealth. Don't wait until you're sick to get care. Get vitamins and fast doctor consults. download our app: onelink.to/vhzcxh",
+    copy: "Hello [Name]! Health is wealth. Don't wait until you're sick to get care. Get vitamins and fast doctor consults. Download our app: onelink.to/vhzcxh",
   },
   {
     id: "aug-2",
@@ -21,7 +21,7 @@ const SMS_CAMPAIGNS = [
     date: "August 20",
     title: "World Mosquito Day",
     target: "Malaria Prevention",
-    copy: "[Name], protect your family from Malaria this rainy season. Order repellent, nets, and rapid tests delivered today! download our app: onelink.to/vhzcxh",
+    copy: "[Name], protect your family from Malaria this rainy season. Order repellent, nets, and rapid tests delivered today! Download our app: onelink.to/vhzcxh",
   },
   {
     id: "aug-3",
@@ -29,7 +29,7 @@ const SMS_CAMPAIGNS = [
     date: "August 28",
     title: "Payday & End of Month",
     target: "Routine Medication",
-    copy: "Hello [Name], payday is here! Stock up on your routine medications before the month ends. Fast, secure delivery. download our app: onelink.to/vhzcxh",
+    copy: "Hello [Name], payday is here! Stock up on your routine medications before the month ends. Fast, secure delivery. Download our app: onelink.to/vhzcxh",
   },
   {
     id: "sep-1",
@@ -37,7 +37,7 @@ const SMS_CAMPAIGNS = [
     date: "September 5",
     title: "Back-to-School Prep",
     target: "Parents & Family",
-    copy: "[Name], the kids are back to school! Ensure they are protected with daily multivitamins and a first-aid kit. download our app: onelink.to/vhzcxh",
+    copy: "[Name], the kids are back to school! Ensure they are protected with daily multivitamins and a first-aid kit. Download our app: onelink.to/vhzcxh",
   },
   {
     id: "sep-2",
@@ -45,7 +45,7 @@ const SMS_CAMPAIGNS = [
     date: "September 25",
     title: "World Pharmacists Day",
     target: "General Audience",
-    copy: "[Name], celebrate World Pharmacist Day with us! Chat with a verified MedPharma pharmacist online for free today. download our app: onelink.to/vhzcxh",
+    copy: "[Name], celebrate World Pharmacist Day with us! Chat with a verified MedPharma pharmacist online for free today. Download our app: onelink.to/vhzcxh",
   },
   {
     id: "sep-3",
@@ -53,7 +53,7 @@ const SMS_CAMPAIGNS = [
     date: "September 29",
     title: "World Heart Day",
     target: "Hypertension / BP",
-    copy: "Hello [Name]! Today is World Heart Day. Stress and diet affect your BP. Book an instant doctor consult from home. download our app: onelink.to/vhzcxh",
+    copy: "Hello [Name]! Today is World Heart Day. Stress and diet affect your BP. Book an instant doctor consult from home. Download our app: onelink.to/vhzcxh",
   },
   {
     id: "oct-1",
@@ -61,7 +61,7 @@ const SMS_CAMPAIGNS = [
     date: "October 10",
     title: "World Mental Health Day",
     target: "General Audience",
-    copy: "Hi [Name]. Mental health is health. If stress is overwhelming you, talk to our licensed therapists confidentially. download our app: onelink.to/vhzcxh",
+    copy: "Hi [Name]. Mental health is health. If stress is overwhelming you, talk to our licensed therapists confidentially. Download our app: onelink.to/vhzcxh",
   },
   {
     id: "oct-2",
@@ -69,7 +69,7 @@ const SMS_CAMPAIGNS = [
     date: "October 15",
     title: "Breast Cancer Awareness",
     target: "Women's Health",
-    copy: "[Name], Pink October is here! Early detection saves lives. Book a doctor consult for a clinical breast exam today. download our app: onelink.to/vhzcxh",
+    copy: "[Name], Pink October is here! Early detection saves lives. Book a doctor consult for a clinical breast exam today. Download our app: onelink.to/vhzcxh",
   },
   {
     id: "oct-3",
@@ -77,7 +77,7 @@ const SMS_CAMPAIGNS = [
     date: "October 28",
     title: "End of Month Refill",
     target: "Routine Medication",
-    copy: "Hello [Name]! Payday is here. Secure your monthly medications with FulLife automatic refills before they run out. download our app: onelink.to/vhzcxh",
+    copy: "Hello [Name]! Payday is here. Secure your monthly medications with FulLife automatic refills before they run out. Download our app: onelink.to/vhzcxh",
   },
   {
     id: "nov-1",
@@ -85,7 +85,7 @@ const SMS_CAMPAIGNS = [
     date: "November 5",
     title: "Movember / Men's Health",
     target: "Men's Health",
-    copy: "[Name], take charge of your health this Movember! Book your routine prostate and wellness checks directly with us. download our app: onelink.to/vhzcxh",
+    copy: "[Name], take charge of your health this Movember! Book your routine prostate and wellness checks directly with us. Download our app: onelink.to/vhzcxh",
   },
   {
     id: "nov-2",
@@ -93,7 +93,7 @@ const SMS_CAMPAIGNS = [
     date: "November 14",
     title: "World Diabetes Day",
     target: "Diabetic Patients",
-    copy: "Hi [Name]. Managing sugar levels is easier with support. Order test strips and insulin directly to your doorstep. download our app: onelink.to/vhzcxh",
+    copy: "Hi [Name]. Managing sugar levels is easier with support. Order test strips and insulin directly to your doorstep. Download our app: onelink.to/vhzcxh",
   },
   {
     id: "nov-3",
