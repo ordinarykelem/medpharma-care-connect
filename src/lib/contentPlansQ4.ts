@@ -6,7 +6,7 @@
  * Brand guide is already with the designer - not repeated here.
  */
 
-import { ContentPlan } from "./contentPlans";
+import type { ContentPlan } from "./contentPlans";
 
 const CALL = "0557560448";
 const APP  = "https://onelink.to/vhzcxh";
