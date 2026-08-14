@@ -71,7 +71,7 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
         { title: "Slide 3 - Stat", body: "Headline: Hypertension is Ghana's leading cause of stroke.\nBody: 1 in 3 Ghanaian adults has high blood pressure. Most do not know it." },
         { title: "Slide 4 - The FulLife Angle", body: "Headline: Consistency is your best cardiologist.\nBody: FulLife delivers your heart medication to your door and sends you a reminder so it's never missed." },
         { title: "Slide 5 - Testimonial Placeholder", body: "Quote: 'Since joining FulLife, my BP is under control and I don't have to think about my refill anymore.' - [First name], Accra." },
-        { title: "Slide 6 - CTA", body: "Headline: Make your heart the priority this October. },
+        { title: "Slide 6 - CTA", body: "Headline: Make your heart the priority this October." },
       ],
       designDirection:
         "Deep teal + warm coral accent. Heartbeat line graphic running across slides. Lifestyle photo of a smiling Ghanaian man 50s+.",
@@ -132,7 +132,7 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
         { title: "Slide 2 - BP Medications", body: "Headline: Blood pressure medication.\nBody: Skipping even one dose can cause a 'rebound' spike - elevating your risk of stroke within hours." },
         { title: "Slide 3 - Diabetes Medications", body: "Headline: Diabetes medication.\nBody: A missed dose can cause dangerous blood sugar fluctuations - felt as dizziness, fatigue, or worse." },
         { title: "Slide 4 - Mental Health Medications", body: "Headline: Antidepressants & mood stabilisers.\nBody: Missing doses can trigger discontinuation syndrome - causing flu-like symptoms and mood instability." },
-        { title: "Slide 5 - CTA", body: "Headline: The solution isn't willpower. It's a system.\nBody: FulLife delivers your medication and reminds you daily - so missing a dose becomes history. },
+        { title: "Slide 5 - CTA", body: "Headline: The solution isn't willpower. It's a system.\nBody: FulLife delivers your medication and reminds you daily - so missing a dose becomes history." },
       ],
       designDirection:
         "Data-led, clinical but warm. Use icon + text layout per slide. Soft red accent for the 'problem' slides; teal for the FulLife solution slide.",
@@ -172,7 +172,7 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
       audience: "Potential FulLife subscribers - warm awareness audience.",
       hook: "FulLife isn't just a delivery. It's your entire care routine simplified.",
       body:
-        "Headline: What you get with FulLife:\n✓ Monthly medication delivered to your door\n✓ Daily dose reminders\n✓ Virtual doctor access\n✓ Your FulLife medical ID\n✓ Discounted refills\n\nSub: Starting from [price] / month.,
+        "Headline: What you get with FulLife:\n✓ Monthly medication delivered to your door\n✓ Daily dose reminders\n✓ Virtual doctor access\n✓ Your FulLife medical ID\n✓ Discounted refills\n\nSub: Starting from [price] / month.",
       designDirection:
         "Clean checklist layout. FulLife teal background. Each item fades in (for Reels/Motion version). Static version: bold typography.",
       cta: STD_CTA,
@@ -196,7 +196,7 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
         { title: "Slide 3", body: "Sign 2: You ran out last month before the refill.\nBody: Running out isn't a discipline problem - it's a system problem." },
         { title: "Slide 4", body: "Sign 3: Your doctor's last review showed your numbers going in the wrong direction.\nBody: Inconsistency is the quiet saboteur of progress." },
         { title: "Slide 5", body: "Sign 4: You have 3 or more medications and manage them mentally.\nBody: The human brain was not designed to track multiple schedules. Systems exist for a reason." },
-        { title: "Slide 6 - CTA", body: "Sign 5: You dread running to the pharmacy every month.\nHeadline: Reset your routine with FulLife.\nBody: Delivery + reminders + care - all in one subscription. },
+        { title: "Slide 6 - CTA", body: "Sign 5: You dread running to the pharmacy every month.\nHeadline: Reset your routine with FulLife.\nBody: Delivery + reminders + care - all in one subscription." },
       ],
       designDirection:
         "Bold numbered format. Warm amber and teal palette. Lifestyle imagery of Ghanaian adults looking reflective, not stressed.",
@@ -241,7 +241,7 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
         { title: "Slide 2", body: "Week 1: Your first delivery arrives. No pharmacy run. Your medication is at the door." },
         { title: "Slide 3", body: "Week 2: Your doctor has your full history in one place. Consultations get shorter and more useful." },
         { title: "Slide 4", body: "Week 3: You haven't missed a dose. Your daily reminder is doing the work." },
-        { title: "Slide 5 - CTA", body: "Week 4: Your numbers are trending in the right direction.\nHeadline: 30 days can change a year. },
+        { title: "Slide 5 - CTA", body: "Week 4: Your numbers are trending in the right direction.\nHeadline: 30 days can change a year." },
       ],
       designDirection:
         "Week-by-week progress layout. Simple, clean. Green upward trend line graphic. Ghanaian model, looking progressively more confident across slides.",
@@ -267,7 +267,7 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
         { title: "Slide 3", body: "Headline: The most dangerous myth about diabetes:\nBody: 'I only need my medication when I feel sick.' Diabetes management is every single day - whether you feel it or not." },
         { title: "Slide 4", body: "Headline: FulLife was built for this exact person.\nBody: Monthly medication delivered. Daily reminders sent. Virtual doctor always available." },
         { title: "Slide 5", body: "Headline: For the person managing a parent's diabetes from abroad:\nBody: Pay for their FulLife subscription from anywhere in the world. We deliver and remind them locally." },
-        { title: "Slide 6 - CTA", body: "Headline: Diabetes requires daily care. FulLife provides it. },
+        { title: "Slide 6 - CTA", body: "Headline: Diabetes requires daily care. FulLife provides it." },
       ],
       designDirection:
         "Blue circle (World Diabetes Day brand colour) as a design element, blended with FulLife teal. Portrait of a Ghanaian man 50s+ looking healthy and active.",
@@ -423,7 +423,7 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
         { title: "Slide 3", body: "2. Ensure your December refill is sorted.\nBody: Pharmacies get busier in December. FulLife members don't have to worry." },
         { title: "Slide 4", body: "3. Review your medication list with your doctor.\nBody: Any new prescriptions this year? Anything to stop? Do the review - not in January when it's too late." },
         { title: "Slide 5", body: "4. Set up your medication routine for January.\nBody: January is when most routines break. Set your reminder schedule now." },
-        { title: "Slide 6 - CTA", body: "5. Protect your health plan for the new year.\nBody: Join FulLife before 31 December and start 2027 in control. },
+        { title: "Slide 6 - CTA", body: "5. Protect your health plan for the new year.\nBody: Join FulLife before 31 December and start 2027 in control." },
       ],
       designDirection:
         "Year-end checklist aesthetic. Clean, warm tones. Tick-box graphic. Ghanaian model in smart casual attire, looking organised and confident.",
@@ -466,7 +466,7 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
       audience: "All followers.",
       hook: "Tonight is for celebration. Tomorrow is for commitment.",
       body:
-        "Background: Countdown-style bold type. FulLife teal + gold.\nHeadline: Tonight is for celebration.\nSub: Tomorrow is for commitment - to your health, your routine, and your family.,
+        "Background: Countdown-style bold type. FulLife teal + gold.\nHeadline: Tonight is for celebration.\nSub: Tomorrow is for commitment - to your health, your routine, and your family.",
       designDirection:
         "Bold New Year countdown aesthetic. FulLife teal and gold. Celebratory but purposeful - not just a generic New Year card.",
       cta: STD_CTA,
@@ -532,7 +532,7 @@ export const MEDPHARMA_Q4_PLAN: ContentPlan = {
         { title: "Slide 3", body: "2. Lab Diagnostics Booking.\nBook your blood work, cholesterol panel, or HbA1c from the app. Results delivered digitally." },
         { title: "Slide 4", body: "3. Upload & Dispense Prescriptions.\nTake a photo of your handwritten prescription in the app. Our pharmacists verify and deliver." },
         { title: "Slide 5", body: "4. Your Digital Health Vault.\nAll your prescriptions, lab results, and medical history - stored securely in one place." },
-        { title: "Slide 6 - CTA", body: "5. GPS-Pinned Door Delivery.\nMedication delivered to your exact address - office, home, or wherever you are in Accra. },
+        { title: "Slide 6 - CTA", body: "5. GPS-Pinned Door Delivery.\nMedication delivered to your exact address - office, home, or wherever you are in Accra." },
       ],
       designDirection:
         "Feature-by-feature reveal layout. MedPharma teal icons. Clean, app-screenshot style for one or two slides. Modern and tech-forward.",
@@ -579,7 +579,7 @@ export const MEDPHARMA_Q4_PLAN: ContentPlan = {
         { title: "Slide 2", body: "Headline: Food and medication work together - or against each other.\nBody: Some medications must be taken with food. Others on an empty stomach. Getting this wrong reduces effectiveness." },
         { title: "Slide 3", body: "Headline: The foods that silently interfere with your medications:\n• Grapefruit and BP medication\n• High-fat meals and certain antibiotics\n• High-sodium foods and diuretics" },
         { title: "Slide 4", body: "Headline: Ask your MedPharma pharmacist - it's free.\nBody: Every prescription dispensed through the MedPharma app includes pharmacist counselling on food interactions." },
-        { title: "Slide 5 - CTA", body: "Headline: Your prescription is only half the picture. Food is the other half. },
+        { title: "Slide 5 - CTA", body: "Headline: Your prescription is only half the picture. Food is the other half." },
       ],
       designDirection:
         "Rich food photography mixed with clean infographic slides. Ghanaian food staples (kenkey, kontomire, fish, fruits) styled beautifully alongside medication imagery.",
@@ -599,7 +599,7 @@ export const MEDPHARMA_Q4_PLAN: ContentPlan = {
       audience: "App download conversion audience.",
       hook: "Paper prescription? 3 taps and it's sorted.",
       body:
-        "Background: Screen-recording style mockup - showing the upload flow.\nStep 1: Open MedPharma app.\nStep 2: Tap 'Upload Prescription'.\nStep 3: Photo → pharmacist review → delivery confirmed.\nHeadline: Your paper prescription just became a doorstep delivery.,
+        "Background: Screen-recording style mockup - showing the upload flow.\nStep 1: Open MedPharma app.\nStep 2: Tap 'Upload Prescription'.\nStep 3: Photo → pharmacist review → delivery confirmed.\nHeadline: Your paper prescription just became a doorstep delivery.",
       designDirection:
         "App UI mockup style. Phone frame showing the 3-step flow. Clean, tech-forward. MedPharma teal UI. No cluttered text.",
       cta: STD_CTA,
@@ -642,7 +642,7 @@ export const MEDPHARMA_Q4_PLAN: ContentPlan = {
         { title: "Slide 2", body: "The reality: Monthly pharmacy runs. Tracking blood sugar. Managing diet. Remembering multiple medications. Booking lab tests. It adds up." },
         { title: "Slide 3", body: "What MedPharma takes off your plate:\n✓ Monthly medication delivered\n✓ HbA1c labs booked from the app\n✓ Virtual doctor for prescription reviews\n✓ Daily reminders included" },
         { title: "Slide 4", body: "For the Ghanaian diabetic living abroad or sending for parents:\nPay for their care in the app. We deliver locally and keep them on track." },
-        { title: "Slide 5 - CTA", body: "Headline: Your diabetes management just got a digital upgrade. },
+        { title: "Slide 5 - CTA", body: "Headline: Your diabetes management just got a digital upgrade." },
       ],
       designDirection:
         "Blue circle (World Diabetes Day brand colour) blended with MedPharma teal. Checklist graphic. Ghanaian adult 50s+ looking empowered, not sick.",
@@ -732,7 +732,7 @@ export const MEDPHARMA_Q4_PLAN: ContentPlan = {
         { title: "Slide 2", body: "✓ Refill your medication before the Christmas rush.\nPharmacies across Accra will be packed by 20 December. Sort it now." },
         { title: "Slide 3", body: "✓ Book your year-end lab tests.\nWait until January and you'll be behind everyone else. Book now through the MedPharma app." },
         { title: "Slide 4", body: "✓ Set a medication reminder for the holiday period.\nFestivities disrupt schedules. Your pills don't take Christmas Day off." },
-        { title: "Slide 5 - CTA", body: "✓ Download the MedPharma app before 15 December.\nEnsure your December delivery is sorted before the holiday shutdown. },
+        { title: "Slide 5 - CTA", body: "✓ Download the MedPharma app before 15 December.\nEnsure your December delivery is sorted before the holiday shutdown." },
       ],
       designDirection:
         "Checklist poster style. Warm December palette - teal + gold. Slight festive feel but still clinical-professional. Tick icons in MedPharma teal.",
@@ -800,7 +800,7 @@ export const MEDPHARMA_Q4_PLAN: ContentPlan = {
       audience: "All followers.",
       hook: "Your 2027 health resolution starts tonight.",
       body:
-        "Background: Bold countdown. MedPharma teal + gold.\nHeadline: 2027 resolution: Put your health first.\nSub: Download MedPharma. Keep your medication consistent. Book your first online consultation. Start the year in control.,
+        "Background: Bold countdown. MedPharma teal + gold.\nHeadline: 2027 resolution: Put your health first.\nSub: Download MedPharma. Keep your medication consistent. Book your first online consultation. Start the year in control.",
       designDirection:
         "New Year countdown aesthetic. MedPharma teal and gold. Bold, aspirational, motivating. Feels like a health promise - not just a greeting card.",
       cta: STD_CTA,
