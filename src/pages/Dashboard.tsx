@@ -38,7 +38,7 @@ export default function Dashboard() {
     <>
       <PageHeader
         title="Marketing Command Center"
-        subtitle="Drive traffic to medpharma.care, grow mCare downloads, and own 'best health tech company in Ghana'."
+        subtitle="Drive traffic to medpharma.care, grow FulLife downloads, and own 'best health tech company in Ghana'."
       />
       <div className="max-w-7xl mx-auto p-6 space-y-6">
         <Card className="relative overflow-hidden p-8 shadow-card border-primary/20">

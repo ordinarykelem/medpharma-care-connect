@@ -10,10 +10,10 @@ import { toast } from "sonner";
 
 const DEFAULTS = {
   company_name: "MedPharma Alliance International",
-  description: "Ghanaian health-tech / e-pharmacy. Customers order acute & chronic medication via the mCare app or call center; we deliver. Main site: medpharma.care. Product: mcare.medpharma.care.",
+  description: "Ghanaian health-tech / e-pharmacy. Customers order acute & chronic medication via the MedPharma app or call center; we deliver. Main site: medpharma.care. Product: FulLife.medpharma.care.",
   audience: "Ghanaians (esp. Accra) living with chronic conditions (diabetes, hypertension, asthma); HR/benefits managers at banks, insurers, and corporates.",
   tone: "Trustworthy, warm, locally rooted, expert, action-oriented. No fearmongering. No medical claims.",
-  keywords: "best health tech company in Ghana, online pharmacy Ghana, medication delivery Accra, e-pharmacy Ghana, chronic care app Ghana, mCare app",
+  keywords: "best health tech company in Ghana, online pharmacy Ghana, medication delivery Accra, e-pharmacy Ghana, chronic care app Ghana, MedPharma app",
   services: "On-demand medication delivery, chronic care subscription, B2B2C partnerships with banks/insurers/corporates, customer service line 030 290 9731.",
   competitors: "mPharma, Bloom Healthcare, OnePharma, local independent pharmacies.",
 };

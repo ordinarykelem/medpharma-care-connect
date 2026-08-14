@@ -165,18 +165,18 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
       id: "fl-q4-oct-w3b",
       week: "Week of Mon 13 Oct - Sun 19 Oct",
       date: "Tue 14 Oct 2026",
-      title: "Story / WhatsApp Status - The MCare subscription: what's inside?",
+      title: "Story / WhatsApp Status - The FulLife subscription: what's inside?",
       assetType: "Story / WhatsApp Status",
       format: "1080 x 1920 px (9:16)",
       platforms: ["Instagram Stories", "WhatsApp Status", "Facebook Stories"],
       audience: "Potential FulLife subscribers - warm awareness audience.",
-      hook: "MCare isn't just a delivery. It's your entire care routine simplified.",
+      hook: "FulLife isn't just a delivery. It's your entire care routine simplified.",
       body:
-        "Visual: A vertical list-style card.\nHeadline: What you get with MCare:\n✓ Monthly medication delivered to your door\n✓ Daily dose reminders\n✓ Virtual doctor access\n✓ Your FulLife medical ID\n✓ Discounted refills\n\nSub: Starting from [price] / month.\nCTA: Join today → " + APP,
+        "Visual: A vertical list-style card.\nHeadline: What you get with FulLife:\n✓ Monthly medication delivered to your door\n✓ Daily dose reminders\n✓ Virtual doctor access\n✓ Your FulLife medical ID\n✓ Discounted refills\n\nSub: Starting from [price] / month.\nCTA: Join today → " + APP,
       designDirection:
         "Clean checklist layout. FulLife teal background. Each item fades in (for Reels/Motion version). Static version: bold typography.",
       cta: STD_CTA,
-      hashtags: ["#MCare", "#FulLife", "#MedPharmaGH", "#HealthSubscription"],
+      hashtags: ["#FulLife", "#FulLife", "#MedPharmaGH", "#HealthSubscription"],
     },
 
     // ============ WEEK 4 - Oct 20-26 ============
@@ -217,12 +217,12 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
       hook: "The last day of the month is not the day to discover you're out of medication.",
       body:
         "Headline: End of October. Is your refill sorted?\n\n" +
-        "Sub: MCare members never have to ask this question - we deliver before you run out.\n\n" +
+        "Sub: FulLife members never have to ask this question - we deliver before you run out.\n\n" +
         "Supporting: No queues, no drives, no surprises.",
       designDirection:
         "Calendar graphic showing the last days of October. Clean, minimal. Teal dominant. Pill icon with a tick/check mark.",
       cta: STD_CTA,
-      hashtags: ["#FulLife", "#MedPharmaGH", "#MCare", "#RefillReminder"],
+      hashtags: ["#FulLife", "#MedPharmaGH", "#FulLife", "#RefillReminder"],
     },
 
     // ============ WEEK 6 - Nov 3-9 ============
@@ -234,7 +234,7 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
       assetType: "Information Carousel",
       format: "1080 x 1350 px (4:5) · 5 slides",
       platforms: ["Instagram", "Facebook", "LinkedIn"],
-      audience: "Adults considering signing up for FulLife / MCare.",
+      audience: "Adults considering signing up for FulLife.",
       hook: "30 days on FulLife. Here is what actually changes.",
       slides: [
         { title: "Slide 1 - Cover", body: "Headline: Your first 30 days on FulLife.\nSub: Here is what actually changes." },
@@ -266,7 +266,7 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
         { title: "Slide 2", body: "Stat: Ghana has over 500,000 people living with diabetes. Many go unmanaged due to access and taking medication consistently barriers." },
         { title: "Slide 3", body: "Headline: The most dangerous myth about diabetes:\nBody: 'I only need my medication when I feel sick.' Diabetes management is every single day - whether you feel it or not." },
         { title: "Slide 4", body: "Headline: FulLife was built for this exact person.\nBody: Monthly medication delivered. Daily reminders sent. Virtual doctor always available." },
-        { title: "Slide 5", body: "Headline: For the person managing a parent's diabetes from abroad:\nBody: Pay for their MCare subscription from anywhere in the world. We deliver and remind them locally." },
+        { title: "Slide 5", body: "Headline: For the person managing a parent's diabetes from abroad:\nBody: Pay for their FulLife subscription from anywhere in the world. We deliver and remind them locally." },
         { title: "Slide 6 - CTA", body: "Headline: Diabetes requires daily care. FulLife provides it.\nCTA: " + STD_CTA },
       ],
       designDirection:
@@ -330,7 +330,7 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
         { title: "Page 1 - Cover", body: "Title: The Hidden Productivity Cost of Medication Non-Consistency in Ghana's Workforce.\nBy MedPharma / FulLife." },
         { title: "Page 2", body: "The challenge: 60% of Ghanaian adults on long-term medication are stop taking their medication within 6 months." },
         { title: "Page 3", body: "The business impact: Uncontrolled hypertension and diabetes lead to cognitive fatigue, absenteeism, and higher group insurance premiums." },
-        { title: "Page 4", body: "The FulLife corporate solution: Partner with MedPharma to offer your employees a subsidised MCare subscription as part of their health benefits package." },
+        { title: "Page 4", body: "The FulLife corporate solution: Partner with MedPharma to offer your employees a subsidised FulLife subscription as part of their health benefits package." },
         { title: "Page 5", body: "What employees get: Monthly medication delivery to the office. Daily reminders. Virtual doctor access. Digital health record." },
         { title: "Page 6", body: "What the business gets: Healthier, more present workforce. Reduced health insurance claims. A demonstrable ESG/wellbeing commitment." },
         { title: "Page 7", body: "Testimonial / case study placeholder." },
@@ -420,7 +420,7 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
       slides: [
         { title: "Slide 1 - Cover", body: "Headline: 5 things to do for your health before the year ends.\nSub: A checklist from your FulLife care team." },
         { title: "Slide 2", body: "1. Book your year-end labs.\nBody: HbA1c, lipid panel, BP review - know exactly where your numbers are before January." },
-        { title: "Slide 3", body: "2. Ensure your December refill is sorted.\nBody: Pharmacies get busier in December. MCare members don't have to worry." },
+        { title: "Slide 3", body: "2. Ensure your December refill is sorted.\nBody: Pharmacies get busier in December. FulLife members don't have to worry." },
         { title: "Slide 4", body: "3. Review your medication list with your doctor.\nBody: Any new prescriptions this year? Anything to stop? Do the review - not in January when it's too late." },
         { title: "Slide 5", body: "4. Set up your medication routine for January.\nBody: January is when most routines break. Set your reminder schedule now." },
         { title: "Slide 6 - CTA", body: "5. Protect your health plan for the new year.\nBody: Join FulLife before 31 December and start 2027 in control.\nCTA: " + STD_CTA },
@@ -752,7 +752,7 @@ export const MEDPHARMA_Q4_PLAN: ContentPlan = {
       slides: [
         { title: "Page 1 - Cover", body: "MedPharma: Year in Review 2026.\nSeamless Healthcare. Delivered." },
         { title: "Page 2", body: "Milestone: [X] prescriptions dispensed. [X] online consultations completed. [X] cities reached." },
-        { title: "Page 3", body: "FulLife Growth: [X] active MCare subscribers. Average medication taking medication consistently rate: [X%]." },
+        { title: "Page 3", body: "FulLife Growth: [X] active FulLife subscribers. Average medication taking medication consistently rate: [X%]." },
         { title: "Page 4", body: "Technology milestones: AI Health Assistant launched. Wearable integrations added. Insurance portal expanded." },
         { title: "Page 5", body: "Community impact: Partnerships with [X] corporate employers. [X] health awareness campaigns run." },
         { title: "Page 6", body: "2027 Preview: Expansion to [cities]. New features: [feature 1], [feature 2]. Partnership announcements." },

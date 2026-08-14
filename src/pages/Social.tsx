@@ -27,7 +27,7 @@ export default function Social() {
                 fields={[
                   { key: "topic", label: "What's the post about?", type: "textarea",
                     placeholder: "World Diabetes Day awareness · highlight free chronic medication delivery in Accra" },
-                  { key: "cta", label: "Desired CTA", placeholder: "Download mCare app / Call 030 290 9731 / Visit medpharma.care" },
+                  { key: "cta", label: "Desired CTA", placeholder: "Download MedPharma app / Call 030 290 9731 / Visit medpharma.care" },
                 ]}
                 onSaved={bump}
               />

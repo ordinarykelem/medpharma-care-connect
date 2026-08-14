@@ -1004,7 +1004,7 @@ export const MEDPHARMA_PLAN = {
         { title: "Slide 3", body: "Feature 2: Online Doctor Consultations.\nBook a video call with a licensed Ghanaian doctor in minutes. No commute. No queue." },
         { title: "Slide 4", body: "Feature 3: Upload Your Prescription.\nTake a photo of your paper prescription. Our pharmacist verifies and sends your order." },
         { title: "Slide 5", body: "Feature 4: AI Health Assistant.\nAsk our 24/7 AI health companion any medical question - instantly and safely, any time of day." },
-        { title: "Slide 6 - CTA", body: "Feature 5: FulLife / MCare Subscription.\nAutomatic monthly medication delivery + reminders + doctor access - all in one plan.\nCTA: " + STD_CTA },
+        { title: "Slide 6 - CTA", body: "Feature 5: The FulLife Subscription.\nAutomatic monthly medication delivery + reminders + doctor access - all in one plan.\nCTA: " + STD_CTA },
       ],
       designDirection:
         "App UI showcase style. Clean, tech-forward. MedPharma teal. One app screenshot per slide where possible. Modern and aspirational.",
@@ -1086,7 +1086,7 @@ export const MEDPHARMA_PLAN = {
       audience: "Adults 25-60 due for routine lab tests.",
       hook: "Your lab test doesn't need a waiting room. It needs a phone.",
       body:
-        "Headline: Your blood work doesn't need a waiting room.\n\n" +
+        "Headline: Your lab tests do not need a waiting room.\n\n" +
         "Sub: Book your malaria test, HbA1c, lipid panel, or full blood count directly in the MedPharma app. Results delivered digitally. No queues. No guessing.\n\n" +
         "Tap 'Book a Lab Test' in the MedPharma app today.",
       designDirection:
@@ -1179,7 +1179,7 @@ export const MEDPHARMA_PLAN = {
         { title: "Slide 3", body: "Feature 2: Online Doctor Consultations.\nBook a video call with a licensed Ghanaian doctor in minutes. No commute. No queue." },
         { title: "Slide 4", body: "Feature 3: Upload Your Prescription.\nTake a photo of your paper prescription. Our pharmacist verifies and sends your order." },
         { title: "Slide 5", body: "Feature 4: AI Health Assistant.\nAsk our 24/7 AI health companion any medical question - instantly and safely, any time of day." },
-        { title: "Slide 6 - CTA", body: "Feature 5: FulLife / MCare Subscription.\nAutomatic monthly medication delivery + reminders + doctor access - all in one plan.\nCTA: " + STD_CTA },
+        { title: "Slide 6 - CTA", body: "Feature 5: The FulLife Subscription.\nAutomatic monthly medication delivery + reminders + doctor access - all in one plan.\nCTA: " + STD_CTA },
       ],
       designDirection:
         "App UI showcase style. Clean, tech-forward. MedPharma teal. One app screenshot per slide where possible. Modern and aspirational.",
@@ -1261,7 +1261,7 @@ export const MEDPHARMA_PLAN = {
       audience: "Adults 25-60 due for routine lab tests.",
       hook: "Your lab test doesn't need a waiting room. It needs a phone.",
       body:
-        "Headline: Your blood work doesn't need a waiting room.\n\n" +
+        "Headline: Your lab tests do not need a waiting room.\n\n" +
         "Sub: Book your malaria test, HbA1c, lipid panel, or full blood count directly in the MedPharma app. Results delivered digitally. No queues. No guessing.\n\n" +
         "Tap 'Book a Lab Test' in the MedPharma app today.",
       designDirection:
@@ -1410,9 +1410,28 @@ export const MEDPHARMA_PLAN = {
 
 import { FULLIFE_Q4_PLAN, MEDPHARMA_Q4_PLAN } from "./contentPlansQ4";
 
+// Filter out June and early July briefs (keep from Week of Mon 27 Jul onwards)
+const filterPastBriefs = (briefs: ContentBrief[]) => {
+  return briefs.filter(b => {
+    // We want to remove weeks that contain "Jun" or "Jul", 
+    // EXCEPT for the final week "27 Jul".
+    if (b.week.includes("Jun")) return false;
+    if (b.week.includes("Jul") && !b.week.includes("27 Jul")) return false;
+    return true;
+  });
+};
+
+const MERGED_FULLIFE: ContentPlan = {
+  ...FULLIFE_PLAN,
+  briefs: [...filterPastBriefs(FULLIFE_PLAN.briefs), ...FULLIFE_Q4_PLAN.briefs]
+};
+
+const MERGED_MEDPHARMA: ContentPlan = {
+  ...MEDPHARMA_PLAN,
+  briefs: [...filterPastBriefs(MEDPHARMA_PLAN.briefs), ...MEDPHARMA_Q4_PLAN.briefs]
+};
+
 export const PLAN_BY_BRAND: Record<string, ContentPlan> = {
-  fullife: FULLIFE_PLAN,
-  medpharma: MEDPHARMA_PLAN,
-  "fullife-q4": FULLIFE_Q4_PLAN,
-  "medpharma-q4": MEDPHARMA_Q4_PLAN,
+  fullife: MERGED_FULLIFE,
+  medpharma: MERGED_MEDPHARMA,
 };

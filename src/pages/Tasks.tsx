@@ -37,7 +37,7 @@ const STARTER_PLAN = [
   { title: "Fix GSC 'Not indexed' pages on medpharma.care", category: "gsc", priority: "high",
     description: "Pull the Pages report, list all 'Discovered - currently not indexed' URLs, run them through GSC Fix drafter." },
   { title: "Submit fresh sitemaps for both domains", category: "gsc", priority: "high",
-    description: "Generate sitemap.xml for medpharma.care and mcare.medpharma.care, submit in GSC, monitor coverage." },
+    description: "Generate sitemap.xml for medpharma.care and FulLife.medpharma.care, submit in GSC, monitor coverage." },
   { title: "Publish 4 SEO articles targeting 'best health tech company in Ghana'", category: "seo", priority: "high",
     description: "Use SEO Workshop. Topics: 'Best Health Tech Companies in Ghana 2026', 'How E-Pharmacy is Transforming Chronic Care in Ghana', 'Online Pharmacy Accra: Complete Guide', 'Why Ghanaian Banks Trust MedPharma for Staff Healthcare'." },
   { title: "Add Organization + LocalBusiness JSON-LD to homepage", category: "seo", priority: "medium",
@@ -47,7 +47,7 @@ const STARTER_PLAN = [
   { title: "Outreach pack for 5 new corporate/insurance partners", category: "partnerships", priority: "medium",
     description: "Draft email + one-pager highlighting B2B2C model and existing bank partnerships." },
   { title: "App Store + Play Store listing optimization (ASO)", category: "app_growth", priority: "high",
-    description: "Optimize mCare title, subtitle, description, screenshots, keywords. Target 'pharmacy Ghana', 'medication delivery'." },
+    description: "Optimize FulLife title, subtitle, description, screenshots, keywords. Target 'pharmacy Ghana', 'medication delivery'." },
 ];
 
 export default function Tasks() {

@@ -157,7 +157,7 @@ export default function Missions() {
             </div>
           </div>
           <div className="relative h-64 md:h-auto">
-            <img src={heroImg} alt="MedPharma pharmacist with mCare app" className="absolute inset-0 h-full w-full object-cover" width={1536} height={1024} />
+            <img src={heroImg} alt="MedPharma pharmacist with MedPharma app" className="absolute inset-0 h-full w-full object-cover" width={1536} height={1024} />
             <div className="absolute inset-0 bg-gradient-to-r from-card via-card/60 to-transparent md:from-card/95 md:via-card/30 md:to-transparent" />
           </div>
         </div>
