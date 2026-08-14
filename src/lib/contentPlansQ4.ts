@@ -486,17 +486,15 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
           platforms: ["Instagram", "Facebook", "LinkedIn"],
           audience: "Potential subscribers",
           hook: "Never worry about running out of meds.",
-          body: {
-            slides: [
-              {title: "Subscribe Once", body: "Upload your prescription for your daily medications."},
-              {title: "Automated Refills", body: "We prepare your medications before you even run out."},
-              {title: "Scheduled Delivery", body: "Get your meds delivered to your door every month on time."}
-            ]
-          },
           designDirection: "Background: Clean, minimalist background with simple, elegant icons representing subscription and delivery.",
           cta: STD_CTA,
-          hashtags: ["#SubscriptionHealth", "#FulLife", "#NeverMissADose"]
-        },
+          hashtags: ["#SubscriptionHealth", "#FulLife", "#NeverMissADose"],
+          slides: [
+                            {title: "Subscribe Once", body: "Upload your prescription for your daily medications."},
+                            {title: "Automated Refills", body: "We prepare your medications before you even run out."},
+                            {title: "Scheduled Delivery", body: "Get your meds delivered to your door every month on time."}
+                          ]
+    },
       {
           id: "fl-q4-new-3",
           week: "Week of Mon 16 Nov - Sun 22 Nov",
@@ -552,17 +550,15 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
           platforms: ["Instagram", "Facebook"],
           audience: "Patients on daily medication",
           hook: "What happens when you miss a dose?",
-          body: {
-            slides: [
-              {title: "Health Setbacks", body: "Skipping daily meds can disrupt your treatment progress."},
-              {title: "Avoid Complications", body: "Consistency is the foundation of managing your health."},
-              {title: "The Solution", body: "FulLife ensures your meds arrive before your current batch finishes."}
-            ]
-          },
           designDirection: "Background: A split background showing a calendar with missed days versus a perfect streak.",
           cta: STD_CTA,
-          hashtags: ["#MedicationSafety", "#HealthConsistency", "#FulLife"]
-        },
+          hashtags: ["#MedicationSafety", "#HealthConsistency", "#FulLife"],
+          slides: [
+                            {title: "Health Setbacks", body: "Skipping daily meds can disrupt your treatment progress."},
+                            {title: "Avoid Complications", body: "Consistency is the foundation of managing your health."},
+                            {title: "The Solution", body: "FulLife ensures your meds arrive before your current batch finishes."}
+                          ]
+    },
       {
           id: "fl-q4-new-7",
           week: "Week of Mon 23 Nov - Sun 29 Nov",
@@ -618,17 +614,15 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
           platforms: ["Instagram", "Facebook", "X / Twitter"],
           audience: "Patients who travel",
           hook: "Going on a trip? Don't let your meds hold you back.",
-          body: {
-            slides: [
-              {title: "Plan Ahead", body: "Ensure you have enough medication for your journey."},
-              {title: "Update Delivery", body: "Schedule a delivery before you travel with FulLife."},
-              {title: "Travel Safe", body: "Maintain your daily medication consistency wherever you go."}
-            ]
-          },
           designDirection: "Background: A beautifully packed travel bag with a neat pill organizer sitting on top.",
           cta: STD_CTA,
-          hashtags: ["#TravelHealthy", "#FulLife", "#ConsistentCare"]
-        },
+          hashtags: ["#TravelHealthy", "#FulLife", "#ConsistentCare"],
+          slides: [
+                            {title: "Plan Ahead", body: "Ensure you have enough medication for your journey."},
+                            {title: "Update Delivery", body: "Schedule a delivery before you travel with FulLife."},
+                            {title: "Travel Safe", body: "Maintain your daily medication consistency wherever you go."}
+                          ]
+    },
       {
           id: "fl-q4-new-11",
           week: "Week of Mon 30 Nov - Sun 6 Dec",
@@ -699,17 +693,15 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
           platforms: ["LinkedIn", "Instagram", "Facebook"],
           audience: "General public",
           hook: "Our commitment to your daily health.",
-          body: {
-            slides: [
-              {title: "Reliability", body: "We promise on-time delivery, every time."},
-              {title: "Quality", body: "Only 100% authentic medications."},
-              {title: "Care", body: "Your health journey is our top priority."}
-            ]
-          },
           designDirection: "Background: Clean corporate aesthetic with soft, reassuring blue and green tones.",
           cta: STD_CTA,
-          hashtags: ["#OurPromise", "#FulLifeCare", "#DependableHealth"]
-        },
+          hashtags: ["#OurPromise", "#FulLifeCare", "#DependableHealth"],
+          slides: [
+                            {title: "Reliability", body: "We promise on-time delivery, every time."},
+                            {title: "Quality", body: "Only 100% authentic medications."},
+                            {title: "Care", body: "Your health journey is our top priority."}
+                          ]
+    },
       {
           id: "fl-q4-new-16",
           week: "Week of Mon 14 Dec - Sun 20 Dec",
@@ -765,17 +757,15 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
           platforms: ["Instagram", "Facebook"],
           audience: "Patients reviewing their health",
           hook: "How did your health routine do this year?",
-          body: {
-            slides: [
-              {title: "Review Your Routine", body: "Did you struggle to maintain daily medication consistency?"},
-              {title: "Make a Change", body: "Don't let missed doses hold you back in the new year."},
-              {title: "Join FulLife", body: "Start the new year right with automated subscription delivery."}
-            ]
-          },
           designDirection: "Background: A reflective, aspirational setup with a journal and a pen on a desk.",
           cta: STD_CTA,
-          hashtags: ["#YearInReview", "#HealthGoals", "#FulLife"]
-        },
+          hashtags: ["#YearInReview", "#HealthGoals", "#FulLife"],
+          slides: [
+                            {title: "Review Your Routine", body: "Did you struggle to maintain daily medication consistency?"},
+                            {title: "Make a Change", body: "Don't let missed doses hold you back in the new year."},
+                            {title: "Join FulLife", body: "Start the new year right with automated subscription delivery."}
+                          ]
+    },
       {
           id: "fl-q4-new-20",
           week: "Week of Mon 21 Dec - Sun 27 Dec",
@@ -1141,17 +1131,15 @@ export const MEDPHARMA_Q4_PLAN: ContentPlan = {
           platforms: ["LinkedIn", "Facebook"],
           audience: "HR Managers and Business Owners",
           hook: "A healthy team is a productive team.",
-          body: {
-            slides: [
-              {title: "Corporate Health Simplified", body: "Keep your employees healthy and happy."},
-              {title: "Tailored Packages", body: "Custom healthcare solutions for businesses of all sizes."},
-              {title: "Easy Management", body: "Track and manage employee health benefits effortlessly."}
-            ]
-          },
           designDirection: "Background: Modern office setting with diverse, healthy-looking professionals collaborating.",
           cta: STD_CTA,
-          hashtags: ["#CorporateHealth", "#EmployeeWellness", "#MedPharma", "#HRGhana"]
-        },
+          hashtags: ["#CorporateHealth", "#EmployeeWellness", "#MedPharma", "#HRGhana"],
+          slides: [
+                            {title: "Corporate Health Simplified", body: "Keep your employees healthy and happy."},
+                            {title: "Tailored Packages", body: "Custom healthcare solutions for businesses of all sizes."},
+                            {title: "Easy Management", body: "Track and manage employee health benefits effortlessly."}
+                          ]
+    },
       {
           id: "mp-q4-new-3",
           week: "Week of Mon 2 Nov - Sun 8 Nov",
@@ -1207,17 +1195,15 @@ export const MEDPHARMA_Q4_PLAN: ContentPlan = {
           platforms: ["Instagram", "Facebook", "LinkedIn"],
           audience: "People needing medical advice from home",
           hook: "Speak to a doctor without leaving your couch.",
-          body: {
-            slides: [
-              {title: "Telemedicine Made Easy", body: "Connect with certified doctors instantly."},
-              {title: "Secure & Private", body: "Your health information is strictly confidential."},
-              {title: "Get Prescriptions", body: "Receive digital prescriptions directly after your consult."}
-            ]
-          },
           designDirection: "Background: A person relaxing on a couch, having a video call with a friendly doctor on their tablet.",
           cta: STD_CTA,
-          hashtags: ["#Telemedicine", "#VirtualDoctor", "#MedPharma", "#DigitalPharmacy"]
-        },
+          hashtags: ["#Telemedicine", "#VirtualDoctor", "#MedPharma", "#DigitalPharmacy"],
+          slides: [
+                            {title: "Telemedicine Made Easy", body: "Connect with certified doctors instantly."},
+                            {title: "Secure & Private", body: "Your health information is strictly confidential."},
+                            {title: "Get Prescriptions", body: "Receive digital prescriptions directly after your consult."}
+                          ]
+    },
       {
           id: "mp-q4-new-7",
           week: "Week of Mon 9 Nov - Sun 15 Nov",
@@ -1258,17 +1244,15 @@ export const MEDPHARMA_Q4_PLAN: ContentPlan = {
           platforms: ["Instagram", "Facebook", "X / Twitter"],
           audience: "General public in Ghana",
           hook: "Protect your family from Malaria.",
-          body: {
-            slides: [
-              {title: "Malaria Prevention", body: "Use treated nets and clear stagnant water."},
-              {title: "Know the Symptoms", body: "Fever, chills, and body aches? Get tested."},
-              {title: "Fast Treatment", body: "Order malaria test kits and medication via MedPharma."}
-            ]
-          },
           designDirection: "Background: A family sleeping peacefully under a mosquito net in a warm, cozy room.",
           cta: STD_CTA,
-          hashtags: ["#EndMalaria", "#HealthAwareness", "#MedPharma", "#HealthyGhana"]
-        },
+          hashtags: ["#EndMalaria", "#HealthAwareness", "#MedPharma", "#HealthyGhana"],
+          slides: [
+                            {title: "Malaria Prevention", body: "Use treated nets and clear stagnant water."},
+                            {title: "Know the Symptoms", body: "Fever, chills, and body aches? Get tested."},
+                            {title: "Fast Treatment", body: "Order malaria test kits and medication via MedPharma."}
+                          ]
+    },
       {
           id: "mp-q4-new-10",
           week: "Week of Mon 16 Nov - Sun 22 Nov",
@@ -1339,17 +1323,15 @@ export const MEDPHARMA_Q4_PLAN: ContentPlan = {
           platforms: ["LinkedIn"],
           audience: "HR Managers and Business Leaders",
           hook: "Mental health is as important as physical health.",
-          body: {
-            slides: [
-              {title: "Support Your Team", body: "Mental wellness programs improve overall productivity."},
-              {title: "Confidential Consultations", body: "MedPharma offers private access to mental health professionals."},
-              {title: "Build a Better Workplace", body: "Invest in a comprehensive corporate health plan today."}
-            ]
-          },
           designDirection: "Background: A calm, well-lit office space with a person looking relaxed and focused.",
           cta: STD_CTA,
-          hashtags: ["#MentalHealthAtWork", "#CorporateWellness", "#MedPharma"]
-        },
+          hashtags: ["#MentalHealthAtWork", "#CorporateWellness", "#MedPharma"],
+          slides: [
+                            {title: "Support Your Team", body: "Mental wellness programs improve overall productivity."},
+                            {title: "Confidential Consultations", body: "MedPharma offers private access to mental health professionals."},
+                            {title: "Build a Better Workplace", body: "Invest in a comprehensive corporate health plan today."}
+                          ]
+    },
       {
           id: "mp-q4-new-15",
           week: "Week of Mon 30 Nov - Sun 6 Dec",
@@ -1390,17 +1372,15 @@ export const MEDPHARMA_Q4_PLAN: ContentPlan = {
           platforms: ["Instagram", "Facebook"],
           audience: "General public",
           hook: "Don't let the flu get you down.",
-          body: {
-            slides: [
-              {title: "Flu Season is Here", body: "Take precautions to protect yourself and your family."},
-              {title: "Boost Immunity", body: "Stock up on Vitamin C and immune boosters."},
-              {title: "Fast Relief", body: "Get cold and flu meds delivered fast with MedPharma."}
-            ]
-          },
           designDirection: "Background: A cozy image of someone holding a warm mug of tea, wrapped in a blanket.",
           cta: STD_CTA,
-          hashtags: ["#FluSeason", "#ImmuneBoost", "#MedPharma"]
-        },
+          hashtags: ["#FluSeason", "#ImmuneBoost", "#MedPharma"],
+          slides: [
+                            {title: "Flu Season is Here", body: "Take precautions to protect yourself and your family."},
+                            {title: "Boost Immunity", body: "Stock up on Vitamin C and immune boosters."},
+                            {title: "Fast Relief", body: "Get cold and flu meds delivered fast with MedPharma."}
+                          ]
+    },
       {
           id: "mp-q4-new-18",
           week: "Week of Mon 7 Dec - Sun 13 Dec",
@@ -1471,17 +1451,15 @@ export const MEDPHARMA_Q4_PLAN: ContentPlan = {
           platforms: ["Instagram", "Facebook", "X / Twitter"],
           audience: "General public preparing for holidays",
           hook: "Stay healthy through the holidays.",
-          body: {
-            slides: [
-              {title: "Festive Joy", body: "The holidays are for family, not for falling sick."},
-              {title: "Stock Up", body: "Order your essential medications before the holiday rush."},
-              {title: "We're Open", body: "MedPharma delivers even during the festive season."}
-            ]
-          },
           designDirection: "Background: Subtle festive elements, like warm lights and a joyful family gathering around a table.",
           cta: STD_CTA,
-          hashtags: ["#HealthyHolidays", "#FestiveSeasonGhana", "#MedPharma"]
-        },
+          hashtags: ["#HealthyHolidays", "#FestiveSeasonGhana", "#MedPharma"],
+          slides: [
+                            {title: "Festive Joy", body: "The holidays are for family, not for falling sick."},
+                            {title: "Stock Up", body: "Order your essential medications before the holiday rush."},
+                            {title: "We're Open", body: "MedPharma delivers even during the festive season."}
+                          ]
+    },
       {
           id: "mp-q4-new-23",
           week: "Week of Mon 21 Dec - Sun 27 Dec",

@@ -602,17 +602,15 @@ export const FULLIFE_PLAN: ContentPlan = {
           platforms: ["Instagram", "Facebook"],
           audience: "Busy professionals managing their own or their parents' continuous medication needs.",
           hook: "Imagine a world where your meds refill themselves.",
-          body: {
-            slides: [
-              { title: "The FulLife Advantage", body: "Managing daily medications shouldn't feel like a part-time job." },
-              { title: "Subscribe Once", body: "Set up your medication schedule on the FulLife platform and let us handle the rest." },
-              { title: "Automated Deliveries", body: "Receive your medications securely at your doorstep before your current batch runs out." }
-            ]
-          },
           designDirection: "Background: A sleek, user-friendly interface concept overlaid on a lifestyle image of a person confidently walking into their office building.",
           cta: STD_CTA,
-          hashtags: ["#SubscriptionPharmacy", "#FulLifeCare", "#HealthcareMadeEasy", "#NeverMissADose"]
-        },
+          hashtags: ["#SubscriptionPharmacy", "#FulLifeCare", "#HealthcareMadeEasy", "#NeverMissADose"],
+          slides: [
+                            { title: "The FulLife Advantage", body: "Managing daily medications shouldn't feel like a part-time job." },
+                            { title: "Subscribe Once", body: "Set up your medication schedule on the FulLife platform and let us handle the rest." },
+                            { title: "Automated Deliveries", body: "Receive your medications securely at your doorstep before your current batch runs out." }
+                          ]
+    },
       {
           id: "fl-new-3",
           week: "Week of Mon 24 Aug - Sun 30 Aug",
@@ -683,17 +681,15 @@ export const FULLIFE_PLAN: ContentPlan = {
           platforms: ["Instagram", "Facebook", "LinkedIn"],
           audience: "Anyone struggling to stick to a daily medication schedule.",
           hook: "Building a healthy habit takes time and consistency.",
-          body: {
-            slides: [
-              { title: "The Challenge", body: "It's easy to forget a pill when life gets busy. But skipping doses compromises your health." },
-              { title: "The Solution", body: "FulLife removes the friction. By ensuring you always have your medication, taking it becomes a seamless part of your morning routine." },
-              { title: "The Result", body: "Achieve optimal daily medication consistency and enjoy better long-term health outcomes." }
-            ]
-          },
           designDirection: "Background: Minimalist, aesthetic workspace showing a glass of water, a daily planner, and neatly organized medication.",
           cta: STD_CTA,
-          hashtags: ["#HealthyHabits", "#DailyMedicationConsistency", "#FulLifeJourney", "#WellnessGoals"]
-        },
+          hashtags: ["#HealthyHabits", "#DailyMedicationConsistency", "#FulLifeJourney", "#WellnessGoals"],
+          slides: [
+                            { title: "The Challenge", body: "It's easy to forget a pill when life gets busy. But skipping doses compromises your health." },
+                            { title: "The Solution", body: "FulLife removes the friction. By ensuring you always have your medication, taking it becomes a seamless part of your morning routine." },
+                            { title: "The Result", body: "Achieve optimal daily medication consistency and enjoy better long-term health outcomes." }
+                          ]
+    },
       {
           id: "fl-new-8",
           week: "Week of Mon 7 Sept - Sun 13 Sept",
@@ -779,17 +775,15 @@ export const FULLIFE_PLAN: ContentPlan = {
           platforms: ["Instagram", "Facebook", "LinkedIn"],
           audience: "People actively seeking to improve their medication adherence.",
           hook: "What happens when you miss a dose?",
-          body: {
-            slides: [
-              { title: "The Disruption", body: "Missing even one dose of continuous medication can disrupt your body's balance." },
-              { title: "The Risk", body: "It reduces the effectiveness of your treatment and can lead to unwanted flare-ups." },
-              { title: "The FulLife Guarantee", body: "We deliver proactively. With FulLife, daily medication consistency is guaranteed, keeping your health completely on track." }
-            ]
-          },
           designDirection: "Background: Clean, clinical but warm abstract background featuring smooth continuous flowing lines representing uninterrupted health.",
           cta: STD_CTA,
-          hashtags: ["#NeverMissADose", "#HealthAdherence", "#DailyMedicationConsistency", "#FulLife"]
-        },
+          hashtags: ["#NeverMissADose", "#HealthAdherence", "#DailyMedicationConsistency", "#FulLife"],
+          slides: [
+                            { title: "The Disruption", body: "Missing even one dose of continuous medication can disrupt your body's balance." },
+                            { title: "The Risk", body: "It reduces the effectiveness of your treatment and can lead to unwanted flare-ups." },
+                            { title: "The FulLife Guarantee", body: "We deliver proactively. With FulLife, daily medication consistency is guaranteed, keeping your health completely on track." }
+                          ]
+    },
       {
           id: "fl-new-14",
           week: "Week of Mon 21 Sept - Sun 27 Sept",
@@ -1485,17 +1479,15 @@ export const MEDPHARMA_PLAN = {
           platforms: ["Instagram", "Facebook", "LinkedIn"],
           audience: "Tech-savvy Ghanaians looking for convenient healthcare solutions.",
           hook: "Got a prescription but no time to wait in line?",
-          body: {
-            slides: [
-              { title: "Skip the Pharmacy Queue", body: "Long lines at the pharmacy are a thing of the past." },
-              { title: "Snap & Upload", body: "Simply take a clear photo of your doctor's prescription and upload it securely on the MedPharma app." },
-              { title: "Fast Delivery", body: "Our licensed pharmacists will review it, and your medication will be on its way to your door." }
-            ]
-          },
           designDirection: "Background: A clean, modern aesthetic with a person holding a smartphone taking a picture of a medical prescription.",
           cta: STD_CTA,
-          hashtags: ["#MedPharmaApp", "#HealthTechGhana", "#DigitalPharmacy", "#PrescriptionDelivery"]
-        },
+          hashtags: ["#MedPharmaApp", "#HealthTechGhana", "#DigitalPharmacy", "#PrescriptionDelivery"],
+          slides: [
+                            { title: "Skip the Pharmacy Queue", body: "Long lines at the pharmacy are a thing of the past." },
+                            { title: "Snap & Upload", body: "Simply take a clear photo of your doctor's prescription and upload it securely on the MedPharma app." },
+                            { title: "Fast Delivery", body: "Our licensed pharmacists will review it, and your medication will be on its way to your door." }
+                          ]
+    },
       {
           id: "mp-new-3",
           week: "Week of Mon 7 Sept - Sun 13 Sept",
@@ -1551,17 +1543,15 @@ export const MEDPHARMA_PLAN = {
           platforms: ["Instagram", "Facebook"],
           audience: "Adults caring for elderly parents who live far away.",
           hook: "Caring for your parents just got a whole lot easier.",
-          body: {
-            slides: [
-              { title: "Distance Shouldn't Matter", body: "Living far from your parents makes managing their health stressful." },
-              { title: "Order on Their Behalf", body: "Use the MedPharma app to order and pay for their medications from anywhere." },
-              { title: "Direct to Their Door", body: "We deliver directly to them, ensuring they always have what they need to stay healthy." }
-            ]
-          },
           designDirection: "Background: Warm, emotional imagery of an elderly Ghanaian couple smiling while holding a MedPharma package, standing on their porch.",
           cta: STD_CTA,
-          hashtags: ["#ElderlyCare", "#FamilyHealth", "#MedPharmaApp", "#PharmacyDeliveryGhana"]
-        },
+          hashtags: ["#ElderlyCare", "#FamilyHealth", "#MedPharmaApp", "#PharmacyDeliveryGhana"],
+          slides: [
+                            { title: "Distance Shouldn't Matter", body: "Living far from your parents makes managing their health stressful." },
+                            { title: "Order on Their Behalf", body: "Use the MedPharma app to order and pay for their medications from anywhere." },
+                            { title: "Direct to Their Door", body: "We deliver directly to them, ensuring they always have what they need to stay healthy." }
+                          ]
+    },
       {
           id: "mp-new-7",
           week: "Week of Mon 14 Sept - Sun 20 Sept",
