@@ -454,7 +454,7 @@ export const FULLIFE_PLAN: ContentPlan = {
       platforms: ["Instagram Stories", "WhatsApp Status"],
       audience: "Young professionals managing asthma, sickle cell, or hypertension.",
       hook: "You have meetings, deadlines, and a life. Let us handle your refills.",
-      body: "Headline: Busy life? Don't let your health slip.\n\nSub: FulLife automatically delivers your routine medication every month. No pharmacy queues. No 'I forgot' moments.\n\nCTA: Sign up today -> " + APP,
+      body: "Headline: Busy life? Don't let your health slip.\n\nSub: FulLife automatically delivers your routine medication every month. No pharmacy queues. No 'I forgot' moments.\n\nCTA: Sign up today → " + APP,
       designDirection: "Dynamic, modern. A young Ghanaian professional looking confident.",
       cta: STD_CTA,
       hashtags: ["#FulLife", "#AccraProfessionals", "#MedPharmaGH"]
@@ -470,7 +470,7 @@ export const FULLIFE_PLAN: ContentPlan = {
       platforms: ["Instagram", "Facebook", "LinkedIn"],
       audience: "Parents and caregivers managing prescriptions for parents/children.",
       hook: "Managing medication for your parents and yourself? We make it easy.",
-      body: "Headline: One app. Your whole family's health.\n\nSub: With FulLife, you can manage and track medication deliveries for your parents, your children, and yourself—all from one account.\n\nCTA: Download the app and simplify your care -> " + APP,
+      body: "Headline: One app. Your whole family's health.\n\nSub: With FulLife, you can manage and track medication deliveries for your parents, your children, and yourself—all from one account.\n\nCTA: Download the app and simplify your care → " + APP,
       designDirection: "Warm, family-focused. A multi-generational Ghanaian family.",
       cta: STD_CTA,
       hashtags: ["#FamilyHealth", "#FulLife", "#SeamlessHealthcare"]
@@ -500,13 +500,13 @@ export const FULLIFE_PLAN: ContentPlan = {
       id: "fl-sep-w1",
       week: "Week of Mon 31 Aug - Sun 6 Sep",
       date: "Wed 2 Sep 2026",
-      title: "Back to School - Managing Kids' Routine Meds",
+      title: "Back to School - Managing Kids' Routine Medications",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: ["Instagram", "Facebook"],
       audience: "Parents of children with asthma or sickle cell.",
       hook: "School is back in session. Is their medication ready?",
-      body: "Headline: School is back. Keep their health on track.\n\nSub: Ensure your children have their inhalers, routine meds, and vitamins ready for the new term. FulLife delivers directly to you.\n\nCTA: " + STD_CTA,
+      body: "Headline: School is back. Keep their health on track.\n\nSub: Ensure your children have their inhalers, routine medications, and vitamins ready for the new term. FulLife delivers directly to you.\n\nCTA: " + STD_CTA,
       designDirection: "Bright, reassuring. Ghanaian children in school uniforms looking healthy and happy.",
       cta: STD_CTA,
       hashtags: ["#BackToSchoolGhana", "#FulLife", "#MedPharmaGH"]
@@ -542,7 +542,7 @@ export const FULLIFE_PLAN: ContentPlan = {
       format: "1080 x 1920 px (9:16)",
       platforms: ["Instagram Stories", "WhatsApp Status"],
       audience: "General FulLife audience.",
-      hook: "The long weekend is coming. Are your meds stocked?",
+      hook: "The long weekend is coming. Are your medications stocked?",
       body: "Headline: Long weekend ahead.\nSub: Don't let the holiday disrupt your routine. Get your monthly FulLife box delivered before the Kwame Nkrumah Memorial Day weekend.\nCTA: " + APP,
       designDirection: "Relaxed lifestyle image, weekend vibe. Clean overlay.",
       cta: STD_CTA,
@@ -913,7 +913,7 @@ export const MEDPHARMA_PLAN = {
         "Instagram Stories"
       ],
       audience: "App users with physical prescriptions.",
-      hook: "Snap a picture. Get your meds.",
+      hook: "Snap a picture. Get your medications.",
       body: "Top: Have a physical prescription?\n\nMiddle : Snap a picture and upload it securely in the app.\n\nBottom CTA strip: Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh",
       designDirection: "Visual: A phone taking a photo of a handwritten doctor's prescription.",
       cta: "Call 0557560448 or download the MedPharma App: https://onelink.to/vhzcxh"
@@ -1044,7 +1044,7 @@ export const MEDPHARMA_PLAN = {
       audience: "Young Ghanaians with sickle cell; their families and caregivers.",
       hook: "Sickle cell doesn't pause. Your medication access shouldn't either.",
       body:
-        "Visual: Bold teal card. Clean typography.\nHeadline: Managing sickle cell just got easier.\nSub: MedPharma delivers your hydroxyurea, pain management meds, and supplements straight to your door - with zero pharmacy stress.\nCTA: Download MedPharma → " + APP,
+        "Visual: Bold teal card. Clean typography.\nHeadline: Managing sickle cell just got easier.\nSub: MedPharma delivers your hydroxyurea, pain management medications, and supplements straight to your door - with zero pharmacy stress.\nCTA: Download MedPharma → " + APP,
       designDirection:
         "Strong, empowering. MedPharma teal on dark background. Sickle cell awareness red-cell graphic as subtle background element. Not clinical - empowering.",
       cta: STD_CTA,
@@ -1064,7 +1064,7 @@ export const MEDPHARMA_PLAN = {
       audience: "General Ghanaian public, parents, caregivers.",
       hook: "World Mosquito Day: Malaria starts with a bite. Your response starts with MedPharma.",
       slides: [
-        { title: "Slide 1 - Cover", body: "Headline: Ghana has one of the world's highest malaria burdens.\nSub: World Mosquito Day | 20 August 2026 | by MedPharma." },
+        { title: "Slide 1 - Cover", body: "Headline: Ghana has one of the world's highest malaria burdens.\nSub: World Mosquito Day" },
         { title: "Slide 2", body: "The risk: During rainy season in Ghana, malaria malaria cases go up quickly. Children under 5 and pregnant women are most at risk." },
         { title: "Slide 3", body: "What MedPharma offers:\n✓ Order antimalarial medications in the app\n✓ Get malaria test kits delivered to your door\n✓ Book a online consultation if you have symptoms\n✓ Upload your prescription for instant dispensing" },
         { title: "Slide 4", body: "Complete your full course:\nNever stop malaria treatment early - even when you feel better. Incomplete courses cause resistance and getting sick again.\nFulLife medication reminders keep you on track." },
@@ -1127,7 +1127,7 @@ export const MEDPHARMA_PLAN = {
       audience: "HR Directors, CEOs, Business Owners, Corporate Health Leads.",
       hook: "Your employee's untreated hypertension is costing you far more than their sick days.",
       slides: [
-        { title: "Page 1 - Cover", body: "Title: Digital Pharmacy as a Corporate Health Benefit: The Business Case for MedPharma.\nBy MedPharma Ghana." },
+        { title: "Page 1 - Cover", body: "Title: Digital Pharmacy as a Corporate Health Benefit: The Business Case." },
         { title: "Page 2", body: "The problem: 42% of working-age Ghanaians on long-term medication are stop taking their medication within the first 3 months. The main reason? Inconvenience of the physical pharmacy." },
         { title: "Page 3", body: "The business cost: Lost productivity, increased sick days, higher group health insurance premiums, and higher risk of sudden medical emergencies in the workplace." },
         { title: "Page 4", body: "The MedPharma corporate solution: Partner with us to include MedPharma / FulLife access in your employee health benefits package at a negotiated group rate." },
@@ -1219,7 +1219,7 @@ export const MEDPHARMA_PLAN = {
       audience: "Young Ghanaians with sickle cell; their families and caregivers.",
       hook: "Sickle cell doesn't pause. Your medication access shouldn't either.",
       body:
-        "Visual: Bold teal card. Clean typography.\nHeadline: Managing sickle cell just got easier.\nSub: MedPharma delivers your hydroxyurea, pain management meds, and supplements straight to your door - with zero pharmacy stress.\nCTA: Download MedPharma → " + APP,
+        "Visual: Bold teal card. Clean typography.\nHeadline: Managing sickle cell just got easier.\nSub: MedPharma delivers your hydroxyurea, pain management medications, and supplements straight to your door - with zero pharmacy stress.\nCTA: Download MedPharma → " + APP,
       designDirection:
         "Strong, empowering. MedPharma teal on dark background. Sickle cell awareness red-cell graphic as subtle background element. Not clinical - empowering.",
       cta: STD_CTA,
@@ -1239,7 +1239,7 @@ export const MEDPHARMA_PLAN = {
       audience: "General Ghanaian public, parents, caregivers.",
       hook: "World Mosquito Day: Malaria starts with a bite. Your response starts with MedPharma.",
       slides: [
-        { title: "Slide 1 - Cover", body: "Headline: Ghana has one of the world's highest malaria burdens.\nSub: World Mosquito Day | 20 August 2026 | by MedPharma." },
+        { title: "Slide 1 - Cover", body: "Headline: Ghana has one of the world's highest malaria burdens.\nSub: World Mosquito Day" },
         { title: "Slide 2", body: "The risk: During rainy season in Ghana, malaria malaria cases go up quickly. Children under 5 and pregnant women are most at risk." },
         { title: "Slide 3", body: "What MedPharma offers:\n✓ Order antimalarial medications in the app\n✓ Get malaria test kits delivered to your door\n✓ Book a online consultation if you have symptoms\n✓ Upload your prescription for instant dispensing" },
         { title: "Slide 4", body: "Complete your full course:\nNever stop malaria treatment early - even when you feel better. Incomplete courses cause resistance and getting sick again.\nFulLife medication reminders keep you on track." },
@@ -1302,7 +1302,7 @@ export const MEDPHARMA_PLAN = {
       audience: "HR Directors, CEOs, Business Owners, Corporate Health Leads.",
       hook: "Your employee's untreated hypertension is costing you far more than their sick days.",
       slides: [
-        { title: "Page 1 - Cover", body: "Title: Digital Pharmacy as a Corporate Health Benefit: The Business Case for MedPharma.\nBy MedPharma Ghana." },
+        { title: "Page 1 - Cover", body: "Title: Digital Pharmacy as a Corporate Health Benefit: The Business Case." },
         { title: "Page 2", body: "The problem: 42% of working-age Ghanaians on long-term medication are stop taking their medication within the first 3 months. The main reason? Inconvenience of the physical pharmacy." },
         { title: "Page 3", body: "The business cost: Lost productivity, increased sick days, higher group health insurance premiums, and higher risk of sudden medical emergencies in the workplace." },
         { title: "Page 4", body: "The MedPharma corporate solution: Partner with us to include MedPharma / FulLife access in your employee health benefits package at a negotiated group rate." },
@@ -1349,9 +1349,9 @@ export const MEDPHARMA_PLAN = {
       platforms: ["LinkedIn"],
       audience: "HR Directors, CEOs.",
       hook: "Is your company's health benefit actually keeping your team healthy?",
-      body: "Headline: The modern workplace needs modern healthcare.\n\nSub: MedPharma partners with forward-thinking Ghanaian companies to provide digital pharmacy access, online doctor consultations, and doorstep delivery for employees.\n\nCTA: Message us to set up a corporate account -> partnerships@medpharma.care",
+      body: "Headline: The modern workplace needs modern healthcare.\n\nSub: MedPharma partners with forward-thinking Ghanaian companies to provide digital pharmacy access, online doctor consultations, and doorstep delivery for employees.\n\nCTA: Message us to set up a corporate account → support@medpharma.care",
       designDirection: "Corporate aesthetic. Modern Accra office environment. Professional.",
-      cta: "Email: partnerships@medpharma.care",
+      cta: "Email: support@medpharma.care",
       hashtags: ["#HRGhana", "#CorporateHealth", "#EmployeeBenefits", "#MedPharmaGH"]
     },
     // ============ SEPTEMBER WEEK 3 - Sep 14-20 ============
@@ -1400,7 +1400,7 @@ export const MEDPHARMA_PLAN = {
       platforms: ["Instagram Stories", "WhatsApp Status"],
       audience: "General public.",
       hook: "When was the last time you checked your blood pressure?",
-      body: "Headline: World Heart Day.\nSub: Book a lipid panel or general health check-up through the MedPharma app today. Prevention is always cheaper than cure.\nCTA: Book Lab Test -> " + APP,
+      body: "Headline: World Heart Day.\nSub: Book a lipid panel or general health check-up through the MedPharma app today. Prevention is always cheaper than cure.\nCTA: Book Lab Test → " + APP,
       designDirection: "Clean, urgent but not scary. Focus on lab test booking interface.",
       cta: STD_CTA,
       hashtags: ["#WorldHeartDay", "#HealthScreening", "#MedPharmaGH"]

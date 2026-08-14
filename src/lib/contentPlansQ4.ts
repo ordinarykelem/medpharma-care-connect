@@ -129,9 +129,9 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
       hook: "One skipped dose feels harmless. Medically, it's not.",
       slides: [
         { title: "Slide 1 - Cover", body: "Headline: What actually happens when you skip a dose.\nSub: The answer might surprise you." },
-        { title: "Slide 2 - BP Meds", body: "Headline: Blood pressure medication.\nBody: Skipping even one dose can cause a 'rebound' spike - elevating your risk of stroke within hours." },
-        { title: "Slide 3 - Diabetes Meds", body: "Headline: Diabetes medication.\nBody: A missed dose can cause dangerous blood sugar fluctuations - felt as dizziness, fatigue, or worse." },
-        { title: "Slide 4 - Mental Health Meds", body: "Headline: Antidepressants & mood stabilisers.\nBody: Missing doses can trigger discontinuation syndrome - causing flu-like symptoms and mood instability." },
+        { title: "Slide 2 - BP Medications", body: "Headline: Blood pressure medication.\nBody: Skipping even one dose can cause a 'rebound' spike - elevating your risk of stroke within hours." },
+        { title: "Slide 3 - Diabetes Medications", body: "Headline: Diabetes medication.\nBody: A missed dose can cause dangerous blood sugar fluctuations - felt as dizziness, fatigue, or worse." },
+        { title: "Slide 4 - Mental Health Medications", body: "Headline: Antidepressants & mood stabilisers.\nBody: Missing doses can trigger discontinuation syndrome - causing flu-like symptoms and mood instability." },
         { title: "Slide 5 - CTA", body: "Headline: The solution isn't willpower. It's a system.\nBody: FulLife delivers your medication and reminds you daily - so missing a dose becomes history.\nCTA: " + STD_CTA },
       ],
       designDirection:
@@ -327,7 +327,7 @@ export const FULLIFE_Q4_PLAN: ContentPlan = {
       audience: "HR managers, CEOs, business owners, corporate health leads.",
       hook: "Your employee's missed medication is costing you more than their sick days.",
       slides: [
-        { title: "Page 1 - Cover", body: "Title: The Hidden Productivity Cost of Medication Non-Consistency in Ghana's Workforce.\nBy MedPharma / FulLife." },
+        { title: "Page 1 - Cover", body: "Title: The Hidden Productivity Cost of Medication Non-Consistency in Ghana's Workforce." },
         { title: "Page 2", body: "The challenge: 60% of Ghanaian adults on long-term medication are stop taking their medication within 6 months." },
         { title: "Page 3", body: "The business impact: Uncontrolled hypertension and diabetes lead to cognitive fatigue, absenteeism, and higher group insurance premiums." },
         { title: "Page 4", body: "The FulLife corporate solution: Partner with MedPharma to offer your employees a subsidised FulLife subscription as part of their health benefits package." },
@@ -575,9 +575,9 @@ export const MEDPHARMA_Q4_PLAN: ContentPlan = {
       audience: "Health-conscious adults; people managing diet-sensitive conditions.",
       hook: "Before the pharmacy, there is the kitchen. Nutrition is your first prescription.",
       slides: [
-        { title: "Slide 1 - Cover", body: "Headline: Nutrition is your first prescription.\nSub: World Food Day | 16 October 2026 | by MedPharma." },
+        { title: "Slide 1 - Cover", body: "Headline: Nutrition is your first prescription.\nSub: World Food Day" },
         { title: "Slide 2", body: "Headline: Food and medication work together - or against each other.\nBody: Some medications must be taken with food. Others on an empty stomach. Getting this wrong reduces effectiveness." },
-        { title: "Slide 3", body: "Headline: The foods that silently interfere with your meds:\n• Grapefruit and BP medication\n• High-fat meals and certain antibiotics\n• High-sodium foods and diuretics" },
+        { title: "Slide 3", body: "Headline: The foods that silently interfere with your medications:\n• Grapefruit and BP medication\n• High-fat meals and certain antibiotics\n• High-sodium foods and diuretics" },
         { title: "Slide 4", body: "Headline: Ask your MedPharma pharmacist - it's free.\nBody: Every prescription dispensed through the MedPharma app includes pharmacist counselling on food interactions." },
         { title: "Slide 5 - CTA", body: "Headline: Your prescription is only half the picture. Food is the other half.\nCTA: " + STD_CTA },
       ],
