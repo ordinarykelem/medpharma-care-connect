@@ -58,10 +58,9 @@ export const FULLIFE_PLAN: ContentPlan = {
     // ============ JULY ============
     {
       id: "fl-jul-1",
-      week: "Week of Mon 29 Jun - Sun 5 Jul",
-      date: "Wed 1 Jul 2026",
-      occasion: "Republic Day (Ghana, public holiday)",
-      title: "Republic Day - A republic of citizens who take their dose",
+        week: "Week of Mon 29 Jun - Sun 5 Jul",
+        date: "Tue, 30 Jun 2026",
+        title: "Republic Day - A republic of citizens who take their dose",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: ["Instagram", "Facebook", "X / Twitter", "WhatsApp Status (cropped)"],
@@ -80,9 +79,9 @@ export const FULLIFE_PLAN: ContentPlan = {
     },
     {
       id: "fl-jul-2",
-      week: "Week of Mon 13 - Sun 19 Jul",
-      date: "Wed 15 Jul 2026",
-      title: "Information Carousel - What 'auto-refill' actually means",
+        week: "Week of Mon 29 Jun - Sun 5 Jul",
+        date: "Thu, 2 Jul 2026",
+        title: "Information Carousel - What 'auto-refill' actually means",
       assetType: "Information Carousel",
       format: "1080 x 1350 px (4:5) · 5 slides",
       platforms: ["Instagram", "Facebook"],
@@ -104,10 +103,9 @@ export const FULLIFE_PLAN: ContentPlan = {
     },
     {
       id: "fl-jul-3",
-      week: "Week of Mon 27 Jul - Sun 2 Aug",
-      date: "Tue 28 Jul 2026",
-      occasion: "World Hepatitis Day",
-      title: "World Hepatitis Day - The condition is silent. Your routine shouldn't be.",
+        week: "Week of Mon 29 Jun - Sun 5 Jul",
+        date: "Sat, 4 Jul 2026",
+        title: "World Hepatitis Day - The condition is silent. Your routine shouldn't be.",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: ["Instagram", "Facebook", "LinkedIn", "X / Twitter"],
@@ -127,9 +125,9 @@ export const FULLIFE_PLAN: ContentPlan = {
     },
     {
       id: "fl-jul-4",
-      week: "Week of Mon 27 Jul - Sun 2 Aug",
-      date: "Thu 30 Jul 2026",
-      title: "Newsletter Header - FulLife: the new standard, six months in",
+        week: "Week of Mon 6 Jul - Sun 12 Jul",
+        date: "Tue, 7 Jul 2026",
+        title: "Newsletter Header - FulLife: the new standard, six months in",
       assetType: "Newsletter Header",
       format: "1200 x 600 px (Mailchimp Header)",
       platforms: ["Email (Mailchimp)", "LinkedIn cover crop (1584 x 396 - designer to re-export)"],
@@ -142,9 +140,9 @@ export const FULLIFE_PLAN: ContentPlan = {
       cta: STD_CTA,
     },    {
       id: "fl-jun-1b",
-      week: "Week of Mon 1 - Sun 7 Jun",
-      date: "Mon 1 Jun 2026",
-      title: "Square Flyer - The hidden risk of missed doses",
+        week: "Week of Mon 6 Jul - Sun 12 Jul",
+        date: "Thu, 9 Jul 2026",
+        title: "Square Flyer - The hidden risk of missed doses",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: [
@@ -167,9 +165,9 @@ export const FULLIFE_PLAN: ContentPlan = {
     },
     {
       id: "fl-jul-0a",
-      week: "Week of Mon 29 Jun - Sun 5 Jul",
-      date: "Fri 3 Jul 2026",
-      title: "Square Flyer - Math of prevention",
+        week: "Week of Mon 6 Jul - Sun 12 Jul",
+        date: "Sat, 11 Jul 2026",
+        title: "Square Flyer - Math of prevention",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: [
@@ -190,9 +188,9 @@ export const FULLIFE_PLAN: ContentPlan = {
     },
     {
       id: "fl-jul-1a",
-      week: "Week of Mon 6 - Sun 12 Jul",
-      date: "Tue 7 Jul 2026",
-      title: "Square Flyer - In-app doctor",
+        week: "Week of Mon 13 Jul - Sun 19 Jul",
+        date: "Tue, 14 Jul 2026",
+        title: "Square Flyer - In-app doctor",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: [
@@ -214,9 +212,9 @@ export const FULLIFE_PLAN: ContentPlan = {
     },
     {
       id: "fl-jul-1b",
-      week: "Week of Mon 6 - Sun 12 Jul",
-      date: "Thu 9 Jul 2026",
-      title: "Information Carousel - Dietary habits",
+        week: "Week of Mon 13 Jul - Sun 19 Jul",
+        date: "Thu, 16 Jul 2026",
+        title: "Information Carousel - Dietary habits",
       assetType: "Information Carousel",
       format: "1080 x 1350 px (4:5) · 3 slides",
       platforms: [
@@ -251,9 +249,9 @@ export const FULLIFE_PLAN: ContentPlan = {
     },
     {
       id: "fl-jul-1c",
-      week: "Week of Mon 6 - Sun 12 Jul",
-      date: "Sat 11 Jul 2026",
-      title: "WhatsApp Status - Q&A on auto-refill",
+        week: "Week of Mon 13 Jul - Sun 19 Jul",
+        date: "Sat, 18 Jul 2026",
+        title: "WhatsApp Status - Q&A on auto-refill",
       assetType: "Story / WhatsApp Status",
       format: "1080 x 1920 px (9:16)",
       platforms: [
@@ -268,9 +266,9 @@ export const FULLIFE_PLAN: ContentPlan = {
     },
     {
       id: "fl-jul-2a",
-      week: "Week of Mon 13 - Sun 19 Jul",
-      date: "Mon 13 Jul 2026",
-      title: "Square Flyer - Exercise safely",
+        week: "Week of Mon 20 Jul - Sun 26 Jul",
+        date: "Tue, 21 Jul 2026",
+        title: "Square Flyer - Exercise safely",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: [
@@ -292,9 +290,9 @@ export const FULLIFE_PLAN: ContentPlan = {
     },
     {
       id: "fl-jul-2b",
-      week: "Week of Mon 13 - Sun 19 Jul",
-      date: "Fri 17 Jul 2026",
-      title: "Square Flyer - Consistency over intensity",
+        week: "Week of Mon 20 Jul - Sun 26 Jul",
+        date: "Thu, 23 Jul 2026",
+        title: "Square Flyer - Consistency over intensity",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: [
@@ -317,9 +315,9 @@ export const FULLIFE_PLAN: ContentPlan = {
     },
     {
       id: "fl-jul-3a",
-      week: "Week of Mon 20 - Sun 26 Jul",
-      date: "Mon 20 Jul 2026",
-      title: "Square Flyer - Peace of mind",
+        week: "Week of Mon 20 Jul - Sun 26 Jul",
+        date: "Sat, 25 Jul 2026",
+        title: "Square Flyer - Peace of mind",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: [
@@ -340,9 +338,9 @@ export const FULLIFE_PLAN: ContentPlan = {
     },
     {
       id: "fl-jul-3b",
-      week: "Week of Mon 20 - Sun 26 Jul",
-      date: "Wed 22 Jul 2026",
-      title: "Information Carousel - Alarms vs FulLife",
+        week: "Week of Mon 27 Jul - Sun 2 Aug",
+        date: "Tue, 28 Jul 2026",
+        title: "Information Carousel - Alarms vs FulLife",
       assetType: "Information Carousel",
       format: "1080 x 1350 px (4:5) · 3 slides",
       platforms: [
@@ -377,9 +375,9 @@ export const FULLIFE_PLAN: ContentPlan = {
     },
     {
       id: "fl-jul-3c",
-      week: "Week of Mon 20 - Sun 26 Jul",
-      date: "Fri 24 Jul 2026",
-      title: "Square Flyer - Caregiver spotlight",
+        week: "Week of Mon 27 Jul - Sun 2 Aug",
+        date: "Thu, 30 Jul 2026",
+        title: "Square Flyer - Caregiver spotlight",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: [
@@ -401,9 +399,9 @@ export const FULLIFE_PLAN: ContentPlan = {
     },
     {
       id: "fl-jul-4a",
-      week: "Week of Mon 27 Jul - Sun 2 Aug",
-      date: "Sun 2 Aug 2026",
-      title: "Square Flyer - Month-end reflection",
+        week: "Week of Mon 27 Jul - Sun 2 Aug",
+        date: "Sat, 1 Aug 2026",
+        title: "Square Flyer - Month-end reflection",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: [
@@ -429,10 +427,9 @@ export const FULLIFE_PLAN: ContentPlan = {
     // ============ AUGUST WEEK 1 - Aug 3-9 (Founders' Day Aug 4) ============
     {
       id: "fl-aug-w1",
-      week: "Week of Mon 3 Aug - Sun 9 Aug",
-      date: "Tue 5 Aug 2026",
-      occasion: "Founders' Day Week",
-      title: "Founders' Day - Building a foundation of consistency",
+        week: "Week of Mon 3 Aug - Sun 9 Aug",
+        date: "Tue, 4 Aug 2026",
+        title: "Founders' Day - Building a foundation of consistency",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: ["Instagram", "Facebook"],
@@ -446,9 +443,9 @@ export const FULLIFE_PLAN: ContentPlan = {
     // ============ AUGUST WEEK 2 - Aug 10-16 ============
     {
       id: "fl-aug-w2",
-      week: "Week of Mon 10 Aug - Sun 16 Aug",
-      date: "Thu 13 Aug 2026",
-      title: "Young professionals and routine medication",
+        week: "Week of Mon 3 Aug - Sun 9 Aug",
+        date: "Thu, 6 Aug 2026",
+        title: "Young professionals and routine medication",
       assetType: "Story / WhatsApp Status",
       format: "1080 x 1920 px (9:16)",
       platforms: ["Instagram Stories", "WhatsApp Status"],
@@ -462,9 +459,9 @@ export const FULLIFE_PLAN: ContentPlan = {
     // ============ AUGUST WEEK 3 - Aug 17-23 ============
     {
       id: "fl-aug-w3",
-      week: "Week of Mon 17 Aug - Sun 23 Aug",
-      date: "Tue 19 Aug 2026",
-      title: "Family medication management",
+        week: "Week of Mon 3 Aug - Sun 9 Aug",
+        date: "Sat, 8 Aug 2026",
+        title: "Family medication management",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: ["Instagram", "Facebook", "LinkedIn"],
@@ -478,9 +475,9 @@ export const FULLIFE_PLAN: ContentPlan = {
     // ============ AUGUST WEEK 4 - Aug 24-30 ============
     {
       id: "fl-aug-w4",
-      week: "Week of Mon 24 Aug - Sun 30 Aug",
-      date: "Fri 28 Aug 2026",
-      title: "End of month check-in",
+        week: "Week of Mon 10 Aug - Sun 16 Aug",
+        date: "Tue, 11 Aug 2026",
+        title: "End of month check-in",
       assetType: "Information Carousel",
       format: "1080 x 1350 px (4:5) · 3 slides",
       platforms: ["Instagram", "Facebook"],
@@ -498,9 +495,9 @@ export const FULLIFE_PLAN: ContentPlan = {
     // ============ SEPTEMBER WEEK 1 - Aug 31-Sep 6 ============
     {
       id: "fl-sep-w1",
-      week: "Week of Mon 31 Aug - Sun 6 Sep",
-      date: "Wed 2 Sep 2026",
-      title: "Back to School - Managing Kids' Routine Medications",
+        week: "Week of Mon 10 Aug - Sun 16 Aug",
+        date: "Thu, 13 Aug 2026",
+        title: "Back to School - Managing Kids' Routine Medications",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: ["Instagram", "Facebook"],
@@ -514,9 +511,9 @@ export const FULLIFE_PLAN: ContentPlan = {
     // ============ SEPTEMBER WEEK 2 - Sep 7-13 ============
     {
       id: "fl-sep-w2",
-      week: "Week of Mon 7 Sep - Sun 13 Sep",
-      date: "Mon 7 Sep 2026",
-      title: "The cost of skipping a dose",
+        week: "Week of Mon 10 Aug - Sun 16 Aug",
+        date: "Sat, 15 Aug 2026",
+        title: "The cost of skipping a dose",
       assetType: "Information Carousel",
       format: "1080 x 1350 px (4:5) · 4 slides",
       platforms: ["Instagram", "Facebook"],
@@ -535,9 +532,9 @@ export const FULLIFE_PLAN: ContentPlan = {
     // ============ SEPTEMBER WEEK 3 - Sep 14-20 ============
     {
       id: "fl-sep-w3",
-      week: "Week of Mon 14 Sep - Sun 20 Sep",
-      date: "Fri 18 Sep 2026",
-      title: "Kwame Nkrumah Memorial Day Prep",
+        week: "Week of Mon 17 Aug - Sun 23 Aug",
+        date: "Tue, 18 Aug 2026",
+        title: "Kwame Nkrumah Memorial Day Prep",
       assetType: "Story / WhatsApp Status",
       format: "1080 x 1920 px (9:16)",
       platforms: ["Instagram Stories", "WhatsApp Status"],
@@ -551,10 +548,9 @@ export const FULLIFE_PLAN: ContentPlan = {
     // ============ SEPTEMBER WEEK 4 - Sep 21-27 ============
     {
       id: "fl-sep-w4",
-      week: "Week of Mon 21 Sep - Sun 27 Sep",
-      date: "Fri 25 Sep 2026",
-      occasion: "World Pharmacists Day",
-      title: "World Pharmacists Day - Your pharmacist, in your pocket",
+        week: "Week of Mon 17 Aug - Sun 23 Aug",
+        date: "Thu, 20 Aug 2026",
+        title: "World Pharmacists Day - Your pharmacist, in your pocket",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: ["Instagram", "Facebook", "LinkedIn"],
@@ -568,10 +564,9 @@ export const FULLIFE_PLAN: ContentPlan = {
     // ============ SEPTEMBER WEEK 5 - Sep 28-Oct 4 ============
     {
       id: "fl-sep-w5",
-      week: "Week of Mon 28 Sep - Sun 4 Oct",
-      date: "Tue 29 Sep 2026",
-      occasion: "World Heart Day",
-      title: "World Heart Day - Consistency is cardio",
+        week: "Week of Mon 17 Aug - Sun 23 Aug",
+        date: "Sat, 22 Aug 2026",
+        title: "World Heart Day - Consistency is cardio",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: ["Instagram", "Facebook"],
@@ -581,8 +576,251 @@ export const FULLIFE_PLAN: ContentPlan = {
       designDirection: "Heart health motif, warm reds and MedPharma teal. A healthy, active older Ghanaian couple.",
       cta: STD_CTA,
       hashtags: ["#WorldHeartDay", "#HeartHealthGhana", "#FulLife"]
-    }
-  ],
+    },
+      {
+          id: "fl-new-1",
+          week: "Week of Mon 24 Aug - Sun 30 Aug",
+          date: "Tue, 25 Aug 2026",
+        title: "Daily Consistency - Peace of Mind",
+          assetType: "Square Flyer",
+          format: "1080 x 1080 px (1:1)",
+          platforms: ["Instagram", "Facebook", "LinkedIn"],
+          audience: "Individuals managing long-term health conditions who want a stress-free routine.",
+          hook: "Tired of the monthly rush to the pharmacy?",
+          body: "Headline: Make Daily Medication Consistency Effortless\nSub: With FulLife, your essential medications arrive at your doorstep exactly when you need them. Never miss a dose, never worry about running out.",
+          designDirection: "Background: A relaxed individual enjoying a peaceful morning coffee on their balcony, looking completely stress-free.",
+          cta: STD_CTA,
+          hashtags: ["#FulLife", "#DailyMedicationConsistency", "#HealthRoutine", "#PeaceOfMind"]
+        },
+      {
+          id: "fl-new-2",
+          week: "Week of Mon 24 Aug - Sun 30 Aug",
+          date: "Thu, 27 Aug 2026",
+        title: "Subscription Delivery - Convenience",
+          assetType: "Information Carousel",
+          format: "1080 x 1350 px (4:5) · 3 slides",
+          platforms: ["Instagram", "Facebook"],
+          audience: "Busy professionals managing their own or their parents' continuous medication needs.",
+          hook: "Imagine a world where your meds refill themselves.",
+          body: {
+            slides: [
+              { title: "The FulLife Advantage", body: "Managing daily medications shouldn't feel like a part-time job." },
+              { title: "Subscribe Once", body: "Set up your medication schedule on the FulLife platform and let us handle the rest." },
+              { title: "Automated Deliveries", body: "Receive your medications securely at your doorstep before your current batch runs out." }
+            ]
+          },
+          designDirection: "Background: A sleek, user-friendly interface concept overlaid on a lifestyle image of a person confidently walking into their office building.",
+          cta: STD_CTA,
+          hashtags: ["#SubscriptionPharmacy", "#FulLifeCare", "#HealthcareMadeEasy", "#NeverMissADose"]
+        },
+      {
+          id: "fl-new-3",
+          week: "Week of Mon 24 Aug - Sun 30 Aug",
+          date: "Sat, 29 Aug 2026",
+        title: "Daily Consistency - Hypertension",
+          assetType: "Square Flyer",
+          format: "1080 x 1080 px (1:1)",
+          platforms: ["Instagram", "Facebook", "X / Twitter"],
+          audience: "Individuals managing high blood pressure and their caregivers.",
+          hook: "Consistency is the key to controlling your blood pressure.",
+          body: "Headline: Keep Your Heart in Check\nSub: Managing hypertension requires strict daily medication consistency. Let FulLife's subscription service ensure you always have your medications on hand to protect your heart.",
+          designDirection: "Background: A vibrant, healthy middle-aged man jogging lightly in a green park in Accra, radiating vitality.",
+          cta: STD_CTA,
+          hashtags: ["#HeartHealth", "#HypertensionCare", "#DailyMedicationConsistency", "#FulLife"]
+        },
+      {
+          id: "fl-new-4",
+          week: "Week of Mon 31 Aug - Sun 6 Sept",
+          date: "Tue, 1 Sept 2026",
+        title: "Subscription Delivery - Family Care",
+          assetType: "Square Flyer",
+          format: "1080 x 1080 px (1:1)",
+          platforms: ["Instagram", "Facebook", "LinkedIn"],
+          audience: "People responsible for managing healthcare for multiple family members.",
+          hook: "Managing medications for the whole family?",
+          body: "Headline: Simplify Your Family's Health Routine\nSub: Juggling different prescriptions and refill dates is exhausting. Consolidate your family's daily medication needs with a single, reliable FulLife subscription.",
+          designDirection: "Background: A warm family portrait of three generations gathered around a dining table, laughing and enjoying a meal together.",
+          cta: STD_CTA,
+          hashtags: ["#FamilyHealth", "#CaregiversGhana", "#FulLifeSubscription", "#HealthManagement"]
+        },
+      {
+          id: "fl-new-5",
+          week: "Week of Mon 31 Aug - Sun 6 Sept",
+          date: "Thu, 3 Sept 2026",
+        title: "Daily Consistency - Diabetes Care",
+          assetType: "Square Flyer",
+          format: "1080 x 1080 px (1:1)",
+          platforms: ["Instagram", "Facebook", "X / Twitter"],
+          audience: "Individuals managing diabetes.",
+          hook: "Take control of your glucose levels every single day.",
+          body: "Headline: Uninterrupted Diabetes Management\nSub: Daily medication consistency is vital for living well with diabetes. FulLife guarantees timely deliveries so your routine is never disrupted.",
+          designDirection: "Background: A close-up of hands preparing a healthy, colorful salad, symbolizing a balanced and well-managed lifestyle.",
+          cta: STD_CTA,
+          hashtags: ["#DiabetesCare", "#HealthyLiving", "#DailyMedicationConsistency", "#FulLife"]
+        },
+      {
+          id: "fl-new-6",
+          week: "Week of Mon 31 Aug - Sun 6 Sept",
+          date: "Sat, 5 Sept 2026",
+        title: "Subscription Delivery - Travel Ready",
+          assetType: "Square Flyer",
+          format: "1080 x 1080 px (1:1)",
+          platforms: ["Instagram", "Facebook", "X / Twitter"],
+          audience: "Frequent travelers who need continuous medication.",
+          hook: "Planning a trip? Don't let medication logistics hold you back.",
+          body: "Headline: Travel with Confidence\nSub: With FulLife, you can easily adjust your subscription to receive a sufficient supply before you travel. Focus on the journey, we'll handle the meds.",
+          designDirection: "Background: A traveler's open suitcase neatly packed with clothes, a passport, and a FulLife medication pouch ready for a trip.",
+          cta: STD_CTA,
+          hashtags: ["#TravelHealth", "#AlwaysPrepared", "#FulLife", "#SubscriptionDelivery"]
+        },
+      {
+          id: "fl-new-7",
+          week: "Week of Mon 7 Sept - Sun 13 Sept",
+          date: "Tue, 8 Sept 2026",
+        title: "Daily Consistency - Habit Building",
+          assetType: "Information Carousel",
+          format: "1080 x 1350 px (4:5) · 3 slides",
+          platforms: ["Instagram", "Facebook", "LinkedIn"],
+          audience: "Anyone struggling to stick to a daily medication schedule.",
+          hook: "Building a healthy habit takes time and consistency.",
+          body: {
+            slides: [
+              { title: "The Challenge", body: "It's easy to forget a pill when life gets busy. But skipping doses compromises your health." },
+              { title: "The Solution", body: "FulLife removes the friction. By ensuring you always have your medication, taking it becomes a seamless part of your morning routine." },
+              { title: "The Result", body: "Achieve optimal daily medication consistency and enjoy better long-term health outcomes." }
+            ]
+          },
+          designDirection: "Background: Minimalist, aesthetic workspace showing a glass of water, a daily planner, and neatly organized medication.",
+          cta: STD_CTA,
+          hashtags: ["#HealthyHabits", "#DailyMedicationConsistency", "#FulLifeJourney", "#WellnessGoals"]
+        },
+      {
+          id: "fl-new-8",
+          week: "Week of Mon 7 Sept - Sun 13 Sept",
+          date: "Thu, 10 Sept 2026",
+        title: "Subscription Delivery - Cost Savings",
+          assetType: "Square Flyer",
+          format: "1080 x 1080 px (1:1)",
+          platforms: ["Instagram", "Facebook", "LinkedIn"],
+          audience: "Cost-conscious individuals on continuous medication programs.",
+          hook: "Consistent care shouldn't break the bank.",
+          body: "Headline: Save Time, Save Money\nSub: Subscribing to your long-term medications through FulLife not only offers unmatched convenience but shields you from sudden price hikes and transport costs.",
+          designDirection: "Background: A person looking pleasantly surprised while reviewing a digital receipt on their smartphone screen.",
+          cta: STD_CTA,
+          hashtags: ["#SmartSavings", "#AffordableHealth", "#FulLifeSubscription", "#HealthcareGhana"]
+        },
+      {
+          id: "fl-new-9",
+          week: "Week of Mon 7 Sept - Sun 13 Sept",
+          date: "Sat, 12 Sept 2026",
+        title: "Daily Consistency - Automated Refills",
+          assetType: "Square Flyer",
+          format: "1080 x 1080 px (1:1)",
+          platforms: ["Instagram", "Facebook", "X / Twitter"],
+          audience: "Busy people who frequently forget to refill their prescriptions.",
+          hook: "Forgot to refill again? We've got you covered.",
+          body: "Headline: Say Goodbye to Refill Anxiety\nSub: Never scramble for your medications at the last minute. FulLife tracks your usage and automatically dispatches your next batch before you run out.",
+          designDirection: "Background: An elegant, soft-focus image of a wall calendar with a subtle, stylized checkmark landing perfectly on today's date.",
+          cta: STD_CTA,
+          hashtags: ["#AutomatedRefills", "#StressFreeHealth", "#DailyMedicationConsistency", "#FulLife"]
+        },
+      {
+          id: "fl-new-10",
+          week: "Week of Mon 14 Sept - Sun 20 Sept",
+          date: "Tue, 15 Sept 2026",
+        title: "Subscription Delivery - Expert Support",
+          assetType: "Square Flyer",
+          format: "1080 x 1080 px (1:1)",
+          platforms: ["Instagram", "Facebook", "LinkedIn"],
+          audience: "Patients who need ongoing guidance for their continuous medication.",
+          hook: "More than just delivery. It's dedicated care.",
+          body: "Headline: Your Dedicated Health Partners\nSub: A FulLife subscription means you're never alone. Access continuous support and advice from our team of licensed pharmacists whenever you have questions about your routine.",
+          designDirection: "Background: A friendly, professional Ghanaian pharmacist wearing a headset, smiling and providing virtual consultation.",
+          cta: STD_CTA,
+          hashtags: ["#PharmacyCare", "#ExpertSupport", "#FulLife", "#ContinuousCare"]
+        },
+      {
+          id: "fl-new-11",
+          week: "Week of Mon 14 Sept - Sun 20 Sept",
+          date: "Thu, 17 Sept 2026",
+        title: "Daily Consistency - Long-term Health",
+          assetType: "Square Flyer",
+          format: "1080 x 1080 px (1:1)",
+          platforms: ["Instagram", "Facebook", "LinkedIn"],
+          audience: "Older adults and individuals focused on longevity.",
+          hook: "Invest in your tomorrow, today.",
+          body: "Headline: The Foundation of Longevity\nSub: True wellness is built day by day. Committing to daily medication consistency ensures you stay active, healthy, and ready for whatever the future holds.",
+          designDirection: "Background: An active elderly couple walking hand-in-hand along a beautiful beach at sunset, looking healthy and vibrant.",
+          cta: STD_CTA,
+          hashtags: ["#Longevity", "#HealthyAging", "#DailyMedicationConsistency", "#FulLifeCare"]
+        },
+      {
+          id: "fl-new-12",
+          week: "Week of Mon 14 Sept - Sun 20 Sept",
+          date: "Sat, 19 Sept 2026",
+        title: "Subscription Delivery - Focus on Life",
+          assetType: "Square Flyer",
+          format: "1080 x 1080 px (1:1)",
+          platforms: ["Instagram", "Facebook", "X / Twitter"],
+          audience: "Active individuals and creatives who don't want to be bogged down by health logistics.",
+          hook: "Spend your time living, not waiting in line.",
+          body: "Headline: Reclaim Your Time\nSub: Your time is precious. Let FulLife's subscription service handle your medication logistics so you can focus on your passions, your career, and your family.",
+          designDirection: "Background: An artist deeply immersed in painting in a sunlit studio, completely focused on their creative work.",
+          cta: STD_CTA,
+          hashtags: ["#FocusOnLife", "#TimeSaver", "#FulLifeDelivery", "#LiveFully"]
+        },
+      {
+          id: "fl-new-13",
+          week: "Week of Mon 21 Sept - Sun 27 Sept",
+          date: "Tue, 22 Sept 2026",
+        title: "Daily Consistency - Never Miss a Dose",
+          assetType: "Information Carousel",
+          format: "1080 x 1350 px (4:5) · 3 slides",
+          platforms: ["Instagram", "Facebook", "LinkedIn"],
+          audience: "People actively seeking to improve their medication adherence.",
+          hook: "What happens when you miss a dose?",
+          body: {
+            slides: [
+              { title: "The Disruption", body: "Missing even one dose of continuous medication can disrupt your body's balance." },
+              { title: "The Risk", body: "It reduces the effectiveness of your treatment and can lead to unwanted flare-ups." },
+              { title: "The FulLife Guarantee", body: "We deliver proactively. With FulLife, daily medication consistency is guaranteed, keeping your health completely on track." }
+            ]
+          },
+          designDirection: "Background: Clean, clinical but warm abstract background featuring smooth continuous flowing lines representing uninterrupted health.",
+          cta: STD_CTA,
+          hashtags: ["#NeverMissADose", "#HealthAdherence", "#DailyMedicationConsistency", "#FulLife"]
+        },
+      {
+          id: "fl-new-14",
+          week: "Week of Mon 21 Sept - Sun 27 Sept",
+          date: "Thu, 24 Sept 2026",
+        title: "Subscription Delivery - Quality Assured",
+          assetType: "Square Flyer",
+          format: "1080 x 1080 px (1:1)",
+          platforms: ["Instagram", "Facebook", "LinkedIn"],
+          audience: "Quality-conscious consumers managing ongoing treatments.",
+          hook: "When you rely on medication daily, quality is non-negotiable.",
+          body: "Headline: Premium Care, Every Month\nSub: A FulLife subscription guarantees you receive authentic, properly stored medications every single time, straight from trusted manufacturers to your door.",
+          designDirection: "Background: A premium unboxing experience showing a neatly organized, beautifully branded FulLife medication package.",
+          cta: STD_CTA,
+          hashtags: ["#PremiumHealthcare", "#AuthenticMeds", "#FulLifeQuality", "#SubscriptionDelivery"]
+        },
+      {
+          id: "fl-new-15",
+          week: "Week of Mon 21 Sept - Sun 27 Sept",
+          date: "Sat, 26 Sept 2026",
+        title: "Daily Consistency - Seamless Routine",
+          assetType: "Square Flyer",
+          format: "1080 x 1080 px (1:1)",
+          platforms: ["Instagram", "Facebook", "X / Twitter"],
+          audience: "Young professionals establishing long-term health routines.",
+          hook: "Make your health routine as seamless as your morning coffee.",
+          body: "Headline: Effortless Health Management\nSub: Integrate your health needs into your lifestyle perfectly. With FulLife's reliable delivery, daily medication consistency just happens automatically.",
+          designDirection: "Background: A stylized flat lay showing morning essentials: a smart watch, keys, a cup of coffee, and a neat pill organizer.",
+          cta: STD_CTA,
+          hashtags: ["#SeamlessRoutine", "#HealthyLifestyle", "#DailyMedicationConsistency", "#FulLife"]
+        }
+],
 };
 
 // =================================================================
@@ -605,10 +843,9 @@ export const MEDPHARMA_PLAN = {
     // ============ JULY ============
     {
       id: "mp-jul-1",
-      week: "Week of Mon 29 Jun - Sun 5 Jul",
-      date: "Wed 1 Jul 2026",
-      occasion: "Republic Day (Ghana, public holiday)",
-      title: "Republic Day - Built in Ghana, for Ghana",
+        week: "Week of Mon 29 Jun - Sun 5 Jul",
+        date: "Mon, 29 Jun 2026",
+        title: "Republic Day - Built in Ghana, for Ghana",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: ["Instagram", "Facebook", "X / Twitter", "WhatsApp Status (cropped)"],
@@ -625,9 +862,9 @@ export const MEDPHARMA_PLAN = {
     },
     {
       id: "mp-jul-2",
-      week: "Week of Mon 6 - Sun 12 Jul",
-      date: "Wed 8 Jul 2026",
-      title: "Information Carousel - Real medicine, real pharmacists, real receipts",
+        week: "Week of Mon 29 Jun - Sun 5 Jul",
+        date: "Wed, 1 Jul 2026",
+        title: "Information Carousel - Real medicine, real pharmacists, real receipts",
       assetType: "Information Carousel",
       format: "1080 x 1350 px (4:5) · 5 slides",
       platforms: ["Instagram", "Facebook"],
@@ -649,9 +886,9 @@ export const MEDPHARMA_PLAN = {
     },
     {
       id: "mp-jul-3",
-      week: "Week of Mon 20 - Sun 26 Jul",
-      date: "Wed 22 Jul 2026",
-      title: "App Download Flyer - The whole pharmacy. In your pocket.",
+        week: "Week of Mon 29 Jun - Sun 5 Jul",
+        date: "Fri, 3 Jul 2026",
+        title: "App Download Flyer - The whole pharmacy. In your pocket.",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: ["Instagram", "Facebook", "X / Twitter"],
@@ -668,10 +905,9 @@ export const MEDPHARMA_PLAN = {
     },
     {
       id: "mp-jul-4",
-      week: "Week of Mon 27 Jul - Sun 2 Aug",
-      date: "Tue 28 Jul 2026",
-      occasion: "World Hepatitis Day",
-      title: "World Hepatitis Day - Get tested. Then keep going.",
+        week: "Week of Mon 6 Jul - Sun 12 Jul",
+        date: "Mon, 6 Jul 2026",
+        title: "World Hepatitis Day - Get tested. Then keep going.",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: ["Instagram", "Facebook", "LinkedIn", "X / Twitter"],
@@ -688,9 +924,9 @@ export const MEDPHARMA_PLAN = {
     },
     {
       id: "mp-jul-5",
-      week: "Week of Mon 27 Jul - Sun 2 Aug",
-      date: "Fri 31 Jul 2026",
-      title: "TikTok Photo Set - A day in 3 frames at MedPharma",
+        week: "Week of Mon 6 Jul - Sun 12 Jul",
+        date: "Wed, 8 Jul 2026",
+        title: "TikTok Photo Set - A day in 3 frames at MedPharma",
       assetType: "TikTok Photo Set",
       format: "1080 x 1920 px (9:16) · 3 still images, posted as a TikTok Photo Mode set",
       platforms: ["TikTok", "Instagram Reels (3-image carousel reel)"],
@@ -709,9 +945,9 @@ export const MEDPHARMA_PLAN = {
       hashtags: ["#MedPharmaGH", "#OnlinePharmacyGhana", "#AccraTikTok", "#GhanaTikTok"],
     },    {
       id: "mp-may-3",
-      week: "Week of Mon 26 May - Sun 1 Jun",
-      date: "Thu 29 May 2026",
-      title: "Square Flyer - Intro to the rider network",
+        week: "Week of Mon 6 Jul - Sun 12 Jul",
+        date: "Fri, 10 Jul 2026",
+        title: "Square Flyer - Intro to the rider network",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: [
@@ -733,9 +969,9 @@ export const MEDPHARMA_PLAN = {
     },
     {
       id: "mp-jul-0a",
-      week: "Week of Mon 29 Jun - Sun 5 Jul",
-      date: "Mon 29 Jun 2026",
-      title: "Square Flyer - Same-day Accra",
+        week: "Week of Mon 13 Jul - Sun 19 Jul",
+        date: "Mon, 13 Jul 2026",
+        title: "Square Flyer - Same-day Accra",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: [
@@ -756,9 +992,9 @@ export const MEDPHARMA_PLAN = {
     },
     {
       id: "mp-jul-0b",
-      week: "Week of Mon 29 Jun - Sun 5 Jul",
-      date: "Fri 3 Jul 2026",
-      title: "Square Flyer - Next-day Nationwide",
+        week: "Week of Mon 13 Jul - Sun 19 Jul",
+        date: "Wed, 15 Jul 2026",
+        title: "Square Flyer - Next-day Nationwide",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: [
@@ -779,9 +1015,9 @@ export const MEDPHARMA_PLAN = {
     },
     {
       id: "mp-jul-1a",
-      week: "Week of Mon 6 - Sun 12 Jul",
-      date: "Mon 6 Jul 2026",
-      title: "Square Flyer - The Batch Number",
+        week: "Week of Mon 13 Jul - Sun 19 Jul",
+        date: "Fri, 17 Jul 2026",
+        title: "Square Flyer - The Batch Number",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: [
@@ -803,9 +1039,9 @@ export const MEDPHARMA_PLAN = {
     },
     {
       id: "mp-jul-1b",
-      week: "Week of Mon 6 - Sun 12 Jul",
-      date: "Fri 10 Jul 2026",
-      title: "WhatsApp Status - Flexible checkout",
+        week: "Week of Mon 20 Jul - Sun 26 Jul",
+        date: "Mon, 20 Jul 2026",
+        title: "WhatsApp Status - Flexible checkout",
       assetType: "Story / WhatsApp Status",
       format: "1080 x 1920 px (9:16)",
       platforms: [
@@ -820,9 +1056,9 @@ export const MEDPHARMA_PLAN = {
     },
     {
       id: "mp-jul-2a",
-      week: "Week of Mon 13 - Sun 19 Jul",
-      date: "Mon 13 Jul 2026",
-      title: "Square Flyer - Customer testimonial",
+        week: "Week of Mon 20 Jul - Sun 26 Jul",
+        date: "Wed, 22 Jul 2026",
+        title: "Square Flyer - Customer testimonial",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: [
@@ -843,9 +1079,9 @@ export const MEDPHARMA_PLAN = {
     },
     {
       id: "mp-jul-2b",
-      week: "Week of Mon 13 - Sun 19 Jul",
-      date: "Thu 16 Jul 2026",
-      title: "Square Flyer - Authenticity guarantee",
+        week: "Week of Mon 20 Jul - Sun 26 Jul",
+        date: "Fri, 24 Jul 2026",
+        title: "Square Flyer - Authenticity guarantee",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: [
@@ -867,9 +1103,9 @@ export const MEDPHARMA_PLAN = {
     },
     {
       id: "mp-jul-2c",
-      week: "Week of Mon 13 - Sun 19 Jul",
-      date: "Sat 18 Jul 2026",
-      title: "Information Carousel - E-consultation value",
+        week: "Week of Mon 27 Jul - Sun 2 Aug",
+        date: "Mon, 27 Jul 2026",
+        title: "Information Carousel - E-consultation value",
       assetType: "Information Carousel",
       format: "1080 x 1350 px (4:5) · 3 slides",
       platforms: [
@@ -903,9 +1139,9 @@ export const MEDPHARMA_PLAN = {
     },
     {
       id: "mp-jul-3a",
-      week: "Week of Mon 20 - Sun 26 Jul",
-      date: "Tue 21 Jul 2026",
-      title: "WhatsApp Status - Prescription upload",
+        week: "Week of Mon 27 Jul - Sun 2 Aug",
+        date: "Wed, 29 Jul 2026",
+        title: "WhatsApp Status - Prescription upload",
       assetType: "Story / WhatsApp Status",
       format: "1080 x 1920 px (9:16)",
       platforms: [
@@ -920,9 +1156,9 @@ export const MEDPHARMA_PLAN = {
     },
     {
       id: "mp-jul-3b",
-      week: "Week of Mon 20 - Sun 26 Jul",
-      date: "Thu 23 Jul 2026",
-      title: "Square Flyer - Insurance integration",
+        week: "Week of Mon 27 Jul - Sun 2 Aug",
+        date: "Fri, 31 Jul 2026",
+        title: "Square Flyer - Insurance integration",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: [
@@ -944,9 +1180,9 @@ export const MEDPHARMA_PLAN = {
     },
     {
       id: "mp-jul-4a",
-      week: "Week of Mon 27 Jul - Sun 2 Aug",
-      date: "Sat 1 Aug 2026",
-      title: "Square Flyer - Future of healthcare",
+        week: "Week of Mon 3 Aug - Sun 9 Aug",
+        date: "Mon, 3 Aug 2026",
+        title: "Square Flyer - Future of healthcare",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: [
@@ -967,13 +1203,13 @@ export const MEDPHARMA_PLAN = {
       ]
     },
 
+
     // ============ AUGUST WEEK 1 - Aug 3-9 (Founders' Day Aug 4) ============
     {
       id: "mp-aug-w1a",
-      week: "Week of Mon 3 Aug - Sun 9 Aug",
-      date: "Mon 4 Aug 2026",
-      occasion: "Ghana Founders' Day (Public Holiday)",
-      title: "Founders' Day - A healthy nation honours its founders best",
+        week: "Week of Mon 3 Aug - Sun 9 Aug",
+        date: "Wed, 5 Aug 2026",
+        title: "Founders' Day - A healthy nation honours its founders best",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: ["Instagram", "Facebook", "X / Twitter"],
@@ -990,9 +1226,9 @@ export const MEDPHARMA_PLAN = {
     },
     {
       id: "mp-aug-w1b",
-      week: "Week of Mon 3 Aug - Sun 9 Aug",
-      date: "Thu 7 Aug 2026",
-      title: "Information Carousel - The MedPharma app: A full tour in 5 slides",
+        week: "Week of Mon 3 Aug - Sun 9 Aug",
+        date: "Fri, 7 Aug 2026",
+        title: "Information Carousel - The MedPharma app: A full tour in 5 slides",
       assetType: "Information Carousel",
       format: "1080 x 1350 px (4:5) · 6 slides",
       platforms: ["Instagram", "Facebook"],
@@ -1015,10 +1251,9 @@ export const MEDPHARMA_PLAN = {
     // ============ AUGUST WEEK 2 - Aug 10-16 (Youth Day Aug 12) ============
     {
       id: "mp-aug-w2a",
-      week: "Week of Mon 10 Aug - Sun 16 Aug",
-      date: "Wed 12 Aug 2026",
-      occasion: "International Youth Day",
-      title: "International Youth Day - Healthcare for the generation building tomorrow's Ghana",
+        week: "Week of Mon 10 Aug - Sun 16 Aug",
+        date: "Mon, 10 Aug 2026",
+        title: "International Youth Day - Healthcare for the generation building tomorrow's Ghana",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: ["Instagram", "Facebook", "X / Twitter"],
@@ -1035,9 +1270,9 @@ export const MEDPHARMA_PLAN = {
     },
     {
       id: "mp-aug-w2b",
-      week: "Week of Mon 10 Aug - Sun 16 Aug",
-      date: "Fri 14 Aug 2026",
-      title: "Story / WhatsApp Status - Sickle cell: managing it just got easier",
+        week: "Week of Mon 10 Aug - Sun 16 Aug",
+        date: "Wed, 12 Aug 2026",
+        title: "Story / WhatsApp Status - Sickle cell: managing it just got easier",
       assetType: "Story / WhatsApp Status",
       format: "1080 x 1920 px (9:16)",
       platforms: ["Instagram Stories", "WhatsApp Status", "Facebook Stories"],
@@ -1054,10 +1289,9 @@ export const MEDPHARMA_PLAN = {
     // ============ AUGUST WEEK 3 - Aug 17-23 (World Mosquito Day Aug 20) ============
     {
       id: "mp-aug-w3a",
-      week: "Week of Mon 17 Aug - Sun 23 Aug",
-      date: "Thu 20 Aug 2026",
-      occasion: "World Mosquito Day",
-      title: "World Mosquito Day - Order your malaria treatment before you need it",
+        week: "Week of Mon 10 Aug - Sun 16 Aug",
+        date: "Fri, 14 Aug 2026",
+        title: "World Mosquito Day - Order your malaria treatment before you need it",
       assetType: "Information Carousel",
       format: "1080 x 1350 px (4:5) · 5 slides",
       platforms: ["Instagram", "Facebook"],
@@ -1077,9 +1311,9 @@ export const MEDPHARMA_PLAN = {
     },
     {
       id: "mp-aug-w3b",
-      week: "Week of Mon 17 Aug - Sun 23 Aug",
-      date: "Mon 18 Aug 2026",
-      title: "Square Flyer - Book a lab test from the MedPharma app",
+        week: "Week of Mon 17 Aug - Sun 23 Aug",
+        date: "Mon, 17 Aug 2026",
+        title: "Square Flyer - Book a lab test from the MedPharma app",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: ["Instagram", "Facebook", "X / Twitter"],
@@ -1098,10 +1332,9 @@ export const MEDPHARMA_PLAN = {
     // ============ AUGUST WEEK 4 - Aug 24-30 (Women's Equality Day Aug 26) ============
     {
       id: "mp-aug-w4a",
-      week: "Week of Mon 24 Aug - Sun 30 Aug",
-      date: "Wed 26 Aug 2026",
-      occasion: "Women's Equality Day",
-      title: "Women's Equality Day - Equal healthcare is not optional",
+        week: "Week of Mon 17 Aug - Sun 23 Aug",
+        date: "Wed, 19 Aug 2026",
+        title: "Women's Equality Day - Equal healthcare is not optional",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: ["Instagram", "Facebook", "LinkedIn", "X / Twitter"],
@@ -1118,184 +1351,9 @@ export const MEDPHARMA_PLAN = {
     },
     {
       id: "mp-aug-w4b",
-      week: "Week of Mon 24 Aug - Sun 30 Aug",
-      date: "Fri 28 Aug 2026",
-      title: "LinkedIn PDF - Why Ghana's employers should include digital pharmacy in their health benefits",
-      assetType: "LinkedIn PDF Document",
-      format: "1920 x 1080 px (16:9) · 7 pages",
-      platforms: ["LinkedIn"],
-      audience: "HR Directors, CEOs, Business Owners, Corporate Health Leads.",
-      hook: "Your employee's untreated hypertension is costing you far more than their sick days.",
-      slides: [
-        { title: "Page 1 - Cover", body: "Title: Digital Pharmacy as a Corporate Health Benefit: The Business Case." },
-        { title: "Page 2", body: "The problem: 42% of working-age Ghanaians on long-term medication are stop taking their medication within the first 3 months. The main reason? Inconvenience of the physical pharmacy." },
-        { title: "Page 3", body: "The business cost: Lost productivity, increased sick days, higher group health insurance premiums, and higher risk of sudden medical emergencies in the workplace." },
-        { title: "Page 4", body: "The MedPharma corporate solution: Partner with us to include FulLife access in your employee health benefits package at a negotiated group rate." },
-        { title: "Page 5", body: "What employees get: Medication delivered to their desk or home. 24/7 AI health assistant. Virtual doctor access. Digital health records and prescription management." },
-        { title: "Page 6", body: "What the business gets: Healthier, more present team. Reduced insurance claims. A clear health benefit that helps you attract and keep great staff." },
-        { title: "Page 7 - CTA", body: "Ready to build a healthier workforce?\nBook a corporate consultation: " + CALL + "\n" + APP },
-      ],
-      designDirection:
-        "Background: Premium corporate environment.",
-      cta: STD_CTA,
-      hashtags: ["#MedPharmaGH", "#CorporateHealth", "#EmployeeWellbeing", "#SeamlessHealthcare", "#GhanaHR"],
-    },
-
-
-    // ============ AUGUST WEEK 1 - Aug 3-9 (Founders' Day Aug 4) ============
-    {
-      id: "mp-aug-w1a",
-      week: "Week of Mon 3 Aug - Sun 9 Aug",
-      date: "Mon 4 Aug 2026",
-      occasion: "Ghana Founders' Day (Public Holiday)",
-      title: "Founders' Day - A healthy nation honours its founders best",
-      assetType: "Square Flyer",
-      format: "1080 x 1080 px (1:1)",
-      platforms: ["Instagram", "Facebook", "X / Twitter"],
-      audience: "General Ghanaian public.",
-      hook: "The founders built this nation with discipline and consistency. Your health deserves the same.",
-      body:
-        "Headline: A healthy nation honours its founders best.\n\n" +
-        "Sub: Happy Founders' Day from MedPharma. We are proud to be building a healthier Ghana - one smooth healthcare experience at a time.\n\n" +
-        "Supporting: Download the MedPharma app today and join thousands of Ghanaians taking control of their health.",
-      designDirection:
-        "Ghana flag palette (red, gold, green, black star) woven elegantly with MedPharma teal. National pride aesthetic - bold, clean, patriotic.",
-      cta: STD_CTA,
-      hashtags: ["#FoundersDay", "#GhanaAt69", "#MedPharmaGH", "#HealthyGhana", "#SeamlessHealthcare"],
-    },
-    {
-      id: "mp-aug-w1b",
-      week: "Week of Mon 3 Aug - Sun 9 Aug",
-      date: "Thu 7 Aug 2026",
-      title: "Information Carousel - The MedPharma app: A full tour in 5 slides",
-      assetType: "Information Carousel",
-      format: "1080 x 1350 px (4:5) · 6 slides",
-      platforms: ["Instagram", "Facebook"],
-      audience: "People who need to know about the app.",
-      hook: "Most people still don't know everything MedPharma does. Let's fix that.",
-      slides: [
-        { title: "Slide 1 - Cover", body: "Headline: The MedPharma app.\nSub: A full tour. 5 slides. Everything you need to know." },
-        { title: "Slide 2", body: "Feature 1: Medication Delivery.\nOrder any prescription or OTC medication and get it delivered to your door - anywhere in Accra." },
-        { title: "Slide 3", body: "Feature 2: Online Doctor Consultations.\nBook a video call with a licensed Ghanaian doctor in minutes. No commute. No queue." },
-        { title: "Slide 4", body: "Feature 3: Upload Your Prescription.\nTake a photo of your paper prescription. Our pharmacist verifies and sends your order." },
-        { title: "Slide 5", body: "Feature 4: AI Health Assistant.\nAsk our 24/7 AI health companion any medical question - instantly and safely, any time of day." },
-        { title: "Slide 6 - CTA", body: "Feature 5: The FulLife Subscription.\nAutomatic monthly medication delivery + reminders + doctor access - all in one plan." },
-      ],
-      designDirection:
-        "App UI showcase style. Clean, tech-forward. MedPharma teal. One app screenshot per slide where possible. Modern and aspirational.",
-      cta: STD_CTA,
-      hashtags: ["#MedPharmaGH", "#DigitalPharmacy", "#SeamlessHealthcare", "#AccraHealthTech"],
-    },
-
-    // ============ AUGUST WEEK 2 - Aug 10-16 (Youth Day Aug 12) ============
-    {
-      id: "mp-aug-w2a",
-      week: "Week of Mon 10 Aug - Sun 16 Aug",
-      date: "Wed 12 Aug 2026",
-      occasion: "International Youth Day",
-      title: "International Youth Day - Healthcare for the generation building tomorrow's Ghana",
-      assetType: "Square Flyer",
-      format: "1080 x 1080 px (1:1)",
-      platforms: ["Instagram", "Facebook", "X / Twitter"],
-      audience: "Young Ghanaians 18-35; parents of young people managing health conditions.",
-      hook: "Young Ghanaians are building the future. MedPharma keeps them healthy enough to do it.",
-      body:
-        "Headline: Healthcare for the generation building tomorrow's Ghana.\n\n" +
-        "Sub: International Youth Day is a reminder that asthma, sickle cell, anxiety, and early high blood pressure affect young Ghanaians right now. Healthcare access cannot wait.\n\n" +
-        "MedPharma: Fast, affordable, and digital healthcare - built for how young Ghanaians actually live.",
-      designDirection:
-        "Bold, energetic. Young Ghanaian professionals and students - diverse, vibrant. MedPharma teal. Modern typography. Urban setting.",
-      cta: STD_CTA,
-      hashtags: ["#InternationalYouthDay", "#YouthHealthGhana", "#MedPharmaGH", "#SeamlessHealthcare"],
-    },
-    {
-      id: "mp-aug-w2b",
-      week: "Week of Mon 10 Aug - Sun 16 Aug",
-      date: "Fri 14 Aug 2026",
-      title: "Story / WhatsApp Status - Sickle cell: managing it just got easier",
-      assetType: "Story / WhatsApp Status",
-      format: "1080 x 1920 px (9:16)",
-      platforms: ["Instagram Stories", "WhatsApp Status", "Facebook Stories"],
-      audience: "Young Ghanaians with sickle cell; their families and caregivers.",
-      hook: "Sickle cell doesn't pause. Your medication access shouldn't either.",
-      body:
-        "Headline: Managing sickle cell just got easier.\nSub: MedPharma delivers your hydroxyurea, pain management medications, and supplements straight to your door - with zero pharmacy stress.",
-      designDirection:
-        "Strong, empowering. MedPharma teal on dark background. Sickle cell awareness red-cell graphic as subtle background element. Not clinical - empowering.",
-      cta: STD_CTA,
-      hashtags: ["#SickleCellGhana", "#MedPharmaGH", "#SeamlessHealthcare", "#YouthHealth"],
-    },
-
-    // ============ AUGUST WEEK 3 - Aug 17-23 (World Mosquito Day Aug 20) ============
-    {
-      id: "mp-aug-w3a",
-      week: "Week of Mon 17 Aug - Sun 23 Aug",
-      date: "Thu 20 Aug 2026",
-      occasion: "World Mosquito Day",
-      title: "World Mosquito Day - Order your malaria treatment before you need it",
-      assetType: "Information Carousel",
-      format: "1080 x 1350 px (4:5) · 5 slides",
-      platforms: ["Instagram", "Facebook"],
-      audience: "General Ghanaian public, parents, caregivers.",
-      hook: "World Mosquito Day: Malaria starts with a bite. Your response starts with MedPharma.",
-      slides: [
-        { title: "Slide 1 - Cover", body: "Headline: Ghana has one of the world's highest malaria burdens.\nSub: World Mosquito Day" },
-        { title: "Slide 2", body: "The risk: During rainy season in Ghana, malaria malaria cases go up quickly. Children under 5 and pregnant women are most at risk." },
-        { title: "Slide 3", body: "What MedPharma offers:\n✓ Order antimalarial medications in the app\n✓ Get malaria test kits delivered to your door\n✓ Book a online consultation if you have symptoms\n✓ Upload your prescription for instant dispensing" },
-        { title: "Slide 4", body: "Complete your full course:\nNever stop malaria treatment early - even when you feel better. Incomplete courses cause resistance and getting sick again.\nFulLife medication reminders keep you on track." },
-        { title: "Slide 5 - CTA", body: "Headline: From prevention to treatment - MedPharma has you covered." },
-      ],
-      designDirection:
-        "Health poster style - deep green and MedPharma teal. Mosquito net graphic. Ghanaian family - mother and child. Warm but educational.",
-      cta: STD_CTA,
-      hashtags: ["#WorldMosquitoDay", "#MalariaGhana", "#MedPharmaGH", "#SeamlessHealthcare"],
-    },
-    {
-      id: "mp-aug-w3b",
-      week: "Week of Mon 17 Aug - Sun 23 Aug",
-      date: "Mon 18 Aug 2026",
-      title: "Square Flyer - Book a lab test from the MedPharma app",
-      assetType: "Square Flyer",
-      format: "1080 x 1080 px (1:1)",
-      platforms: ["Instagram", "Facebook", "X / Twitter"],
-      audience: "Adults 25-60 due for routine lab tests.",
-      hook: "Your lab test doesn't need a waiting room. It needs a phone.",
-      body:
-        "Headline: Your lab tests do not need a waiting room.\n\n" +
-        "Sub: Book your malaria test, HbA1c, lipid panel, or full blood count directly in the MedPharma app. Results delivered digitally. No queues. No guessing.\n\n" +
-        "Tap 'Book a Lab Test' in the MedPharma app today.",
-      designDirection:
-        "Clean, medical-tech. Lab tubes / test icon alongside a phone mockup of the booking flow. MedPharma teal. Confident and convenient.",
-      cta: STD_CTA,
-      hashtags: ["#MedPharmaGH", "#LabTests", "#SeamlessHealthcare", "#DigitalHealthGhana"],
-    },
-
-    // ============ AUGUST WEEK 4 - Aug 24-30 (Women's Equality Day Aug 26) ============
-    {
-      id: "mp-aug-w4a",
-      week: "Week of Mon 24 Aug - Sun 30 Aug",
-      date: "Wed 26 Aug 2026",
-      occasion: "Women's Equality Day",
-      title: "Women's Equality Day - Equal healthcare is not optional",
-      assetType: "Square Flyer",
-      format: "1080 x 1080 px (1:1)",
-      platforms: ["Instagram", "Facebook", "LinkedIn", "X / Twitter"],
-      audience: "Women 25-60; general public; community-focused followers.",
-      hook: "Equal rights mean equal access to healthcare - private, consistent, and dignified.",
-      body:
-        "Headline: Equal healthcare is not optional.\n\n" +
-        "Sub: On Women's Equality Day, MedPharma stands for every woman's right to access her healthcare - without queues, stigma, or stress.\n\n" +
-        "Discreet delivery. Online consultations. Prescriptions managed in-app. Healthcare on your terms.",
-      designDirection:
-        "Bold, empowering. MedPharma teal and warm gold. Diverse Ghanaian women - different ages, different backgrounds. Strong, dignified, confident.",
-      cta: STD_CTA,
-      hashtags: ["#WomensEqualityDay", "#WomensHealthGhana", "#MedPharmaGH", "#SeamlessHealthcare"],
-    },
-    {
-      id: "mp-aug-w4b",
-      week: "Week of Mon 24 Aug - Sun 30 Aug",
-      date: "Fri 28 Aug 2026",
-      title: "LinkedIn PDF - Why Ghana's employers should include digital pharmacy in their health benefits",
+        week: "Week of Mon 17 Aug - Sun 23 Aug",
+        date: "Fri, 21 Aug 2026",
+        title: "LinkedIn PDF - Why Ghana's employers should include digital pharmacy in their health benefits",
       assetType: "LinkedIn PDF Document",
       format: "1920 x 1080 px (16:9) · 7 pages",
       platforms: ["LinkedIn"],
@@ -1321,9 +1379,9 @@ export const MEDPHARMA_PLAN = {
     // ============ SEPTEMBER WEEK 1 - Aug 31-Sep 6 ============
     {
       id: "mp-sep-w1",
-      week: "Week of Mon 31 Aug - Sun 6 Sep",
-      date: "Thu 3 Sep 2026",
-      title: "Upload your prescription",
+        week: "Week of Mon 24 Aug - Sun 30 Aug",
+        date: "Mon, 24 Aug 2026",
+        title: "Upload your prescription",
       assetType: "Information Carousel",
       format: "1080 x 1350 px (4:5) · 3 slides",
       platforms: ["Instagram", "Facebook"],
@@ -1341,9 +1399,9 @@ export const MEDPHARMA_PLAN = {
     // ============ SEPTEMBER WEEK 2 - Sep 7-13 ============
     {
       id: "mp-sep-w2",
-      week: "Week of Mon 7 Sep - Sun 13 Sep",
-      date: "Wed 9 Sep 2026",
-      title: "Corporate Health Benefit",
+        week: "Week of Mon 24 Aug - Sun 30 Aug",
+        date: "Wed, 26 Aug 2026",
+        title: "Corporate Health Benefit",
       assetType: "LinkedIn Post",
       format: "1080 x 1080 px (1:1)",
       platforms: ["LinkedIn"],
@@ -1357,10 +1415,9 @@ export const MEDPHARMA_PLAN = {
     // ============ SEPTEMBER WEEK 3 - Sep 14-20 ============
     {
       id: "mp-sep-w3",
-      week: "Week of Mon 14 Sep - Sun 20 Sep",
-      date: "Mon 21 Sep 2026",
-      occasion: "Kwame Nkrumah Memorial Day",
-      title: "Kwame Nkrumah Memorial Day - Healthcare Vision",
+        week: "Week of Mon 24 Aug - Sun 30 Aug",
+        date: "Fri, 28 Aug 2026",
+        title: "Kwame Nkrumah Memorial Day - Healthcare Vision",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: ["Instagram", "Facebook", "X / Twitter"],
@@ -1374,10 +1431,9 @@ export const MEDPHARMA_PLAN = {
     // ============ SEPTEMBER WEEK 4 - Sep 21-27 ============
     {
       id: "mp-sep-w4",
-      week: "Week of Mon 21 Sep - Sun 27 Sep",
-      date: "Fri 25 Sep 2026",
-      occasion: "World Pharmacists Day",
-      title: "World Pharmacists Day - The heart of MedPharma",
+        week: "Week of Mon 31 Aug - Sun 6 Sept",
+        date: "Mon, 31 Aug 2026",
+        title: "World Pharmacists Day - The heart of MedPharma",
       assetType: "Square Flyer",
       format: "1080 x 1080 px (1:1)",
       platforms: ["Instagram", "Facebook", "LinkedIn"],
@@ -1391,10 +1447,9 @@ export const MEDPHARMA_PLAN = {
     // ============ SEPTEMBER WEEK 5 - Sep 28-Oct 4 ============
     {
       id: "mp-sep-w5",
-      week: "Week of Mon 28 Sep - Sun 4 Oct",
-      date: "Tue 29 Sep 2026",
-      occasion: "World Heart Day",
-      title: "World Heart Day - Don't ignore the numbers",
+        week: "Week of Mon 31 Aug - Sun 6 Sept",
+        date: "Wed, 2 Sept 2026",
+        title: "World Heart Day - Don't ignore the numbers",
       assetType: "Story / WhatsApp Status",
       format: "1080 x 1920 px (9:16)",
       platforms: ["Instagram Stories", "WhatsApp Status"],
@@ -1404,8 +1459,170 @@ export const MEDPHARMA_PLAN = {
       designDirection: "Clean, urgent but not scary. Focus on lab test booking interface.",
       cta: STD_CTA,
       hashtags: ["#WorldHeartDay", "#HealthScreening", "#MedPharmaGH"]
-    }
-  ],
+    },
+      {
+          id: "mp-new-1",
+          week: "Week of Mon 31 Aug - Sun 6 Sept",
+          date: "Fri, 4 Sept 2026",
+        title: "Fast Medicine Delivery - Office",
+          assetType: "Square Flyer",
+          format: "1080 x 1080 px (1:1)",
+          platforms: ["Instagram", "Facebook", "X / Twitter", "LinkedIn"],
+          audience: "Busy professionals in Accra who cannot leave work to go to the pharmacy.",
+          hook: "Stuck at the office with a splitting headache?",
+          body: "Headline: Pharmacy at Your Fingertips\nSub: Don't let minor ailments slow you down. Order your medications on the MedPharma app and get them delivered straight to your desk.",
+          designDirection: "Background: A busy Ghanaian professional sitting at an office desk, smiling while receiving a small MedPharma delivery package from a rider.",
+          cta: STD_CTA,
+          hashtags: ["#MedPharma", "#DigitalPharmacy", "#GhanaHealth", "#FastDelivery", "#CorporateHealth"]
+        },
+      {
+          id: "mp-new-2",
+          week: "Week of Mon 7 Sept - Sun 13 Sept",
+          date: "Mon, 7 Sept 2026",
+        title: "App Features - Prescription Upload",
+          assetType: "Information Carousel",
+          format: "1080 x 1350 px (4:5) · 3 slides",
+          platforms: ["Instagram", "Facebook", "LinkedIn"],
+          audience: "Tech-savvy Ghanaians looking for convenient healthcare solutions.",
+          hook: "Got a prescription but no time to wait in line?",
+          body: {
+            slides: [
+              { title: "Skip the Pharmacy Queue", body: "Long lines at the pharmacy are a thing of the past." },
+              { title: "Snap & Upload", body: "Simply take a clear photo of your doctor's prescription and upload it securely on the MedPharma app." },
+              { title: "Fast Delivery", body: "Our licensed pharmacists will review it, and your medication will be on its way to your door." }
+            ]
+          },
+          designDirection: "Background: A clean, modern aesthetic with a person holding a smartphone taking a picture of a medical prescription.",
+          cta: STD_CTA,
+          hashtags: ["#MedPharmaApp", "#HealthTechGhana", "#DigitalPharmacy", "#PrescriptionDelivery"]
+        },
+      {
+          id: "mp-new-3",
+          week: "Week of Mon 7 Sept - Sun 13 Sept",
+          date: "Wed, 9 Sept 2026",
+        title: "Corporate Health - Team Wellness",
+          assetType: "Square Flyer",
+          format: "1080 x 1080 px (1:1)",
+          platforms: ["LinkedIn", "Facebook", "X / Twitter"],
+          audience: "HR Managers and Business Owners in Ghana.",
+          hook: "Healthy employees are the backbone of a successful business.",
+          body: "Headline: Elevate Your Team's Wellbeing\nSub: Partner with MedPharma for comprehensive corporate health solutions. From easy access to medications to wellness programs, we keep your workforce healthy and productive.",
+          designDirection: "Background: A diverse group of Ghanaian corporate employees in a bright, modern boardroom looking happy and engaged.",
+          cta: STD_CTA,
+          hashtags: ["#CorporateHealth", "#EmployeeWellness", "#MedPharma", "#HRGhana", "#BusinessGrowth"]
+        },
+      {
+          id: "mp-new-4",
+          week: "Week of Mon 7 Sept - Sun 13 Sept",
+          date: "Fri, 11 Sept 2026",
+        title: "General Health - Hydration Reminder",
+          assetType: "Square Flyer",
+          format: "1080 x 1080 px (1:1)",
+          platforms: ["Instagram", "Facebook", "X / Twitter"],
+          audience: "General public, focusing on health-conscious individuals.",
+          hook: "Are you drinking enough water today?",
+          body: "Headline: Stay Hydrated, Stay Healthy\nSub: In our sunny Ghanaian climate, staying hydrated is crucial for your kidneys, skin, and energy levels. Aim for at least 8 glasses of water a day!",
+          designDirection: "Background: A crisp, refreshing glass of water with a slice of lemon on a sunlit table, with a blurred natural background.",
+          cta: STD_CTA,
+          hashtags: ["#HealthTips", "#Hydration", "#HealthyLivingGhana", "#MedPharmaCares"]
+        },
+      {
+          id: "mp-new-5",
+          week: "Week of Mon 14 Sept - Sun 20 Sept",
+          date: "Mon, 14 Sept 2026",
+        title: "Late Night Delivery",
+          assetType: "Square Flyer",
+          format: "1080 x 1080 px (1:1)",
+          platforms: ["Instagram", "Facebook", "X / Twitter"],
+          audience: "Parents and individuals needing urgent medication outside normal hours.",
+          hook: "Fever strikes at midnight? Don't panic.",
+          body: "Headline: Reliable Late-Night Pharmacy Delivery\nSub: Illness doesn't stick to business hours. Count on MedPharma for fast, secure delivery of your essential medications, even when the local shops are closed.",
+          designDirection: "Background: A concerned parent checking a child's temperature in a dimly lit bedroom, with a glowing smartphone showing the MedPharma app.",
+          cta: STD_CTA,
+          hashtags: ["#NightDelivery", "#MedPharma", "#EmergencyCare", "#ParentingGhana"]
+        },
+      {
+          id: "mp-new-6",
+          week: "Week of Mon 14 Sept - Sun 20 Sept",
+          date: "Wed, 16 Sept 2026",
+        title: "Digital Pharmacy - Elderly Care",
+          assetType: "Information Carousel",
+          format: "1080 x 1350 px (4:5) · 3 slides",
+          platforms: ["Instagram", "Facebook"],
+          audience: "Adults caring for elderly parents who live far away.",
+          hook: "Caring for your parents just got a whole lot easier.",
+          body: {
+            slides: [
+              { title: "Distance Shouldn't Matter", body: "Living far from your parents makes managing their health stressful." },
+              { title: "Order on Their Behalf", body: "Use the MedPharma app to order and pay for their medications from anywhere." },
+              { title: "Direct to Their Door", body: "We deliver directly to them, ensuring they always have what they need to stay healthy." }
+            ]
+          },
+          designDirection: "Background: Warm, emotional imagery of an elderly Ghanaian couple smiling while holding a MedPharma package, standing on their porch.",
+          cta: STD_CTA,
+          hashtags: ["#ElderlyCare", "#FamilyHealth", "#MedPharmaApp", "#PharmacyDeliveryGhana"]
+        },
+      {
+          id: "mp-new-7",
+          week: "Week of Mon 14 Sept - Sun 20 Sept",
+          date: "Fri, 18 Sept 2026",
+        title: "App Features - Doctor Consult",
+          assetType: "Square Flyer",
+          format: "1080 x 1080 px (1:1)",
+          platforms: ["Instagram", "Facebook", "X / Twitter", "LinkedIn"],
+          audience: "Busy individuals needing quick medical advice.",
+          hook: "Need medical advice but can't visit the clinic today?",
+          body: "Headline: Chat with a Doctor Instantly\nSub: Get professional medical guidance right from your phone. Use the MedPharma app to consult with licensed professionals before ordering your medication.",
+          designDirection: "Background: A split screen showing a patient looking relaxed at home on their phone, and a friendly doctor in a white coat looking at a tablet.",
+          cta: STD_CTA,
+          hashtags: ["#Telemedicine", "#DigitalHealth", "#MedPharma", "#DoctorConsult"]
+        },
+      {
+          id: "mp-new-8",
+          week: "Week of Mon 21 Sept - Sun 27 Sept",
+          date: "Mon, 21 Sept 2026",
+        title: "General Health - Malaria Prevention",
+          assetType: "Square Flyer",
+          format: "1080 x 1080 px (1:1)",
+          platforms: ["Instagram", "Facebook", "X / Twitter"],
+          audience: "Families and general public in malaria-prone areas.",
+          hook: "Don't let mosquitoes dictate your family's health.",
+          body: "Headline: Protect Your Family from Malaria\nSub: Sleep under treated nets, eliminate stagnant water, and get fast access to antimalarials via the MedPharma app the moment you feel symptoms.",
+          designDirection: "Background: A peaceful sleeping child safely under a mosquito net in a cozy, softly lit room.",
+          cta: STD_CTA,
+          hashtags: ["#MalariaPrevention", "#EndMalaria", "#HealthAwareness", "#MedPharma"]
+        },
+      {
+          id: "mp-new-9",
+          week: "Week of Mon 21 Sept - Sun 27 Sept",
+          date: "Wed, 23 Sept 2026",
+        title: "Fast Delivery - Anywhere",
+          assetType: "Square Flyer",
+          format: "1080 x 1080 px (1:1)",
+          platforms: ["Instagram", "Facebook", "X / Twitter"],
+          audience: "Anyone needing medication delivery across the city.",
+          hook: "At home, at work, or on the go?",
+          body: "Headline: Your Pharmacy Follows You\nSub: No matter where you are in the city, MedPharma ensures your health needs are met with fast, accurate, and secure delivery.",
+          designDirection: "Background: A dynamic shot of a MedPharma delivery rider on a motorbike navigating a recognizable, sunny street in Accra.",
+          cta: STD_CTA,
+          hashtags: ["#DeliveryService", "#PharmacyGhana", "#MedPharma", "#HealthcareOnTheGo"]
+        },
+      {
+          id: "mp-new-10",
+          week: "Week of Mon 21 Sept - Sun 27 Sept",
+          date: "Fri, 25 Sept 2026",
+        title: "Digital Pharmacy - Trusted Meds",
+          assetType: "Square Flyer",
+          format: "1080 x 1080 px (1:1)",
+          platforms: ["Instagram", "Facebook", "LinkedIn"],
+          audience: "Health-conscious individuals concerned about counterfeit medications.",
+          hook: "Are you sure of the quality of your medication?",
+          body: "Headline: 100% Genuine Medications Guaranteed\nSub: Your health is our priority. MedPharma sources all medications directly from certified manufacturers and trusted distributors. No compromises.",
+          designDirection: "Background: A close-up of a pharmacist's hands neatly packing pristine, branded medication boxes into a MedPharma delivery bag.",
+          cta: STD_CTA,
+          hashtags: ["#GenuineMeds", "#SafeHealthcare", "#MedPharmaQuality", "#TrustedPharmacy"]
+        }
+],
 };
 
 import { FULLIFE_Q4_PLAN, MEDPHARMA_Q4_PLAN } from "./contentPlansQ4";
