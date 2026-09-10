@@ -121,15 +121,16 @@ const IN_D = smoothPath(INBOUND_PATH);
 
 /* label offsets so callouts sit clear of the course */
 const LABEL_OFFSET: Record<number, { dx: number; dy: number; anchor: "start" | "end" }> = {
-  1: { dx: 22, dy: 26, anchor: "start" },
-  2: { dx: -22, dy: 22, anchor: "end" },
-  3: { dx: -22, dy: 4, anchor: "end" },
-  4: { dx: 10, dy: -26, anchor: "start" },
-  5: { dx: -18, dy: -24, anchor: "end" },
-  6: { dx: 18, dy: 26, anchor: "start" },
-  7: { dx: 22, dy: -14, anchor: "start" },
-  8: { dx: 24, dy: 18, anchor: "start" },
+  1: { dx: -24, dy: 34, anchor: "end" },
+  2: { dx: -26, dy: 26, anchor: "end" },
+  3: { dx: -26, dy: 0, anchor: "end" },
+  4: { dx: -18, dy: -54, anchor: "end" },
+  5: { dx: 4, dy: -40, anchor: "start" },
+  6: { dx: 34, dy: 60, anchor: "start" },
+  7: { dx: -26, dy: -26, anchor: "end" },
+  8: { dx: -26, dy: 24, anchor: "end" },
 };
+
 
 export default function RouteGuide() {
   const sheetRef = useRef<HTMLDivElement>(null);
