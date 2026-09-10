@@ -10,7 +10,8 @@ export type ContentBrief = {
     | "Story / WhatsApp Status"
     | "LinkedIn PDF Document"
     | "Newsletter Header"
-    | "TikTok Photo Set";
+    | "TikTok Photo Set"
+    | "LinkedIn Post";
   format: string;
   platforms: string[];
   audience: string;
