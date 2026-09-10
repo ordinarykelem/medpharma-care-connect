@@ -43,12 +43,16 @@ const bbox = {
   maxLng: Math.max(...lngs),
 };
 
-const PADDING = 14; // px of breathing room inside the map frame
+const PADDING = 34; // px of breathing room inside the map frame
+const FIT_W = MW - PADDING * 2;
+const FIT_H = MH - PADDING * 2;
+
+/* pick the sharpest zoom whose tiles are then scaled DOWN to fit the frame exactly */
 function pickZoom() {
   for (let z = 17; z >= 10; z--) {
     const w = lngToX(bbox.maxLng, z) - lngToX(bbox.minLng, z);
     const h = latToY(bbox.minLat, z) - latToY(bbox.maxLat, z);
-    if (w <= MW - PADDING * 2 && h <= MH - PADDING * 2) return z;
+    if (w <= FIT_W * 1.9 && h <= FIT_H * 1.9) return z;
   }
   return 10;
 }
@@ -56,21 +60,31 @@ const Z = pickZoom();
 
 const cx = (lngToX(bbox.minLng, Z) + lngToX(bbox.maxLng, Z)) / 2;
 const cy = (latToY(bbox.minLat, Z) + latToY(bbox.maxLat, Z)) / 2;
-const originX = cx - MW / 2; // world px at the map frame's left edge
-const originY = cy - MH / 2;
+const rawW = lngToX(bbox.maxLng, Z) - lngToX(bbox.minLng, Z);
+const rawH = latToY(bbox.minLat, Z) - latToY(bbox.maxLat, Z);
+const K = Math.min(FIT_W / rawW, FIT_H / rawH, 1.6);
+
+const FX = MX + MW / 2; // frame centre
+const FY = MY + MH / 2;
+const wx = (worldX: number) => FX + (worldX - cx) * K;
+const wy = (worldY: number) => FY + (worldY - cy) * K;
 
 const project = ([lat, lng]: [number, number]): [number, number] => [
-  MX + lngToX(lng, Z) - originX,
-  MY + latToY(lat, Z) - originY,
+  wx(lngToX(lng, Z)),
+  wy(latToY(lat, Z)),
 ];
 
-/* tiles covering the frame — Carto "light" basemap keeps streets legible under the route */
-const tiles: { x: number; y: number; px: number; py: number }[] = [];
+/* tiles covering the frame */
+const tiles: { x: number; y: number; px: number; py: number; size: number }[] = [];
 {
-  const x0 = Math.floor(originX / TILE);
-  const x1 = Math.floor((originX + MW) / TILE);
-  const y0 = Math.floor(originY / TILE);
-  const y1 = Math.floor((originY + MH) / TILE);
+  const leftWorld = cx + (MX - FX) / K;
+  const rightWorld = cx + (MX + MW - FX) / K;
+  const topWorld = cy + (MY - FY) / K;
+  const botWorld = cy + (MY + MH - FY) / K;
+  const x0 = Math.floor(leftWorld / TILE);
+  const x1 = Math.floor(rightWorld / TILE);
+  const y0 = Math.floor(topWorld / TILE);
+  const y1 = Math.floor(botWorld / TILE);
   const max = 2 ** Z;
   for (let x = x0; x <= x1; x++) {
     for (let y = y0; y <= y1; y++) {
@@ -78,8 +92,9 @@ const tiles: { x: number; y: number; px: number; py: number }[] = [];
       tiles.push({
         x: ((x % max) + max) % max,
         y,
-        px: MX + x * TILE - originX,
-        py: MY + y * TILE - originY,
+        px: wx(x * TILE),
+        py: wy(y * TILE),
+        size: TILE * K + 0.5,
       });
     }
   }
