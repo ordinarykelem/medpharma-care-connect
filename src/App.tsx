@@ -20,6 +20,7 @@ import VideoBriefs from "./pages/VideoBriefs.tsx";
 import CanvaKit from "./pages/CanvaKit.tsx";
 import MarketingScripts from "./pages/MarketingScripts.tsx";
 import SmsPlan from "./pages/SmsPlan.tsx";
+import RouteGuide from "./pages/RouteGuide.tsx";
 import { AuthProvider } from "./hooks/useAuth";
 
 const queryClient = new QueryClient();
