@@ -57,15 +57,16 @@ const OUT_D = smoothPath(OUTBOUND_PATH);
 const IN_D = smoothPath(INBOUND_PATH);
 
 /* label placement: keep callouts off the road */
-const LABEL_SIDE: Record<number, "top" | "bottom"> = {
-  1: "bottom",
-  2: "bottom",
-  3: "top",
-  4: "top",
-  5: "top",
-  6: "bottom",
-  7: "bottom",
-  8: "bottom",
+type Label = { dx: number; dy: number; anchor: "start" | "middle" | "end" };
+const LABELS: Record<number, Label> = {
+  1: { dx: 0, dy: 62, anchor: "middle" },
+  2: { dx: -30, dy: -6, anchor: "end" },
+  3: { dx: -14, dy: -56, anchor: "end" },
+  4: { dx: 0, dy: -62, anchor: "middle" },
+  5: { dx: 10, dy: -66, anchor: "start" },
+  6: { dx: 0, dy: 70, anchor: "middle" },
+  7: { dx: 30, dy: -50, anchor: "start" },
+  8: { dx: 30, dy: 8, anchor: "start" },
 };
 
 const INK = "#0f2a23";
