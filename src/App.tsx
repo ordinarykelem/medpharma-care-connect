@@ -49,6 +49,7 @@ const App = () => (
               <Route path="/canva-kit" element={<CanvaKit />} />
               <Route path="/scripts" element={<MarketingScripts />} />
               <Route path="/sms-plan" element={<SmsPlan />} />
+              <Route path="/route-guide" element={<RouteGuide />} />
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
