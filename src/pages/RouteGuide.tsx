@@ -5,18 +5,18 @@ import { saveAs } from "file-saver";
 import { Button } from "@/components/ui/button";
 import { Download, FileImage, FileText, Printer } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
-import { COURSE, STEPS, OUTBOUND_PATH, INBOUND_PATH, buildGpx } from "@/lib/marathonRoute";
+import {
+  COURSE,
+  STEPS,
+  LANDMARKS,
+  OUTBOUND_PATH,
+  INBOUND_PATH,
+  buildGpx,
+} from "@/lib/marathonRoute";
 
 /* ---------- A4 landscape canvas (96 dpi) ---------- */
 const W = 1123;
 const H = 794;
-
-const MX = 40;
-const MY = 168;
-const SIDEBAR = 306;
-const GAP = 16;
-const MW = W - MX * 2 - SIDEBAR - GAP;
-const MH = H - MY - 58;
 
 const INK = "#0f2a23";
 const ROAD = "#123b31";
@@ -25,7 +25,7 @@ const RET = "#e2653c";
 const GOLD = "#c9902a";
 const CREAM = "#f7f2e7";
 
-/* ---------- Web Mercator (real map geometry) ---------- */
+/* ---------- Web Mercator ---------- */
 const TILE = 256;
 const lngToX = (lng: number, z: number) => ((lng + 180) / 360) * TILE * 2 ** z;
 const latToY = (lat: number, z: number) => {
@@ -43,13 +43,12 @@ const bbox = {
   maxLng: Math.max(...lngs),
 };
 
-const PADDING = 34; // px of breathing room inside the map frame
-const FIT_W = MW - PADDING * 2;
-const FIT_H = MH - PADDING * 2;
+const PADDING = 58;
+const FIT_W = W - PADDING * 2;
+const FIT_H = H - PADDING * 2;
 
-/* pick the sharpest zoom whose tiles are then scaled DOWN to fit the frame exactly */
 function pickZoom() {
-  for (let z = 17; z >= 10; z--) {
+  for (let z = 18; z >= 10; z--) {
     const w = lngToX(bbox.maxLng, z) - lngToX(bbox.minLng, z);
     const h = latToY(bbox.minLat, z) - latToY(bbox.maxLat, z);
     if (w <= FIT_W * 1.9 && h <= FIT_H * 1.9) return z;
@@ -62,10 +61,10 @@ const cx = (lngToX(bbox.minLng, Z) + lngToX(bbox.maxLng, Z)) / 2;
 const cy = (latToY(bbox.minLat, Z) + latToY(bbox.maxLat, Z)) / 2;
 const rawW = lngToX(bbox.maxLng, Z) - lngToX(bbox.minLng, Z);
 const rawH = latToY(bbox.minLat, Z) - latToY(bbox.maxLat, Z);
-const K = Math.min(FIT_W / rawW, FIT_H / rawH, 1.6);
+const K = Math.min(FIT_W / rawW, FIT_H / rawH, 2);
 
-const FX = MX + MW / 2; // frame centre
-const FY = MY + MH / 2;
+const FX = W / 2;
+const FY = H / 2;
 const wx = (worldX: number) => FX + (worldX - cx) * K;
 const wy = (worldY: number) => FY + (worldY - cy) * K;
 
@@ -74,13 +73,13 @@ const project = ([lat, lng]: [number, number]): [number, number] => [
   wy(latToY(lat, Z)),
 ];
 
-/* tiles covering the frame */
+/* tiles covering the whole sheet */
 const tiles: { x: number; y: number; px: number; py: number; size: number }[] = [];
 {
-  const leftWorld = cx + (MX - FX) / K;
-  const rightWorld = cx + (MX + MW - FX) / K;
-  const topWorld = cy + (MY - FY) / K;
-  const botWorld = cy + (MY + MH - FY) / K;
+  const leftWorld = cx + (0 - FX) / K;
+  const rightWorld = cx + (W - FX) / K;
+  const topWorld = cy + (0 - FY) / K;
+  const botWorld = cy + (H - FY) / K;
   const x0 = Math.floor(leftWorld / TILE);
   const x1 = Math.floor(rightWorld / TILE);
   const y0 = Math.floor(topWorld / TILE);
@@ -120,15 +119,28 @@ function smoothPath(pts: [number, number][]) {
 const OUT_D = smoothPath(OUTBOUND_PATH);
 const IN_D = smoothPath(INBOUND_PATH);
 
+/* label offsets so callouts sit clear of the course */
+const LABEL_OFFSET: Record<number, { dx: number; dy: number; anchor: "start" | "end" }> = {
+  1: { dx: -24, dy: 34, anchor: "end" },
+  2: { dx: -26, dy: 26, anchor: "end" },
+  3: { dx: -26, dy: 0, anchor: "end" },
+  4: { dx: -64, dy: -54, anchor: "end" },
+  5: { dx: 4, dy: -40, anchor: "start" },
+  6: { dx: 34, dy: 60, anchor: "start" },
+  7: { dx: -26, dy: -26, anchor: "end" },
+  8: { dx: -22, dy: 34, anchor: "end" },
+};
+
+
 export default function RouteGuide() {
   const sheetRef = useRef<HTMLDivElement>(null);
   const [busy, setBusy] = useState(false);
 
   const capture = async () => {
-    await new Promise((r) => setTimeout(r, 600));
+    await new Promise((r) => setTimeout(r, 900));
     return html2canvas(sheetRef.current!, {
       scale: 2,
-      backgroundColor: CREAM,
+      backgroundColor: "#ffffff",
       useCORS: true,
       logging: false,
     });
@@ -138,7 +150,7 @@ export default function RouteGuide() {
     setBusy(true);
     try {
       const canvas = await capture();
-      canvas.toBlob((b) => b && saveAs(b, "Route_Guide_A4_Landscape.jpg"), "image/jpeg", 0.96);
+      canvas.toBlob((b) => b && saveAs(b, "Race_Route_Map_A4.jpg"), "image/jpeg", 0.96);
       toast({ title: "JPEG downloaded" });
     } catch {
       toast({ title: "Could not create the image", variant: "destructive" });
@@ -159,7 +171,7 @@ export default function RouteGuide() {
         pdf.internal.pageSize.getWidth(),
         pdf.internal.pageSize.getHeight(),
       );
-      pdf.save("Route_Guide_A4_Landscape.pdf");
+      pdf.save("Race_Route_Map_A4.pdf");
       toast({ title: "PDF downloaded" });
     } catch {
       toast({ title: "Could not create the PDF", variant: "destructive" });
@@ -172,186 +184,191 @@ export default function RouteGuide() {
       <style>{`@media print{.no-print{display:none!important}body{background:#fff}}`}</style>
 
       <header className="no-print sticky top-0 z-20 border-b border-border bg-card">
-        <div className="mx-auto flex max-w-[1240px] flex-wrap items-center justify-between gap-3 px-6 py-4">
-          <div>
-            <h1 className="text-xl font-bold uppercase tracking-tight">{COURSE.title}</h1>
-            <p className="text-xs uppercase tracking-wide text-muted-foreground">A4 landscape route map · print ready</p>
-          </div>
+        <div className="mx-auto flex max-w-[1240px] flex-wrap items-center justify-between gap-3 px-6 py-3">
+          <p className="text-xs uppercase tracking-wide text-muted-foreground">
+            Full-bleed A4 landscape race map · print ready
+          </p>
           <div className="flex flex-wrap gap-2">
             <Button
               variant="outline"
               size="sm"
-              onClick={() => saveAs(new Blob([buildGpx()], { type: "application/gpx+xml" }), "Official_Route.gpx")}
+              onClick={() =>
+                saveAs(new Blob([buildGpx()], { type: "application/gpx+xml" }), "Official_Route.gpx")
+              }
             >
-              <Download className="mr-1.5 h-4 w-4" />GPX
+              <Download className="mr-1.5 h-4 w-4" />
+              GPX
             </Button>
             <Button variant="outline" size="sm" disabled={busy} onClick={downloadJpeg}>
-              <FileImage className="mr-1.5 h-4 w-4" />JPEG
+              <FileImage className="mr-1.5 h-4 w-4" />
+              JPEG
             </Button>
             <Button size="sm" disabled={busy} onClick={downloadPdf}>
-              <FileText className="mr-1.5 h-4 w-4" />PDF
+              <FileText className="mr-1.5 h-4 w-4" />
+              PDF
             </Button>
             <Button variant="outline" size="sm" onClick={() => window.print()}>
-              <Printer className="mr-1.5 h-4 w-4" />Print
+              <Printer className="mr-1.5 h-4 w-4" />
+              Print
             </Button>
           </div>
         </div>
       </header>
 
       <div className="mx-auto max-w-[1240px] overflow-x-auto p-6">
-        <div ref={sheetRef} style={{ width: W, height: H, background: CREAM, color: INK }} className="mx-auto shadow-xl">
+        <div ref={sheetRef} style={{ width: W, height: H, background: "#fff" }} className="mx-auto shadow-xl">
           <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`} style={{ fontFamily: "Inter, system-ui, sans-serif" }}>
             <defs>
-              <clipPath id="mapClip">
-                <rect x={MX} y={MY} width={MW} height={MH} rx="14" />
-              </clipPath>
-              <marker id="arrowOut" viewBox="0 0 12 12" refX="6" refY="6" markerWidth="4.5" markerHeight="4.5" orient="auto">
+              <marker id="arrowOut" viewBox="0 0 12 12" refX="6" refY="6" markerWidth="4.2" markerHeight="4.2" orient="auto">
                 <path d="M2 1 L10 6 L2 11 z" fill="#ffffff" />
               </marker>
               <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
-                <feDropShadow dx="0" dy="3" stdDeviation="5" floodColor="#0f2a23" floodOpacity="0.22" />
+                <feDropShadow dx="0" dy="3" stdDeviation="5" floodColor="#0f2a23" floodOpacity="0.25" />
               </filter>
             </defs>
 
-            <rect x="0" y="0" width={W} height={H} fill={CREAM} />
-            <rect x="0" y="0" width={W} height="12" fill={ROAD} />
-
-            {/* Header */}
-            <text x={MX} y="70" fontSize="38" fontWeight="800" letterSpacing="-0.5" fill={INK}>
-              {COURSE.title.toUpperCase()}
-            </text>
-            <text x={MX} y="96" fontSize="13" letterSpacing="3" fill="#5b7a70">
-              OFFICIAL ROUTE MAP · RING ROAD CENTRAL · ACCRA, GHANA
-            </text>
-            {[
-              ["DISTANCE", COURSE.totalDistance],
-              ["COURSE", "Out-and-back"],
-              ["SURFACE", COURSE.surface],
-              ["START", "Absa Clubhouse"],
-              ["FINISH", "Assemblies of God HQ"],
-            ].map(([k, v], i) => (
-              <g key={k} transform={`translate(${MX + i * 172}, 124)`}>
-                <text fontSize="9.5" letterSpacing="2" fill="#8aa79d">{k}</text>
-                <text y="20" fontSize="14" fontWeight="700" fill={INK}>{v}</text>
-              </g>
+            {/* ---------- BASEMAP (full bleed) ---------- */}
+            <rect x="0" y="0" width={W} height={H} fill="#eef1ec" />
+            {tiles.map((t) => (
+              <image
+                key={`${t.x}-${t.y}`}
+                href={tileUrl(t.x, t.y)}
+                x={t.px}
+                y={t.py}
+                width={t.size}
+                height={t.size}
+                crossOrigin="anonymous"
+                preserveAspectRatio="none"
+              />
             ))}
-            <line x1={MX} y1="152" x2={W - MX} y2="152" stroke="#d9cfb8" strokeWidth="1.5" />
+            <rect x="0" y="0" width={W} height={H} fill="#ffffff" opacity="0.2" />
 
-            {/* ---------- MAP ---------- */}
-            <g clipPath="url(#mapClip)">
-              <rect x={MX} y={MY} width={MW} height={MH} fill="#eef1ec" />
-              {tiles.map((t) => (
-                <image
-                  key={`${t.x}-${t.y}`}
-                  href={tileUrl(t.x, t.y)}
-                  x={t.px}
-                  y={t.py}
-                  width={t.size}
-                  height={t.size}
-                  crossOrigin="anonymous"
-                  preserveAspectRatio="none"
-                />
-              ))}
-              <rect x={MX} y={MY} width={MW} height={MH} fill={CREAM} opacity="0.18" />
-
-              {/* route */}
-              <g filter="url(#soft)">
-                <path d={OUT_D} fill="none" stroke={ROAD} strokeWidth="22" strokeLinecap="round" strokeLinejoin="round" />
-                <path d={IN_D} fill="none" stroke={ROAD} strokeWidth="22" strokeLinecap="round" strokeLinejoin="round" />
-              </g>
-              <path d={OUT_D} fill="none" stroke={OUT} strokeWidth="15" strokeLinecap="round" strokeLinejoin="round" />
-              <path d={IN_D} fill="none" stroke={RET} strokeWidth="15" strokeLinecap="round" strokeLinejoin="round" />
-              <path
-                d={OUT_D}
-                fill="none"
-                stroke="#ffffff"
-                strokeWidth="2.5"
-                strokeDasharray="12 18"
-                strokeLinecap="round"
-                opacity="0.9"
-                markerMid="url(#arrowOut)"
-              />
-              <path
-                d={IN_D}
-                fill="none"
-                stroke="#ffffff"
-                strokeWidth="2.5"
-                strokeDasharray="12 18"
-                strokeLinecap="round"
-                opacity="0.9"
-                markerMid="url(#arrowOut)"
-              />
-
-              {/* numbered markers only — detail lives in the key */}
-              {STEPS.map((s) => {
-                const [x, y] = project([s.lat, s.lng]);
-                const isEnd = s.marker === "start" || s.marker === "finish";
-                const fill = s.marker === "start" ? OUT : s.marker === "finish" ? ROAD : s.marker === "uturn" ? GOLD : "#ffffff";
-                const txt = fill === "#ffffff" ? INK : "#fff";
-                return (
-                  <g key={s.id}>
-                    <circle cx={x} cy={y} r={isEnd ? 17 : 14} fill="#fff" opacity="0.95" />
-                    <circle cx={x} cy={y} r={isEnd ? 14 : 11} fill={fill} stroke={ROAD} strokeWidth="2.5" />
-                    <text x={x} y={y + 4.5} fontSize="12" fontWeight="800" textAnchor="middle" fill={txt}>
-                      {s.marker === "start" ? "S" : s.marker === "finish" ? "F" : s.id}
-                    </text>
-                  </g>
-                );
-              })}
+            {/* ---------- ROUTE ---------- */}
+            <g filter="url(#soft)">
+              <path d={OUT_D} fill="none" stroke={ROAD} strokeWidth="26" strokeLinecap="round" strokeLinejoin="round" />
+              <path d={IN_D} fill="none" stroke={ROAD} strokeWidth="26" strokeLinecap="round" strokeLinejoin="round" />
             </g>
-            <rect x={MX} y={MY} width={MW} height={MH} rx="14" fill="none" stroke={ROAD} strokeWidth="2" />
+            <path d={OUT_D} fill="none" stroke={OUT} strokeWidth="18" strokeLinecap="round" strokeLinejoin="round" />
+            <path d={IN_D} fill="none" stroke={RET} strokeWidth="18" strokeLinecap="round" strokeLinejoin="round" />
+            <path
+              d={OUT_D}
+              fill="none"
+              stroke="#ffffff"
+              strokeWidth="2.6"
+              strokeDasharray="12 20"
+              strokeLinecap="round"
+              opacity="0.92"
+              markerMid="url(#arrowOut)"
+            />
+            <path
+              d={IN_D}
+              fill="none"
+              stroke="#ffffff"
+              strokeWidth="2.6"
+              strokeDasharray="12 20"
+              strokeLinecap="round"
+              opacity="0.92"
+              markerMid="url(#arrowOut)"
+            />
 
-            {/* start / finish flags on the map frame */}
-            <g transform={`translate(${MX + 14}, ${MY + MH - 44})`}>
-              <rect x="0" y="0" width="196" height="30" rx="15" fill="#ffffff" opacity="0.92" />
-              <text x="14" y="20" fontSize="11.5" fontWeight="700" fill={INK}>
-                MAP DATA © OPENSTREETMAP
-              </text>
+            {/* ---------- LANDMARKS ---------- */}
+            {LANDMARKS.map((l) => {
+              const [x, y] = project([l.lat, l.lng]);
+              return (
+                <g key={l.name}>
+                  <circle cx={x} cy={y} r="4.5" fill="#ffffff" stroke={ROAD} strokeWidth="2" />
+                  <text
+                    x={x + 9}
+                    y={y - 7}
+                    fontSize="11"
+                    fontWeight="700"
+                    fill={INK}
+                    stroke="#ffffff"
+                    strokeWidth="3.2"
+                    paintOrder="stroke"
+                  >
+                    {l.name}
+                  </text>
+                </g>
+              );
+            })}
+
+            {/* ---------- NUMBERED MARKERS + INLINE DETAIL ---------- */}
+            {STEPS.map((s) => {
+              const [x, y] = project([s.lat, s.lng]);
+              const isEnd = s.marker === "start" || s.marker === "finish";
+              const fill =
+                s.marker === "start" ? OUT : s.marker === "finish" ? ROAD : s.marker === "uturn" ? GOLD : "#ffffff";
+              const txt = fill === "#ffffff" ? INK : "#fff";
+              const o = LABEL_OFFSET[s.id];
+              const lx = x + o.dx;
+              const ly = y + o.dy;
+              const title = s.name.replace(/^(Start|Finish|Turnaround) — /, "");
+              return (
+                <g key={s.id}>
+                  <line x1={x} y1={y} x2={lx} y2={ly - 10} stroke={ROAD} strokeWidth="1.2" opacity="0.55" />
+                  <circle cx={x} cy={y} r={isEnd ? 19 : 15} fill="#fff" opacity="0.96" />
+                  <circle cx={x} cy={y} r={isEnd ? 16 : 12} fill={fill} stroke={ROAD} strokeWidth="2.6" />
+                  <text x={x} y={y + 5} fontSize="13" fontWeight="800" textAnchor="middle" fill={txt}>
+                    {s.marker === "start" ? "S" : s.marker === "finish" ? "F" : s.id}
+                  </text>
+
+                  <text
+                    x={lx}
+                    y={ly}
+                    fontSize="12.5"
+                    fontWeight="800"
+                    textAnchor={o.anchor}
+                    fill={INK}
+                    stroke="#ffffff"
+                    strokeWidth="3.6"
+                    paintOrder="stroke"
+                  >
+                    {title}
+                  </text>
+                  <text
+                    x={lx}
+                    y={ly + 15}
+                    fontSize="11"
+                    fontWeight="600"
+                    textAnchor={o.anchor}
+                    fill="#3d5c53"
+                    stroke="#ffffff"
+                    strokeWidth="3.2"
+                    paintOrder="stroke"
+                  >
+                    {s.cumulativeKm.toFixed(1)} km · {s.direction}
+                  </text>
+                  <text
+                    x={lx}
+                    y={ly + 29}
+                    fontSize="10.5"
+                    textAnchor={o.anchor}
+                    fill="#5b7a70"
+                    stroke="#ffffff"
+                    strokeWidth="3"
+                    paintOrder="stroke"
+                  >
+                    {s.street}
+                  </text>
+                </g>
+              );
+            })}
+
+            {/* ---------- COMPACT KEY (bottom-left corner) ---------- */}
+            <g transform={`translate(24, ${H - 118})`}>
+              <rect x="0" y="0" width="252" height="94" rx="10" fill={CREAM} opacity="0.95" stroke={ROAD} strokeWidth="1.5" />
+              <rect x="14" y="17" width="26" height="8" rx="4" fill={OUT} />
+              <text x="48" y="25" fontSize="11" fontWeight="700" fill={INK}>Outbound — west to Circle</text>
+              <rect x="14" y="39" width="26" height="8" rx="4" fill={RET} />
+              <text x="48" y="47" fontSize="11" fontWeight="700" fill={INK}>Return — east to finish</text>
+              <circle cx="27" cy="66" r="7" fill={GOLD} stroke={ROAD} strokeWidth="1.6" />
+              <text x="48" y="70" fontSize="11" fontWeight="700" fill={INK}>Turnaround · {COURSE.totalDistance}</text>
             </g>
 
-            {/* ---------- KEY / ITINERARY ---------- */}
-            <g transform={`translate(${MX + MW + GAP}, ${MY})`}>
-              <rect x="0" y="0" width={SIDEBAR} height={MH} rx="14" fill="#ffffff" stroke="#d9cfb8" strokeWidth="1.5" />
-              <rect x="0" y="0" width={SIDEBAR} height="42" rx="14" fill={ROAD} />
-              <rect x="0" y="28" width={SIDEBAR} height="14" fill={ROAD} />
-              <text x="18" y="27" fontSize="13" fontWeight="800" letterSpacing="2.5" fill="#fff">
-                ROUTE KEY
-              </text>
-
-              {STEPS.map((s, i) => {
-                const y = 68 + i * 50;
-                const fill = s.marker === "start" ? OUT : s.marker === "finish" ? ROAD : s.marker === "uturn" ? GOLD : "#ffffff";
-                const txt = fill === "#ffffff" ? INK : "#fff";
-                return (
-                  <g key={s.id}>
-                    <circle cx="30" cy={y} r="13" fill={fill} stroke={ROAD} strokeWidth="2" />
-                    <text x="30" y={y + 4.5} fontSize="12" fontWeight="800" textAnchor="middle" fill={txt}>
-                      {s.marker === "start" ? "S" : s.marker === "finish" ? "F" : s.id}
-                    </text>
-                    <text x="54" y={y - 2} fontSize="12.5" fontWeight="700" fill={INK}>
-                      {s.name.replace(/^(Start Line|Finish Line) — /, "").slice(0, 30)}
-                    </text>
-                    <text x="54" y={y + 15} fontSize="11" fill="#5b7a70">
-                      {s.cumulativeKm.toFixed(1)} km · {s.direction}
-                    </text>
-                    {i < STEPS.length - 1 && (
-                      <line x1="18" y1={y + 25} x2={SIDEBAR - 18} y2={y + 25} stroke="#eee6d3" strokeWidth="1" />
-                    )}
-                  </g>
-                );
-              })}
-            </g>
-
-            {/* ---------- LEGEND FOOTER ---------- */}
-            <g transform={`translate(${MX}, ${H - 30})`}>
-              <rect x="0" y="-11" width="42" height="11" rx="5.5" fill={OUT} />
-              <text x="52" y="0" fontSize="12.5" fontWeight="600" fill={INK}>Outbound — westbound to Circle</text>
-              <rect x="272" y="-11" width="42" height="11" rx="5.5" fill={RET} />
-              <text x="324" y="0" fontSize="12.5" fontWeight="600" fill={INK}>Return — eastbound to finish</text>
-              <circle cx="600" cy="-5" r="8" fill={GOLD} />
-              <text x="616" y="0" fontSize="12.5" fontWeight="600" fill={INK}>Turnaround — Kwame Nkrumah Interchange</text>
-            </g>
-            <rect x="0" y={H - 10} width={W} height="10" fill={ROAD} />
+            <text x={W - 16} y={H - 12} fontSize="10" textAnchor="end" fill="#4c635b">
+              Map data © OpenStreetMap contributors
+            </text>
           </svg>
         </div>
       </div>
