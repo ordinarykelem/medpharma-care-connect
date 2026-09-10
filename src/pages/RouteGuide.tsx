@@ -239,7 +239,7 @@ export default function RouteGuide() {
               <circle cx="700" cy="-2" r="9" fill="#c9902a" />
               <text x="716" y="2" fontSize="13" fontWeight="600" fill={INK}>Turnaround point</text>
             </g>
-            <text x={W - PAD_X} y={H - 40} fontSize="11" letterSpacing="1.5" textAnchor="end" fill="#8aa79d">
+            <text x={W - PAD_X} y={H - 22} fontSize="11" letterSpacing="1.5" textAnchor="end" fill="#8aa79d">
               SCHEMATIC — NOT TO SCALE
             </text>
             <rect x="0" y={H - 10} width={W} height="10" fill={ROAD} />
