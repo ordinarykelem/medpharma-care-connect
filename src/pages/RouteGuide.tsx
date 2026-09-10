@@ -196,15 +196,24 @@ export default function RouteGuide() {
             {/* Markers + callouts */}
             {STEPS.map((s) => {
               const [x, y] = project([s.lat, s.lng]);
-              const side = LABEL_SIDE[s.id] ?? "top";
-              const ly = side === "top" ? y - 44 : y + 44;
+              const lab = LABELS[s.id] ?? { dx: 0, dy: -56, anchor: "middle" as const };
+              const lx = x + lab.dx;
+              const ly = y + lab.dy;
+              const anchor = lab.anchor;
               const isEnd = s.marker === "start" || s.marker === "finish";
               const fill = s.marker === "start" ? OUT : s.marker === "finish" ? ROAD : s.marker === "uturn" ? "#c9902a" : "#ffffff";
               const txt = s.marker === "start" ? "#fff" : s.marker === "finish" ? "#fff" : s.marker === "uturn" ? "#fff" : INK;
-              const anchor = x > W - 260 ? "end" : x < 240 ? "start" : "middle";
               return (
                 <g key={s.id}>
-                  <line x1={x} y1={y} x2={x} y2={ly + (side === "top" ? 20 : -20)} stroke="#8aa79d" strokeWidth="1.5" strokeDasharray="3 3" />
+                  <line
+                    x1={x}
+                    y1={y}
+                    x2={lx + (anchor === "end" ? 6 : anchor === "start" ? -6 : 0)}
+                    y2={ly + (lab.dy < 0 ? 22 : lab.dy > 20 ? -20 : -4)}
+                    stroke="#8aa79d"
+                    strokeWidth="1.5"
+                    strokeDasharray="3 3"
+                  />
                   <circle cx={x} cy={y} r={isEnd ? 19 : 16} fill="#fff" />
                   <circle cx={x} cy={y} r={isEnd ? 15 : 12} fill={fill} stroke={ROAD} strokeWidth="2.5" />
                   <text x={x} y={y + 5} fontSize="13" fontWeight="800" textAnchor="middle" fill={txt}>
