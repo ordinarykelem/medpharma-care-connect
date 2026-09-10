@@ -10,7 +10,8 @@ export type ContentBrief = {
     | "Story / WhatsApp Status"
     | "LinkedIn PDF Document"
     | "Newsletter Header"
-    | "TikTok Photo Set";
+    | "TikTok Photo Set"
+    | "LinkedIn Post";
   format: string;
   platforms: string[];
   audience: string;
@@ -745,7 +746,7 @@ export const FULLIFE_PLAN: ContentPlan = {
 // =================================================================
 // MEDPHARMA GENERAL BRAND PLAN
 // =================================================================
-export const MEDPHARMA_PLAN = {
+export const MEDPHARMA_PLAN: ContentPlan = {
   brand: "MedPharma",
   productNote: "MedPharma is the parent brand: full-service e-pharmacy, medication delivery anywhere in Ghana, in-app doctor chat (AI + human clinicians), corporate health partnerships. Tone: warm, expert, locally rooted, action-oriented.",
   callLine: CALL,

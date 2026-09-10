@@ -3,7 +3,7 @@ import {
   Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel,
   SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarProvider, SidebarTrigger, useSidebar,
 } from "@/components/ui/sidebar";
-import { Activity, Target, Coffee, BarChart3, FileText, Megaphone, MapPin, CheckSquare, Settings, LogOut, Palette, HeartPulse, Video, MessageSquare } from "lucide-react";
+import { Activity, Target, Coffee, BarChart3, FileText, Megaphone, MapPin, CheckSquare, Settings, LogOut, Palette, HeartPulse, Video, MessageSquare, Route } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
@@ -22,6 +22,7 @@ const nav = [
   { to: "/scripts", label: "Master Scripts", icon: FileText },
   { to: "/canva-kit", label: "Canva Copy-Paste Kit", icon: Palette },
   { to: "/tasks", label: "Action Tracker", icon: CheckSquare },
+  { to: "/route-guide", label: "Marathon Route Guide", icon: Route },
   { to: "/brand", label: "Brand Context", icon: Settings },
 ];
 
