@@ -43,7 +43,7 @@ const bbox = {
   maxLng: Math.max(...lngs),
 };
 
-const PADDING = 56; // px of breathing room inside the map frame
+const PADDING = 14; // px of breathing room inside the map frame
 function pickZoom() {
   for (let z = 17; z >= 10; z--) {
     const w = lngToX(bbox.maxLng, z) - lngToX(bbox.minLng, z);
