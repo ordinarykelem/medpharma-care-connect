@@ -219,10 +219,10 @@ export default function RouteGuide() {
                   <text x={x} y={y + 5} fontSize="13" fontWeight="800" textAnchor="middle" fill={txt}>
                     {s.marker === "start" ? "S" : s.marker === "finish" ? "F" : s.id}
                   </text>
-                  <text x={x} y={ly} fontSize="14" fontWeight="700" textAnchor={anchor} fill={INK}>
+                  <text x={lx} y={ly} fontSize="14" fontWeight="700" textAnchor={anchor} fill={INK}>
                     {s.name.replace(/^(Start Line|Finish Line) — /, "")}
                   </text>
-                  <text x={x} y={ly + 17} fontSize="11.5" textAnchor={anchor} fill="#5b7a70">
+                  <text x={lx} y={ly + 17} fontSize="11.5" textAnchor={anchor} fill="#5b7a70">
                     {s.cumulativeKm.toFixed(1)} km · {s.direction}
                   </text>
                 </g>
