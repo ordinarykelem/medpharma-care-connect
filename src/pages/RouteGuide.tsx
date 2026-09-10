@@ -246,8 +246,8 @@ export default function RouteGuide() {
                   href={tileUrl(t.x, t.y)}
                   x={t.px}
                   y={t.py}
-                  width={TILE}
-                  height={TILE}
+                  width={t.size}
+                  height={t.size}
                   crossOrigin="anonymous"
                   preserveAspectRatio="none"
                 />
