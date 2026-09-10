@@ -65,7 +65,7 @@ const LABELS: Record<number, Label> = {
   4: { dx: 0, dy: -62, anchor: "middle" },
   5: { dx: 8, dy: -84, anchor: "start" },
   6: { dx: 0, dy: 70, anchor: "middle" },
-  7: { dx: -150, dy: 34, anchor: "end" },
+  7: { dx: -150, dy: -34, anchor: "end" },
   8: { dx: -162, dy: 62, anchor: "end" },
 };
 
