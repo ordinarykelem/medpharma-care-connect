@@ -22,6 +22,7 @@ const nav = [
   { to: "/scripts", label: "Master Scripts", icon: FileText },
   { to: "/canva-kit", label: "Canva Copy-Paste Kit", icon: Palette },
   { to: "/tasks", label: "Action Tracker", icon: CheckSquare },
+  { to: "/route-guide", label: "Marathon Route Guide", icon: Route },
   { to: "/brand", label: "Brand Context", icon: Settings },
 ];
 
