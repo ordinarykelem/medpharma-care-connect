@@ -84,7 +84,7 @@ const tiles: { x: number; y: number; px: number; py: number }[] = [];
     }
   }
 }
-const tileUrl = (x: number, y: number) => `https://basemaps.cartocdn.com/light_all/${Z}/${x}/${y}@2x.png`;
+const tileUrl = (x: number, y: number) => `https://tile.openstreetmap.org/${Z}/${x}/${y}.png`;
 
 /* smooth Catmull-Rom -> cubic bezier */
 function smoothPath(pts: [number, number][]) {
@@ -272,7 +272,7 @@ export default function RouteGuide() {
                 const [x, y] = project([s.lat, s.lng]);
                 const isEnd = s.marker === "start" || s.marker === "finish";
                 const fill = s.marker === "start" ? OUT : s.marker === "finish" ? ROAD : s.marker === "uturn" ? GOLD : "#ffffff";
-                const txt = s.marker === "point" ? INK : "#fff";
+                const txt = fill === "#ffffff" ? INK : "#fff";
                 return (
                   <g key={s.id}>
                     <circle cx={x} cy={y} r={isEnd ? 17 : 14} fill="#fff" opacity="0.95" />
@@ -306,7 +306,7 @@ export default function RouteGuide() {
               {STEPS.map((s, i) => {
                 const y = 68 + i * 50;
                 const fill = s.marker === "start" ? OUT : s.marker === "finish" ? ROAD : s.marker === "uturn" ? GOLD : "#ffffff";
-                const txt = s.marker === "point" ? INK : "#fff";
+                const txt = fill === "#ffffff" ? INK : "#fff";
                 return (
                   <g key={s.id}>
                     <circle cx="30" cy={y} r="13" fill={fill} stroke={ROAD} strokeWidth="2" />
@@ -314,7 +314,7 @@ export default function RouteGuide() {
                       {s.marker === "start" ? "S" : s.marker === "finish" ? "F" : s.id}
                     </text>
                     <text x="54" y={y - 2} fontSize="12.5" fontWeight="700" fill={INK}>
-                      {s.name.replace(/^(Start Line|Finish Line) — /, "").slice(0, 34)}
+                      {s.name.replace(/^(Start Line|Finish Line) — /, "").slice(0, 30)}
                     </text>
                     <text x="54" y={y + 15} fontSize="11" fill="#5b7a70">
                       {s.cumulativeKm.toFixed(1)} km · {s.direction}
