@@ -65,8 +65,8 @@ const LABELS: Record<number, Label> = {
   4: { dx: 0, dy: -62, anchor: "middle" },
   5: { dx: 8, dy: -84, anchor: "start" },
   6: { dx: 0, dy: 70, anchor: "middle" },
-  7: { dx: -52, dy: 26, anchor: "end" },
-  8: { dx: -26, dy: -82, anchor: "end" },
+  7: { dx: -150, dy: 34, anchor: "end" },
+  8: { dx: -162, dy: 62, anchor: "end" },
 };
 
 const INK = "#0f2a23";
@@ -219,10 +219,10 @@ export default function RouteGuide() {
                   <text x={x} y={y + 5} fontSize="13" fontWeight="800" textAnchor="middle" fill={txt}>
                     {s.marker === "start" ? "S" : s.marker === "finish" ? "F" : s.id}
                   </text>
-                  <text x={lx} y={ly} fontSize="14" fontWeight="700" textAnchor={anchor} fill={INK}>
+                  <text x={lx} y={ly} fontSize="14" fontWeight="700" textAnchor={anchor} fill={INK} stroke={CREAM} strokeWidth="5" paintOrder="stroke">
                     {s.name.replace(/^(Start Line|Finish Line) — /, "")}
                   </text>
-                  <text x={lx} y={ly + 17} fontSize="11.5" textAnchor={anchor} fill="#5b7a70">
+                  <text x={lx} y={ly + 17} fontSize="11.5" textAnchor={anchor} fill="#5b7a70" stroke={CREAM} strokeWidth="4" paintOrder="stroke">
                     {s.cumulativeKm.toFixed(1)} km · {s.direction}
                   </text>
                 </g>
