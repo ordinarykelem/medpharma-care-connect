@@ -65,8 +65,8 @@ const LABELS: Record<number, Label> = {
   4: { dx: 0, dy: -62, anchor: "middle" },
   5: { dx: 8, dy: -84, anchor: "start" },
   6: { dx: 0, dy: 70, anchor: "middle" },
-  7: { dx: -18, dy: 52, anchor: "end" },
-  8: { dx: -22, dy: 46, anchor: "end" },
+  7: { dx: -52, dy: 26, anchor: "end" },
+  8: { dx: -26, dy: -82, anchor: "end" },
 };
 
 const INK = "#0f2a23";
