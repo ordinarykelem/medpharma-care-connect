@@ -131,9 +131,6 @@ export const STEPS: RouteStep[] = [
 export const LANDMARKS: { name: string; lat: number; lng: number }[] = [
   { name: "Absa Bank Head Office", lat: 5.5647, lng: -0.1899 },
   { name: "LMI Holdings", lat: 5.5632, lng: -0.1882 },
-  { name: "Sankara Interchange", lat: 5.5722, lng: -0.1949 },
-  { name: "Kwame Nkrumah Interchange", lat: 5.5707, lng: -0.2075 },
-  { name: "Assemblies of God Guest House", lat: 5.5651, lng: -0.1848 },
 ];
 
 // Densified geometry so the polyline hugs the road corridors.

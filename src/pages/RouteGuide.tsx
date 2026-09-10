@@ -124,11 +124,11 @@ const LABEL_OFFSET: Record<number, { dx: number; dy: number; anchor: "start" | "
   1: { dx: -24, dy: 34, anchor: "end" },
   2: { dx: -26, dy: 26, anchor: "end" },
   3: { dx: -26, dy: 0, anchor: "end" },
-  4: { dx: -18, dy: -54, anchor: "end" },
+  4: { dx: -64, dy: -54, anchor: "end" },
   5: { dx: 4, dy: -40, anchor: "start" },
   6: { dx: 34, dy: 60, anchor: "start" },
   7: { dx: -26, dy: -26, anchor: "end" },
-  8: { dx: -26, dy: 24, anchor: "end" },
+  8: { dx: -22, dy: 34, anchor: "end" },
 };
 
 
