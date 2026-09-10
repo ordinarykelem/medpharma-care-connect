@@ -10,7 +10,7 @@ import { COURSE, STEPS, OUTBOUND_PATH, INBOUND_PATH, buildGpx } from "@/lib/mara
 /* ---------- A4 landscape canvas (96 dpi) ---------- */
 const W = 1123;
 const H = 794;
-const PAD_X = 70;
+const PAD_X = 120;
 const TOP = 190;
 const BOTTOM = 92;
 
@@ -61,12 +61,12 @@ type Label = { dx: number; dy: number; anchor: "start" | "middle" | "end" };
 const LABELS: Record<number, Label> = {
   1: { dx: 0, dy: 62, anchor: "middle" },
   2: { dx: -30, dy: -6, anchor: "end" },
-  3: { dx: -14, dy: -56, anchor: "end" },
+  3: { dx: -16, dy: -58, anchor: "end" },
   4: { dx: 0, dy: -62, anchor: "middle" },
-  5: { dx: 10, dy: -66, anchor: "start" },
+  5: { dx: 8, dy: -84, anchor: "start" },
   6: { dx: 0, dy: 70, anchor: "middle" },
-  7: { dx: 30, dy: -50, anchor: "start" },
-  8: { dx: 30, dy: 8, anchor: "start" },
+  7: { dx: -18, dy: 52, anchor: "end" },
+  8: { dx: -22, dy: 46, anchor: "end" },
 };
 
 const INK = "#0f2a23";
