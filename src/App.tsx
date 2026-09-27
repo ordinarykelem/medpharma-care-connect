@@ -21,6 +21,7 @@ import CanvaKit from "./pages/CanvaKit.tsx";
 import MarketingScripts from "./pages/MarketingScripts.tsx";
 import SmsPlan from "./pages/SmsPlan.tsx";
 import RouteGuide from "./pages/RouteGuide.tsx";
+import MemorialService from "./pages/MemorialService.tsx";
 import { AuthProvider } from "./hooks/useAuth";
 
 const queryClient = new QueryClient();
@@ -34,6 +35,8 @@ const App = () => (
         <AuthProvider>
           <Routes>
             <Route path="/auth" element={<Auth />} />
+            <Route path="/memorial" element={<MemorialService />} />
+            <Route path="/prince-memorial" element={<MemorialService />} />
             <Route element={<AppShell />}>
               <Route path="/" element={<Missions />} />
               <Route path="/missions/:id" element={<MissionDetail />} />
