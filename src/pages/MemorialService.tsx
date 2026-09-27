@@ -527,7 +527,7 @@ export default function MemorialService() {
 
               <div className="text-xs sm:text-sm text-slate-300 leading-relaxed space-y-3 font-serif break-words">
                 <p>
-                  Prince Patrick Ekow Bondzie (aged 32) served as the <strong>Chief Technology Officer</strong> and <strong>Lead Software Engineer</strong> at MedPharma Ghana. He was the intellectual heartbeat and architect behind the digital healthcare systems that connect thousands of Ghanaians to medications, telemedicine, and life-saving health services.
+                  Prince Patrick Ekow Bondzie (aged 32) served as the <strong>Chief Technology Officer</strong> and <strong>Lead Software Engineer</strong> at MedPharma. He was the intellectual heartbeat and architect behind the digital healthcare systems that connect thousands of Ghanaians to medications, telemedicine, and life-saving health services.
                 </p>
                 <p>
                   Known for his calm demeanor, sharp engineering intellect, and unwavering generosity of spirit, Prince led with humility. Whether debugging complex deployment scripts late into the night or mentoring young software developers, he brought excellence, patience, and contagious warmth to every endeavor.
@@ -542,7 +542,7 @@ export default function MemorialService() {
 
               {/* Company Info */}
               <div className="pt-3 border-t border-slate-800 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-400">
-                <div>MedPharma Ghana</div>
+                <div>MedPharma</div>
                 <div>RSVP: {MEMORIAL_INFO.contactRsvp}</div>
               </div>
             </div>
@@ -636,7 +636,7 @@ export default function MemorialService() {
 
       {/* Footer */}
       <footer className="w-full border-t border-slate-900 bg-slate-950 py-5 sm:py-6 px-4 text-center text-xs text-slate-500">
-        <p className="mb-1">MedPharma Ghana • Seamless Healthcare</p>
+        <p className="mb-1">MedPharma • Seamless Healthcare</p>
         <p className="text-[11px] text-slate-600">
           In everlasting tribute to Prince Patrick Ekow Bondzie (1994 – 2026)
         </p>
